@@ -1,8 +1,6 @@
 let DuoCard = function () {
     return (
         <section className="max-w-7xl mx-auto">
-            
-            {/* ===== DESKTOP LAYOUT (TIDAK DIUBAH) ===== */}
             <div className="hidden md:flex about-section mt-44 mx-auto relative justify-center items-center">
                 <div className="about-content">
                     <div className="about-card">
@@ -30,8 +28,6 @@ let DuoCard = function () {
                     }}></div>
                 </div>
             </div>
-
-            {/* ===== MOBILE LAYOUT (BARU) ===== */}
             <div className="flex md:hidden flex-col w-full px-2 mt-16 mb-12">
                 <div className="w-full h-[260px] rounded-2xl bg-cover bg-center shadow-md" style={{
                     backgroundImage: "url('/assets/img/profil/5e6c8a11855b39c3ee0f9b523dec390495c03544.png')"
@@ -55,7 +51,6 @@ let DuoCard = function () {
                     </div>
                 </div>
             </div>
-
         </section>
     );
 }
