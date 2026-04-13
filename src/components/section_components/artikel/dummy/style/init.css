@@ -1,0 +1,5 @@
+.img-placeholder {
+    background-color: rgb(185, 185, 185);
+    background-size: 10px 10px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
