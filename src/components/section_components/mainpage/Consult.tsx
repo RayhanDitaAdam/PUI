@@ -34,9 +34,9 @@ let Consult = function () {
             <div className="card-icon-wrap w-9 h-9 md:w-12 md:h-12 bg-[#C49A6C] rounded-lg md:rounded-xl flex items-center justify-center mb-3 md:mb-5">
               <img src="/assets/img/81829e2cbb1d51f007adb0e183c5911e296267be.png" width="24px" className="brightness-0 w-[18px] md:w-[24px]" />
             </div>
-            <h1 className="text-sm lg:text-base md:text-lg font-extrabold text-[#111] mb-1.5 md:mb-2.5">
+            <h3 className="text-sm lg:text-base md:text-lg font-extrabold text-[#111] mb-1.5 md:mb-2.5">
               Bawa langsung aset mewah ke kantor PUI
-            </h1>
+            </h3>
             <p className="text-xs lg:text-[10px] md:text-sm text-[#333] leading-relaxed mb-4 md:mb-6">
               Anda dapat membawa langsung aset mewah Anda ke kantor PUI
               untuk mendapatkan pengalaman layanan yang cepat, aman, dan
