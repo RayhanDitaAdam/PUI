@@ -1,21 +1,23 @@
 import { SidePost } from "./SidePost";
 
 let MainPost = function () {
-    return (            <div className="grid grid-cols-12 gap-12">
-                <div className="col-span-8">
-                    <div className="relative flex items-center mb-4">
-                        <a href="/artikel" className="absolute left-0 group flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-[#008774] transition-colors">
+    return (
+        <div className="px-4 lg:py-6 max-w-7xl mx-auto">
+            <div className="lg:grid lg:grid-cols-3 lg:gap-8">
+                <div className="lg:col-span-2">
+                    <div className="mb-4">
+                        <a href="/artikel" className="group flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-[#008774] transition-colors mb-4">
                             <i className="fas fa-arrow-left transform group-hover:-translate-x-1 transition-transform duration-300"></i>
                             <span>Kembali</span>
                         </a>
-                        <div className="w-full flex justify-center">
+                        <div className="flex justify-center mb-4">
                             <span className="border border-gray-400 text-xs px-4 py-1 text-gray-700">Edukasi</span>
                         </div>
                     </div>
 
-                    <h1 className="text-3xl text-center font-bold mb-3 leading-snug text-black">Lorem Ipsum is simply dummy text of the printing</h1>
+                    <h1 className="text-2xl font-bold mb-3 leading-tight text-black">Lorem Ipsum is simply dummy text of the printing</h1>
                     
-                    <div className="flex justify-center items-center gap-4 text-xs text-gray-500 mb-6">
+                    <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500 mb-4">
                         <span className="flex items-center gap-1">
                             <i className="far fa-clock"></i> 23 Mei 2024
                         </span>
@@ -24,7 +26,7 @@ let MainPost = function () {
                         </span>
                     </div>
 
-                    <div className="w-full h-[350px] rounded-xl mb-6 overflow-hidden">
+                    <div className="w-full lg:h-[420px] rounded-xl mb-6 overflow-hidden">
                         <img src="https://picsum.photos/id/445/600/400" alt="Minimalist Architecture" className="w-full h-full object-cover" />
                     </div>
 
@@ -44,9 +46,17 @@ let MainPost = function () {
                     <p className="text-sm text-gray-600 leading-relaxed mb-6">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                     </p>
-                </div>                
+                </div>
+                <div className="hidden lg:block lg:col-span-1">
+                    <SidePost />
+                </div>
+            </div>
+
+            <div className="lg:hidden">
                 <SidePost />
-            </div>);
+            </div>
+        </div>
+    );
 }
 
 export {MainPost}

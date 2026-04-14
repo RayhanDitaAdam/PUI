@@ -1,19 +1,15 @@
 let MainPost = function () {
     return (
         <div className="w-full">
-            {/* Header Section */}
             <section className="text-center mb-10 md:mb-16 px-4">
                 <h1 className="text-2xl md:text-4xl font-bold text-black mb-3">Artikel Kami</h1>
                 <p className="text-gray-500 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 </p>
             </section>
-
-            {/* Grid Container: md:items-stretch memastikan semua kolom punya tinggi yang sama */}
+            
             <section className="grid grid-cols-1 md:grid-cols-12 gap-6 mb-20 px-4 md:px-0 md:items-stretch">
                 
-                {/* 1. Main Featured Post */}
-                {/* Perbaikan: Menggunakan md:h-full agar tingginya mengikuti kolom kanan */}
                 <div className="md:col-span-8 h-[400px] md:h-[610px] relative rounded-3xl md:rounded-[32px] overflow-hidden group shadow-lg">
                     <img 
                         src="https://picsum.photos/id/24/800/600" 
@@ -42,11 +38,7 @@ let MainPost = function () {
                     </div>
                 </div>
 
-                {/* 2. Side Posts */}
-                {/* Kolom ini yang menentukan tinggi total untuk layout desktop */}
                 <div className="md:col-span-4 flex flex-col gap-6">
-                    
-                    {/* Item Samping 1 */}
                     <div className="flex flex-col bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-md transition-all">
                         <div className="w-full h-40 md:h-44 flex-shrink-0 overflow-hidden">
                             <img 
@@ -66,7 +58,6 @@ let MainPost = function () {
                         </div>
                     </div>
 
-                    {/* Item Samping 2 */}
                     <div className="flex flex-col bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-md transition-all">
                         <div className="w-full h-40 md:h-44 flex-shrink-0 overflow-hidden">
                             <img 
@@ -85,7 +76,6 @@ let MainPost = function () {
                             </a>
                         </div>
                     </div>
-
                 </div>
             </section>
         </div>

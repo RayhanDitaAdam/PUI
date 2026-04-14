@@ -70,14 +70,10 @@ let Item = function () {
     }, [activeCategory]);
 
     return (
-        // Gunakan px-2 di mobile agar lebih lebar (rapat ke pinggir), md:px-0 di desktop
         <div className="px-2 md:px-0"> 
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 gap-y-4">
                 <h2 className="text-2xl font-bold text-gray-900">Artikel Terbaru</h2>
-
-                {/* --- BAGIAN FILTER --- */}
                 <div className="relative">
-                    {/* Mobile: Hamburger/Dropdown Toggle */}
                     <button 
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         className="md:hidden flex items-center justify-between w-full px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-700 font-medium"
@@ -86,7 +82,7 @@ let Item = function () {
                         <i className={`fa-solid fa-chevron-${isMenuOpen ? 'up' : 'down'} text-xs ml-2`}></i>
                     </button>
 
-                    {/* Desktop Menu (Tetap Horizontal) + Mobile Dropdown Menu (Vertikal) */}
+
                     <div className={`
                         ${isMenuOpen ? 'flex' : 'hidden'} 
                         md:flex flex-col md:flex-row 
@@ -100,7 +96,7 @@ let Item = function () {
                                 key={cat}
                                 onClick={() => {
                                     setActiveCategory(cat);
-                                    setIsMenuOpen(false); // Tutup menu setelah pilih (mobile)
+                                    setIsMenuOpen(false);
                                 }}
                                 className={`px-5 py-1.5 rounded-md transition-all duration-300 text-sm font-medium ${
                                     activeCategory === cat 
@@ -115,12 +111,9 @@ let Item = function () {
                 </div>
             </div>
 
-            {/* --- BAGIAN GRID --- */}
-            {/* grid-cols-1 md:grid-cols-3 agar satu kolom di mobile */}
             <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-10 mb-20">
                 {filteredItems.map((item) => (
                     <div key={item.id} className="group cursor-pointer">
-                        {/* h-64 di mobile agar gambar lebih besar dan lebar, md:h-52 di desktop */}
                         <div className="w-full h-64 md:h-52 shadow-lg relative mb-4 overflow-hidden rounded-2xl">
                             <img 
                                 src={item.url} 
@@ -147,5 +140,4 @@ let Item = function () {
         </div>
     );
 }
-
 export { Item }

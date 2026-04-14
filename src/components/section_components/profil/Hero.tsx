@@ -75,13 +75,14 @@ let Hero: React.FC = () => {
             <img src="/assets/img/profil/b9a7ba4f124bce19449bb1ac060f6ff5edbdb775.png" alt="Person" />
           </div>
         </div>
+        <div className="flex justify-center items-center">
         <div className="flex md:hidden absolute bottom-0 z-20 items-center justify-center pointer-events-none">
           <img
             src="/assets/img/profil/b9a7ba4f124bce19449bb1ac060f6ff5edbdb775.png"
             className="w-[150%] -ml-64 max-w-[980px] object-contain object-bottom"
             alt="Person Mobile"
           />
-        </div>
+        </div></div>
       </div>
     </section>
   );
