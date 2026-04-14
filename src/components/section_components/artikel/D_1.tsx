@@ -54,10 +54,10 @@ function D_1() {
   }, []);
 
   return (
-    <div className="bg-white text-black">
+    <div className="bg-white max-w-[1700px] mx-auto text-black">
       <Header />
       <div className="pt-[120px] pb-20">
-        <div className="w-full max-w-7xl mx-auto bg-white rounded-t-[50px] p-16 pb-0 mb-10 text-black gsap-reveal">
+        <div className="w-full mx-auto bg-white rounded-t-[50px] p-2 lg:p-14 md:p-10 pb-0 mb-10 text-black gsap-reveal">
           <MainPost />
           <Item />
         </div>

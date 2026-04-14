@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
-const articleData = {
+let articleData = {
     edukasi: [
         { id: 1, title: "Buku Koleksi", url: "https://picsum.photos/id/24/600/400" },
         { id: 2, title: "Suasana Belajar", url: "https://picsum.photos/id/1/600/400" },
@@ -37,7 +37,7 @@ const articleData = {
     ]
 };
 
-const allArticles = [
+let allArticles = [
     ...articleData.edukasi.map(item => ({ ...item, category: 'Edukasi' })),
     ...articleData.berita.map(item => ({ ...item, category: 'Berita' })),
     ...articleData.pesan.map(item => ({ ...item, category: 'Pesan' }))
@@ -45,6 +45,7 @@ const allArticles = [
 
 let Item = function () {
     const [activeCategory, setActiveCategory] = useState('Semua');
+    const [isMenuOpen, setIsMenuOpen] = useState(false); // State untuk mobile menu
     const gridRef = useRef<HTMLDivElement>(null);
 
     const filteredItems = activeCategory === 'Semua' 
@@ -56,63 +57,88 @@ let Item = function () {
     useEffect(() => {
         if (gridRef.current) {
             const items = gridRef.current.children;
-            // First reset the state for animation
             gsap.set(items, { opacity: 0, y: 20 });
-            // Then trigger the stagger animation
             gsap.to(items, {
                 opacity: 1,
                 y: 0,
                 duration: 0.6,
                 stagger: 0.1,
                 ease: 'power3.out',
-                clearProps: 'all' // Clean up inline styles after animation
+                clearProps: 'all'
             });
         }
     }, [activeCategory]);
 
     return (
-        <div>
-            <div className="flex items-center justify-between mb-8">
+        // Gunakan px-2 di mobile agar lebih lebar (rapat ke pinggir), md:px-0 di desktop
+        <div className="px-2 md:px-0"> 
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 gap-y-4">
                 <h2 className="text-2xl font-bold text-gray-900">Artikel Terbaru</h2>
 
-                <div className="flex space-x-2 text-sm font-medium">
-                    {categories.map(cat => (
-                        <button 
-                            key={cat}
-                            onClick={() => setActiveCategory(cat)}
-                            className={`px-5 py-1.5 rounded-md transition-all duration-300 ${
-                                activeCategory === cat 
-                                ? "bg-[#008774] text-white shadow-md transform scale-105" 
-                                : "border border-gray-300 text-gray-500 hover:border-[#008774] hover:text-[#008774]"
-                            }`}
-                        >
-                            {cat}
-                        </button>
-                    ))}
+                {/* --- BAGIAN FILTER --- */}
+                <div className="relative">
+                    {/* Mobile: Hamburger/Dropdown Toggle */}
+                    <button 
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        className="md:hidden flex items-center justify-between w-full px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-700 font-medium"
+                    >
+                        <span>Kategori: {activeCategory}</span>
+                        <i className={`fa-solid fa-chevron-${isMenuOpen ? 'up' : 'down'} text-xs ml-2`}></i>
+                    </button>
+
+                    {/* Desktop Menu (Tetap Horizontal) + Mobile Dropdown Menu (Vertikal) */}
+                    <div className={`
+                        ${isMenuOpen ? 'flex' : 'hidden'} 
+                        md:flex flex-col md:flex-row 
+                        absolute md:static top-full left-0 right-0 z-10 
+                        bg-white md:bg-transparent shadow-lg md:shadow-none 
+                        border md:border-none rounded-md mt-2 md:mt-0 
+                        p-2 md:p-0 space-y-2 md:space-y-0 md:space-x-2
+                    `}>
+                        {categories.map(cat => (
+                            <button 
+                                key={cat}
+                                onClick={() => {
+                                    setActiveCategory(cat);
+                                    setIsMenuOpen(false); // Tutup menu setelah pilih (mobile)
+                                }}
+                                className={`px-5 py-1.5 rounded-md transition-all duration-300 text-sm font-medium ${
+                                    activeCategory === cat 
+                                    ? "bg-[#008774] text-white shadow-md" 
+                                    : "border border-gray-300 text-gray-500 hover:border-[#008774] hover:text-[#008774]"
+                                }`}
+                            >
+                                {cat}
+                            </button>
+                        ))}
+                    </div>
                 </div>
             </div>
 
-            <div ref={gridRef} className="grid grid-cols-3 gap-x-6 gap-y-10 mb-20">
+            {/* --- BAGIAN GRID --- */}
+            {/* grid-cols-1 md:grid-cols-3 agar satu kolom di mobile */}
+            <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-10 mb-20">
                 {filteredItems.map((item) => (
                     <div key={item.id} className="group cursor-pointer">
-                        <div className="w-full h-52 shadow-lg relative mb-4 overflow-hidden rounded-2xl">
+                        {/* h-64 di mobile agar gambar lebih besar dan lebar, md:h-52 di desktop */}
+                        <div className="w-full h-64 md:h-52 shadow-lg relative mb-4 overflow-hidden rounded-2xl">
                             <img 
                                 src={item.url} 
                                 alt={item.title} 
                                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
                             />
-                            <span className="absolute top-3 right-3 bg-[#008774] text-white text-xs px-3 py-1 rounded-full">
+                            <span className="absolute top-3 right-3 bg-[#008774] text-white text-[10px] px-3 py-1 rounded-full">
                                 {item.category}
                             </span>
                         </div>
-                        <div className="text-xs text-gray-400 flex items-center gap-1 mb-1">
+                        <div className="text-[10px] text-gray-400 flex items-center gap-1 mb-1">
                             <i className="fa-solid fa-clock"></i> 20 Mei 2025
                         </div>
-                        <h3 className="text-base font-bold text-gray-900 mb-2 group-hover:text-[#008774] transition-colors line-clamp-1">{item.title}</h3>
-                        <p className="text-xs text-gray-500 mb-3 leading-relaxed line-clamp-2">
+                        <h3 className="text-lg md:text-base font-bold text-gray-900 mb-2 group-hover:text-[#008774] transition-colors line-clamp-1">{item.title}</h3>
+                        <p className="text-sm md:text-xs text-gray-500 mb-3 leading-relaxed line-clamp-2">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         </p>
-                        <a href="/artikel/lorem-ipsum-is-simple" className="group text-[#00A294] text-xs font-semibold flex items-center gap-1">
+                        <a href="#" className="group text-[#00A294] text-xs font-semibold flex items-center gap-1">
                             Read More <i className="fa-solid fa-arrow-right text-xs transform group-hover:translate-x-1 transition-transform duration-300"></i>
                         </a>
                     </div>

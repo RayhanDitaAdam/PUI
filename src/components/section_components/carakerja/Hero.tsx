@@ -3,7 +3,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 let Hero: React.FC = () => {
   return (
-    <section className="z-[9999] relative w-full h-[520px]">
+    <section className="relative w-full h-[520px]">
       <div className="relative h-[620px] shadow-lg overflow-hidden" style={{
         borderBottomLeftRadius: "50px",
         borderBottomRightRadius: "50px"
