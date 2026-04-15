@@ -77,7 +77,7 @@ let Product = function () {
                                 <h3 className="text-sm md:text-lg font-semibold mb-1 md:mb-2">
                                     {item.title}
                                 </h3>
-                                <p className="text-[10px] md:text-sm text-gray-400 md:text-gray-300 mb-2 md:mb-3 line-clamp-3 md:line-clamp-none">
+                                <p className="text-[10px] md:text-sm text-gray-400 md:text-gray-300 mb-2 md:mb-3 line-clamp-3 md:line-clamp-none min-h-[45px] md:min-h-[80px]">
                                     {item.desc}
                                 </p>
                                 <button className="hover-premium-btn mt-2 md:mt-auto text-[10px] md:text-sm border-2 border-[#5C5E3D] mb-1 md:mb-2 font-bold text-[#C49A6C] px-2 md:px-4 py-1.5 md:py-2 rounded-lg md:rounded-[15px] bg-[#C49A6C30]">
