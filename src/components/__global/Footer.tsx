@@ -64,17 +64,15 @@ const Footer: React.FC<FooterProps> = ({
     const position: [number, number] = [-6.2449, 106.8023];
 
     return (
-        <footer id="kontak" className={`w-full mx-auto ${bgClass} ${isAttached ? "" : "px-0 md:px-4 pt-12 pb-4"} ${className}`}>
+        <footer id="kontak" className={`w-full mx-auto ${bgClass} ${isAttached ? "" : "px-0 md:px-4 pt-12 md:pb-4"} ${className}`}>
             
             {/* 1. Keamanan Section */}
             {showSecurity && (
                 <div
                     style={{
-                        borderTopLeftRadius: "48px",
-                        borderTopRightRadius: "48px",
                         background: "linear-gradient(135deg, rgb(0, 58, 48) 0%, rgb(0, 29, 24) 50%, rgb(0, 5, 4) 100%)",
                     }}
-                    className="w-full pt-16 pb-12 text-white"
+                    className="w-full md:max-w-7xl md:mx-auto pt-16 md:pb-12 text-white rounded-t-[24px] md:rounded-t-[48px]"
                 >
                     <div className="text-center mb-10 px-6">
                         <h1 className="text-2xl md:text-3xl mb-4 font-extrabold px-2">Didukung Standar Keamanan Tinggi</h1>
@@ -97,7 +95,7 @@ const Footer: React.FC<FooterProps> = ({
 
             {/* 2. Map Section with New Styled Card */}
             {showMap && (
-                <div className="w-full h-[600px] md:h-[500px] overflow-hidden relative">
+                <div className="w-full md:max-w-7xl md:mx-auto h-[600px] md:h-[500px] overflow-hidden relative">
                     <MapContainer
                         center={position}
                         zoom={17}
@@ -187,13 +185,11 @@ const Footer: React.FC<FooterProps> = ({
             {/* 3. Bottom Footer - Main Content */}
             <div
                 style={{
-                    borderBottomLeftRadius: isAttached ? "0" : "48px",
-                    borderBottomRightRadius: isAttached ? "0" : "48px",
                     background: "linear-gradient(135deg, rgb(0, 58, 48) 0%, rgb(0, 29, 24) 50%, rgb(0, 5, 4) 100%)",
                 }}
-                className={`w-full text-white pt-16 pb-8 px-6 md:px-16`}
+                className={`w-full md:max-w-7xl md:mx-auto text-white pt-16 md:pb-8 px-6 md:px-16 ${isAttached ? "" : "rounded-b-none md:rounded-b-[48px]"}`}
             >
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12 md:mb-12">
                     {/* Brand & Address */}
                     <div className="flex flex-col">
                         <img className="w-[140px] md:w-[160px] mb-8" src="/assets/img/logo-pui.png" alt="PUI Logo" />
@@ -261,7 +257,7 @@ const Footer: React.FC<FooterProps> = ({
                 </div>
 
                 {/* Regulation Logos */}
-                <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 mb-12 border-t border-white/10 pt-10">
+                <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 md:mb-12 border-t border-white/10 pt-10">
                     <div className="flex items-center gap-4 p-3 bg-white/5 rounded-xl w-full md:w-auto">
                         <img width="50" src="/assets/img/logo-ojk.png" alt="OJK" />
                         <span className="text-[12px] font-medium">Terdaftar & diawasi OJK</span>

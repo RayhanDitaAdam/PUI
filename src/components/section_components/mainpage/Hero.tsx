@@ -8,7 +8,8 @@ let Hero: React.FC = () => {
   const words = [
     "Jam Tangan Mewah",
     "Logam Mulia",
-    "Perhiasan dan Batu Mulia",
+    "Perhiasan",
+    "Batu Mulia",
     "Tas Branded",
     "Kendaraan Premium",
     "Barang Kolektor"
@@ -32,14 +33,11 @@ let Hero: React.FC = () => {
         <Header />
 
         {/* --- MOBILE LAYOUT (Visible only on mobile) --- */}
-        <div className="md:hidden relative z-20 flex flex-col items-center pt-[120px] pb-16 px-6">
+        <div className="md:hidden relative z-20 flex flex-col items-center pt-[140px] pb-16 px-6">
           {/* Hero Title */}
-          <h1 className="text-3xl font-bold leading-snug text-center text-white">
-            Dapatkan Solusi Gadai
+          <h1 className="text-[26px] font-bold leading-tight text-center text-white">
+            Dapatkan Solusi Gadai{" "}
             <span className="text-switcher-container">
-              <span className="invisible h-0 overflow-hidden inline-block" aria-hidden="true">
-                {words.reduce((a, b) => a.length > b.length ? a : b)}
-              </span>
               {words.map((word, i) => {
                 const isActive = i === index;
                 const isExiting = i === prevIndex;
@@ -53,7 +51,7 @@ let Hero: React.FC = () => {
                   </span>
                 );
               })}
-            </span>
+            </span>{" "}
             untuk<br /> Aset Mewah Anda Dengan PUI
           </h1>
 
@@ -110,11 +108,8 @@ let Hero: React.FC = () => {
           {/* Hero Title */}
           <div className="absolute top-[120px] w-full flex justify-center z-20 px-4">
             <h1 className="text-4xl font-bold leading-snug text-center text-white">
-              Dapatkan Solusi Gadai
+              Dapatkan Solusi Gadai{" "}
               <span className="text-switcher-container">
-                <span className="invisible h-0 overflow-hidden inline-block" aria-hidden="true">
-                  {words.reduce((a, b) => a.length > b.length ? a : b)}
-                </span>
                 {words.map((word, i) => {
                   const isActive = i === index;
                   const isExiting = i === prevIndex;
@@ -128,7 +123,7 @@ let Hero: React.FC = () => {
                     </span>
                   );
                 })}
-              </span>
+              </span>{" "}
               untuk<br /> Aset Mewah Anda Dengan PUI
             </h1>
           </div>

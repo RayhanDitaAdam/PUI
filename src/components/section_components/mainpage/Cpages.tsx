@@ -86,4 +86,4 @@ let Cpages: React.FC = function () {
     </>
   );
 };
-export {Cpages};
+export { Cpages };

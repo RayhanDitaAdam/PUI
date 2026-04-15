@@ -7,16 +7,16 @@ let Consult = function () {
         <div className="hero flex flex-col md:flex-row-reverse items-start md:items-end gap-0 md:gap-8 pt-0 pb-0 px-8 md:p-12 md:pb-0 text-left md:text-left isolate">
           <div className="hero-deco hidden md:block"></div>
           <div className="hero-img-wrap flex-shrink-0 w-full md:w-auto flex justify-end items-end relative z-0 md:z-10 pointer-events-none">
-            <div className="hero-person-placeholder relative h-[120px] md:h-[320px] translate-x-12 md:translate-x-0">
+            <div className="hero-person-placeholder relative h-[120px] md:h-[320px] overflow-visible">
               <img
-                className=" -mb-40 lg:-mb-56 md:p-2 sm:-mb-64 md:-mb-64 w-[280px] md:w-[340px] max-w-full h-auto object-contain pointer-events-none"
-                src="/assets/img/40d826a68f7b2fe6a3460b18c5d0de6a1118d609.png"
+                className="w-full h-auto pointer-events-none scale-75 md:scale-100 origin-bottom translate-x-16 translate-y-10 md:translate-x-10 md:translate-y-0 transition-transform duration-300"
+                src="/assets/img/Consult.png"
               />
             </div>
           </div>
 
-          <div className="mr-8 md:mr-0 lg:mr-0 md:-mb-5 lg:p-5 lg:mt-20 md:p-1 hero-content relative -mt-[310px] flex flex-col items-start w-full md:w-auto pb-10 md:pb-10 md:bottom-10">
-            <h6 className="text-[20px] lg:text-3xl md:text-[30px] font-bold text-white leading-snug md:leading-tight mb-4 md:mb-[14px] max-w-[190px] md:max-w-[320px] px-2 md:px-0">
+          <div className="mr-8 md:mr-0 lg:mr-0 md:-mb-5 lg:p-5 lg:mt-20 md:p-1 hero-content relative z-[50] md:z-10 -mt-[310px] flex flex-col items-start w-full md:w-[340px] pb-10 md:pb-10 md:bottom-10">
+            <h6 className="text-[20px] lg:text-3xl md:text-[30px] font-bold text-white leading-snug md:leading-tight mb-4 md:mb-[14px] max-w-[190px] md:max-w-full px-2 md:px-0">
               Punya barang mewah dan ingin dilikuidasi?
             </h6>
             <a className="text-xs lg:text-base md:text-sm text-white/70 mb-8 md:mb-7 leading-relaxed max-w-[260px] md:max-w-[280px]">

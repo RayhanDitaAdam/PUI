@@ -526,26 +526,28 @@
     position: relative;
     width: auto;
     transition: width 0.3s ease-in-out;
-    margin: 0 8px;
+    margin: 0 4px;
     vertical-align: middle;
-    top: -4px;
+    top: -2px;
 }
 
 .text-switcher-item {
-    position: absolute;
-    width: 100%;
     color: #B8945F;
     text-align: center;
+    white-space: nowrap;
     display: flex;
     justify-content: center;
-    white-space: nowrap;
 }
 
 .text-switcher-item.enter {
+    position: relative;
     animation: slide-up-in 0.5s forwards;
 }
 
 .text-switcher-item.exit {
+    position: absolute;
+    left: 0;
+    right: 0;
     animation: slide-up-out 0.5s forwards;
 }
 

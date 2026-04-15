@@ -47,14 +47,14 @@ let Product = function () {
                     untuk berbagai aset mewah, mulai <br className="hidden md:block" /> dari jam tangan premium, tas branded,
                     berlian, hingga emas dan perhiasan eksklusif.
                 </p>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-16 md:gap-16">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-6 md:gap-16">
                     {products.map((item, i) => (
                         <div
                             key={i}
-                            className={`product-card mb-36 md:mb-16 ${item.variant === "rare" ? "product-card-rare" : ""
+                            className={`product-card max-w-[170px] mx-auto md:max-w-none mb-0 md:mb-16 ${item.variant === "rare" ? "product-card-rare" : ""
                                 }`}
                         >
-                            <div className="bg-[#0000002d] border-t-[#0000002d] rounded-xl w-full h-32 md:h-44 flex items-center justify-center mb-4 md:mb-5 z-10 relative" style={{
+                            <div className="bg-[#0000002d] border-t-[#0000002d] rounded-xl w-full h-28 md:h-44 flex items-center justify-center mb-4 md:mb-5 z-10 relative" style={{
                                 borderBottomLeftRadius: "0px",
                                 borderBottomRightRadius: "0px"
                             }}>
@@ -73,14 +73,14 @@ let Product = function () {
                                     )}
                                 </div>
                             </div>
-                            <div className="p-2 mt-2 md:p-2 z-[100] text-left flex flex-col flex-grow relative">
-                                <h3 className="text-sm md:text-lg font-semibold mb-2 md:mb-3">
+                            <div className="p-1 mt-1 md:p-2 md:mt-2 z-[100] text-left flex flex-col flex-grow relative">
+                                <h3 className="text-sm md:text-lg font-semibold mb-1 md:mb-2">
                                     {item.title}
                                 </h3>
-                                <p className="text-[10px] md:text-sm text-gray-400 md:text-gray-300 mb-4 md:mb-6 line-clamp-3 md:line-clamp-none">
+                                <p className="text-[10px] md:text-sm text-gray-400 md:text-gray-300 mb-2 md:mb-3 line-clamp-3 md:line-clamp-none">
                                     {item.desc}
                                 </p>
-                                <button className="hover-premium-btn mt-auto text-[10px] md:text-sm border-2 border-[#5C5E3D] mb-2 md:mb-4 font-bold text-[#C49A6C] px-2 md:px-4 py-1.5 md:py-2 rounded-lg md:rounded-[15px] bg-[#C49A6C30]">
+                                <button className="hover-premium-btn mt-2 md:mt-auto text-[10px] md:text-sm border-2 border-[#5C5E3D] mb-1 md:mb-2 font-bold text-[#C49A6C] px-2 md:px-4 py-1.5 md:py-2 rounded-lg md:rounded-[15px] bg-[#C49A6C30]">
                                     Pelajari Selengkapnya
                                 </button>
                             </div>

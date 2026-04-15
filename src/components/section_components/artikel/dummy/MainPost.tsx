@@ -31,7 +31,7 @@ let MainPost = function () {
                         <p className="text-sm md:text-gray-300 mb-5 max-w-xl line-clamp-2 text-gray-200">
                             Ubah koleksi bernilai menjadi likuiditas optimal dengan dokumentasi yang tepat dan terstruktur.
                         </p>
-                        <a href="#" className="flex items-center gap-2 text-[#00A294] font-bold text-sm group/btn">
+                        <a href="/artikel/lorem-ipsum-is-simple" className="flex items-center gap-2 text-[#00A294] font-bold text-sm group/btn">
                             Read More 
                             <i className="fa-solid fa-arrow-right text-xs transform group-hover/btn:translate-x-2 transition-transform"></i>
                         </a>

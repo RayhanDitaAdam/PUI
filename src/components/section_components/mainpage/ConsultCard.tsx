@@ -23,7 +23,7 @@ let Consult = function () {
 
           <div className="hero-img-wrap">
             <div className="hero-person-placeholder">
-              <img className="-mb-44" src="/assets/img/main/40d826a68f7b2fe6a3460b18c5d0de6a1118d609.png" />
+              <img className="-mb-44" src="/assets/img/main/Consult.png" />
             </div>
           </div>
         </div>

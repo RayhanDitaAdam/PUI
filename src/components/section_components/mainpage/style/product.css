@@ -49,8 +49,14 @@
 }
 
 .product-card-rare img {
-  width: 160px;
+  width: 100px;
   transform: scale(1.1);
+}
+
+@media (min-width: 768px) {
+  .product-card-rare img {
+    width: 160px;
+  }
 }
 
 .hover-premium-btn {

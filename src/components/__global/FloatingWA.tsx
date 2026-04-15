@@ -52,7 +52,7 @@ const FloatingWA: React.FC = () => {
                         href="https://wa.me/6282277777911"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="relative w-[280px] h-[130px] bg-[#D9D9D9] rounded-[16px] flex items-center px-4 shadow-xl cursor-pointer block group overflow-visible"
+                        className="relative w-[190px] h-[85px] bg-[#D9D9D9] rounded-[12px] flex items-center px-3 shadow-xl cursor-pointer block group overflow-visible"
                     >
                         <button
                             onClick={handleClose}
@@ -61,28 +61,27 @@ const FloatingWA: React.FC = () => {
                         >
                             <FaTimes size={10} />
                         </button>
-                        {/* Text content */}
-                        <div className="z-10 w-[65%] h-full flex flex-col justify-center">
-                            <p className="text-[#334155] text-[10px] sm:text-[12px] font-semibold mb-1 leading-none">Selamat Datang</p>
-                            <h1 className="text-black text-[14px] sm:text-[16px] font-extrabold leading-[1.1] my-1">
+                        <div className="z-10 w-[60%] h-full flex flex-col justify-center">
+                            <p className="text-[#334155] text-[8px] font-semibold mb-0.5 leading-none">Selamat Datang</p>
+                            <h1 className="text-black text-[10px] sm:text-[11px] font-extrabold leading-tight my-0.5">
                                 Ada yang Prisil<br />bisa bantu?
                             </h1>
-                            <div className="text-[10px] sm:text-[12px] flex items-center text-[#494949] group-hover:text-[#003D35] transition-all leading-none mt-0.5">
+                            <div className="text-[7.5px] sm:text-[9px] flex items-center text-[#494949] group-hover:text-[#003D35] transition-all leading-none mt-0.5">
                                 Chat dengan Prisil <span className="ml-1">→</span>
                             </div>
 
-                            <div className="mt-2.5 flex items-center">
-                                <div className="relative flex items-center justify-center mr-2 w-[8px] h-[8px]">
+                            <div className="mt-1.5 flex items-center">
+                                <div className="relative flex items-center justify-center mr-1.5 w-[5px] h-[5px]">
                                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0E6800] opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-[6px] w-[6px] bg-[#0E6800]"></span>
+                                    <span className="relative inline-flex rounded-full h-[3px] w-[3px] bg-[#0E6800]"></span>
                                 </div>
-                                <span className="text-gray-700 text-[10px] sm:text-[12px] font-medium leading-none">Online</span>
+                                <span className="text-gray-700 text-[8px] sm:text-[10px] font-medium leading-none">Online</span>
                             </div>
                         </div>
 
                         {/* Character image */}
                         <div
-                            className="absolute right-0 bottom-0 w-[110px] sm:w-[130px] h-full pointer-events-none"
+                            className="absolute right-0 bottom-0 w-[80px] sm:w-[90px] h-full pointer-events-none"
                             style={{ clipPath: 'inset(-999px 0px 0px 0px)' }}
                         >
                             <div className="relative w-full h-full">

@@ -1,23 +1,23 @@
 let Proccess = function () {
   return (
-    <section 
+    <section
       style={{
         background: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/assets/img/9e0218ad745918733fdd97792224e9033eb1d6f6.png')",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "top center",
         backgroundSize: "cover"
-      }} 
+      }}
       className="relative process-section py-12 md:py-20 px-6 text-white"
     >
       <div className="max-w-4xl mx-auto mt-20 text-center">
-        
+
         <p className="text-sm md:text-2xl tracking-[0.18em] mb-2">How it works</p>
         <h2 className="text-3xl md:text-7xl font-bold mb-4 leading-tight">
           Proses Pencairan Cepat
         </h2>
 
         <p className="text-sm md:text-base max-w-2xl mx-auto mb-16 opacity-90">
-          Ubah aset berharga Anda menjadi likuiditas dengan proses yang cepat, aman, dan terpercaya. 
+          Ubah aset berharga Anda menjadi likuiditas dengan proses yang cepat, aman, dan terpercaya.
           Kami memastikan pengalaman yang mudah dengan hasil maksimal serta ketenangan bagi Anda.
         </p>
         <div className="flex flex-col items-center gap-6 md:flex-row md:items-start md:justify-center md:gap-10 mb-14">
