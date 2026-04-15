@@ -108,7 +108,7 @@ let Hero: React.FC = () => {
         {/* --- DESKTOP LAYOUT (Original behavior) --- */}
         <div className="hidden md:block">
           {/* Hero Title */}
-          <div className="absolute top-[120px] w-full flex justify-center z-20 gsap-reveal px-4">
+          <div className="absolute top-[120px] w-full flex justify-center z-20 px-4">
             <h1 className="text-4xl font-bold leading-snug text-center text-white">
               Dapatkan Solusi Gadai
               <span className="text-switcher-container">
@@ -137,7 +137,7 @@ let Hero: React.FC = () => {
           <div className="absolute inset-0 z-20 flex justify-center pointer-events-none">
             <div className="w-full max-w-[1440px] relative pointer-events-none">
               {/* Info Card */}
-              <div className="absolute left-20 top-[300px] z-20 max-w-xs gsap-reveal pointer-events-auto">
+              <div className="absolute left-20 top-[300px] z-20 max-w-xs pointer-events-auto">
                 <h3 className="font-bold mb-2 text-white">
                   Pergadaian Utama Indonesia
                 </h3>
@@ -152,7 +152,7 @@ let Hero: React.FC = () => {
               </div>
 
               {/* Feature Cards Column */}
-              <div className="absolute right-24 top-[260px] z-20 flex flex-col gap-4 gsap-reveal pointer-events-auto">
+              <div className="absolute right-24 top-[260px] z-20 flex flex-col gap-4 pointer-events-auto">
                 <div className="animate-floating flex items-center gap-2 bg-[#243F29] border-2 rounded-[10px] border-[#5C5E3D] px-4 py-2 text-xs shadow text-white" style={{ animationDelay: '0s' }}>
                   <img className="w-[60px]" src="/assets/img/logo-ojk.png" />
                   Terdaftar & diawasi OJK
@@ -172,7 +172,7 @@ let Hero: React.FC = () => {
           </div>
 
           {/* Kirim Foto Button */}
-          <div className="absolute bottom-[110px] w-full flex justify-center z-20 gsap-reveal">
+          <div className="absolute bottom-[110px] w-full flex justify-center z-20">
             <button className="group relative bg-[#D4AA6A] text-black px-8 py-3 rounded-md text-sm font-semibold shadow-xl flex items-center gap-2 animate-pulse-whatsapp hover:scale-105 transition-all duration-300">
               <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-[#243F29]/80 backdrop-blur-md px-4 py-2 rounded-full flex gap-4 opacity-0 group-hover:opacity-100 group-hover:-top-16 transition-all duration-300 pointer-events-none border border-[#5C5E3D] shadow-2xl z-30">
                 <FaCarSide className="text-[#D4AA6A] text-lg" />

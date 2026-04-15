@@ -36,7 +36,7 @@ let Product = function () {
     return (
         <section style={{
             background: "linear-gradient(135deg, rgb(0, 58, 48) 0%, rgb(0, 29, 24) 50%, rgb(0, 5, 4) 100%)"
-        }} id="produk" className="text-white py-12 lg:pt-24 lg:pb-12 scroll-mt-20">
+        }} id="produk" className="text-white py-24 md:py-12 lg:pt-24 lg:pb-12 scroll-mt-20">
             <div className="max-w-5xl mx-auto px-4 md:px-6">
                 <p className="text-xl md:text-2xl text-[#9CA3AF] mb-1 md:mb-2 italic text-center">Our Product</p>
                 <h2 className="text-center text-3xl md:text-5xl font-extrabold text-[#C49A6C] mb-3">
@@ -47,11 +47,11 @@ let Product = function () {
                     untuk berbagai aset mewah, mulai <br className="hidden md:block" /> dari jam tangan premium, tas branded,
                     berlian, hingga emas dan perhiasan eksklusif.
                 </p>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-16">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-16 md:gap-16">
                     {products.map((item, i) => (
                         <div
                             key={i}
-                            className={`product-card mb-8 md:mb-16 ${item.variant === "rare" ? "product-card-rare" : ""
+                            className={`product-card mb-36 md:mb-16 ${item.variant === "rare" ? "product-card-rare" : ""
                                 }`}
                         >
                             <div className="bg-[#0000002d] border-t-[#0000002d] rounded-xl w-full h-32 md:h-44 flex items-center justify-center mb-4 md:mb-5 z-10 relative" style={{

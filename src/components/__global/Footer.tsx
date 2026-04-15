@@ -111,48 +111,48 @@ const Footer: React.FC<FooterProps> = ({
                     </MapContainer>
 
                     {/* New Styled Card Overlay */}
-                    <div className="absolute top-6 left-4 right-4 md:left-auto md:right-8 md:w-[420px] bg-[#F4F4F1] border border-white/50 p-6 md:p-8 rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.1)] pointer-events-auto">
-                        <div className="flex flex-col gap-6">
+                    <div className="absolute bottom-6 md:bottom-auto top-auto md:top-6 left-4 right-4 md:left-auto md:right-8 md:w-[420px] bg-[#F4F4F1] border border-white/50 p-4 md:p-8 rounded-3xl md:rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.1)] pointer-events-auto">
+                        <div className="flex flex-col gap-3 md:gap-6">
                             {/* Header */}
                             <div>
-                                <h3 className="text-[#003D35] font-black text-2xl md:text-3xl mb-2">
+                                <h3 className="text-[#003D35] font-black text-xl md:text-3xl mb-1 md:mb-2">
                                     Kantor Pusat PUI
                                 </h3>
-                                <div className="h-[3px] w-12 bg-[#C49A6C]"></div>
+                                <div className="h-[2px] md:h-[3px] w-8 md:w-12 bg-[#C49A6C]"></div>
                             </div>
 
                             {/* Content Body */}
-                            <div className="space-y-6">
+                            <div className="space-y-3 md:space-y-6">
                                 {/* Lokasi */}
-                                <div className="flex gap-4 items-start">
-                                    <div className="bg-[#003D35] text-white p-3 rounded-full shadow-lg shrink-0">
-                                        <FaLocationDot size={20} />
+                                <div className="flex gap-3 md:gap-4 items-start">
+                                    <div className="bg-[#003D35] text-white p-2.5 md:p-3 rounded-full shadow-lg shrink-0">
+                                        <FaLocationDot className="text-sm md:text-xl" />
                                     </div>
                                     <div>
-                                        <p className="text-[11px] uppercase tracking-widest text-[#8C8C8C] font-bold mb-1">
+                                        <p className="text-[10px] md:text-[11px] uppercase tracking-widest text-[#8C8C8C] font-bold mb-0.5 md:mb-1">
                                             LOKASI
                                         </p>
-                                        <p className="text-sm md:text-base text-[#003D35] font-bold leading-snug">
+                                        <p className="text-xs md:text-base text-[#003D35] font-bold leading-snug">
                                             The Darmawangsa Square Lt.2 No.263-264, Jakarta Selatan 12160
                                         </p>
                                     </div>
                                 </div>
 
                                 {/* Jam Operasional */}
-                                <div className="flex gap-4 items-start">
-                                    <div className="bg-[#003D35] text-white p-3 rounded-full shadow-lg shrink-0">
-                                        <FaClock size={20} />
+                                <div className="flex gap-3 md:gap-4 items-start">
+                                    <div className="bg-[#003D35] text-white p-2.5 md:p-3 rounded-full shadow-lg shrink-0">
+                                        <FaClock className="text-sm md:text-xl" />
                                     </div>
                                     <div className="flex-1">
-                                        <p className="text-[11px] uppercase tracking-widest text-[#8C8C8C] font-bold mb-1">
+                                        <p className="text-[10px] md:text-[11px] uppercase tracking-widest text-[#8C8C8C] font-bold mb-0.5 md:mb-1">
                                             JAM OPERASIONAL
                                         </p>
-                                        <div className="space-y-1">
-                                            <div className="flex justify-between items-center text-sm md:text-base font-bold">
+                                        <div className="space-y-0.5 md:space-y-1">
+                                            <div className="flex justify-between items-center text-xs md:text-base font-bold">
                                                 <span className="text-[#003D35]">Senin - Jumat:</span>
                                                 <span className="text-[#C49A6C]">10:00 - 17:30</span>
                                             </div>
-                                            <div className="flex justify-between items-center text-sm md:text-base font-bold">
+                                            <div className="flex justify-between items-center text-xs md:text-base font-bold">
                                                 <span className="text-[#003D35]">Sabtu - Minggu:</span>
                                                 <span className="text-[#C49A6C]">By Appointment</span>
                                             </div>
@@ -165,16 +165,16 @@ const Footer: React.FC<FooterProps> = ({
                             <div className="h-[1px] w-full bg-[#E5E5E0] my-1"></div>
 
                             {/* Contact Info */}
-                            <div className="space-y-3">
-                                <div className="flex gap-3 items-center">
-                                    <FaPhone className="text-[#C49A6C]" size={18} />
-                                    <p className="text-base md:text-lg text-[#003D35] font-bold">
+                            <div className="space-y-2 md:space-y-3">
+                                <div className="flex gap-2.5 md:gap-3 items-center">
+                                    <FaPhone className="text-[#C49A6C] text-sm md:text-[18px]" />
+                                    <p className="text-sm md:text-lg text-[#003D35] font-bold">
                                         021-7278-7020
                                     </p>
                                 </div>
-                                <div className="flex gap-3 items-center">
-                                    <FaWhatsapp className="text-[#C49A6C]" size={20} />
-                                    <p className="text-base md:text-lg text-[#003D35] font-bold">
+                                <div className="flex gap-2.5 md:gap-3 items-center">
+                                    <FaWhatsapp className="text-[#C49A6C] text-[16px] md:text-[20px]" />
+                                    <p className="text-sm md:text-lg text-[#003D35] font-bold">
                                         0822 77777 911
                                     </p>
                                 </div>
