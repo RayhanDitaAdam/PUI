@@ -4,7 +4,7 @@ let Consult = function () {
   return (
     <div className="w-full flex justify-center bg-white py-10 md:py-10">
       <div className="pui-wrap mt-32 md:mt-10 overflow-visible">
-        <div className="hero flex flex-col md:flex-row-reverse items-start md:items-end gap-0 md:gap-8 pt-0 pb-0 px-8 md:p-12 md:pb-0 text-left md:text-left isolate">
+        <div className="hero flex flex-col md:flex-row-reverse items-start md:items-end gap-0 md:gap-8 pt-4 pb-0 px-8 md:p-12 md:pb-0 text-left md:text-left isolate">
           <div className="hero-deco hidden md:block"></div>
           <div className="hero-img-wrap flex-shrink-0 w-full md:w-auto flex justify-end items-end relative z-0 md:z-10 pointer-events-none">
             <div className="hero-person-placeholder relative h-[120px] md:h-[320px] overflow-visible">
