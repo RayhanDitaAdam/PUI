@@ -72,7 +72,7 @@ const Footer: React.FC<FooterProps> = ({
                     style={{
                         background: "linear-gradient(135deg, rgb(0, 58, 48) 0%, rgb(0, 29, 24) 50%, rgb(0, 5, 4) 100%)",
                     }}
-                    className="w-full md:max-w-7xl md:mx-auto pt-16 md:pb-12 text-white rounded-t-[24px] md:rounded-t-[48px]"
+                    className="w-full md:max-w-7xl md:mx-auto pt-16 pb-12 md:pb-12 text-white rounded-t-[24px] md:rounded-t-[48px]"
                 >
                     <div className="text-center mb-10 px-6">
                         <h1 className="text-2xl md:text-3xl mb-4 font-extrabold px-2">Didukung Standar Keamanan Tinggi</h1>
