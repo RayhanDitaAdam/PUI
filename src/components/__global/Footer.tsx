@@ -62,7 +62,7 @@ const Footer: React.FC<FooterProps> = ({
     const position: [number, number] = [-6.2449, 106.8023];
 
     return (
-        <footer id="kontak" className={`w-full mx-auto ${bgClass} ${isAttached ? "" : "px-0 md:px-4 pt-12 md:pb-12"} ${className}`}>
+        <footer id="kontak" className={`w-full max-w-[1700px] mx-auto ${bgClass} ${isAttached ? "" : "px-0 md:px-4 pt-12 md:pb-12"} ${className}`}>
             
             {/* 1. Keamanan Section */}
             {showSecurity && (
