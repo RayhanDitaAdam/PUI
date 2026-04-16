@@ -52,7 +52,7 @@ const FloatingWA: React.FC = () => {
                         href="https://wa.me/6282277777911"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="relative w-[190px] h-[85px] bg-[#D9D9D9] rounded-[12px] flex items-center px-3 shadow-xl cursor-pointer block group overflow-visible"
+                        className="relative w-[190px] md:w-[230px] h-[85px] md:h-[100px] bg-[#D9D9D9] rounded-[12px] flex items-center px-3 md:px-4 shadow-xl cursor-pointer block group overflow-visible"
                     >
                         <button
                             onClick={handleClose}
@@ -62,20 +62,20 @@ const FloatingWA: React.FC = () => {
                             <FaTimes size={10} />
                         </button>
                         <div className="z-10 w-[60%] h-full flex flex-col justify-center">
-                            <p className="text-[#334155] text-[8px] font-semibold mb-0.5 leading-none">Selamat Datang</p>
-                            <h1 className="text-black text-[10px] sm:text-[11px] font-extrabold leading-tight my-0.5">
+                            <p className="text-[#334155] text-[8px] md:text-[10px] font-semibold mb-0.5 md:mb-1 leading-none">Selamat Datang</p>
+                            <h1 className="text-black text-[10px] sm:text-[11px] md:text-[14px] font-extrabold leading-tight my-0.5 md:my-1">
                                 Ada yang Prisil<br />bisa bantu?
                             </h1>
-                            <div className="text-[7.5px] sm:text-[9px] flex items-center text-[#494949] group-hover:text-[#003D35] transition-all leading-none mt-0.5">
+                            <div className="text-[7.5px] sm:text-[9px] md:text-[11px] flex items-center text-[#494949] group-hover:text-[#003D35] transition-all leading-none mt-0.5 md:mt-1">
                                 Chat dengan Prisil <span className="ml-1">→</span>
                             </div>
 
-                            <div className="mt-1.5 flex items-center">
-                                <div className="relative flex items-center justify-center mr-1.5 w-[5px] h-[5px]">
+                            <div className="mt-1.5 md:mt-2 flex items-center">
+                                <div className="relative flex items-center justify-center mr-1.5 w-[5px] md:w-[6px] h-[5px] md:h-[6px]">
                                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0E6800] opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-[3px] w-[3px] bg-[#0E6800]"></span>
+                                    <span className="relative inline-flex rounded-full h-[3px] md:h-[4px] w-[3px] md:w-[4px] bg-[#0E6800]"></span>
                                 </div>
-                                <span className="text-gray-700 text-[8px] sm:text-[10px] font-medium leading-none">Online</span>
+                                <span className="text-gray-700 text-[8px] sm:text-[10px] md:text-[12px] font-medium leading-none">Online</span>
                             </div>
                         </div>
 

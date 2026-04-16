@@ -56,7 +56,7 @@ const Header: React.FC = () => {
         {/* Logo */}
         <div className="flex items-center gap-2 flex-1">
           <a href="/">
-            <img src="/assets/img/logo-pui.png" className="w-[90px] md:w-[110px]" />
+            <img src="/assets/img/logo-pui.png" className="w-[145px] h-[48px]" />
           </a>
         </div>
 

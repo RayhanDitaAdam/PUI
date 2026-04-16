@@ -42,7 +42,7 @@ let Product = function () {
                 <h2 className="text-center text-3xl md:text-5xl font-extrabold text-[#C49A6C] mb-3">
                     Layanan Likuiditas Aset Mewah
                 </h2>
-                <p className="text-center text-gray-400 md:text-gray-300 text-sm md:text-base mb-12 md:mb-16 max-w-2xl mx-auto">
+                <p className="text-center text-gray-400 md:text-gray-300 text-sm md:text-base mb-12 md:mb-16 max-xl mx-auto">
                     Pergadaian Utama Indonesia (PUI) menyediakan layanan gadai komprehensif
                     untuk berbagai aset mewah, mulai <br className="hidden md:block" /> dari jam tangan premium, tas branded,
                     berlian, hingga emas dan perhiasan eksklusif.
@@ -51,7 +51,7 @@ let Product = function () {
                     {products.map((item, i) => (
                         <div
                             key={i}
-                            className={`product-card max-w-[170px] mx-auto md:max-w-none mb-0 md:mb-16 ${item.variant === "rare" ? "product-card-rare" : ""
+                            className={`product-card max-w-[170px] mx-auto md:max-w-none md:w-[15.1875rem] md:h-[25.83256rem] md:rounded-[1.1875rem] md:border-2 md:border-white/10 md:bg-[linear-gradient(96deg,rgba(0,112,90,0.03)_59.29%,rgba(255,255,255,0)_117.42%)] md:shadow-[-20px_32px_43px_0_rgba(0,0,0,0.10)] md:backdrop-blur-[10px] mb-0 md:mb-16 flex flex-col ${item.variant === "rare" ? "product-card-rare" : ""
                                 }`}
                         >
                             <div className="bg-[#0000002d] border-t-[#0000002d] rounded-xl w-full h-28 md:h-44 flex items-center justify-center mb-4 md:mb-5 z-10 relative" style={{
@@ -62,7 +62,7 @@ let Product = function () {
                                     <img
                                         src={item.image}
                                         alt={item.title}
-                                        className={`product-image ${item.image_1 ? "main" : "single"}`}
+                                        className={`product-image ${item.image_1 ? "main" : "single"} ${item.variant === "rare" ? "w-[9.5625rem] h-[14.25rem] aspect-[51/76]" : ""}`}
                                     />
                                     {item.image_1 && (
                                         <img
@@ -73,14 +73,14 @@ let Product = function () {
                                     )}
                                 </div>
                             </div>
-                            <div className="p-1 mt-1 md:p-2 md:mt-2 z-[100] text-left flex flex-col flex-grow relative">
+                            <div className="mx-[0.5rem] p-1 mt-1 md:mx-[1.06rem] md:mt-2 z-[100] text-left flex flex-col flex-grow relative">
                                 <h3 className="text-sm md:text-lg font-semibold mb-1 md:mb-2">
                                     {item.title}
                                 </h3>
-                                <p className="text-[10px] md:text-sm text-gray-400 md:text-gray-300 mb-2 md:mb-3 line-clamp-3 md:line-clamp-none min-h-[45px] md:min-h-[80px]">
+                                <p className="text-[10px] md:text-[0.8125rem] text-gray-400 md:text-white md:font-['Lato'] md:font-medium md:leading-[130%] mb-2 md:mb-3 min-h-[45px] md:h-[6.6875rem] md:self-stretch">
                                     {item.desc}
                                 </p>
-                                <button className="hover-premium-btn mt-auto text-[10px] md:text-sm border-2 border-[#5C5E3D] mb-1 md:mb-2 font-bold text-[#C49A6C] px-2 md:px-4 py-1.5 md:py-2 rounded-lg md:rounded-[15px] bg-[#C49A6C30]">
+                                <button className="hover-premium-btn mt-auto text-[10px] md:text-sm border-2 border-[#5C5E3D] mb-[1.56rem] md:mb-[2rem] font-bold text-[#C49A6C] px-2 md:px-4 py-1.5 md:py-2 rounded-lg md:rounded-[15px] bg-[#C49A6C30]">
                                     Pelajari Selengkapnya
                                 </button>
                             </div>

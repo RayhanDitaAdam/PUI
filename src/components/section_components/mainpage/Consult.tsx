@@ -9,14 +9,14 @@ let Consult = function () {
           <div className="hero-img-wrap flex-shrink-0 w-full md:w-auto flex justify-end items-end relative z-0 md:z-10 pointer-events-none">
             <div className="hero-person-placeholder relative h-[120px] md:h-[320px] overflow-visible">
               <img
-                className="w-full h-auto pointer-events-none scale-[0.65] md:scale-[0.65] origin-bottom translate-x-[5.5rem] -translate-y-2 md:translate-x-0 md:translate-y-4 transition-transform duration-300"
+                className="w-full h-auto pointer-events-none scale-[0.65] md:scale-[0.65] lg:scale-75 lg:w-[25rem] origin-bottom translate-x-[5.5rem] -translate-y-2 md:translate-x-0 md:translate-y-4 transition-transform duration-300"
                 src="/assets/img/Consult.png"
               />
             </div>
           </div>
 
           <div className="mr-8 md:mr-0 lg:mr-0 md:-mb-5 lg:p-5 lg:mt-20 md:p-1 hero-content relative z-[50] md:z-10 -mt-[310px] flex flex-col items-start w-full md:w-[340px] pb-10 md:pb-10 md:bottom-10">
-            <h6 className="text-[20px] lg:text-3xl md:text-[30px] font-bold text-white leading-snug md:leading-tight mb-4 md:mb-[14px] max-w-[190px] md:max-w-full px-2 md:px-0">
+            <h6 className="text-[20px] lg:text-3xl md:text-[30px] font-bold text-white leading-snug md:leading-tight mb-4 md:mb-[14px] max-w-[190px] md:max-w-full md:px-0">
               Punya barang mewah dan ingin dilikuidasi?
             </h6>
             <a className="text-xs lg:text-base md:text-sm text-white/70 mb-8 md:mb-7 leading-relaxed max-w-[260px] md:max-w-[280px]">
@@ -44,14 +44,14 @@ let Consult = function () {
               secara detail dan akurat, memastikan Anda mendapatkan nilai
               terbaik sesuai kondisi dan pasar terkini.
             </p>
-            <div className="card-link mt-auto flex items-center gap-2 text-[#1B4332] font-semibold text-[9px] md:text-xs cursor-pointer animate-link-arrow">
+            <a href="https://wa.me/6282277777911?text=Halo%20PUI,%20saya%20ingin%20booking%20jadwal%20janji%20temu%20ke%20kantor." target="_blank" rel="noopener noreferrer" className="card-link mt-auto flex items-center gap-2 text-[#1B4332] font-semibold text-[9px] md:text-xs cursor-pointer animate-link-arrow">
               Booking Jadwal Janji Temu
               <span className="w-4 h-4 bg-[#1B4332] rounded-full flex items-center justify-center">
                 <svg width="8" height="8" viewBox="0 0 9 9" fill="none">
                   <path d="M2 4.5h5M4.5 2l2.5 2.5L4.5 7" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </span>
-            </div>
+            </a>
           </div>
 
           <div className="card bg-white border border-gray-200 md:border-gray-200 rounded-xl p-4 md:p-7 flex flex-col">
@@ -67,14 +67,14 @@ let Consult = function () {
               menginginkan proses praktis tanpa perlu datang ke kantor.
               Tim kami akan datang dengan prosedur keamanan ketat dan profesionalisme tinggi dalam menangani setiap aset.
             </p>
-            <div className="card-link mt-auto flex items-center gap-2 text-[#1B4332] font-semibold text-[9px] md:text-xs cursor-pointer animate-link-arrow">
+            <a href="https://wa.me/6282277777911?text=Halo%20PUI,%20saya%20ingin%20booking%20layanan%20jemput%20aset%20ke%20lokasi%20saya." target="_blank" rel="noopener noreferrer" className="card-link mt-auto flex items-center gap-2 text-[#1B4332] font-semibold text-[9px] md:text-xs cursor-pointer animate-link-arrow">
               Booking Jadwal Jemput barang
               <span className="w-4 h-4 bg-[#1B4332] rounded-full flex items-center justify-center">
                 <svg width="8" height="8" viewBox="0 0 9 9" fill="none">
                   <path d="M2 4.5h5M4.5 2l2.5 2.5L4.5 7" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </span>
-            </div>
+            </a>
           </div>
         </div>
       </div>

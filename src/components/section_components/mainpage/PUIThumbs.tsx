@@ -10,9 +10,9 @@ let PUIThumbs = function () {
                     </p>
                 </div>
                 <div className="flex justify-center">
-                    <div className="mb-12 md:mb-16 p-2 text-sm font-bold text-[#007F6D] border-2 w-[230px] rounded-lg border-[#007F6D] cursor-pointer hover:bg-[#007F6D] hover:text-white hover:scale-105 transition-all duration-300">
+                    <a href="/artikel" className="mb-12 md:mb-16 p-2 text-sm font-bold text-[#007F6D] border-2 w-[230px] rounded-lg border-[#007F6D] cursor-pointer hover:bg-[#007F6D] hover:text-white hover:scale-105 transition-all duration-300 flex items-center justify-center">
                         Lihat Selengkapnya Tentang PUI
-                    </div>
+                    </a>
                 </div>
                 <div className="flex justify-center -mb-8 md:-mb-16">
                     <img className="w-full md:w-[1200px] h-auto object-contain" src="/assets/img/63959d55c77b0ac1ccf433618f2f6ac32f199cd6.png"/>

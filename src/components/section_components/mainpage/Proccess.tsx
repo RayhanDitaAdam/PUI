@@ -7,9 +7,9 @@ let Proccess = function () {
         backgroundPosition: "top center",
         backgroundSize: "cover"
       }}
-      className="relative process-section py-12 md:py-20 px-6 text-white"
+      className="relative process-section py-12 md:py-28 lg:py-32 px-6 text-white"
     >
-      <div className="max-w-4xl mx-auto mt-20 text-center">
+      <div className="max-w-4xl mx-auto mt-80 md:mt-28 lg:mt-80 text-center">
 
         <p className="text-sm md:text-2xl tracking-[0.18em] mb-2">How it works</p>
         <h2 className="text-3xl md:text-7xl font-bold mb-4 leading-tight">

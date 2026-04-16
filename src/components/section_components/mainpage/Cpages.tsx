@@ -1,8 +1,6 @@
 import React from "react";
-import { HiShieldCheck, HiOutlineDocumentText, HiOutlineLockClosed } from "react-icons/hi";
 
 let Cpages: React.FC = function () {
-  const iconColor = "#C49A6C";
 
   return (
     <>
@@ -22,17 +20,17 @@ let Cpages: React.FC = function () {
               </p>
             </div>
 
-            <div className="flex flex-col md:flex-row justify-center gap-16 md:gap-20 mt-16 md:mt-16">
+            <div className="flex flex-col md:flex-row md:items-center md:gap-[3.4375rem] md:self-stretch justify-center gap-16 mt-16">
               {/* Privacy Item */}
-              <div className="flex flex-row items-start md:items-center gap-6 md:gap-4 w-full md:w-1/3 text-left">
+              <div className="flex flex-row items-start gap-6 md:gap-4 w-full md:w-1/3 text-left">
                 <div className="flex-shrink-0">
-                  <HiShieldCheck style={{ color: iconColor }} className="text-5xl md:text-4xl" />
+                  <img src="/assets/img/icon-privacy.png" alt="Privacy" className="w-[48px] h-[48px] object-contain" />
                 </div>
                 <div>
                   <div className="mb-2 md:mb-1">
-                    <h3 className="font-bold text-lg md:text-sm text-white">Privasi 100%</h3>
+                    <h3 className="font-bold text-lg md:text-xl text-white">Privasi 100%</h3>
                   </div>
-                  <p className="text-sm md:text-xs text-gray-300 leading-relaxed">
+                  <p className="text-sm md:text-base text-gray-300 leading-relaxed">
                     Identitas dan seluruh informasi klien dijaga <br className="hidden md:block" />
                     sepenuhnya dengan sistem keamanan <br className="hidden md:block" />
                     berlapis.
@@ -41,18 +39,18 @@ let Cpages: React.FC = function () {
               </div>
 
               {/* Process Item */}
-              <div className="flex flex-row items-start md:items-start gap-6 md:gap-4 w-full md:w-1/3 text-left">
+              <div className="flex flex-row items-start gap-6 md:gap-4 w-full md:w-1/3 text-left">
                 <div className="flex-shrink-0">
-                  <HiOutlineDocumentText style={{ color: iconColor }} className="text-5xl md:text-4xl" />
+                  <img src="/assets/img/icon-document.png" alt="Process" className="w-[48px] h-[48px] object-contain" />
                 </div>
 
                 <div>
                   <div className="mb-2 md:mb-1">
-                    <h3 className="font-bold text-lg md:text-sm text-white">
+                    <h3 className="font-bold text-lg md:text-xl text-white">
                       Proses Transparan & Terverifikasi
                     </h3>
                   </div>
-                  <p className="text-sm md:text-xs text-gray-300 leading-relaxed">
+                  <p className="text-sm md:text-base text-gray-300 leading-relaxed">
                     Identitas dan seluruh informasi klien dijaga <br className="hidden md:block" />
                     sepenuhnya dengan sistem keamanan <br className="hidden md:block" />
                     berlapis.
@@ -61,21 +59,21 @@ let Cpages: React.FC = function () {
               </div>
 
               {/* Protection Item */}
-              <div className="flex flex-row items-start md:items-start gap-6 md:gap-4 w-full md:w-1/3 text-left">
+              <div className="flex flex-row items-start gap-6 md:gap-4 w-full md:w-1/3 text-left">
                 <div className="flex-shrink-0">
-                  <HiOutlineLockClosed style={{ color: iconColor }} className="text-5xl md:text-4xl" />
+                  <img src="/assets/img/icon-shield.png" alt="Protection" className="w-[48px] h-[48px] object-contain" />
                 </div>
 
                 <div>
                   <div className="mb-2 md:mb-1">
-                    <h3 className="font-bold text-lg md:text-sm text-white">
+                    <h3 className="font-bold text-lg md:text-xl text-white">
                       Perlindungan Aset Maksimal
                     </h3>
                   </div>
-                  <p className="text-sm md:text-xs text-gray-300 leading-relaxed">
+                  <p className="text-sm md:text-base text-gray-300 leading-relaxed">
                     Aset Anda disimpan dalam <br className="hidden md:block" />
                     standar keamanan tinggi untuk memastikan <br className="hidden md:block" />
-                    kondisi tetap aman.
+                    kondisi tetap aman dan bernilai optimal.
                   </p>
                 </div>
               </div>

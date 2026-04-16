@@ -52,7 +52,7 @@ let MainPost = function () {
                             <h3 className="text-sm md:text-base font-bold text-gray-900 mb-2 group-hover:text-[#00A294] transition-colors line-clamp-2">
                                 Koran Dunia: Lorem Ipsum Dolor Sit Amet
                             </h3>
-                            <a href="#" className="flex items-center gap-1.5 text-[#00A294] font-semibold text-xs group/btn">
+                            <a href="/artikel/lorem-ipsum-is-simple" className="flex items-center gap-1.5 text-[#00A294] font-semibold text-xs group/btn">
                                 Read More <i className="fa-solid fa-arrow-right text-[10px] transform group-hover/btn:translate-x-1.5 transition-transform"></i>
                             </a>
                         </div>
@@ -71,7 +71,7 @@ let MainPost = function () {
                             <h3 className="text-sm md:text-base font-bold text-gray-900 mb-2 group-hover:text-[#00A294] transition-colors line-clamp-2">
                                 Amplop Surat: Strategi Komunikasi Efektif
                             </h3>
-                            <a href="#" className="flex items-center gap-1.5 text-[#00A294] font-semibold text-xs group/btn">
+                            <a href="/artikel/lorem-ipsum-is-simple" className="flex items-center gap-1.5 text-[#00A294] font-semibold text-xs group/btn">
                                 Read More <i className="fa-solid fa-arrow-right text-[10px] transform group-hover/btn:translate-x-1.5 transition-transform"></i>
                             </a>
                         </div>
