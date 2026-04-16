@@ -4,12 +4,12 @@ let Consult = function () {
   return (
     <div className="w-full flex justify-center bg-white py-10 md:py-10">
       <div className="pui-wrap mt-32 md:mt-10 overflow-visible">
-        <div className="hero flex flex-col md:flex-row-reverse items-start md:items-end gap-0 md:gap-8 pt-0 pb-0 px-8 md:p-12 md:pb-0 text-left md:text-left isolate">
+        <div className="hero flex flex-col md:flex-row-reverse items-start md:items-end gap-0 md:gap-8 pt-4 pb-0 px-8 md:p-12 md:pb-0 text-left md:text-left isolate">
           <div className="hero-deco hidden md:block"></div>
           <div className="hero-img-wrap flex-shrink-0 w-full md:w-auto flex justify-end items-end relative z-0 md:z-10 pointer-events-none">
             <div className="hero-person-placeholder relative h-[120px] md:h-[320px] overflow-visible">
               <img
-                className="w-full h-auto pointer-events-none scale-75 md:scale-100 origin-bottom translate-x-16 translate-y-10 md:translate-x-10 md:translate-y-16 transition-transform duration-300"
+                className="w-full h-auto pointer-events-none scale-[0.65] md:scale-[0.65] origin-bottom translate-x-[5.5rem] -translate-y-2 md:translate-x-0 md:translate-y-4 transition-transform duration-300"
                 src="/assets/img/Consult.png"
               />
             </div>
@@ -29,10 +29,10 @@ let Consult = function () {
           </div>
         </div>
 
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-14 md:gap-4 -mt-[1.1rem] lg:-mt-[1.1rem] md:mt-[-60px] bg-white p-4 md:p-0 rounded-b-xl md:rounded-b-2xl border-x md:border-none border-b md:border-none border-gray-200">
-          <div className="card w-full relative lg:-ml-7 bg-white border border-gray-200 md:border-gray-200 rounded-xl p-4 md:p-7 flex flex-col">
-            <div className="card-icon-wrap w-9 h-9 md:w-12 md:h-12 bg-gradient-to-r from-[#0E2B25] to-[#0C816B] rounded-lg md:rounded-xl flex items-center justify-center mb-3 md:mb-5">
-              <img style={{ filter: "brightness(0) invert(1)" }} src="/assets/img/81829e2cbb1d51f007adb0e183c5911e296267be.png" width="24px" className="brightness-0 w-[18px] md:w-[24px]" />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 -mt-[1.1rem] lg:-mt-[1.1rem] md:mt-[-60px] bg-white p-4 md:p-0 rounded-b-xl md:rounded-b-2xl border-x md:border-none border-b md:border-none border-gray-200">
+          <div className="card bg-white border border-gray-200 md:border-gray-200 rounded-xl p-4 md:p-7 flex flex-col">
+            <div className="card-icon-wrap w-9 h-9 md:w-12 md:h-12 bg-[#C49A6C] rounded-lg md:rounded-xl flex items-center justify-center mb-3 md:mb-5">
+              <img src="/assets/img/81829e2cbb1d51f007adb0e183c5911e296267be.png" width="24px" className="brightness-0 w-[18px] md:w-[24px]" />
             </div>
             <h3 className="text-sm lg:text-base md:text-lg font-extrabold text-[#111] mb-1.5 md:mb-2.5">
               Bawa langsung aset mewah ke kantor PUI
@@ -54,9 +54,9 @@ let Consult = function () {
             </div>
           </div>
 
-          <div className="card lg:-mr-7 bg-white border border-gray-200 md:border-gray-200 rounded-xl p-4 md:p-7 flex flex-col">
-            <div className="card-icon-wrap w-9 h-9 md:w-12 md:h-12 bg-gradient-to-r from-[#0E2B25] to-[#0C816B] rounded-lg md:rounded-xl flex items-center justify-center mb-3 md:mb-5">
-              <img style={{ filter: "brightness(0) invert(1)" }} src="/assets/img/d8d020e2c5ce16700e20195204cc0d38d6ba12bb.png" width="24px" className="brightness-0 w-[18px] md:w-[24px]" />
+          <div className="card bg-white border border-gray-200 md:border-gray-200 rounded-xl p-4 md:p-7 flex flex-col">
+            <div className="card-icon-wrap w-9 h-9 md:w-12 md:h-12 bg-[#C49A6C] rounded-lg md:rounded-xl flex items-center justify-center mb-3 md:mb-5">
+              <img src="/assets/img/d8d020e2c5ce16700e20195204cc0d38d6ba12bb.png" width="24px" className="brightness-0 w-[18px] md:w-[24px]" />
             </div>
             <h3 className="text-xs md:text-lg font-extrabold text-[#111] mb-1.5 md:mb-2.5 leading-tight">
               Layanan Jemput Barang
