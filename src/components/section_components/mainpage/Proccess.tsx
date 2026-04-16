@@ -1,15 +1,21 @@
 let Proccess = function () {
   return (
     <section
-      style={{
-        background: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/assets/img/9e0218ad745918733fdd97792224e9033eb1d6f6.png')",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "top center",
-        backgroundSize: "cover"
-      }}
-      className="relative process-section py-12 md:py-28 lg:py-32 px-6 text-white"
+      className="relative process-section py-12 md:py-28 lg:py-32 px-6 text-white overflow-hidden"
     >
-      <div className="max-w-4xl mx-auto mt-80 md:mt-28 lg:mt-80 text-center">
+      <img
+        src="/assets/img/main/mobile.png"
+        className="absolute inset-0 w-full h-full object-cover object-center md:hidden"
+        alt="Process Background Mobile"
+      />
+      <img
+        src="/assets/img/main/desktop.png"
+        className="absolute inset-0 w-full h-full object-cover object-center hidden md:block"
+        alt="Process Background Desktop"
+      />
+      <div className="absolute inset-0 z-0"></div>
+
+      <div className="relative max-w-4xl mx-auto mt-80 md:mt-28 lg:mt-80 text-center z-10">
 
         <p className="text-sm md:text-2xl tracking-[0.18em] mb-2">How it works</p>
         <h2 className="text-3xl md:text-7xl font-bold mb-4 leading-tight">

@@ -64,7 +64,7 @@ const Footer: React.FC<FooterProps> = ({
     return (
         <div className="bg-white">
 
-            <footer id="kontak" className={` w-full max-w-[1700px] mx-auto ${bgClass} ${isAttached ? "" : "px-0 md:px-4 pt-12 md:pb-12"} ${className}`}>
+            <footer id="kontak" className={`px-[1rem] md:px-0 w-full max-w-[1700px] mx-auto ${bgClass} ${isAttached ? "" : "pt-12 md:pb-12"} ${className}`}>
 
                 {/* 1. Keamanan Section */}
                 {showSecurity && (
@@ -199,7 +199,7 @@ const Footer: React.FC<FooterProps> = ({
                                     <div>
                                         <span className="font-bold block mb-1">Alamat:</span>
                                         <p className="text-white/70 text-sm leading-relaxed">
-                                            The Darmawangsa Square Lt.2 No.263-264, Jalan Darmawangsa VI, Kebayoran Baru, Jakarta Selatan 12160
+                                            The Darmawangsa Square Lt.2 No.263-264, Jln. Darmawangsa VI, Kebayoran Baru, Jakarta Selatan 12160
                                         </p>
                                     </div>
                                 </div>

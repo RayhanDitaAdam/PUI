@@ -47,7 +47,7 @@ let Product = function () {
                     untuk berbagai aset mewah, mulai <br className="hidden md:block" /> dari jam tangan premium, tas branded,
                     berlian, hingga emas dan perhiasan eksklusif.
                 </p>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-6 md:gap-16">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-[2.5rem] md:gap-16">
                     {products.map((item, i) => (
                         <div
                             key={i}
@@ -58,7 +58,7 @@ let Product = function () {
                                 borderBottomLeftRadius: "0px",
                                 borderBottomRightRadius: "0px"
                             }}>
-                                <div className="image-wrapper transform scale-75 md:scale-100">
+                                <div className="image-wrapper transform scale-[0.85] md:scale-100">
                                     <img
                                         src={item.image}
                                         alt={item.title}
