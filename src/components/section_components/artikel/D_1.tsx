@@ -57,11 +57,11 @@ function D_1() {
     <div className="bg-white max-w-[1700px] mx-auto text-black">
       <Header />
       <div className="pt-[120px] pb-20">
-        <div className="w-full mx-auto bg-white rounded-t-[50px] px-4 py-2 lg:p-14 md:p-10 pb-2 mb-10 text-black gsap-reveal">
+        <div className="w-full mx-auto bg-white rounded-t-[50px] px-0 py-2 lg:p-14 md:p-10 pb-0 mb-10 text-black gsap-reveal">
           <MainPost />
           <Item />
         </div>
-        <Footer showMap={false} showSecurity={false} isAttached={true} className="px-4 md:px-0" />
+        <Footer showMap={true} showSecurity={true} isAttached={false} className="bg-white" />
       </div>
     </div>
   ); 

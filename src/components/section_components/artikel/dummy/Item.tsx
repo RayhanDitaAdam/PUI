@@ -70,7 +70,7 @@ let Item = function () {
     }, [activeCategory]);
 
     return (
-        <div className="px-4 md:px-0"> 
+        <div className="px-2 md:px-0"> 
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 gap-y-4">
                 <h2 className="text-2xl font-bold text-gray-900">Artikel Terbaru</h2>
                 <div className="relative">
