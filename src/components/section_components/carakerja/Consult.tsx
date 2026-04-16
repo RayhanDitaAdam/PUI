@@ -3,15 +3,15 @@ import { FaWhatsapp } from "react-icons/fa";
 let Consult = function () {
   return (
     <div className="w-full flex justify-center bg-white py-10 md:py-10">
-      <div className="pui-wrap mt-32 md:mt-10 overflow-visible">
+      <div className="pui-wrap mt-32 md:mt-10 overflow-visible lg:!max-w-[1200px] xl:!max-w-[1350px]">
         <div className="hero flex flex-col md:flex-row-reverse items-start md:items-end gap-0 md:gap-8 pt-4 pb-0 px-8 md:p-12 md:pb-0 text-left md:text-left isolate">
           <div className="hero-deco hidden md:block"></div>
           <div className="hero-img-wrap flex-shrink-0 w-full md:w-auto flex justify-end items-end relative z-0 md:z-10 pointer-events-none">
             <div className="hero-person-placeholder relative h-[120px] md:h-[320px] overflow-visible">
-                <img
-                  className="w-full h-auto pointer-events-none scale-[0.65] md:scale-[0.65] lg:scale-[0.85] xl:scale-100 origin-bottom translate-x-[5.5rem] -translate-y-2 md:translate-x-0 md:translate-y-4 lg:translate-y-0 transition-transform duration-300"
-                  src="/assets/img/Consult.png"
-                />
+              <img
+                className="w-full h-auto pointer-events-none scale-[0.65] md:scale-[0.65] origin-bottom translate-x-[5.5rem] -translate-y-2 md:translate-x-0 md:translate-y-4 transition-transform duration-300"
+                src="/assets/img/Consult.png"
+              />
             </div>
           </div>
 
