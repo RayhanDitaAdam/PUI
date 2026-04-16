@@ -58,7 +58,7 @@ const Footer: React.FC<FooterProps> = ({
     className = "",
     isAttached = false
 }) => {
-    const bgClass = "bg-white";
+    const bgClass = "bg-transparent";
     const position: [number, number] = [-6.2449, 106.8023];
 
     return (
