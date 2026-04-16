@@ -1,5 +1,4 @@
 import Header from "../../__global/Header";
-import Footer from "../../__global/Footer";
 import { Item } from "./dummy/Item";
 import { MainPost } from "./dummy/MainPost";
 import "./dummy/style/init.css";
@@ -9,13 +8,13 @@ import gsap from 'gsap';
 // @ts-ignore
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
-    FaLocationDot,
-    FaClock,
-    FaPhone,
-    FaWhatsapp,
-    FaFacebookF,
-    FaInstagram,
-    FaLinkedinIn
+  FaLocationDot,
+  FaClock,
+  FaPhone,
+  FaWhatsapp,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn
 } from "react-icons/fa6";
 // @ts-ignore
 import Lenis from 'lenis';
@@ -55,7 +54,7 @@ function D_1() {
     setTimeout(() => {
       ScrollTrigger.refresh();
     }, 100);
-    
+
     return function () {
       document.body.style.backgroundColor = "";
       lenis.destroy();
@@ -169,6 +168,6 @@ function D_1() {
         </div>
       </div>
     </div>
-  ); 
+  );
 }
 export default D_1;
