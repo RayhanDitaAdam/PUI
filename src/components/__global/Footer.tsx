@@ -58,9 +58,7 @@ const Footer: React.FC<FooterProps> = ({
     className = "",
     isAttached = false
 }) => {
-    const location = useLocation();
-    const isHomePage = location.pathname === "/";
-    const bgClass = isHomePage ? "bg-white" : "bg-gray-200";
+    const bgClass = "bg-white";
     const position: [number, number] = [-6.2449, 106.8023];
 
     return (
@@ -187,7 +185,7 @@ const Footer: React.FC<FooterProps> = ({
                 style={{
                     background: "linear-gradient(135deg, rgb(0, 58, 48) 0%, rgb(0, 29, 24) 50%, rgb(0, 5, 4) 100%)",
                 }}
-                className={`w-full md:max-w-7xl 2xl:max-w-[1700px] md:mx-auto text-white pt-16 md:pb-8 px-6 md:px-16 2xl:px-32 ${isAttached ? "" : "rounded-b-none md:rounded-b-[48px] "}`}
+                className={`w-full md:max-w-7xl 2xl:max-w-[1700px] md:mx-auto text-white pt-16 md:pb-8 px-6 md:px-16 2xl:px-32 rounded-b-[24px] md:rounded-b-[48px]`}
             >
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12 md:mb-12">
                     {/* Brand & Address */}
