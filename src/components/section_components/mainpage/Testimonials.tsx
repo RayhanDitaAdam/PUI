@@ -1,74 +1,75 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./style/marquee.css"
 
 const Testimonials = function () {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
   const [startX, setStartX] = useState(0);
-  const handleMouseDown = (e: React.MouseEvent) => {
-    if (!scrollRef.current || !scrollRef.current.firstChild) return;
-    setIsDragging(true);
-    
-    // Capture the current transform position to start drag from there
-    const track = scrollRef.current.firstChild as HTMLDivElement;
-    const style = window.getComputedStyle(track);
-    const matrix = new DOMMatrix(style.transform);
-    const currentX = matrix.e; // m41 is same as e in DOMMatrix
-    
-    setStartX(e.pageX - scrollRef.current.offsetLeft);
-    setTranslateX(currentX);
-    
-    track.style.animationPlayState = "paused";
-  };
-
-  const handleMouseLeave = () => {
-    if (isDragging) {
-      setIsDragging(false);
-      if (scrollRef.current?.firstChild) {
-        (scrollRef.current.firstChild as HTMLDivElement).style.animationPlayState = "running";
-      }
-    }
-  };
-
   const [translateX, setTranslateX] = useState(0);
+  const scrollPosRef = useRef(0);
+
+  useEffect(() => {
+    let animationId: number;
+    const scroll = () => {
+      if (!isDragging && !isPaused && scrollRef.current) {
+        const container = scrollRef.current;
+        const maxScroll = container.scrollWidth / 2;
+        
+        scrollPosRef.current += 0.8; // Scroll speed
+        
+        if (scrollPosRef.current >= maxScroll) {
+          scrollPosRef.current = 0;
+        }
+        
+        container.scrollLeft = scrollPosRef.current;
+      }
+      animationId = requestAnimationFrame(scroll);
+    };
+    
+    animationId = requestAnimationFrame(scroll);
+    return () => cancelAnimationFrame(animationId);
+  }, [isDragging, isPaused]);
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!scrollRef.current) return;
+    setIsDragging(true);
+    setStartX(e.pageX - scrollRef.current.offsetLeft);
+    setTranslateX(scrollRef.current.scrollLeft);
+  };
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!isDragging || !scrollRef.current) return;
     e.preventDefault();
     
     const container = scrollRef.current;
-    const track = container.firstChild as HTMLDivElement;
-    if (!track) return;
-
     const x = e.pageX - container.offsetLeft;
     const walk = (x - startX) * 1.5;
-    let newTranslate = translateX + walk;
+    let newScroll = translateX - walk;
     
-    const singleSetWidth = track.scrollWidth / 2;
+    const maxScroll = container.scrollWidth / 2;
 
-    // Logic Infinite: Teleportation
-    if (newTranslate > 0) {
-        newTranslate = -singleSetWidth;
-        setStartX(e.pageX - container.offsetLeft);
-        setTranslateX(-singleSetWidth);
-    } else if (newTranslate < -singleSetWidth) {
-        newTranslate = 0;
-        setStartX(e.pageX - container.offsetLeft);
-        setTranslateX(0);
+    // Infinite Teleportation Logic
+    if (newScroll < 0) {
+      newScroll = maxScroll + newScroll;
+      setStartX(e.pageX - container.offsetLeft);
+      setTranslateX(newScroll);
+    } else if (newScroll >= maxScroll) {
+      newScroll = newScroll - maxScroll;
+      setStartX(e.pageX - container.offsetLeft);
+      setTranslateX(newScroll);
     }
 
-    track.style.transform = `translateX(${newTranslate}px)`;
-    track.style.animation = "none"; // Stop animation during drag
+    container.scrollLeft = newScroll;
+    scrollPosRef.current = newScroll;
   };
 
-  const handleMouseUp = () => {
-    if (isDragging) {
-      setIsDragging(false);
-      if (scrollRef.current?.firstChild) {
-        (scrollRef.current.firstChild as HTMLDivElement).style.animationPlayState = "running";
-      }
-    }
+  const handleMouseUp = () => setIsDragging(false);
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+    setIsPaused(false);
   };
+  const handleMouseEnter = () => setIsPaused(true);
 
   const reviews = [
     {
@@ -117,6 +118,7 @@ const Testimonials = function () {
         ref={scrollRef}
         onMouseDown={handleMouseDown}
         onMouseLeave={handleMouseLeave}
+        onMouseEnter={handleMouseEnter}
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
         className="testimonial-marquee"

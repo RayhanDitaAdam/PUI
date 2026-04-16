@@ -441,13 +441,7 @@
 .testimonial-track {
     display: flex;
     gap: 40px;
-    animation: marquee-scroll 40s linear infinite;
     width: max-content;
-    will-change: transform;
-}
-
-.testimonial-track:hover {
-    animation-play-state: paused;
 }
 
 /* Product Marquee */
@@ -524,7 +518,7 @@
     transition: width 0.3s ease-in-out;
     margin: 0 4px;
     vertical-align: middle;
-    top: -2px;
+    top: -5px;
 }
 
 .text-switcher-item {
