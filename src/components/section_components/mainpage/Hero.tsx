@@ -26,8 +26,8 @@ let Hero: React.FC = () => {
   }, [index]);
 
   return (
-    <section className="z-10 relative w-full h-auto min-h-[1100px] md:min-h-0 md:h-[720px] overflow-hidden">
-      <div className="relative h-full min-h-[1100px] md:min-h-0 md:h-[720px] rounded-b-[32px] md:rounded-b-[50px] shadow-lg overflow-hidden">
+    <section className="z-10 relative w-full h-auto min-h-[1100px] md:min-h-0 md:h-[720px] 2xl:h-[1200px] overflow-hidden">
+      <div className="relative h-full min-h-[1100px] md:min-h-0 md:h-[720px] 2xl:h-[1200px] rounded-b-[32px] md:rounded-b-[50px] shadow-lg overflow-hidden">
         <img src="/assets/img/hero-bg.png" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0"></div>
         <Header />
@@ -106,8 +106,8 @@ let Hero: React.FC = () => {
         {/* --- DESKTOP LAYOUT (Original behavior) --- */}
         <div className="hidden md:block">
           {/* Hero Title */}
-          <div className="absolute top-[120px] w-full flex justify-center z-20 px-4">
-            <h1 className="text-4xl font-bold leading-snug text-center text-white">
+          <div className="absolute top-[120px] 2xl:top-[160px] w-full flex justify-center z-20 px-4">
+            <h1 className="text-4xl 2xl:text-6xl font-bold leading-snug text-center text-white">
               Dapatkan Solusi Gadai{" "}
               <span className="text-switcher-container">
                 {words.map((word, i) => {
@@ -130,9 +130,9 @@ let Hero: React.FC = () => {
 
           {/* Content Wrapper */}
           <div className="absolute inset-0 z-20 flex justify-center pointer-events-none">
-            <div className="w-full max-w-[1440px] relative pointer-events-none">
+            <div className="w-full max-w-[1440px] 2xl:max-w-full relative pointer-events-none">
               {/* Info Card */}
-              <div className="absolute left-20 top-[300px] z-20 max-w-xs pointer-events-auto">
+              <div className="absolute left-20 2xl:left-32 top-[300px] 2xl:top-[600px] z-20 max-w-xs 2xl:max-w-md pointer-events-auto 2xl:scale-125 origin-left">
                 <h3 className="font-bold mb-2 text-white">
                   Pergadaian Utama Indonesia
                 </h3>
@@ -147,7 +147,7 @@ let Hero: React.FC = () => {
               </div>
 
               {/* Feature Cards Column */}
-              <div className="absolute right-24 top-[260px] z-20 flex flex-col gap-4 pointer-events-auto">
+              <div className="absolute right-24 2xl:right-32 top-[260px] 2xl:top-[450px] z-20 flex flex-col gap-4 pointer-events-auto 2xl:scale-110 origin-right">
                 <div className="animate-floating flex items-center gap-2 bg-[#243F29] border-2 rounded-[10px] border-[#5C5E3D] px-4 py-2 text-xs shadow text-white" style={{ animationDelay: '0s' }}>
                   <img className="w-[60px]" src="/assets/img/logo-ojk.png" />
                   Terdaftar & diawasi OJK
@@ -167,8 +167,8 @@ let Hero: React.FC = () => {
           </div>
 
           {/* Kirim Foto Button */}
-          <div className="absolute bottom-[110px] w-full flex justify-center z-20">
-            <button className="group relative bg-[#D4AA6A] text-black px-8 py-3 rounded-md text-sm font-semibold shadow-xl flex items-center gap-2 animate-pulse-whatsapp hover:scale-105 transition-all duration-300">
+          <div className="absolute bottom-[110px] 2xl:bottom-[300px] w-full flex justify-center z-20">
+            <button className="group relative bg-[#D4AA6A] text-black px-8 py-3 2xl:px-12 2xl:py-5 rounded-md 2xl:rounded-xl text-sm 2xl:text-lg font-semibold shadow-xl flex items-center gap-2 animate-pulse-whatsapp hover:scale-105 transition-all duration-300">
               <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-[#243F29]/80 backdrop-blur-md px-4 py-2 rounded-full flex gap-4 opacity-0 group-hover:opacity-100 group-hover:-top-16 transition-all duration-300 pointer-events-none border border-[#5C5E3D] shadow-2xl z-30">
                 <FaCarSide className="text-[#D4AA6A] text-lg" />
                 <GiHandBag className="text-[#D4AA6A] text-lg" />
