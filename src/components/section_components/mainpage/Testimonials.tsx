@@ -5,24 +5,69 @@ const Testimonials = function () {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-
   const handleMouseDown = (e: React.MouseEvent) => {
-    if (!scrollRef.current) return;
+    if (!scrollRef.current || !scrollRef.current.firstChild) return;
     setIsDragging(true);
+    
+    // Capture the current transform position to start drag from there
+    const track = scrollRef.current.firstChild as HTMLDivElement;
+    const style = window.getComputedStyle(track);
+    const matrix = new DOMMatrix(style.transform);
+    const currentX = matrix.e; // m41 is same as e in DOMMatrix
+    
     setStartX(e.pageX - scrollRef.current.offsetLeft);
-    setScrollLeft(scrollRef.current.scrollLeft);
+    setTranslateX(currentX);
+    
+    track.style.animationPlayState = "paused";
   };
 
-  const handleMouseLeave = () => setIsDragging(false);
-  const handleMouseUp = () => setIsDragging(false);
+  const handleMouseLeave = () => {
+    if (isDragging) {
+      setIsDragging(false);
+      if (scrollRef.current?.firstChild) {
+        (scrollRef.current.firstChild as HTMLDivElement).style.animationPlayState = "running";
+      }
+    }
+  };
+
+  const [translateX, setTranslateX] = useState(0);
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!isDragging || !scrollRef.current) return;
     e.preventDefault();
-    const x = e.pageX - scrollRef.current.offsetLeft;
-    const walk = (x - startX) * 2;
-    scrollRef.current.scrollLeft = scrollLeft - walk;
+    
+    const container = scrollRef.current;
+    const track = container.firstChild as HTMLDivElement;
+    if (!track) return;
+
+    const x = e.pageX - container.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    let newTranslate = translateX + walk;
+    
+    const singleSetWidth = track.scrollWidth / 2;
+
+    // Logic Infinite: Teleportation
+    if (newTranslate > 0) {
+        newTranslate = -singleSetWidth;
+        setStartX(e.pageX - container.offsetLeft);
+        setTranslateX(-singleSetWidth);
+    } else if (newTranslate < -singleSetWidth) {
+        newTranslate = 0;
+        setStartX(e.pageX - container.offsetLeft);
+        setTranslateX(0);
+    }
+
+    track.style.transform = `translateX(${newTranslate}px)`;
+    track.style.animation = "none"; // Stop animation during drag
+  };
+
+  const handleMouseUp = () => {
+    if (isDragging) {
+      setIsDragging(false);
+      if (scrollRef.current?.firstChild) {
+        (scrollRef.current.firstChild as HTMLDivElement).style.animationPlayState = "running";
+      }
+    }
   };
 
   const reviews = [
@@ -45,7 +90,13 @@ const Testimonials = function () {
       isDark: true
     }
   ];
-  const duplicatedReviews = [...reviews, ...reviews, ...reviews, ...reviews];
+  const duplicatedReviews = [...reviews, ...reviews];
+
+  React.useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollLeft = 0;
+    }
+  }, []);
 
   return (
     <section className="testimonial-section py-16 overflow-hidden">
@@ -57,7 +108,7 @@ const Testimonials = function () {
           <span className="text-yellow-500 text-xl">★</span>
           <span className="font-bold text-base mt-[1px]">5/5 Trust Rating (87+ Review)</span>
         </div>
-        <h2 className="text-3xl font-extrabold text-[#4D4D4D] mb-10 leading-tight">
+        <h2 className="text-2xl md:text-3xl font-extrabold text-[#4D4D4D] mb-10 leading-tight">
           Apa kata pelanggan yang telah<br />menggunakan layanan PUI
         </h2>
       </div>
@@ -70,11 +121,11 @@ const Testimonials = function () {
         onMouseMove={handleMouseMove}
         className="testimonial-marquee"
       >
-        <div className="testimonial-track flex gap-6 px-4">
+        <div className="testimonial-track flex gap-10 px-4">
           {duplicatedReviews.map((review, i) => (
             <div
               key={i}
-              className={`review-card w-[350px] md:w-[400px] shrink-0 p-6 rounded-2xl border border-gray-100 shadow-sm ${review.isDark ? 'bg-gray-50' : 'bg-white'}`}
+              className={`review-card w-[350px] md:w-[400px] shrink-0 p-6 rounded-2xl border border-gray-100 shadow-[-4px_6px_18px_rgba(0,0,0,0.06)] bg-white`}
             >
               <div className="flex items-center mb-3">
                 <div>
