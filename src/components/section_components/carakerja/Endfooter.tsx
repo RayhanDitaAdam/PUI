@@ -1,6 +1,6 @@
 let Endfooter = function () {
     return (
-        <footer className="w-full mx-auto px-4 pt-12 pb-4 bg-gray-200">
+        <footer className="w-full mx-auto px-4 pt-12 pb-4 bg-white">
             <div
                 style={{
                     borderTopLeftRadius: "48px",

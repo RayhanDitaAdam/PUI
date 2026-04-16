@@ -58,7 +58,7 @@ function CaraKerja() {
   }, []);
 
   return (
-    <div className='bg-gray-200'>
+    <div className='bg-white'>
       <Hero />
       <div className="gsap-reveal">
         <ItemContext />
