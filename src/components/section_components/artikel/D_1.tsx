@@ -24,7 +24,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function D_1() {
   useEffect(function () {
-    document.body.style.backgroundColor = "#000";
+    document.body.style.backgroundColor = "white";
 
     const lenis = new Lenis({
       duration: 1.8,

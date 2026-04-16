@@ -1,5 +1,4 @@
 import Header from "../../__global/Header";
-
 import { Item } from "./dummy_2/Item";
 import { MainPost } from "./dummy_2/MainPost";
 import "./dummy/style/init.css";
@@ -56,7 +55,7 @@ function D_2() {
     setTimeout(() => {
       ScrollTrigger.refresh();
     }, 100);
-    
+
     return function () {
       document.body.style.backgroundColor = "";
       lenis.destroy();
@@ -170,6 +169,6 @@ function D_2() {
         </div>
       </div>
     </div>
-  ); 
+  );
 }
 export default D_2;
