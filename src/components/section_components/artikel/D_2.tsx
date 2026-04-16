@@ -61,7 +61,7 @@ function D_2() {
           <MainPost />
           <Item />
         </div>
-        <Footer showMap={false} showSecurity={false} isAttached={true} />
+        <Footer showMap={false} showSecurity={false} isAttached={true} className="px-4 md:px-0" />
       </div>
     </div>
   ); 
