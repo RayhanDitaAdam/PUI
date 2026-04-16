@@ -57,7 +57,7 @@ function D_2() {
     <div className="bg-white text-black">
       <Header />
       <div className="pt-[120px] pb-20">
-        <div className="w-full mx-auto bg-white rounded-t-[50px] px-4 py-2 lg:p-14 md:p-10 pb-4 mb-10 text-black gsap-reveal">
+        <div className="w-full mx-auto bg-white rounded-t-[50px] px-4 py-2 lg:p-14 md:p-10 pb-2 mb-10 text-black gsap-reveal">
           <MainPost />
           <Item />
         </div>
