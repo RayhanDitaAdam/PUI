@@ -5,11 +5,7 @@ let Hero: React.FC = () => {
   return (
     <section className="relative w-full md:h-[520px] h-[450px]">
       <div 
-        className="relative md:h-[620px] h-full shadow-lg overflow-hidden" 
-        style={{
-          borderBottomLeftRadius: "50px",
-          borderBottomRightRadius: "50px"
-        }}
+        className="relative md:h-[620px] h-full shadow-lg overflow-hidden rounded-b-[32px] md:rounded-b-[50px]"
       >
         <img
           src="/assets/img/carakerja/467d94ec24d57b6909f5a3b71d6c34242dbff12c.png"

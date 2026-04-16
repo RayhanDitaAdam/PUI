@@ -27,7 +27,7 @@ let Hero: React.FC = () => {
 
   return (
     <section className="z-10 relative w-full h-auto min-h-[1100px] md:min-h-0 md:h-[720px] overflow-hidden">
-      <div className="relative h-full min-h-[1100px] md:min-h-0 md:h-[720px] rounded-b-[50px] shadow-lg overflow-hidden">
+      <div className="relative h-full min-h-[1100px] md:min-h-0 md:h-[720px] rounded-b-[32px] md:rounded-b-[50px] shadow-lg overflow-hidden">
         <img src="/assets/img/hero-bg.png" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0"></div>
         <Header />

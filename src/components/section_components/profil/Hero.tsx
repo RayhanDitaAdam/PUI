@@ -4,7 +4,7 @@ import Header from "../../__global/Header";
 let Hero: React.FC = () => {
   return (
     <section className=" relative w-full h-[750px] md:h-[520px]">
-      <div className="relative h-[750px] md:h-[620px] shadow-lg overflow-hidden">
+      <div className="relative h-[750px] md:h-[620px] rounded-b-[32px] md:rounded-b-[50px] shadow-lg overflow-hidden">
         <img
           src="/assets/img/profil/hero-bg.png"
           className="absolute inset-0 w-full h-full object-cover z-0"

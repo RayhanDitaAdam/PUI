@@ -29,7 +29,7 @@ let Consult = function () {
           </div>
         </div>
 
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-14 md:gap-4 -mt-[1.1rem] lg:-mt-[1.1rem] md:mt-[-60px] bg-white p-4 md:p-0 rounded-b-2xl border-x md:border-none border-b md:border-none border-gray-200">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-14 md:gap-4 -mt-[1.1rem] lg:-mt-[1.1rem] md:mt-[-60px] bg-white p-4 md:p-0 rounded-b-xl md:rounded-b-2xl border-x md:border-none border-b md:border-none border-gray-200">
           <div className="card w-full relative lg:-ml-7 bg-white border border-gray-200 md:border-gray-200 rounded-xl p-4 md:p-7 flex flex-col">
             <div className="card-icon-wrap w-9 h-9 md:w-12 md:h-12 bg-gradient-to-r from-[#0E2B25] to-[#0C816B] rounded-lg md:rounded-xl flex items-center justify-center mb-3 md:mb-5">
               <img style={{ filter: "brightness(0) invert(1)" }} src="/assets/img/81829e2cbb1d51f007adb0e183c5911e296267be.png" width="24px" className="brightness-0 w-[18px] md:w-[24px]" />
