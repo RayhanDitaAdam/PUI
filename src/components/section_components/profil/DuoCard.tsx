@@ -5,7 +5,7 @@ let DuoCard = function () {
                 <div className="about-content w-full flex justify-center items-center md:mb-7">
                     <div className="about-card">
                         <h2>Tentang Perusahaan</h2>
-                        <div className="w-[300px] p-0.5 -mt-5 mb-5 bg-white"></div>
+                        <div className="w-[300px] h-[3px] mt-2 mb-6 bg-white"></div>
                         <div className="feature-list text-white">
                             <p className="mb-2">
                                 PT Pergadaian Utama Indonesia (PUI) merupakan perusahaan pergadaian nasional yang menyediakan solusi pendanaan cepat dengan sistem gadai, khususnya untuk barang bernilai tinggi atau barang mewah.
