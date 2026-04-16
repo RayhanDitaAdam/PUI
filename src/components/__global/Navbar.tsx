@@ -27,12 +27,14 @@ let Navbar: React.FC = function () {
     }
   }, []);
 
+  const linkClassName = "relative hover:text-white transition-colors duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[1.5px] after:bottom-[-4px] after:left-0 after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left";
+
   return (
     <div className="flex gap-10 text-sm text-gray-300">
-      <a href="/profil-perusahaan">Profil Perusahaan</a>
-      <a href="/#produk" onClick={(e) => auto_scroll(e, "#produk")}>Produk</a>
-      <a href="/cara-kerja">Cara Kerja</a>
-      <a href="/artikel">Artikel</a>
+      <a href="/profil-perusahaan" className={linkClassName}>Profil Perusahaan</a>
+      <a href="/#produk" onClick={(e) => auto_scroll(e, "#produk")} className={linkClassName}>Produk</a>
+      <a href="/cara-kerja" className={linkClassName}>Cara Kerja</a>
+      <a href="/artikel" className={linkClassName}>Artikel</a>
     </div>
   );
 };

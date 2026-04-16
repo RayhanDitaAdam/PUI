@@ -645,3 +645,21 @@ html.lenis body {
 .animate-floating {
     animation: floating 3s ease-in-out infinite;
 }
+
+@keyframes shine-text {
+    0% {
+        background-position: 200% center;
+    }
+    100% {
+        background-position: -200% center;
+    }
+}
+
+.animate-shine-text {
+    background: linear-gradient(120deg, #ffffff 40%, #c8a96e 50%, #ffffff 60%);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shine-text 3s linear infinite;
+}
