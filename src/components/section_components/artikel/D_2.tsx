@@ -61,9 +61,7 @@ function D_2() {
           <MainPost />
           <Item />
         </div>
-        <div className="w-full max-w-7xl mx-auto">
-          <Footer showMap={false} showSecurity={false} isAttached={true} />
-        </div>
+        <Footer showMap={false} showSecurity={false} isAttached={true} />
       </div>
     </div>
   ); 
