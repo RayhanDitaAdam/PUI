@@ -58,11 +58,13 @@ const Footer: React.FC<FooterProps> = ({
     className = "",
     isAttached = false
 }) => {
-    const bgClass = "bg-transparent";
+    const bgClass = "bg-white";
     const position: [number, number] = [-6.2449, 106.8023];
 
     return (
-        <footer id="kontak" className={`w-full max-w-[1700px] mx-auto ${bgClass} ${isAttached ? "" : "px-0 md:px-4 pt-12 md:pb-12"} ${className}`}>
+        <div className="bg-white">   
+
+        <footer id="kontak" className={` w-full max-w-[1700px] mx-auto ${bgClass} ${isAttached ? "" : "px-0 md:px-4 pt-12 md:pb-12"} ${className}`}>
             
             {/* 1. Keamanan Section */}
             {showSecurity && (
@@ -276,6 +278,7 @@ const Footer: React.FC<FooterProps> = ({
                 </div>
             </div>
         </footer>
+        </div>
     );
 };
 
