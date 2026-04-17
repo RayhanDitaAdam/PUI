@@ -41,12 +41,31 @@ const FloatingWA: React.FC = () => {
     }, [isHiddenPath]);
 
     useEffect(() => {
-        if (showPopup && !isMinimized && popupRef.current) {
+        if (!popupRef.current) return;
+
+        if (showPopup && !isMinimized) {
+            // Show popup card
             gsap.killTweensOf(popupRef.current);
-            gsap.fromTo(popupRef.current,
-                { opacity: 0, scale: 0.9, y: 30, force3D: true },
-                { opacity: 1, scale: 1, y: 0, duration: 0.8, ease: "power3.out", force3D: true }
-            );
+            gsap.to(popupRef.current, {
+                opacity: 1,
+                scale: 1,
+                y: 0,
+                duration: 0.8,
+                ease: "power3.out",
+                force3D: true,
+                pointerEvents: 'auto'
+            });
+        } else {
+            // Hide popup card
+            gsap.to(popupRef.current, {
+                opacity: 0,
+                scale: 0.9,
+                y: 20,
+                duration: 0.4,
+                ease: "power2.in",
+                force3D: true,
+                pointerEvents: 'none'
+            });
         }
     }, [showPopup, isMinimized]);
 
@@ -121,7 +140,7 @@ const FloatingWA: React.FC = () => {
                 </a>
             </div>
 
-            {isMinimized && (
+            {showPopup && isMinimized && (
                 <div className="fixed bottom-6 right-6 z-[100] pointer-events-auto">
                     <button
                         onClick={handleOpen}
