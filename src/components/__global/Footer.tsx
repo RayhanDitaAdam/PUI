@@ -164,18 +164,18 @@ const Footer: React.FC<FooterProps> = ({
 
                                 {/* Contact Info */}
                                 <div className="space-y-2 md:space-y-3">
-                                    <div className="flex gap-2.5 md:gap-3 items-center">
+                                    <a href="tel:02172787020" className="flex gap-2.5 md:gap-3 items-center hover:opacity-80 transition-opacity cursor-pointer">
                                         <FaPhone className="text-[#C49A6C] text-sm md:text-[18px]" />
                                         <p className="text-sm md:text-lg text-[#003D35] font-bold">
                                             021-7278-7020
                                         </p>
-                                    </div>
-                                    <div className="flex gap-2.5 md:gap-3 items-center">
+                                    </a>
+                                    <a href="https://wa.me/6282277777911" target="_blank" rel="noopener noreferrer" className="flex gap-2.5 md:gap-3 items-center hover:opacity-80 transition-opacity cursor-pointer">
                                         <FaWhatsapp className="text-[#C49A6C] text-[16px] md:text-[20px]" />
                                         <p className="text-sm md:text-lg text-[#003D35] font-bold">
                                             0822 77777 911
                                         </p>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -236,14 +236,14 @@ const Footer: React.FC<FooterProps> = ({
                         <div className="md:mt-16">
                             <h3 className="font-semibold mb-4 text-lg md:text-base">Kontak</h3>
                             <div className="space-y-3">
-                                <div className="flex items-center gap-4 border border-white/30 px-4 py-4 rounded-xl hover:bg-white/5 transition-all cursor-pointer">
+                                <a href="tel:02172787020" className="flex items-center gap-4 border border-white/30 px-4 py-4 rounded-xl hover:bg-white/5 transition-all cursor-pointer">
                                     <FaPhone className="text-xl shrink-0" />
                                     <span className="text-sm font-medium">Telepon:<br />021-7278-7020</span>
-                                </div>
-                                <div className="flex items-center gap-4 border border-white/30 px-4 py-4 rounded-xl hover:bg-white/5 transition-all cursor-pointer">
+                                </a>
+                                <a href="https://wa.me/6282277777911" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 border border-white/30 px-4 py-4 rounded-xl hover:bg-white/5 transition-all cursor-pointer">
                                     <FaWhatsapp className="text-xl shrink-0" />
                                     <span className="text-sm font-medium">WhatsApp:<br />0822 77777 911</span>
-                                </div>
+                                </a>
                             </div>
 
                             <div className="flex gap-4 mt-8">

@@ -124,14 +124,14 @@ function D_1() {
               <div className="md:mt-16">
                 <h3 className="font-semibold mb-4 text-lg md:text-base">Kontak</h3>
                 <div className="space-y-3">
-                  <div className="flex items-center gap-4 border border-white/30 px-4 py-4 rounded-xl hover:bg-white/5 transition-all cursor-pointer">
+                  <a href="tel:02172787020" className="flex items-center gap-4 border border-white/30 px-4 py-4 rounded-xl hover:bg-white/5 transition-all cursor-pointer">
                     <FaPhone className="text-xl shrink-0" />
                     <span className="text-sm font-medium">Telepon:<br />021-7278-7020</span>
-                  </div>
-                  <div className="flex items-center gap-4 border border-white/30 px-4 py-4 rounded-xl hover:bg-white/5 transition-all cursor-pointer">
+                  </a>
+                  <a href="https://wa.me/6282277777911" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 border border-white/30 px-4 py-4 rounded-xl hover:bg-white/5 transition-all cursor-pointer">
                     <FaWhatsapp className="text-xl shrink-0" />
                     <span className="text-sm font-medium">WhatsApp:<br />0822 77777 911</span>
-                  </div>
+                  </a>
                 </div>
 
                 <div className="flex gap-4 mt-8">

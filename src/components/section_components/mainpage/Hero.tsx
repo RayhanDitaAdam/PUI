@@ -57,7 +57,7 @@ let Hero: React.FC = () => {
 
           {/* Kirim Foto Button */}
           <div className="mt-14 w-full flex justify-center">
-            <button className="group relative bg-[#D4AA6A] text-black w-[85%] py-4 rounded-2xl text-base font-bold shadow-xl flex items-center justify-center gap-3 animate-pulse-whatsapp hover:scale-105 transition-all duration-300">
+            <a href="https://wa.me/6282277777911" target="_blank" rel="noopener noreferrer" className="group relative bg-[#D4AA6A] text-black w-[85%] py-4 rounded-2xl text-base font-bold shadow-xl flex items-center justify-center gap-3 animate-pulse-whatsapp hover:scale-105 transition-all duration-300 cursor-pointer">
               <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-[#243F29]/80 backdrop-blur-md px-4 py-2 rounded-full flex gap-4 opacity-0 group-hover:opacity-100 group-hover:-top-16 transition-all duration-300 pointer-events-none border border-[#5C5E3D] shadow-2xl z-30">
                 <FaCarSide className="text-[#D4AA6A] text-lg" />
                 <GiHandBag className="text-[#D4AA6A] text-lg" />
@@ -66,7 +66,7 @@ let Hero: React.FC = () => {
               </div>
               <FaWhatsapp className="relative z-10 text-xl" />
               <span className="relative z-10">Kirim Foto Aset Anda</span>
-            </button>
+            </a>
           </div>
 
           {/* Feature Cards Grid (2 top, 1 bottom) */}
@@ -166,7 +166,7 @@ let Hero: React.FC = () => {
 
           {/* Kirim Foto Button */}
           <div className="absolute bottom-[110px] w-full flex justify-center z-20">
-            <button className="group relative bg-[#D4AA6A] text-black px-8 py-3 rounded-md text-sm font-semibold shadow-xl flex items-center gap-2 animate-pulse-whatsapp hover:scale-105 transition-all duration-300">
+            <a href="https://wa.me/6282277777911" target="_blank" rel="noopener noreferrer" className="group relative bg-[#D4AA6A] text-black px-8 py-3 rounded-md text-sm font-semibold shadow-xl flex items-center gap-2 animate-pulse-whatsapp hover:scale-105 transition-all duration-300 cursor-pointer">
               <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-[#243F29]/80 backdrop-blur-md px-4 py-2 rounded-full flex gap-4 opacity-0 group-hover:opacity-100 group-hover:-top-16 transition-all duration-300 pointer-events-none border border-[#5C5E3D] shadow-2xl z-30">
                 <FaCarSide className="text-[#D4AA6A] text-lg" />
                 <GiHandBag className="text-[#D4AA6A] text-lg" />
@@ -175,7 +175,7 @@ let Hero: React.FC = () => {
               </div>
               <FaWhatsapp className="relative z-10 text-xl" />
               <span className="relative z-10">Kirim Foto Aset Anda</span>
-            </button>
+            </a>
           </div>
         </div>
       </div>

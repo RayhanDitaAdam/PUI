@@ -128,24 +128,22 @@ let Endfooter = function () {
                             Kontak
                         </h3>
                         <div className="space-y-1">
-                            <div className="flex items-center gap-3 
-                                border-2 border-white px-4 py-3 rounded-lg">
+                            <a href="tel:02172787020" className="flex items-center gap-3 border-2 border-white px-4 py-3 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
                                 <i className="fa-solid fa-phone"></i>
                                 <span className="text-sm">
                                     Telepon:
                                     <br />
                                     021-7278-7020
                                 </span>
-                            </div>
-                            <div className="flex items-center gap-3 
-                                border-2 border-white px-4 py-3 rounded-lg">
+                            </a>
+                            <a href="https://wa.me/6282277777911" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 border-2 border-white px-4 py-3 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
                                 <i className="fa-brands fa-whatsapp"></i>
                                 <span className="text-sm">
                                     WhatsApp:
                                     <br />
                                     0822 77777 911
                                 </span>
-                            </div>
+                            </a>
                         </div>
                         <div className="flex gap-4 mt-6">
                             <a href="https://www.facebook.com/profile.php?id=61585918772400" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center cursor-pointer">
