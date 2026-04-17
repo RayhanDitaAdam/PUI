@@ -82,11 +82,9 @@ const Footer: React.FC<FooterProps> = ({
                         </div>
                         <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 px-6">
                             <div className="flex items-center gap-4 bg-white/10 backdrop-blur-md px-6 py-4 rounded-xl w-full max-w-[340px]">
-                                <img width="70" alt="OJK" src="/assets/img/logo-ojk.png" />
                                 <span className="text-sm font-medium">Terdaftar &amp; diawasi OJK</span>
                             </div>
                             <div className="flex items-center gap-4 bg-white/10 backdrop-blur-md px-6 py-4 rounded-xl w-full max-w-[340px]">
-                                <img width="70" alt="PPGI" src="/assets/img/d8a28cc7d63c61e6d01f7699200f9f7a096d9c27.png" />
                                 <span className="text-sm font-medium">Anggota Resmi PPGI</span>
                             </div>
                         </div>
@@ -263,11 +261,9 @@ const Footer: React.FC<FooterProps> = ({
                     {/* Regulation Logos */}
                     <div className="flex flex-row md:flex-row items-stretch justify-center md:justify-start gap-4 md:gap-6 md:mb-[3rem] border-t border-white/10 pt-[2.5rem]">
                         <div className="flex flex-col md:flex-row items-start md:items-center gap-[0.5rem] md:gap-[1rem] p-[0.75rem] bg-white/5 rounded-xl w-auto">
-                            <img className="w-[3.125rem] h-auto" src="/assets/img/logo-ojk.png" alt="OJK" />
                             <span className="text-[0.75rem] font-medium text-white text-left">Terdaftar & diawasi OJK</span>
                         </div>
                         <div className="flex flex-col md:flex-row items-start md:items-center gap-[0.5rem] md:gap-[1rem] p-[0.75rem] bg-white/5 rounded-xl w-auto">
-                            <img className="w-[4.375rem] h-auto" src="/assets/img/d8a28cc7d63c61e6d01f7699200f9f7a096d9c27.png" alt="PPGI" />
                             <span className="text-[0.75rem] font-medium text-white text-left">Anggota Resmi PPGI</span>
                         </div>
                     </div>
