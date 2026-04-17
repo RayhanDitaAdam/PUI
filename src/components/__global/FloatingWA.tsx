@@ -15,11 +15,29 @@ const FloatingWA: React.FC = () => {
     useEffect(() => {
         if (isHiddenPath) return;
 
-        const timer = setTimeout(() => {
-            setShowPopup(true);
-        }, 500);
+        const handleScroll = () => {
+            const isMobile = window.innerWidth < 768;
+            if (isMobile && window.scrollY > 800) {
+                setShowPopup(true);
+            }
+        };
 
-        return () => clearTimeout(timer);
+        // Desktop behavior: show after 500ms
+        let timer: any;
+        if (window.innerWidth >= 768) {
+            timer = setTimeout(() => {
+                setShowPopup(true);
+            }, 500);
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        // Initial check in case they are already scrolled
+        handleScroll();
+
+        return () => {
+            if (timer) clearTimeout(timer);
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, [isHiddenPath]);
 
     useEffect(() => {
