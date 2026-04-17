@@ -45,7 +45,16 @@
   opacity: 0.9;
 }
 
+.product-card-rare img {
+  width: 95px;
+  top: -15px !important;
+}
 
+@media (min-width: 768px) {
+  .product-card-rare img {
+    width: 130px;
+  }
+}
 
 .hover-premium-btn {
   position: relative;

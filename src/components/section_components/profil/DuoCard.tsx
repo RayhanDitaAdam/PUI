@@ -2,8 +2,8 @@ let DuoCard = function () {
     return (
         <section className="max-w-7xl mx-auto">
             <div className="hidden md:flex about-section mt-44 mx-auto relative justify-center items-center px-4">
-                <div className="about-content w-full flex justify-center items-center md:mb-7">
-                    <div className="about-card">
+                <div className="about-content w-full flex justify-center items-center md:mb-7 relative">
+                    <div className="about-card absolute left-0 lg:left-[-2rem] xl:left-[2rem] z-10 !w-[39.4375rem] !h-[26.1875rem]">
                         <h2>Tentang Perusahaan</h2>
                         <div className="w-[300px] h-[3px] mt-2 mb-6 bg-white"></div>
                         <div className="feature-list text-white">
@@ -23,7 +23,7 @@ let DuoCard = function () {
                             </p>
                         </div>
                     </div>
-                    <div className="about-image-placeholder -ml-32 lg:-ml-28" style={{
+                    <div className="about-image-placeholder ml-auto" style={{
                         backgroundImage: "url('/assets/img/profil/5e6c8a11855b39c3ee0f9b523dec390495c03544.png')"
                     }}></div>
                 </div>

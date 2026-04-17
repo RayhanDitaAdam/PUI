@@ -54,11 +54,11 @@ let Product = function () {
                             className={`product-card max-w-[170px] mx-auto md:max-w-none md:w-[15.1875rem] md:h-[25.83256rem] md:rounded-[1.1875rem] md:border-2 md:border-white/10 md:bg-[linear-gradient(96deg,rgba(0,112,90,0.03)_59.29%,rgba(255,255,255,0)_117.42%)] md:shadow-[-20px_32px_43px_0_rgba(0,0,0,0.10)] md:backdrop-blur-[10px] mb-0 md:mb-16 flex flex-col ${item.variant === "rare" ? "product-card-rare" : ""
                                 }`}
                         >
-                            <div className="bg-[#0000002d] border-t-[#0000002d] rounded-xl w-full h-28 md:h-44 flex items-center justify-center mb-4 md:mb-5 z-10 relative" style={{
+                            <div className="bg-[#0000002d] border-t-[#0000002d] rounded-xl w-full h-36 md:h-44 flex items-center justify-center mb-4 md:mb-5 z-10 relative" style={{
                                 borderBottomLeftRadius: "0px",
                                 borderBottomRightRadius: "0px"
                             }}>
-                                <div className="image-wrapper transform scale-[0.85] md:scale-100">
+                                <div className={`image-wrapper transform md:scale-100 ${item.image_1 ? "scale-[0.85]" : "scale-[1.1]"}`}>
                                     <img
                                         src={item.image}
                                         alt={item.title}
