@@ -16,25 +16,18 @@ const FloatingWA: React.FC = () => {
 
         const handleScroll = () => {
             const isMobile = window.innerWidth < 768;
-            if (isMobile && window.scrollY > 800) {
+            const threshold = isMobile ? 400 : 200;
+            
+            if (window.scrollY > threshold) {
                 setShowPopup(true);
             }
         };
 
-        // Desktop behavior: show after 500ms
-        let timer: any;
-        if (window.innerWidth >= 768) {
-            timer = setTimeout(() => {
-                setShowPopup(true);
-            }, 500);
-        }
-
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
         // Initial check in case they are already scrolled
         handleScroll();
 
         return () => {
-            if (timer) clearTimeout(timer);
             window.removeEventListener('scroll', handleScroll);
         };
     }, [isHiddenPath]);

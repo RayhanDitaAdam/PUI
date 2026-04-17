@@ -23,7 +23,7 @@ export const initScrollAnimations = () => {
         ease: 'power3.out',
         scrollTrigger: {
           trigger: elem,
-          start: 'top 85%',
+          start: 'top 90%',
           toggleActions: 'play none none none',
         },
       }
@@ -49,7 +49,7 @@ export const initScrollAnimations = () => {
           ease: 'power2.out',
           scrollTrigger: {
             trigger: grid,
-            start: 'top 80%',
+            start: 'top 90%',
           },
         }
       );
