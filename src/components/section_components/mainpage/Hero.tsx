@@ -72,23 +72,22 @@ let Hero: React.FC = () => {
           {/* Feature Cards Grid (2 top, 1 bottom) */}
           <div className="mt-16 w-full flex flex-col gap-4 items-center">
             <div className="grid grid-cols-2 gap-4 w-full">
-              <div className="animate-floating flex items-center justify-center gap-2 bg-[#243F29] border-2 rounded-[10px] border-[#5C5E3D] px-3 py-2 text-[10px] shadow text-white" style={{ animationDelay: '0.8s' }}>
+              <div className="animate-floating flex items-center justify-center gap-2 bg-[#003D35] border-2 rounded-[10px] border-[#5C5E3D] px-3 py-2 text-[10px] shadow text-white" style={{ animationDelay: '0.8s' }}>
                 <img className="w-[20px]" src="/assets/img/icon-clock.png" />
                 Pencairan Dana Cepat
               </div>
-              <div className="animate-floating flex items-center justify-center gap-2 bg-[#243F29] border-2 rounded-[10px] border-[#5C5E3D] px-3 py-2 text-[10px] shadow text-white" style={{ animationDelay: '0.4s' }}>
+              <div className="animate-floating flex items-center justify-center gap-2 bg-[#003D35] border-2 rounded-[10px] border-[#5C5E3D] px-3 py-2 text-[10px] shadow text-white" style={{ animationDelay: '0.4s' }}>
                 <img className="w-[20px]" src="/assets/img/icon-chart.png" />
                 Valuasi Aset Tinggi
               </div>
             </div>
-            <div className="animate-floating flex items-center gap-2 bg-[#243F29] border-2 rounded-[10px] border-[#5C5E3D] px-4 py-2 text-[10px] shadow text-white" style={{ animationDelay: '0s' }}>
-              <img className="w-[40px]" src="/assets/img/logo-ojk.png" />
+            <div className="animate-floating flex items-center gap-2 bg-[#003D35] border-2 rounded-[10px] border-[#5C5E3D] px-4 py-2 text-xs shadow text-white" style={{ animationDelay: '0s' }}>
               Terdaftar & diawasi OJK
             </div>
           </div>
 
           {/* PUI Info Card */}
-          <div className="mt-20 text-center flex flex-col items-center max-w-[90%] sm:max-w-sm bg-white/5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1),inset_0_1px_0_0_rgba(255,255,255,0.2)] backdrop-blur-[8px] rounded-[24px] p-6 sm:p-8">
+          <div className="mt-20 text-center flex flex-col items-center max-w-[90%] sm:max-w-sm bg-black/80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1),inset_0_1px_0_0_rgba(255,255,255,0.2)] backdrop-blur-[8px] rounded-[24px] p-6 sm:p-8">
             <h3 className="font-bold mb-3 animate-shine-text text-xl">
               Pergadaian Utama Indonesia
             </h3>
@@ -132,7 +131,7 @@ let Hero: React.FC = () => {
           <div className="absolute inset-0 z-20 flex justify-center pointer-events-none">
             <div className="w-full max-w-[1440px] relative pointer-events-none">
               {/* Info Card */}
-              <div className="absolute left-20 top-[300px] z-20 max-w-xs pointer-events-auto origin-left bg-white/5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1),inset_0_1px_0_0_rgba(255,255,255,0.2)] backdrop-blur-[8px] rounded-[24px] p-6 lg:p-8">
+              <div className="absolute left-20 top-[300px] z-20 max-w-xs pointer-events-auto origin-left bg-black/80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1),inset_0_1px_0_0_rgba(255,255,255,0.2)] backdrop-blur-[8px] rounded-[24px] p-6 lg:p-8">
                 <h3 className="font-bold mb-2 animate-shine-text text-lg">
                   Pergadaian Utama Indonesia
                 </h3>
@@ -148,17 +147,16 @@ let Hero: React.FC = () => {
 
               {/* Feature Cards Column */}
               <div className="absolute right-24 top-[260px] z-20 flex flex-col gap-4 pointer-events-auto origin-right">
-                <div className="animate-floating flex items-center gap-2 bg-[#243F29] border-2 rounded-[10px] border-[#5C5E3D] px-4 py-2 text-xs shadow text-white" style={{ animationDelay: '0s' }}>
-                  <img className="w-[60px]" src="/assets/img/logo-ojk.png" />
+                <div className="animate-floating flex items-center gap-2 bg-[#003D35] border-2 rounded-[10px] border-[#5C5E3D] px-4 py-2 text-sm shadow text-white" style={{ animationDelay: '0s' }}>
                   Terdaftar & diawasi OJK
                 </div>
                 <div className="-ml-20">
-                  <div className="animate-floating inline-flex mt-10 items-center gap-2 bg-[#243F29] border-2 rounded-[10px] border-[#5C5E3D] px-4 py-2 text-xs shadow text-white" style={{ animationDelay: '0.4s' }}>
+                  <div className="animate-floating inline-flex mt-10 items-center gap-2 bg-[#003D35] border-2 rounded-[10px] border-[#5C5E3D] px-4 py-2 text-xs shadow text-white" style={{ animationDelay: '0.4s' }}>
                     <img className="w-[30px]" src="/assets/img/icon-chart.png" />
                     Valuasi Aset Tinggi
                   </div>
                 </div>
-                <div className="animate-floating flex items-center mt-14 gap-2 bg-[#243F29] border-2 rounded-[10px] border-[#5C5E3D] px-4 py-2 text-xs shadow text-white" style={{ animationDelay: '0.8s' }}>
+                <div className="animate-floating flex items-center mt-14 gap-2 bg-[#003D35] border-2 rounded-[10px] border-[#5C5E3D] px-4 py-2 text-xs shadow text-white" style={{ animationDelay: '0.8s' }}>
                   <img className="w-[30px]" src="/assets/img/icon-clock.png" />
                   Pencairan Dana Cepat
                 </div>
