@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import gsap from 'gsap';
 import { FaWhatsapp, FaTimes } from 'react-icons/fa';
 
 const FloatingWA: React.FC = () => {
@@ -40,34 +39,6 @@ const FloatingWA: React.FC = () => {
         };
     }, [isHiddenPath]);
 
-    useEffect(() => {
-        if (!popupRef.current) return;
-
-        if (showPopup && !isMinimized) {
-            // Show popup card
-            gsap.killTweensOf(popupRef.current);
-            gsap.to(popupRef.current, {
-                opacity: 1,
-                scale: 1,
-                y: 0,
-                duration: 0.8,
-                ease: "power3.out",
-                force3D: true,
-                pointerEvents: 'auto'
-            });
-        } else {
-            // Hide popup card
-            gsap.to(popupRef.current, {
-                opacity: 0,
-                scale: 0.9,
-                y: 20,
-                duration: 0.4,
-                ease: "power2.in",
-                force3D: true,
-                pointerEvents: 'none'
-            });
-        }
-    }, [showPopup, isMinimized]);
 
     const handleClose = (e: React.MouseEvent) => {
         e.preventDefault();
@@ -85,8 +56,7 @@ const FloatingWA: React.FC = () => {
         <>
             <div 
                 ref={popupRef} 
-                className={`fixed bottom-6 right-6 z-50 prisil-popup transition-all duration-300 ${(!showPopup || isMinimized) ? 'opacity-0 scale-95 pointer-events-none' : 'opacity-100 scale-100'}`}
-                style={{ willChange: 'transform, opacity' }}
+                className={`fixed bottom-6 right-6 z-50 prisil-popup transition-all duration-200 transform ${(!showPopup || isMinimized) ? 'opacity-0 scale-90 translate-y-4 pointer-events-none' : 'opacity-100 scale-100 translate-y-0'}`}
             >
                 <a
                     href="https://wa.me/6282277777911"
