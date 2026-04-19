@@ -6,6 +6,7 @@ import D_1 from "./components/section_components/artikel/D_1";
 import D_2 from "./components/section_components/artikel/D_2";
 import FloatingWA from "./components/__global/FloatingWA";
 import "./css/all.css"
+import {Produk} from "./components/section_components/Produk";
 
 function App () {
   return (
@@ -17,6 +18,7 @@ function App () {
         <Route path="/cara-kerja" element={<CaraKerja />} />
         <Route path="/artikel" element={<D_1 />} />
         <Route path="/artikel/lorem-ipsum-is-simple" element={<D_2 />} />
+        <Route path="/detail/produk" element={<Produk />} />
       </Routes>
     </BrowserRouter>
   )

@@ -82,7 +82,8 @@ let Hero: React.FC = () => {
               </div>
             </div>
             <div className="animate-floating flex items-center gap-2 bg-[#003D35] border-2 rounded-[10px] border-[#5C5E3D] px-4 py-2 text-xs shadow text-white" style={{ animationDelay: '0s' }}>
-              Terdaftar & diawasi OJK
+              <img src="/assets/img/Layer_1.svg" className="h-[14px] w-auto" alt="License Logo" />
+              <span>Terdaftar & diawasi OJK</span>
             </div>
           </div>
 
@@ -148,7 +149,8 @@ let Hero: React.FC = () => {
               {/* Feature Cards Column */}
               <div className="absolute right-24 top-[260px] z-20 flex flex-col gap-4 pointer-events-auto origin-right">
                 <div className="animate-floating flex items-center gap-2 bg-[#003D35] border-2 rounded-[10px] border-[#5C5E3D] px-4 py-2 text-sm shadow text-white" style={{ animationDelay: '0s' }}>
-                  Terdaftar & diawasi OJK
+                  <img src="/assets/img/Layer_1.svg" className="h-[18px] w-auto" alt="License Logo" />
+                  <span>Terdaftar & diawasi OJK</span>
                 </div>
                 <div className="-ml-20">
                   <div className="animate-floating inline-flex mt-10 items-center gap-2 bg-[#003D35] border-2 rounded-[10px] border-[#5C5E3D] px-4 py-2 text-xs shadow text-white" style={{ animationDelay: '0.4s' }}>
