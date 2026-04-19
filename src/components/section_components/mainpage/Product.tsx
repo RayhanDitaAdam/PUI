@@ -62,13 +62,13 @@ let Product = function () {
                                     <img
                                         src={item.image}
                                         alt={item.title}
-                                        className={`product-image ${item.image_1 ? "main" : "single"} ${item.variant === "rare" ? "w-[8rem] h-[11.92rem] md:w-[9rem] md:h-[13.41rem] aspect-[51/76]" : ""}`}
+                                        className={`product-image ${item.image_1 ? "main w-auto h-[5rem] md:h-[14.375rem]" : "single w-auto h-[6rem] md:h-[10rem]"} ${item.variant === "rare" ? "!w-[8rem] !h-[11.92rem] md:!w-[9rem] md:!h-[13.41rem] aspect-[51/76]" : ""}`}
                                     />
                                     {item.image_1 && (
                                         <img
                                             src={item.image_1}
                                             alt={item.title}
-                                            className="product-image second"
+                                            className="product-image second w-auto !h-[11rem] md:!h-[11.25rem] translate-x-[1.8rem] md:translate-x-[2.1875rem] scale-[1.5] md:scale-[1.4] opacity-80"
                                         />
                                     )}
                                 </div>
