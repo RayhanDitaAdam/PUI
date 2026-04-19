@@ -16,8 +16,8 @@ let Product = function () {
             image: "/assets/img/b66aced856067bdae66be6141bebc57002ffb69a.png",
         },
         {
-            title: "Perhiasan Mewah",
-            desc: "PUI menghadirkan layanan gadai perhiasan mewah dari merek ternama seperti Cartier, Tiffany & Co., Bulgari, Van Cleef & Arpels, dan lainnya.",
+            title: "Tas Branded",
+            desc: "PUI menghadirkan layanan gadai tas branded dari merek ternama seperti Cartier, Tiffany & Co., Bulgari, Van Cleef & Arpels, dan lainnya.",
             image: "/assets/img/c0c7e308852f4d42b44a67e0409997954100aea7.png",
         },
         {
@@ -77,7 +77,7 @@ let Product = function () {
                                 <h3 className="text-sm md:text-lg font-semibold mb-1 md:mb-2">
                                     {item.title}
                                 </h3>
-                                <p className="text-[10px] md:text-[0.8125rem] text-gray-400 md:text-white md:font-['Lato'] md:font-medium md:leading-[130%] mt-1.5 mb-2 md:mb-3 min-h-[45px] md:h-[6.6875rem] md:self-stretch">
+                                <p className="text-[10px] md:text-[0.8125rem] text-gray-400 md:text-white md:font-['Lato'] md:font-medium md:leading-[130%] mb-2 md:mb-3 min-h-[45px] md:h-[6.6875rem] md:self-stretch">
                                     {item.desc}
                                 </p>
                                 <button className="hover-premium-btn mt-auto text-[10px] md:text-sm border-2 border-[#5C5E3D] mb-[1.56rem] md:mb-[2rem] font-bold text-[#C49A6C] px-2 md:px-4 py-1.5 md:py-2 rounded-lg md:rounded-[15px] bg-[#C49A6C30]">
