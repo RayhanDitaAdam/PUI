@@ -6,7 +6,7 @@ let Consult = function () {
       <div className="pui-wrap mt-32 md:mt-10 overflow-visible lg:!max-w-[1200px] xl:!max-w-[1350px]">
         <div className="mx-[1rem] hero flex flex-col md:flex-row-reverse items-start md:items-end gap-0 md:gap-8 pt-4 pb-0 px-8 md:p-12 md:pb-0 text-left md:text-left isolate">
           <div className="hero-deco hidden md:block"></div>
-          <div className="hero-img-wrap flex-shrink-0 w-full md:w-auto flex justify-end items-end relative z-0 md:z-10 pointer-events-none">
+          <div className="hero-img-wrap flex-shrink-0 w-full md:w-auto flex justify-end items-end relative z-0 pointer-events-none">
             <div className="hero-person-placeholder relative h-[7.5rem] md:h-[20rem] overflow-visible">
               <img
                 className="w-full h-auto pointer-events-none scale-[0.7] md:scale-[0.65] lg:scale-75 lg:w-[25rem] origin-bottom translate-x-[5.5rem] -translate-y-[1rem] md:translate-x-0 md:translate-y-4 transition-transform duration-300"
@@ -29,7 +29,7 @@ let Consult = function () {
           </div>
         </div>
 
-        <div className="mx-[1rem] grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mt-[1.5rem] lg:-mt-[1.1rem] md:mt-[-3.75rem] bg-white py-4 md:p-0 rounded-b-xl md:rounded-b-2xl border-x md:border-none border-b md:border-none border-gray-200">
+        <div className="mx-[1rem] grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mt-[1.5rem] lg:-mt-[1.1rem] md:mt-[-3.75rem] bg-white py-4 md:p-0 rounded-b-xl md:rounded-b-2xl border-x md:border-none border-b md:border-none border-gray-200 relative z-10">
           <div className="card bg-white border border-gray-200 md:border-gray-200 rounded-xl p-4 md:p-7 flex flex-col">
             <div className="card-icon-wrap w-9 h-9 md:w-12 md:h-12 bg-[#C49A6C] rounded-lg md:rounded-xl flex items-center justify-center mb-3 md:mb-5">
               <img src="/assets/img/81829e2cbb1d51f007adb0e183c5911e296267be.png" width="1.5rem" className="brightness-0 w-[1.125rem] md:w-[1.5rem]" />

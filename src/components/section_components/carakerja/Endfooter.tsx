@@ -148,16 +148,16 @@ let Endfooter = function () {
                             </div>
                         </div>
                         <div className="flex gap-4 mt-6">
-                            <div className="flex items-center justify-center cursor-pointer">
+                            <a href="https://www.facebook.com/profile.php?id=61585918772400" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center cursor-pointer">
                                 <i className="text-2xl fa-brands fa-facebook-f"></i>
-                            </div>
-                            <div className="w-9 h-9 flex items-center justify-center cursor-pointer">
+                            </a>
+                            <a href="https://www.instagram.com/pui.gadai" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center cursor-pointer">
                                 <i className="text-2xl fa-brands fa-instagram"></i>
-                            </div>
-                            <div className="w-9 h-9 flex items-center justify-center 
+                            </a>
+                            <a href="https://www.linkedin.com/company/puigadai/about" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center 
                                 bg-white rounded cursor-pointer">
                                 <i className="text-black fa-brands fa-linkedin-in"></i>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>

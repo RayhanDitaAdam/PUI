@@ -88,7 +88,7 @@ let Hero: React.FC = () => {
           </div>
 
           {/* PUI Info Card */}
-          <div className="mt-20 text-center flex flex-col items-center max-w-[90%] sm:max-w-sm bg-[radial-gradient(93.37%_6432.5%_at_100%_50%,rgba(255,255,255,0.047)_0%,rgba(255,255,255,0.1)_100%)] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1),inset_0_1px_0_0_rgba(255,255,255,0.2)] backdrop-blur-[8px] rounded-[24px] p-6 sm:p-8">
+          <div className="mt-20 text-center flex flex-col items-center max-w-[90%] sm:max-w-sm bg-white/5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1),inset_0_1px_0_0_rgba(255,255,255,0.2)] backdrop-blur-[8px] rounded-[24px] p-6 sm:p-8">
             <h3 className="font-bold mb-3 animate-shine-text text-xl">
               Pergadaian Utama Indonesia
             </h3>
@@ -132,7 +132,7 @@ let Hero: React.FC = () => {
           <div className="absolute inset-0 z-20 flex justify-center pointer-events-none">
             <div className="w-full max-w-[1440px] relative pointer-events-none">
               {/* Info Card */}
-              <div className="absolute left-20 top-[300px] z-20 max-w-xs pointer-events-auto origin-left bg-[radial-gradient(93.37%_6432.5%_at_100%_50%,rgba(255,255,255,0.047)_0%,rgba(255,255,255,0.1)_100%)] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1),inset_0_1px_0_0_rgba(255,255,255,0.2)] backdrop-blur-[8px] rounded-[24px] p-6 lg:p-8">
+              <div className="absolute left-20 top-[300px] z-20 max-w-xs pointer-events-auto origin-left bg-white/5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1),inset_0_1px_0_0_rgba(255,255,255,0.2)] backdrop-blur-[8px] rounded-[24px] p-6 lg:p-8">
                 <h3 className="font-bold mb-2 animate-shine-text text-lg">
                   Pergadaian Utama Indonesia
                 </h3>

@@ -247,11 +247,15 @@ const Footer: React.FC<FooterProps> = ({
                             </div>
 
                             <div className="flex gap-4 mt-8">
-                                {[FaFacebookF, FaInstagram, FaLinkedinIn].map((Icon, idx) => (
-                                    <div key={idx} className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#C49A6C] transition-colors cursor-pointer">
-                                        <Icon className="text-lg" />
-                                    </div>
-                                ))}
+                                <a href="https://www.facebook.com/profile.php?id=61585918772400" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#C49A6C] transition-colors cursor-pointer">
+                                    <FaFacebookF className="text-lg" />
+                                </a>
+                                <a href="https://www.instagram.com/pui.gadai" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#C49A6C] transition-colors cursor-pointer">
+                                    <FaInstagram className="text-lg" />
+                                </a>
+                                <a href="https://www.linkedin.com/company/puigadai/about" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#C49A6C] transition-colors cursor-pointer">
+                                    <FaLinkedinIn className="text-lg" />
+                                </a>
                             </div>
                         </div>
                     </div>
