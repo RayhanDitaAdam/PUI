@@ -31,7 +31,6 @@
 .product-image.single {
   position: relative;
   top: -30px;
-  height: 870px;
 }
 
 .product-image.main {
@@ -43,21 +42,10 @@
 }
 
 .product-image.second {
-  height: 950px;
-  transform: translateX(35px) scale(1.4);
   opacity: 0.9;
 }
 
-.product-card-rare img {
-  width: 100px;
-  transform: scale(1.1);
-}
 
-@media (min-width: 768px) {
-  .product-card-rare img {
-    width: 160px;
-  }
-}
 
 .hover-premium-btn {
   position: relative;
