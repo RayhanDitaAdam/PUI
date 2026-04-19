@@ -29,52 +29,54 @@ let Consult = function () {
           </div>
         </div>
 
-        <div className="mx-[1rem] grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 lg:-mt-[1.1rem] md:mt-[-3.75rem] !bg-white pb-4 md:p-0 rounded-b-xl md:rounded-b-2xl border-x md:border-none border-b md:border-none border-gray-200 relative z-10" style={{ backgroundColor: 'white' }}>
-          <div className="card bg-white border border-gray-200 md:border-gray-200 rounded-xl p-4 md:p-7 flex flex-col">
-            <div className="card-icon-wrap w-9 h-9 md:w-12 md:h-12 bg-[#C49A6C] rounded-lg md:rounded-xl flex items-center justify-center mb-3 md:mb-5">
-              <img src="/assets/img/81829e2cbb1d51f007adb0e183c5911e296267be.png" width="1.5rem" className="brightness-0 w-[1.125rem] md:w-[1.5rem]" />
+        <div className="bg-white relative z-20">
+          <div className="mx-[1rem] grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 lg:-mt-[1.1rem] md:mt-[-3.75rem] !bg-white pb-4 md:py-4 rounded-b-xl md:rounded-b-2xl border-x md:border-none border-b md:border-none border-gray-200 relative z-10" style={{ backgroundColor: 'white' }}>
+            <div className="card bg-white border border-gray-200 md:border-gray-200 rounded-xl p-4 md:p-7 flex flex-col">
+              <div className="card-icon-wrap w-9 h-9 md:w-12 md:h-12 bg-[#C49A6C] rounded-lg md:rounded-xl flex items-center justify-center mb-3 md:mb-5">
+                <img src="/assets/img/81829e2cbb1d51f007adb0e183c5911e296267be.png" width="1.5rem" className="brightness-0 w-[1.125rem] md:w-[1.5rem]" />
+              </div>
+              <h3 className="text-sm lg:text-base md:text-lg font-extrabold text-[#111] mb-1.5 md:mb-2.5">
+                Bawa langsung aset mewah ke kantor PUI
+              </h3>
+              <p className="text-xs lg:text-[10px] md:text-sm text-[#333] leading-relaxed mb-4 md:mb-6">
+                Anda dapat membawa langsung aset mewah Anda ke kantor PUI
+                untuk mendapatkan pengalaman layanan yang cepat, aman, dan
+                transparan. Tim profesional kami akan melakukan proses valuasi
+                secara detail dan akurat, memastikan Anda mendapatkan nilai
+                terbaik sesuai kondisi dan pasar terkini.
+              </p>
+              <a href="https://wa.me/6282277777911?text=Halo%20PUI,%20saya%20ingin%20booking%20jadwal%20janji%20temu%20ke%20kantor." target="_blank" rel="noopener noreferrer" className="card-link mt-auto flex items-center gap-2 text-[#1B4332] font-semibold text-[9px] md:text-xs cursor-pointer animate-link-arrow">
+                Booking Jadwal Janji Temu
+                <span className="w-4 h-4 bg-[#1B4332] rounded-full flex items-center justify-center">
+                  <svg width="8" height="8" viewBox="0 0 9 9" fill="none">
+                    <path d="M2 4.5h5M4.5 2l2.5 2.5L4.5 7" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+              </a>
             </div>
-            <h3 className="text-sm lg:text-base md:text-lg font-extrabold text-[#111] mb-1.5 md:mb-2.5">
-              Bawa langsung aset mewah ke kantor PUI
-            </h3>
-            <p className="text-xs lg:text-[10px] md:text-sm text-[#333] leading-relaxed mb-4 md:mb-6">
-              Anda dapat membawa langsung aset mewah Anda ke kantor PUI
-              untuk mendapatkan pengalaman layanan yang cepat, aman, dan
-              transparan. Tim profesional kami akan melakukan proses valuasi
-              secara detail dan akurat, memastikan Anda mendapatkan nilai
-              terbaik sesuai kondisi dan pasar terkini.
-            </p>
-            <a href="https://wa.me/6282277777911?text=Halo%20PUI,%20saya%20ingin%20booking%20jadwal%20janji%20temu%20ke%20kantor." target="_blank" rel="noopener noreferrer" className="card-link mt-auto flex items-center gap-2 text-[#1B4332] font-semibold text-[9px] md:text-xs cursor-pointer animate-link-arrow">
-              Booking Jadwal Janji Temu
-              <span className="w-4 h-4 bg-[#1B4332] rounded-full flex items-center justify-center">
-                <svg width="8" height="8" viewBox="0 0 9 9" fill="none">
-                  <path d="M2 4.5h5M4.5 2l2.5 2.5L4.5 7" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </span>
-            </a>
-          </div>
-
-          <div className="card bg-white border border-gray-200 md:border-gray-200 rounded-xl p-4 md:p-7 flex flex-col">
-            <div className="card-icon-wrap w-9 h-9 md:w-12 md:h-12 bg-[#C49A6C] rounded-lg md:rounded-xl flex items-center justify-center mb-3 md:mb-5">
-              <img src="/assets/img/d8d020e2c5ce16700e20195204cc0d38d6ba12bb.png" width="1.5rem" className="brightness-0 w-[1.125rem] md:w-[1.5rem]" />
+  
+            <div className="card bg-white border border-gray-200 md:border-gray-200 rounded-xl p-4 md:p-7 flex flex-col">
+              <div className="card-icon-wrap w-9 h-9 md:w-12 md:h-12 bg-[#C49A6C] rounded-lg md:rounded-xl flex items-center justify-center mb-3 md:mb-5">
+                <img src="/assets/img/d8d020e2c5ce16700e20195204cc0d38d6ba12bb.png" width="1.5rem" className="brightness-0 w-[1.125rem] md:w-[1.5rem]" />
+              </div>
+              <h3 className="text-xs md:text-lg font-extrabold text-[#111] mb-1.5 md:mb-2.5 leading-tight">
+                Layanan Jemput Barang
+              </h3>
+              <p className="text-[0.625rem] md:text-sm text-[#333] leading-relaxed mb-4 md:mb-6">
+                Untuk kenyamanan maksimal, PUI menyediakan layanan jemput
+                aset langsung ke lokasi Anda. Layanan ini dirancang bagi Anda yang
+                menginginkan proses praktis tanpa perlu datang ke kantor.
+                Tim kami akan datang dengan prosedur keamanan ketat dan profesionalisme tinggi dalam menangani setiap aset.
+              </p>
+              <a href="https://wa.me/6282277777911?text=Halo%20PUI,%20saya%20ingin%20booking%20layanan%20jemput%20aset%20ke%20lokasi%20saya." target="_blank" rel="noopener noreferrer" className="card-link mt-auto flex items-center gap-2 text-[#1B4332] font-semibold text-[0.5625rem] md:text-xs cursor-pointer animate-link-arrow">
+                Booking Jadwal Jemput barang
+                <span className="w-4 h-4 bg-[#1B4332] rounded-full flex items-center justify-center">
+                  <svg width="8" height="8" viewBox="0 0 9 9" fill="none">
+                    <path d="M2 4.5h5M4.5 2l2.5 2.5L4.5 7" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+              </a>
             </div>
-            <h3 className="text-xs md:text-lg font-extrabold text-[#111] mb-1.5 md:mb-2.5 leading-tight">
-              Layanan Jemput Barang
-            </h3>
-            <p className="text-[0.625rem] md:text-sm text-[#333] leading-relaxed mb-4 md:mb-6">
-              Untuk kenyamanan maksimal, PUI menyediakan layanan jemput
-              aset langsung ke lokasi Anda. Layanan ini dirancang bagi Anda yang
-              menginginkan proses praktis tanpa perlu datang ke kantor.
-              Tim kami akan datang dengan prosedur keamanan ketat dan profesionalisme tinggi dalam menangani setiap aset.
-            </p>
-            <a href="https://wa.me/6282277777911?text=Halo%20PUI,%20saya%20ingin%20booking%20layanan%20jemput%20aset%20ke%20lokasi%20saya." target="_blank" rel="noopener noreferrer" className="card-link mt-auto flex items-center gap-2 text-[#1B4332] font-semibold text-[0.5625rem] md:text-xs cursor-pointer animate-link-arrow">
-              Booking Jadwal Jemput barang
-              <span className="w-4 h-4 bg-[#1B4332] rounded-full flex items-center justify-center">
-                <svg width="8" height="8" viewBox="0 0 9 9" fill="none">
-                  <path d="M2 4.5h5M4.5 2l2.5 2.5L4.5 7" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </span>
-            </a>
           </div>
         </div>
       </div>

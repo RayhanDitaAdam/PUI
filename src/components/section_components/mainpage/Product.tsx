@@ -47,7 +47,7 @@ let Product = function () {
                     untuk berbagai aset mewah, mulai <br className="hidden md:block" /> dari jam tangan premium, tas branded,
                     berlian, hingga emas dan perhiasan eksklusif.
                 </p>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-[2.5rem] md:gap-16">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-16 md:gap-24">
                     {products.map((item, i) => (
                         <div
                             key={i}
@@ -62,7 +62,7 @@ let Product = function () {
                                     <img
                                         src={item.image}
                                         alt={item.title}
-                                        className={`product-image ${item.image_1 ? "main" : "single"} ${item.variant === "rare" ? "w-[9.5625rem] h-[14.25rem] aspect-[51/76]" : ""}`}
+                                        className={`product-image ${item.image_1 ? "main" : "single"} ${item.variant === "rare" ? "w-[9.5625rem] h-[14.25rem] md:w-[7.5rem] md:h-[11.25rem] aspect-[51/76]" : ""}`}
                                     />
                                     {item.image_1 && (
                                         <img
