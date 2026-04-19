@@ -29,7 +29,7 @@ let Consult = function () {
           </div>
         </div>
 
-        <div className="mx-[1rem] grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mt-[1.5rem] lg:-mt-[1.1rem] md:mt-[-3.75rem] !bg-white py-4 md:p-0 rounded-b-xl md:rounded-b-2xl border-x md:border-none border-b md:border-none border-gray-200 relative z-10" style={{ backgroundColor: 'white' }}>
+        <div className="mx-[1rem] grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 lg:-mt-[1.1rem] md:mt-[-3.75rem] !bg-white pb-4 md:p-0 rounded-b-xl md:rounded-b-2xl border-x md:border-none border-b md:border-none border-gray-200 relative z-10" style={{ backgroundColor: 'white' }}>
           <div className="card bg-white border border-gray-200 md:border-gray-200 rounded-xl p-4 md:p-7 flex flex-col">
             <div className="card-icon-wrap w-9 h-9 md:w-12 md:h-12 bg-[#C49A6C] rounded-lg md:rounded-xl flex items-center justify-center mb-3 md:mb-5">
               <img src="/assets/img/81829e2cbb1d51f007adb0e183c5911e296267be.png" width="1.5rem" className="brightness-0 w-[1.125rem] md:w-[1.5rem]" />
