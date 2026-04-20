@@ -9,7 +9,7 @@ let Consult = function () {
           <div className="hero-img-wrap flex-shrink-0 w-full md:w-auto flex justify-end items-end relative z-0 pointer-events-none">
             <div className="hero-person-placeholder relative h-[7.5rem] md:h-[20rem] overflow-visible">
               <img
-                className="w-full h-auto pointer-events-none scale-[0.7] md:scale-[0.65] lg:scale-75 lg:w-[25rem] origin-bottom translate-x-[5.5rem] -translate-y-[1rem] md:translate-x-0 md:translate-y-4 transition-transform duration-300"
+                className="w-full h-auto pointer-events-none scale-[0.65] md:scale-[0.6] lg:scale-[0.7] lg:w-[25rem] origin-bottom translate-x-[4rem] -translate-y-[1rem] md:translate-x-0 md:translate-y-4 transition-transform duration-300"
                 src="/assets/img/Consult.png"
               />
             </div>
