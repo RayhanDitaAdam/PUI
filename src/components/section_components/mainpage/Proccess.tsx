@@ -63,9 +63,9 @@ let Proccess = function () {
 
         </div>
 
-        <button className="border border-white px-8 py-3 rounded-full hover:bg-white hover:text-black transition-all duration-300 mb-20">
+        <a href="/cara-kerja" className="inline-block border border-white px-8 py-3 rounded-full hover:bg-white hover:text-black transition-all duration-300 mb-20">
           Pelajari Selengkapnya
-        </button>
+        </a>
       </div>
     </section>
   );

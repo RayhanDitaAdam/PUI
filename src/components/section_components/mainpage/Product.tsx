@@ -38,7 +38,7 @@ let Product = function () {
     return (
         <section style={{
             background: "linear-gradient(135deg, rgb(0, 58, 48) 0%, rgb(0, 29, 24) 50%, rgb(0, 5, 4) 100%)"
-        }} id="produk" className="text-white py-24 md:py-12 lg:pt-24 lg:pb-12 scroll-mt-20">
+        }} className="text-white py-24 md:py-12 lg:pt-24 lg:pb-12 scroll-mt-20">
             <div className="max-w-5xl mx-auto px-4 md:px-6">
                 <p className="text-xl md:text-2xl text-[#9CA3AF] mb-1 md:mb-2 italic text-center">Our Product</p>
                 <h2 className="text-center text-3xl md:text-5xl font-extrabold text-[#C49A6C] mb-3">

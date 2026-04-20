@@ -134,7 +134,7 @@ const Footer: React.FC<FooterProps> = ({
                                     <div>
                                         <span className="font-bold block mb-1">Alamat:</span>
                                         <p className="text-white/70 text-sm leading-relaxed">
-                                            The Darmawangsa Square Lt.2 No.263-264, Jln. Darmawangsa VI, Kebayoran Baru, Jakarta Selatan 12160
+                                            The Darmawangsa Square Lt.2 No.263-264, Jl. Darmawangsa VI, Kebayoran Baru, Jakarta Selatan 12160
                                         </p>
                                     </div>
                                 </div>

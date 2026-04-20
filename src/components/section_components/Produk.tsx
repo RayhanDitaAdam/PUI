@@ -39,9 +39,12 @@ let Produk = function () {
 
         gsap.ticker.lagSmoothing(0);
 
+        window.scrollTo(0, 0);
+        
         // Refresh ScrollTrigger after initial render
         setTimeout(() => {
             ScrollTrigger.refresh();
+            window.scrollTo(0, 0);
         }, 100);
 
         return () => {

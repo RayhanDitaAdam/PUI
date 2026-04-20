@@ -10,7 +10,7 @@ let PUIThumbs = function () {
                     </p>
                 </div>
                 <div className="flex justify-center">
-                    <a href="/artikel" className="mb-12 md:mb-16 p-2 text-sm font-bold text-[#007F6D] border-2 w-[300px] rounded-lg border-[#007F6D] cursor-pointer hover:bg-[#007F6D] hover:text-white hover:scale-105 transition-all duration-300 flex items-center justify-center">
+                    <a href="/cara-kerja" className="mb-12 md:mb-16 p-2 text-sm font-bold text-[#007F6D] border-2 w-[300px] rounded-lg border-[#007F6D] cursor-pointer hover:bg-[#007F6D] hover:text-white hover:scale-105 transition-all duration-300 flex items-center justify-center">
                         Pelajari Selengkapnya Tentang PUI
                     </a>
                 </div>
