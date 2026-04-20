@@ -76,10 +76,10 @@ let Product = function () {
                                 </div>
                             </div>
                             <div className="mx-[0.5rem] p-1 mt-1 md:mx-[1.06rem] md:mt-2 z-[100] text-left flex flex-col flex-grow relative">
-                                <h3 className="text-sm md:text-lg font-semibold mb-1 md:mb-2">
+                                <h3 className="text-xs md:text-base font-semibold mb-1 md:mb-2 text-[#EDE8D0]">
                                     {item.title}
                                 </h3>
-                                <p className="text-[10px] md:text-[0.8125rem] text-gray-400 md:text-white md:font-['Lato'] md:font-medium md:leading-[130%] mb-2 md:mb-3 min-h-[45px] md:h-[6.6875rem] md:self-stretch">
+                                <p className="text-[9px] md:text-[0.75rem] text-gray-400 md:text-white md:font-['Lato'] md:font-medium md:leading-[130%] mb-2 md:mb-3 min-h-[45px] md:h-[6.6875rem] md:self-stretch">
                                     {item.desc}
                                 </p>
                                 <Link to="/detail/produk" className="hover-premium-btn mt-auto text-center text-[10px] md:text-sm border-2 border-[#5C5E3D] mb-[1.56rem] md:mb-[2rem] font-bold text-[#C49A6C] px-2 md:px-4 py-1.5 md:py-2 rounded-lg md:rounded-[15px] bg-[#C49A6C30]">

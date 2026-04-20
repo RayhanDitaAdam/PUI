@@ -129,26 +129,26 @@ let ItemContext = function () {
                         <div className="grid grid-cols-3 gap-x-10 gap-y-12 relative z-10">
                             {/* Row 1: 01, 02, 03 */}
                             <div ref={el => { stepsRef.current[0] = el; }} className="step-item relative z-10 h-[260px] p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-300">
-                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-[0.75rem]">01</h2>
+                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">01</h2>
                                 <h3 className="text-lg font-bold text-[#003B33] mb-3">Pemeriksaan Awal</h3>
                                 <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">Asset mewah Anda diterima dan dilakukan pengecekan awal oleh tim ahli</p>
                             </div>
 
                             <div ref={el => { stepsRef.current[1] = el; }} className="step-item relative z-10 h-[260px] p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-300">
-                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-[0.75rem]">02</h2>
+                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">02</h2>
                                 <h3 className="text-lg font-bold text-[#003B33] mb-3">Pemeriksaan Awal</h3>
                                 <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">Pengecekan kondisi fisik dan identifikasi awal oleh tenaga ahli</p>
                             </div>
 
                             <div ref={el => { stepsRef.current[2] = el; }} className="step-item relative z-10 h-[260px] p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-300">
-                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-[0.75rem]">03</h2>
+                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">03</h2>
                                 <h3 className="text-lg font-bold text-[#003B33] mb-3">Analisis Gemologi</h3>
                                 <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">Pengujian menggunakan alat modern untuk menentukan keaslian, jenis, dan kualitas</p>
                             </div>
 
                             {/* Row 2: 06, 05, 04 */}
                             <div ref={el => { stepsRef.current[3] = el; }} className="step-item relative z-10 h-[260px] p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-300" style={{ borderWidth: '2px', borderColor: 'rgb(212, 170, 106)' }}>
-                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-[0.75rem]">06</h2>
+                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">06</h2>
                                 <h3 className="text-lg font-bold text-[#003B33] mb-3">Hubungi Kami Via Whatsapp</h3>
                                 <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium mb-2">Untuk memulai</p>
                                 <a 
@@ -162,13 +162,13 @@ let ItemContext = function () {
                             </div>
 
                             <div ref={el => { stepsRef.current[4] = el; }} className="step-item relative z-10 h-[260px] p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-300">
-                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-[0.75rem]">05</h2>
+                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">05</h2>
                                 <h3 className="text-lg font-bold text-[#003B33] mb-3">Penilaian Nilai</h3>
                                 <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">Penentuan nilai aset secara kompetitif berdasarkan hasil pengujian</p>
                             </div>
 
                             <div ref={el => { stepsRef.current[5] = el; }} className="step-item relative z-10 h-[260px] p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-300">
-                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-[0.75rem]">04</h2>
+                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">04</h2>
                                 <h3 className="text-lg font-bold text-[#003B33] mb-3">Verifikasi & Validasi</h3>
                                 <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">Hasil analisis dikaji ulang untuk memastikan akurasi dan keabsahan data</p>
                             </div>
@@ -192,7 +192,7 @@ let ItemContext = function () {
                                     style={{ gridArea: "1 / 1 / 2 / 2" }}
                                     className="step-item relative z-10 p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 min-h-[260px]"
                                 >
-                                    <h2 className="text-3xl font-extrabold text-[#003B33] mb-[0.75rem]">{step.id}</h2>
+                                    <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">{step.id}</h2>
                                     <h3 className="text-lg font-bold text-[#003B33] mb-3">{step.title}</h3>
                                     <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium mb-2">{step.desc}</p>
                                     {step.id === "06" && (

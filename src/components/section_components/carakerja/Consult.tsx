@@ -16,8 +16,8 @@ let Consult = function () {
           </div>
 
           <div className="md:pl-0 mr-8 md:mr-0 lg:mr-0 md:-mb-5 lg:p-5 lg:mt-20 md:p-1 hero-content relative z-[50] md:z-10 -mt-[19.375rem] flex flex-col items-start w-full md:w-[21.25rem] pb-10 md:pb-10 md:bottom-10">
-            <h6 className="text-[1.25rem] lg:text-3xl md:text-[1.875rem] font-bold text-white leading-snug md:leading-tight mb-4 md:mb-[0.875rem] max-w-[11.875rem] md:max-w-full md:px-0">
-              Punya barang mewah dan ingin dilikuidasi?
+            <h6 className="text-[1.25rem] lg:text-3xl md:text-[1.875rem] font-bold text-[#EDE8D0] leading-snug md:leading-tight mb-4 md:mb-[0.875rem] max-w-[11.875rem] md:max-w-full md:px-0">
+              Punya barang mewah <br className="hidden md:block" /> dan ingin dilikuidasi?
             </h6>
             <a className="text-[0.65rem] lg:text-base md:text-sm text-white/70 mb-8 md:mb-7 leading-relaxed max-w-[16.25rem] md:max-w-[17.5rem]">
               Konsultasikan sekarang via WhatsApp. <br />Terjamin anonimitas & privasi 100%.
