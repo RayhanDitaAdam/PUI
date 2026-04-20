@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 let Product = function () {
     const products = [
         {
@@ -80,9 +82,9 @@ let Product = function () {
                                 <p className="text-[10px] md:text-[0.8125rem] text-gray-400 md:text-white md:font-['Lato'] md:font-medium md:leading-[130%] mb-2 md:mb-3 min-h-[45px] md:h-[6.6875rem] md:self-stretch">
                                     {item.desc}
                                 </p>
-                                <button className="hover-premium-btn mt-auto text-[10px] md:text-sm border-2 border-[#5C5E3D] mb-[1.56rem] md:mb-[2rem] font-bold text-[#C49A6C] px-2 md:px-4 py-1.5 md:py-2 rounded-lg md:rounded-[15px] bg-[#C49A6C30]">
+                                <Link to="/detail/produk" className="hover-premium-btn mt-auto text-center text-[10px] md:text-sm border-2 border-[#5C5E3D] mb-[1.56rem] md:mb-[2rem] font-bold text-[#C49A6C] px-2 md:px-4 py-1.5 md:py-2 rounded-lg md:rounded-[15px] bg-[#C49A6C30]">
                                     Pelajari Selengkapnya
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     ))}

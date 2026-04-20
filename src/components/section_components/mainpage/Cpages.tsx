@@ -4,33 +4,33 @@ let Cpages: React.FC = function () {
 
   return (
     <>
-      <div className="-z-50 -mt-14">
-        <section className="px-6 md:px-16 py-20 md:py-32 bg-transparent">
+      <div className="-z-50 -mt-[3.5rem]">
+        <section className="px-[1.5rem] md:px-[1.5rem] lg:px-[4rem] py-[5rem] md:py-[8rem] bg-transparent">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-4 md:gap-0 text-center md:text-left">
-              <h2 className="text-3xl md:text-3xl font-bold text-[#C49A6C] leading-snug max-w-md">
+              <h2 className="text-[1.875rem] font-bold text-[#C49A6C] leading-snug max-w-[28rem]">
                 Mitra terpercaya untuk <br className="hidden md:block" />
                 likuiditas aset mewah Anda.
               </h2>
 
-              <p className="text-gray-300 text-base md:text-sm max-w-md leading-relaxed">
+              <p className="text-gray-300 text-[1rem] md:text-[0.875rem] lg:text-[1rem] max-w-[28rem] leading-relaxed">
                 Sebagai mitra terpercaya, kami menjamin keamanan <br className="hidden md:block" />
                 tinggi dan penanganan aset dengan integritas untuk <br className="hidden md:block" />
                 hasil optimal.
               </p>
             </div>
 
-            <div className="flex flex-col md:flex-row md:items-center md:gap-[3.4375rem] md:self-stretch justify-center gap-16 mt-16">
+            <div className="flex flex-col md:flex-row md:items-center md:gap-[1.5rem] lg:gap-[3.4375rem] md:self-stretch justify-center gap-16 mt-16">
               {/* Privacy Item */}
-              <div className="flex flex-row items-start gap-6 md:gap-4 w-full md:w-1/3 text-left">
+              <div className="flex flex-row items-start gap-[1.5rem] md:gap-[0.5rem] lg:gap-[1rem] w-full md:w-[13.8125rem] lg:w-1/3 text-left">
                 <div className="flex-shrink-0">
-                  <img src="/assets/img/icon-privacy.png" alt="Privacy" className="w-[48px] h-[48px] object-contain" />
+                  <img src="/assets/img/icon-privacy.png" alt="Privacy" className="w-[2.25rem] lg:w-[3rem] h-[2.25rem] lg:h-[3rem] object-contain" />
                 </div>
                 <div>
-                  <div className="mb-2 md:mb-1">
-                    <h3 className="font-bold text-lg md:text-xl text-white">Privasi 100%</h3>
+                  <div className="mb-[0.5rem] md:mb-[0.25rem]">
+                    <h3 className="font-['Lato'] font-[800] text-[#E6E6E6] leading-[1.3] text-[1.125rem] md:text-[0.875rem] lg:text-[1.25rem]">Privasi 100%</h3>
                   </div>
-                  <p className="text-sm md:text-base text-gray-300 leading-relaxed">
+                  <p className="font-['Lato'] font-[700] text-[#D9D9D9] leading-[1.3] text-[0.875rem] md:text-[0.6875rem] lg:text-[1rem]">
                     Identitas dan seluruh informasi klien dijaga <br className="hidden md:block" />
                     sepenuhnya dengan sistem keamanan <br className="hidden md:block" />
                     berlapis.
@@ -39,18 +39,18 @@ let Cpages: React.FC = function () {
               </div>
 
               {/* Process Item */}
-              <div className="flex flex-row items-start gap-6 md:gap-4 w-full md:w-1/3 text-left">
+              <div className="flex flex-row items-start gap-[1.5rem] md:gap-[0.5rem] lg:gap-[1rem] w-full md:w-[13.8125rem] lg:w-1/3 text-left">
                 <div className="flex-shrink-0">
-                  <img src="/assets/img/icon-document.png" alt="Process" className="w-[48px] h-[48px] object-contain" />
+                  <img src="/assets/img/icon-document.png" alt="Process" className="w-[2.25rem] lg:w-[3rem] h-[2.25rem] lg:h-[3rem] object-contain" />
                 </div>
 
                 <div>
-                  <div className="mb-2 md:mb-1">
-                    <h3 className="font-bold text-lg md:text-xl text-white">
+                  <div className="mb-[0.5rem] md:mb-[0.25rem]">
+                    <h3 className="font-['Lato'] font-[800] text-[#E6E6E6] leading-[1.3] text-[1.125rem] md:text-[0.875rem] lg:text-[1.25rem]">
                       Proses Transparan & Terverifikasi
                     </h3>
                   </div>
-                  <p className="text-sm md:text-base text-gray-300 leading-relaxed">
+                  <p className="font-['Lato'] font-[700] text-[#D9D9D9] leading-[1.3] text-[0.875rem] md:text-[0.6875rem] lg:text-[1rem]">
                     Identitas dan seluruh informasi klien dijaga <br className="hidden md:block" />
                     sepenuhnya dengan sistem keamanan <br className="hidden md:block" />
                     berlapis.
@@ -59,18 +59,18 @@ let Cpages: React.FC = function () {
               </div>
 
               {/* Protection Item */}
-              <div className="flex flex-row items-start gap-6 md:gap-4 w-full md:w-1/3 text-left">
+              <div className="flex flex-row items-start gap-[1.5rem] md:gap-[0.5rem] lg:gap-[1rem] w-full md:w-[13.8125rem] lg:w-1/3 text-left">
                 <div className="flex-shrink-0">
-                  <img src="/assets/img/icon-shield.png" alt="Protection" className="w-[48px] h-[48px] object-contain" />
+                  <img src="/assets/img/icon-shield.png" alt="Protection" className="w-[2.25rem] lg:w-[3rem] h-[2.25rem] lg:h-[3rem] object-contain" />
                 </div>
 
                 <div>
-                  <div className="mb-2 md:mb-1">
-                    <h3 className="font-bold text-lg md:text-xl text-white">
+                  <div className="mb-[0.5rem] md:mb-[0.25rem]">
+                    <h3 className="font-['Lato'] font-[800] text-[#E6E6E6] leading-[1.3] text-[1.125rem] md:text-[0.875rem] lg:text-[1.25rem]">
                       Perlindungan Aset Maksimal
                     </h3>
                   </div>
-                  <p className="text-sm md:text-base text-gray-300 leading-relaxed">
+                  <p className="font-['Lato'] font-[700] text-[#D9D9D9] leading-[1.3] text-[0.875rem] md:text-[0.6875rem] lg:text-[1rem]">
                     Aset Anda disimpan dalam <br className="hidden md:block" />
                     standar keamanan tinggi untuk memastikan <br className="hidden md:block" />
                     kondisi tetap aman dan bernilai optimal.

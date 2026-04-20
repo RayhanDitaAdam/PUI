@@ -27,7 +27,7 @@ let Navbar: React.FC = function () {
     }
   }, []);
 
-  const linkClassName = "relative hover:text-white transition-colors duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[1.5px] after:bottom-[-4px] after:left-0 after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left";
+  const linkClassName = "relative hover:text-white transition-colors duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[0.09375rem] after:bottom-[-0.25rem] after:left-0 after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left";
 
   return (
     <div className="flex gap-10 text-sm text-gray-300">

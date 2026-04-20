@@ -2,17 +2,17 @@ let MainSection = function () {
     return (
         <section className="w-full max-w-[1700px] mx-auto">
             <section className="block md:hidden lg:hidden sm:block">
-                <div className="bg-black text-white px-6 pt-12 pb-16 rounded-b-[40px] text-center">
-                    <h2 className="text-2xl font-bold mb-4">Tas Branded</h2>
-                    <p className="text-sm leading-relaxed text-gray-300 mb-8">
-                        Butuh dana cepat? Punya tas branded mewah seperti Louis Vuitton, Chanel, Hermès, Gucci, Dior dan tas
-                        branded lainnya. Gadaikan tas mewah Anda, terjamin aman di PUI.
+                <div className="bg-black text-white px-6 pt-32 pb-[25rem] rounded-b-[40px] text-center flex flex-col items-center overflow-hidden">
+                    <h2 className="text-[2.5rem] font-bold mb-6 relative z-10">Tas Branded</h2>
+                    <p className="text-sm leading-relaxed text-gray-300 mb-12 max-w-md relative z-10">
+                        Butuh dana cepat? Punya tas branded mewah seperti <br /> Louis Vuitton, Chanel, Hermès, Gucci, Dior dan tas <br /> branded lainnya. Gadaikan tas mewah Anda, terjamin <br /> aman di PUI.
                     </p>
-                    <div className="relative inline-block w-full max-w-xs">
-                        <img src="/assets/img/tas_1.png" alt="tas" className="-ml-5 w-full h-auto drop-shadow-2xl" />
-                        <div
-                            className="absolute -bottom-4 left-0 right-0 h-12 bg-gradient-to-t from-black to-transparent opacity-50">
-                        </div>
+                    <div className="relative inline-block w-full max-w-none px-4 z-0">
+                        <img 
+                            src="/assets/img/tas_1.png" 
+                            alt="tas" 
+                            className="w-full h-auto drop-shadow-2xl scale-[3.5] origin-center translate-y-32 -translate-x-[15rem]" 
+                        />
                     </div>
                 </div>
 

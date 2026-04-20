@@ -16,44 +16,117 @@ let Lab = function () {
                         Fasilitas penilaian internal untuk memastikan setiap aset dinilai dengan standart yang seharusnya.
                     </p>
 
-                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 w-full text-left">
-                        <div className="bg-[#007060] p-3 rounded-2xl flex items-center justify-center min-h-[6rem]">
-                            <div className="p-2 bg-gray-200/20 w-fit rounded-xl">
-                                <img src="/assets/img/profil/logo1.png" className="w-12 md:w-16 h-auto object-contain" />
-                            </div>
-                        </div>
-
-                        <div className="bg-[#007060] p-3 rounded-2xl flex items-center justify-center min-h-[6rem]">
-                            <div className="p-2 bg-gray-200/20 w-fit rounded-xl">
-                                <img src="/assets/img/profil/logo2.png" className="w-12 md:w-16 h-auto object-contain" />
-                            </div>
-                        </div>
-
-                        <div className="bg-[#007060] p-3 rounded-2xl flex items-center justify-center min-h-[6rem]">
-                            <div className="p-2 bg-gray-200/20 w-fit rounded-xl">
-                                <img src="/assets/img/profil/logo3.png" className="w-12 md:w-16 h-auto object-contain" />
-                            </div>
-                        </div>
-
-                        <div className="bg-[#007060] p-3 rounded-2xl flex items-center justify-center min-h-[6rem]">
-                            <div className="p-2 bg-gray-200/20 w-fit rounded-xl">
-                                <img src="/assets/img/profil/logo4.png" className="w-12 md:w-16 h-auto object-contain" />
-                            </div>
-                        </div>
-
-                        <div className="bg-[#007060] p-3 rounded-2xl flex items-center justify-center min-h-[6rem]">
-                            <div className="p-2 bg-gray-200/20 w-fit rounded-xl">
-                                <img src="/assets/img/profil/logo5.png" className="w-12 md:w-16 h-auto object-contain" />
-                            </div>
-                        </div>
+                    <div className="flex items-center justify-start gap-[0.5rem] md:gap-[1.25rem] flex-wrap mt-6 mb-16">
+                        {["SSEF.png", "IGS.png", "BNSP.png"].map((logo, idx) => (
+                            <div 
+                                key={idx}
+                                className="w-[6.25rem] h-[2.125rem] md:w-[11.0625rem] md:h-[3.75rem]"
+                                style={{ 
+                                    backgroundImage: `url(/assets/img/profil/${logo})`,
+                                    backgroundSize: "85%",
+                                    backgroundPosition: "50%",
+                                    backgroundRepeat: "no-repeat",
+                                    backgroundColor: "white",
+                                    aspectRatio: "59/20",
+                                    borderRadius: "0.25rem"
+                                }}
+                            />
+                        ))}
                     </div>
 
-                    <div className="w-1/2 h-[0.2rem] bg-white my-6"></div>
+                    <div className="flex flex-col md:flex-row items-start justify-start gap-y-6 md:gap-y-10 gap-x-[1.25rem] w-full">
+                        {[
+                            { 
+                                title: "Analisis Presisi", 
+                                subtitle: "Pengujian batu mulia dengan hasil presisi tinggi",
+                                icon: "Analisi-Akurat.svg"
+                            },
+                            { 
+                                title: "Verifikasi Keaslian", 
+                                subtitle: "Menjamin identifikasi asli atau sintetis secara terpercaya",
+                                icon: "Verifikasi-Keahlian.svg"
+                            },
+                            { 
+                                title: "Penilaian Independent", 
+                                subtitle: "Ditangani oleh gemologist berpengalaman dan bersertifikasi",
+                                icon: "Penilaian-Independent.svg"
+                            }
+                        ].map((card, idx) => (
+                            <div 
+                                key={idx}
+                                className="w-full md:w-[12rem] h-auto md:h-[11.5rem]"
+                                style={{
+                                    padding: "1.25rem 1rem",
+                                    backgroundColor: "#007060",
+                                    borderRadius: "0.625rem",
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    alignItems: "flex-start",
+                                    gap: "0.75rem"
+                                }}
+                            >
+                                <div 
+                                    style={{
+                                        display: "flex",
+                                        width: "fit-content",
+                                        height: "fit-content",
+                                        padding: "0.40625rem",
+                                        flexDirection: "column",
+                                        justifyContent: "center",
+                                        alignItems: "center",
+                                        borderRadius: "0.40625rem",
+                                        background: "#0A917E"
+                                    }}
+                                >
+                                    <img 
+                                        src={`/assets/img/profil/${card.icon}`} 
+                                        alt={card.title}
+                                        style={{
+                                            width: "1.75rem",
+                                            height: "1.75rem",
+                                            objectFit: "contain"
+                                        }}
+                                    />
+                                </div>
 
-                    <div className="text-left w-full space-y-1">
-                        <p className="text-base md:text-lg">Analisis Presisi</p>
-                        <p className="text-base md:text-lg">Verifikasi Keaslian</p>
-                        <p className="text-base md:text-lg">Penilaian Independent</p>
+                                <div 
+                                    style={{
+                                        width: "100%",
+                                        display: "flex",
+                                        flexDirection: "column",
+                                        alignItems: "flex-start",
+                                        gap: "0.5rem"
+                                    }}
+                                >
+                                    <h3 
+                                        style={{ 
+                                            color: "#FFF", 
+                                            fontFamily: "Lato, sans-serif", 
+                                            fontSize: "0.875rem", 
+                                            fontWeight: 700, 
+                                            lineHeight: "130%",
+                                            alignSelf: "stretch",
+                                            textAlign: "left"
+                                        }}
+                                    >
+                                        {card.title}
+                                    </h3>
+                                    <p 
+                                        style={{ 
+                                            color: "#E4E4E4", 
+                                            fontFamily: "Lato, sans-serif", 
+                                            fontSize: "0.75rem", 
+                                            fontWeight: 400, 
+                                            lineHeight: "130%",
+                                            alignSelf: "stretch",
+                                            textAlign: "left"
+                                        }}
+                                    >
+                                        {card.subtitle}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

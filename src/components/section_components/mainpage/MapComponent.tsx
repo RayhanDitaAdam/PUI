@@ -46,7 +46,7 @@ const MapComponent: React.FC = () => {
 
   const buildingIcon = L.divIcon({
     html: `<div class="flex items-center justify-center bg-white border-2 border-red-600 rounded-full w-10 h-10 shadow-lg">
-             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg" class="text-red-600">
+             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" height="1.25rem" width="1.25rem" xmlns="http://www.w3.org/2000/svg" class="text-red-600">
                <path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path>
              </svg>
            </div>`,
@@ -56,7 +56,7 @@ const MapComponent: React.FC = () => {
   });
 
   return (
-    <div className="w-full h-[450px] overflow-hidden relative">
+    <div className="w-full h-[28.125rem] overflow-hidden relative">
       <MapContainer
         center={position}
         zoom={17}
@@ -87,7 +87,7 @@ const MapComponent: React.FC = () => {
       </MapContainer>
 
       {/* Map Information Card Overlay */}
-      <div className="absolute top-6 right-4 md:right-8 z-[1000] w-[320px] md:w-[380px] bg-white/70 backdrop-blur-2xl border border-white/50 p-4 md:p-5 rounded-[30px] shadow-[0_15px_40px_rgba(0,0,0,0.12)] pointer-events-auto transition-all duration-300 hover:shadow-[0_20px_50px_rgba(0,0,0,0.18)] group">
+      <div className="absolute top-6 right-4 md:right-8 z-[1000] w-[20rem] md:w-[23.75rem] bg-white/70 backdrop-blur-2xl border border-white/50 p-4 md:p-5 rounded-[1.875rem] shadow-[0_15px_40px_rgba(0,0,0,0.12)] pointer-events-auto transition-all duration-300 hover:shadow-[0_20px_50px_rgba(0,0,0,0.18)] group">
         <div className="flex flex-col gap-3">
           <div>
             <h3 className="text-[#003D35] font-black text-lg md:text-xl mb-0.5 group-hover:text-[#C49A6C] transition-colors duration-300">Kantor Pusat PUI</h3>
@@ -100,8 +100,8 @@ const MapComponent: React.FC = () => {
                 <FaMapMarkerAlt size={14} />
               </div>
               <div>
-                <p className="text-[9px] uppercase tracking-widest text-gray-500 font-bold mb-0">Lokasi</p>
-                <p className="text-[11px] md:text-xs text-[#003D35] font-semibold leading-relaxed">
+                <p className="text-[0.5625rem] uppercase tracking-widest text-gray-500 font-bold mb-0">Lokasi</p>
+                <p className="text-[0.6875rem] md:text-xs text-[#003D35] font-semibold leading-relaxed">
                   The Darmawangsa Square Lt.2 No.263-264, Jakarta Selatan 12160
                 </p>
               </div>
@@ -112,13 +112,13 @@ const MapComponent: React.FC = () => {
                 <FaClock size={14} />
               </div>
               <div className="flex-1">
-                <p className="text-[9px] uppercase tracking-widest text-gray-500 font-bold mb-0">Jam Operasional</p>
+                <p className="text-[0.5625rem] uppercase tracking-widest text-gray-500 font-bold mb-0">Jam Operasional</p>
                 <div className="space-y-0.5 mt-0.5">
-                  <p className="text-[11px] md:text-xs text-[#003D35] font-semibold flex justify-between gap-4">
+                  <p className="text-[0.6875rem] md:text-xs text-[#003D35] font-semibold flex justify-between gap-4">
                     <span>Senin - Jumat:</span>
                     <span className="text-[#C49A6C]">10:00 - 17:30</span>
                   </p>
-                  <p className="text-[11px] md:text-xs text-[#003D35] font-semibold flex justify-between gap-4">
+                  <p className="text-[0.6875rem] md:text-xs text-[#003D35] font-semibold flex justify-between gap-4">
                     <span>Sabtu - Minggu:</span>
                     <span className="text-[#C49A6C]">By Appointment</span>
                   </p>
@@ -129,13 +129,13 @@ const MapComponent: React.FC = () => {
             <div className="pt-3 border-t border-[#003D35]/5 space-y-2">
               <div className="flex gap-2 items-center group/subitem">
                 <FaPhone className="text-[#C49A6C] group-hover/subitem:scale-110 transition-transform" size={12} />
-                <p className="text-[11px] md:text-xs text-[#003D35] font-bold">
+                <p className="text-[0.6875rem] md:text-xs text-[#003D35] font-bold">
                   +62 822 7777 7911
                 </p>
               </div>
               <div className="flex gap-2 items-center group/subitem">
                 <FaEnvelope className="text-[#C49A6C] group-hover/subitem:scale-110 transition-transform" size={12} />
-                <p className="text-[11px] md:text-xs text-[#003D35] font-medium italic">
+                <p className="text-[0.6875rem] md:text-xs text-[#003D35] font-medium italic">
                   marketing@pui.co.id
                 </p>
               </div>

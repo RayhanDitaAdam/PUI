@@ -72,22 +72,26 @@ const Footer: React.FC<FooterProps> = ({
                         style={{
                             background: "linear-gradient(135deg, rgb(0, 58, 48) 0%, rgb(0, 29, 24) 50%, rgb(0, 5, 4) 100%)",
                         }}
-                        className="w-full md:max-w-7xl 2xl:max-w-[1700px] md:mx-auto pt-16 pb-12 md:pb-12 text-white rounded-t-[24px] md:rounded-t-[48px] 2xl:px-32"
+                        className="w-full md:max-w-7xl 2xl:max-w-[1700px] md:mx-auto pt-20 pb-16 md:pb-24 text-white rounded-t-[24px] md:rounded-t-[48px] 2xl:px-32 text-center"
                     >
-                        <div className="text-center mb-10 px-6">
-                            <h1 className="text-2xl md:text-3xl mb-4 font-extrabold px-2">Didukung Standar Keamanan Tinggi</h1>
-                            <p className="text-white/80 leading-relaxed text-[13px] md:text-sm max-w-xl mx-auto">
-                                Menghadirkan perlindungan aset kelas premium dengan standar keamanan tinggi, didukung sistem profesional dan pengelolaan yang terpercaya.
-                            </p>
-                        </div>
-                        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 px-6">
-                            <div className="flex items-center gap-4 bg-white/10 backdrop-blur-md px-6 py-4 rounded-xl w-full max-w-[340px]">
-                                <span className="text-sm font-medium">Terdaftar &amp; diawasi OJK</span>
-                            </div>
-                            <div className="flex items-center gap-4 bg-white/10 backdrop-blur-md px-6 py-4 rounded-xl w-full max-w-[340px]">
-                                <span className="text-sm font-medium">Anggota Resmi PPGI</span>
-                            </div>
-                        </div>
+                        <img 
+                            src="/assets/img/logo-pui.png" 
+                            alt="PUI Logo" 
+                            className="w-[9rem] h-[3.125rem] aspect-[72/25] md:w-[12rem] md:h-[4.1875rem] md:aspect-[192/67] mx-auto mb-10" 
+                        />
+                        <p 
+                            style={{ 
+                                color: "#EDE8D0", 
+                                fontFamily: "Lato, sans-serif", 
+                                fontSize: "clamp(1.5rem, 5vw, 2.3125rem)", 
+                                fontWeight: 800, 
+                                lineHeight: "130%",
+                                alignSelf: "stretch"
+                            }}
+                            className="w-full md:w-auto max-w-4xl mx-auto px-6 text-center"
+                        >
+                            Pergadaian Utama Indonesia <br className="md:hidden" /> berizin dan <br className="hidden md:block" /> diawasi oleh <br className="md:hidden" /> Otoritas Jasa Keuangan
+                        </p>
                     </div>
                 )}
 
@@ -178,13 +182,13 @@ const Footer: React.FC<FooterProps> = ({
                             </div>
 
                             <div className="flex gap-4 mt-8">
-                                <a href="https://www.facebook.com/profile.php?id=61585918772400" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#C49A6C] transition-colors cursor-pointer">
+                                <a href="https://www.facebook.com/profile.php?id=61585918772400" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#C49A6C] transition-colors cursor-pointer no-underline">
                                     <FaFacebookF className="text-lg" />
                                 </a>
-                                <a href="https://www.instagram.com/pui.gadai" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#C49A6C] transition-colors cursor-pointer">
+                                <a href="https://www.instagram.com/pui.gadai" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#C49A6C] transition-colors cursor-pointer no-underline">
                                     <FaInstagram className="text-lg" />
                                 </a>
-                                <a href="https://www.linkedin.com/company/puigadai/about" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#C49A6C] transition-colors cursor-pointer">
+                                <a href="https://www.linkedin.com/company/puigadai/about" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#C49A6C] transition-colors cursor-pointer no-underline">
                                     <FaLinkedinIn className="text-lg" />
                                 </a>
                             </div>
@@ -193,12 +197,11 @@ const Footer: React.FC<FooterProps> = ({
 
                     {/* Regulation Logos */}
                     <div className="flex flex-row md:flex-row items-stretch justify-center md:justify-start gap-4 md:gap-6 md:mb-[3rem] border-t border-white/10 pt-[2.5rem]">
-                        <div className="flex flex-col md:flex-row items-start md:items-center gap-[0.5rem] md:gap-[1rem] p-[0.75rem] bg-white/5 rounded-xl w-auto">
-                            <span className="text-[0.75rem] font-medium text-white text-left">Terdaftar & diawasi OJK</span>
-                        </div>
-                        <div className="flex flex-col md:flex-row items-start md:items-center gap-[0.5rem] md:gap-[1rem] p-[0.75rem] bg-white/5 rounded-xl w-auto">
-                            <span className="text-[0.75rem] font-medium text-white text-left">Anggota Resmi PPGI</span>
-                        </div>
+                        <span 
+                            className="w-[18.5625rem] md:w-auto md:max-w-[320px] text-white md:text-white/60 font-normal md:font-medium text-[0.75rem] md:text-[1rem] leading-[130%] font-['Lato']"
+                        >
+                            Pergadaian Utama Indonesia berizin dan diawasi oleh Otoritas Jasa Keuangan
+                        </span>
                     </div>
 
                     {/* Sub-footer */}

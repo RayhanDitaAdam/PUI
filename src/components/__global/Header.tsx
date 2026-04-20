@@ -5,30 +5,14 @@ import { FaWhatsapp } from "react-icons/fa";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 const Header: React.FC = () => {
-  const [isSticky, setIsSticky] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(typeof window !== "undefined" ? window.innerWidth >= 768 : true);
+  const [isDesktop, setIsDesktop] = useState(typeof window !== "undefined" ? window.innerWidth >= 1024 : true);
 
   React.useEffect(() => {
-    const handleResize = () => setIsDesktop(window.innerWidth >= 768);
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      const currentIsDesktop = window.innerWidth >= 768;
-      setScrollY(currentScrollY);
+    const handleResize = () => setIsDesktop(window.innerWidth >= 1024);
 
-      // Header stays sticky only while within the hero section (720px) on desktop
-      if (currentIsDesktop && currentScrollY > 0 && currentScrollY < 720) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
     };
   }, []);
@@ -45,35 +29,32 @@ const Header: React.FC = () => {
   return (
     <>
       <div className={`
-        ${isDesktop 
-          ? (isSticky ? "fixed top-0 animate-slide-down shadow-2xl" : "absolute top-0") 
-          : "fixed top-0 shadow-lg"} 
-        ${(isDesktop && scrollY >= 720) ? "hidden" : "flex"} 
-        left-0 w-full z-[100] px-6 md:px-16 py-6 items-center justify-between backdrop-blur-md bg-black/90 transition-all duration-500
+        ${isDesktop ? "absolute top-0" : "fixed top-0 shadow-lg"} 
+        flex left-0 w-full z-[100] px-6 md:px-16 py-6 items-center justify-between backdrop-blur-md bg-black/90 transition-all duration-500
       `}>
         <ScrollProgress />
         
         {/* Logo */}
         <div className="flex items-center gap-2 flex-1">
           <a href="/">
-            <img src="/assets/img/logo-pui.png" className="w-[145px] h-[48px]" />
+            <img src="/assets/img/logo-pui.png" className="w-[9.0625rem] h-[3rem]" />
           </a>
         </div>
 
         {/* Desktop Navbar */}
-        <div className="hidden md:flex justify-center flex-1">
+        <div className="hidden lg:flex justify-center flex-1">
           <Navbar />
         </div>
 
         {/* Desktop WhatsApp Button */}
-        <div className="hidden md:flex justify-end flex-1">
+        <div className="hidden lg:flex justify-end flex-1">
           <a href="https://wa.me/6282277777911" target="_blank" rel="noopener noreferrer" className="border border-gray-400 px-4 py-2 rounded-full text-sm text-white flex items-center gap-2 animate-pulse-whatsapp hover:scale-105 transition-transform duration-300 cursor-pointer">
             <FaWhatsapp className="z-50 text-white" /> 0822 77777 911
           </a>
         </div>
 
         {/* Mobile Hamburger Menu */}
-        <div className="flex md:hidden justify-end flex-1">
+        <div className="flex lg:hidden justify-end flex-1">
           <button 
             onClick={() => setIsMenuOpen(true)}
             className="text-white text-3xl focus:outline-none"
@@ -85,7 +66,7 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu Drawer */}
       <div 
-        className={`fixed top-0 right-0 h-full w-[70%] sm:w-1/2 bg-black z-[999] transform transition-transform duration-500 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"} md:hidden shadow-2xl border-l border-gray-800`}
+        className={`fixed top-0 right-0 h-full w-[70%] sm:w-1/2 bg-black z-[999] transform transition-transform duration-500 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"} lg:hidden shadow-2xl border-l border-gray-800`}
       >
         <div className="flex flex-col h-full p-8">
           <div className="flex justify-end mb-12">
@@ -116,7 +97,7 @@ const Header: React.FC = () => {
       {/* Overlay */}
       {isMenuOpen && (
         <div 
-          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[150] md:hidden transition-opacity duration-500"
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[150] lg:hidden transition-opacity duration-500"
           onClick={() => setIsMenuOpen(false)}
         />
       )}
