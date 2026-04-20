@@ -1,5 +1,5 @@
 import Header from "../../__global/Header";
-import { FaWhatsapp } from "react-icons/fa";
+
 
 let Hero: React.FC = () => {
   return (
@@ -33,10 +33,10 @@ let Hero: React.FC = () => {
               </p>
 
               <div className="flex justify-center md:justify-start gap-4">
-                <button className="group relative mt-8 md:mt-4 flex items-center gap-3 px-8 py-3 bg-gradient-to-r from-[#12472B] to-[#0A917E] text-white text-sm rounded-full md:rounded-lg animate-pulse-whatsapp hover:scale-105 transition-all duration-300 shadow-xl">
+                {/* <button className="group relative mt-8 md:mt-4 flex items-center gap-3 px-8 py-3 bg-gradient-to-r from-[#12472B] to-[#0A917E] text-white text-sm rounded-full md:rounded-lg animate-pulse-whatsapp hover:scale-105 transition-all duration-300 shadow-xl">
                   <FaWhatsapp className="relative z-10 text-lg" />
                   <span className="relative z-10 font-semibold">Gratis Konsultasi Via WhatsApp</span>
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
