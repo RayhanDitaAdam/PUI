@@ -83,8 +83,23 @@ let Hero: React.FC = () => {
             </a>
           </div>
 
+          {/* PUI Info Card */}
+          <div className="mt-[17rem] text-center flex flex-col items-center max-w-[90%] sm:max-w-sm bg-black/80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1),inset_0_1px_0_0_rgba(255,255,255,0.2)] backdrop-blur-[8px] rounded-[1.5rem] p-6 sm:p-8">
+            <h3 className="font-bold mb-3 animate-shine-text text-xl">
+              Pergadaian Utama Indonesia
+            </h3>
+            <p className="text-sm text-gray-300 leading-relaxed">
+              Pergadaian Utama Indonesia (PUI) adalah mitra terpercaya
+              untuk solusi likuiditas aset mewah Anda, dengan layanan
+              profesional, proses cepat, serta keamanan terjamin.
+            </p>
+            <button className="mt-6 bg-[#003D35] px-6 py-2.5 rounded-full text-sm text-white hover:bg-[#005D51] hover:scale-105 transition-all duration-300">
+              Tentang PUI
+            </button>
+          </div>
+
           {/* Feature Cards Grid (2 top, 1 bottom) */}
-          <div className="mt-[17rem] w-full flex flex-col gap-4 items-center">
+          <div className="mt-10 w-full flex flex-col gap-4 items-center">
             <div className="grid grid-cols-2 gap-4 w-full">
               <div className="animate-floating flex items-center justify-center gap-2 bg-[#003D35] border-2 rounded-[0.625rem] border-[#5C5E3D] px-3 py-2 text-[0.625rem] shadow text-white" style={{ animationDelay: '0.8s' }}>
                 <img className="w-[1.25rem]" src="/assets/img/icon-clock.png" />
@@ -99,21 +114,6 @@ let Hero: React.FC = () => {
               <img src="/assets/img/Layer_1.svg" className="h-[0.875rem] w-auto" alt="License Logo" />
               <span>Terdaftar & diawasi OJK</span>
             </div>
-          </div>
-
-          {/* PUI Info Card */}
-          <div className="mt-10 text-center flex flex-col items-center max-w-[90%] sm:max-w-sm bg-black/80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1),inset_0_1px_0_0_rgba(255,255,255,0.2)] backdrop-blur-[8px] rounded-[1.5rem] p-6 sm:p-8">
-            <h3 className="font-bold mb-3 animate-shine-text text-xl">
-              Pergadaian Utama Indonesia
-            </h3>
-            <p className="text-sm text-gray-300 leading-relaxed">
-              Pergadaian Utama Indonesia (PUI) adalah mitra terpercaya
-              untuk solusi likuiditas aset mewah Anda, dengan layanan
-              profesional, proses cepat, serta keamanan terjamin.
-            </p>
-            <button className="mt-6 bg-[#003D35] px-6 py-2.5 rounded-full text-sm text-white hover:bg-[#005D51] hover:scale-105 transition-all duration-300">
-              Tentang PUI
-            </button>
           </div>
         </div>
 
