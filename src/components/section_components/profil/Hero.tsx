@@ -22,19 +22,10 @@ let Hero: React.FC = () => {
               <p className="text-base text-gray-300 leading-relaxed">
                 Pergadaian Utama Indonesia (PUI) adalah mitra terpercaya untuk solusi <br /> likuiditas aset mewah Anda, dengan layanan profesional, proses cepat, serta <br /> transaksi yang aman dan transparan.
               </p>
-              <div className="flex gap-4 mt-8">
-                <div className="bg-white/10 backdrop-blur-md rounded-xl px-5 py-3 border border-white/20">
-                  <p className="text-[11px] text-white/70 font-medium mb-1">Berizin & Diawasi oleh</p>
-                  <p className="text-lg font-black text-[#D4AA6A]">OJK</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-md rounded-xl px-5 py-3 border border-white/20">
-                  <p className="text-[11px] text-white/70 font-medium mb-1">Anggota Resmi</p>
-                  <p className="text-lg font-black text-[#D4AA6A]">PPGI</p>
-                </div>
-              </div>
-            </div>
+              {/* Logos removed per user request */}
             </div>
           </div>
+        </div>
 
         <div className="flex md:hidden absolute inset-0 z-20 flex-col items-center pt-28 px-6 text-center">
           <h3 className="text-[13px] text-gray-300 mb-2">Profil Perusahaan</h3>
@@ -44,16 +35,7 @@ let Hero: React.FC = () => {
           <p className="text-[13px] text-gray-300 leading-relaxed mb-6 px-2">
             Pergadaian Utama Indonesia (PUI) adalah mitra terpercaya untuk solusi likuiditas aset mewah Anda, dengan layanan profesional, proses cepat, serta transaksi yang aman dan transparan.
           </p>
-          <div className="flex gap-3 mt-4">
-            <div className="bg-white/10 backdrop-blur-md rounded-lg px-4 py-2 border border-white/10">
-              <p className="text-[9px] text-white/60 font-medium">Berizin & Diawasi</p>
-              <p className="text-sm font-bold text-[#D4AA6A]">OJK</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-lg px-4 py-2 border border-white/10">
-              <p className="text-[9px] text-white/60 font-medium">Anggota Resmi</p>
-              <p className="text-sm font-bold text-[#D4AA6A]">PPGI</p>
-            </div>
-          </div>
+          {/* Logos removed per user request */}
         </div>
         <div className="hidden md:flex absolute -bottom-20 left-0 right-0 z-20 justify-center">
           <div className="w-full max-w-[1440px] relative flex justify-end items-end pr-0">
