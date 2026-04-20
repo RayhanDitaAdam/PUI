@@ -93,9 +93,9 @@ let Hero: React.FC = () => {
               untuk solusi likuiditas aset mewah Anda, dengan layanan
               profesional, proses cepat, serta keamanan terjamin.
             </p>
-            <button className="mt-6 bg-[#003D35] px-6 py-2.5 rounded-full text-sm text-white hover:bg-[#005D51] hover:scale-105 transition-all duration-300">
+            <a href="https://pui-xi.vercel.app/profil-perusahaan" className="inline-block mt-6 bg-[#003D35] px-6 py-2.5 rounded-full text-sm text-white hover:bg-[#005D51] hover:scale-105 transition-all duration-300">
               Tentang PUI
-            </button>
+            </a>
           </div>
 
           {/* Feature Cards Grid (2 top, 1 bottom) */}
@@ -187,9 +187,9 @@ let Hero: React.FC = () => {
                 untuk solusi likuiditas aset mewah Anda, dengan layanan
                 profesional, proses cepat, serta keamanan terjamin.
               </p>
-              <button className="mt-6 bg-[#003D35] px-6 py-2 rounded-full text-xs text-white hover:bg-[#005D51] hover:scale-105 transition-all duration-300">
+              <a href="https://pui-xi.vercel.app/profil-perusahaan" className="inline-block mt-6 bg-[#003D35] px-6 py-2 rounded-full text-xs text-white hover:bg-[#005D51] hover:scale-105 transition-all duration-300">
                 Tentang PUI
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -232,9 +232,9 @@ let Hero: React.FC = () => {
                   untuk solusi likuiditas aset mewah Anda, dengan layanan
                   profesional, proses cepat, serta keamanan terjamin.
                 </p>
-                <button className="mt-4 bg-[#003D35] px-4 py-2 rounded-full text-xs text-white hover:bg-[#005D51] hover:scale-105 transition-all duration-300">
+                <a href="https://pui-xi.vercel.app/profil-perusahaan" className="inline-block mt-4 bg-[#003D35] px-4 py-2 rounded-full text-xs text-white hover:bg-[#005D51] hover:scale-105 transition-all duration-300">
                   Tentang PUI
-                </button>
+                </a>
               </div>
 
               {/* Feature Cards Column */}
