@@ -24,13 +24,13 @@ let DuoCard = function () {
                         </div>
                     </div>
                     <div className="about-image-placeholder ml-auto" style={{
-                        backgroundImage: "url('/assets/img/profil/5e6c8a11855b39c3ee0f9b523dec390495c03544.png')"
+                        backgroundImage: "url('/assets/img/profil/5e6c8a11855b39c3ee0f9b523dec390495c03544.webp')"
                     }}></div>
                 </div>
             </div>
             <div className="flex md:hidden flex-col w-full px-2 mt-16 mb-12">
                 <div className="w-full h-[260px] rounded-2xl bg-cover bg-center shadow-md" style={{
-                    backgroundImage: "url('/assets/img/profil/5e6c8a11855b39c3ee0f9b523dec390495c03544.png')"
+                    backgroundImage: "url('/assets/img/profil/5e6c8a11855b39c3ee0f9b523dec390495c03544.webp')"
                 }}></div>
                 <div className="bg-[#004C41] rounded-2xl p-6 -mt-16 mx-2 z-10 shadow-xl text-white">
                     <h2 className="text-sm font-bold mb-3">Tentang Perusahaan</h2>

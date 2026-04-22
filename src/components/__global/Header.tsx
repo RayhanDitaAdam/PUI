@@ -33,11 +33,11 @@ const Header: React.FC = () => {
         flex left-0 w-full z-[100] px-6 md:px-16 py-6 items-center justify-between backdrop-blur-md bg-black/90 transition-all duration-500
       `}>
         <ScrollProgress />
-        
+
         {/* Logo */}
         <div className="flex items-center gap-2 flex-1">
           <a href="/">
-            <img src="/assets/img/logo-pui.png" className="w-[9.0625rem] h-[3rem]" />
+            <img src="/assets/img/logo-pui.webp" className="w-[9.0625rem] h-[3rem]" />
           </a>
         </div>
 
@@ -55,7 +55,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Hamburger Menu */}
         <div className="flex lg:hidden justify-end flex-1">
-          <button 
+          <button
             onClick={() => setIsMenuOpen(true)}
             className="text-white text-3xl focus:outline-none"
           >
@@ -65,19 +65,19 @@ const Header: React.FC = () => {
       </div>
 
       {/* Mobile Menu Drawer */}
-      <div 
+      <div
         className={`fixed top-0 right-0 h-full w-[70%] sm:w-1/2 bg-black z-[999] transform transition-transform duration-500 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"} lg:hidden shadow-2xl border-l border-gray-800`}
       >
         <div className="flex flex-col h-full p-8">
           <div className="flex justify-end mb-12">
-            <button 
+            <button
               onClick={() => setIsMenuOpen(false)}
               className="text-white text-3xl focus:outline-none"
             >
               <HiX />
             </button>
           </div>
-          
+
           <nav className="flex flex-col gap-8">
             <a href="/profil-perusahaan" onClick={() => setIsMenuOpen(false)} className="text-white text-xl font-medium border-b border-white/10 pb-4 hover:text-gray-300 transition-colors">Profil Perusahaan</a>
             <a href="/#produk" onClick={() => setIsMenuOpen(false)} className="text-white text-xl font-medium border-b border-white/10 pb-4 hover:text-gray-300 transition-colors">Produk</a>
@@ -86,17 +86,17 @@ const Header: React.FC = () => {
           </nav>
 
           <div className="mt-auto pt-8 border-t border-white/10">
-             <a href="https://wa.me/6282277777911" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white hover:text-green-400 transition-colors">
-                <FaWhatsapp className="text-2xl text-green-500" />
-                <span className="text-base font-semibold">0822 77777 911</span>
-             </a>
+            <a href="https://wa.me/6282277777911" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white hover:text-green-400 transition-colors">
+              <FaWhatsapp className="text-2xl text-green-500" />
+              <span className="text-base font-semibold">0822 77777 911</span>
+            </a>
           </div>
         </div>
       </div>
 
       {/* Overlay */}
       {isMenuOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[150] lg:hidden transition-opacity duration-500"
           onClick={() => setIsMenuOpen(false)}
         />

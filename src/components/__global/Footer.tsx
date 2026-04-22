@@ -75,7 +75,7 @@ const Footer: React.FC<FooterProps> = ({
                         className="w-full md:max-w-7xl 2xl:max-w-[1700px] md:mx-auto pt-20 pb-16 md:pb-24 text-white rounded-t-[24px] md:rounded-t-[48px] 2xl:px-32 text-center"
                     >
                         <img
-                            src="/assets/img/logo-pui.png"
+                            src="/assets/img/logo-pui.webp"
                             alt="PUI Logo"
                             className="w-[9rem] h-[3.125rem] aspect-[72/25] md:w-[12rem] md:h-[4.1875rem] md:aspect-[192/67] mx-auto mb-10"
                         />
@@ -127,7 +127,7 @@ const Footer: React.FC<FooterProps> = ({
                     <div className="grid grid-cols-1 md:flex md:flex-row md:justify-between lg:grid lg:grid-cols-4 gap-10 md:gap-0 lg:gap-12 md:mb-12">
                         {/* Brand & Address */}
                         <div className="flex flex-col md:max-w-[280px] lg:max-w-none">
-                            <img className="w-[140px] md:w-[160px] mb-8" src="/assets/img/logo-pui.png" alt="PUI Logo" />
+                            <img className="w-[140px] md:w-[160px] mb-8" src="/assets/img/logo-pui.webp" alt="PUI Logo" />
                             <div className="space-y-4">
                                 <div className="flex items-start gap-3">
                                     <FaLocationDot className="mt-1 text-[#C49A6C] shrink-0" />

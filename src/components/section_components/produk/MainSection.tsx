@@ -1,12 +1,12 @@
 import { useParams } from 'react-router-dom';
 
 const productImages: Record<string, string> = {
-    'emas': '/assets/img/produk/emas.jpg',
-    'perhiasan': '/assets/img/produk/cincin.png',
-    'jam-tangan': '/assets/img/produk/jam-tangan.png',
-    'koleksi': '/assets/img/produk/koleksi.jpg',
-    'kendaraan': '/assets/img/produk/kendaraan.jpg',
-    'tas': '/assets/img/produk/tas_1.png',
+    'emas': '/assets/img/produk/emas.webp',
+    'perhiasan': '/assets/img/produk/cincin.webp',
+    'jam-tangan': '/assets/img/produk/jam-tangan.webp',
+    'koleksi': '/assets/img/produk/koleksi.webp',
+    'kendaraan': '/assets/img/produk/kendaraan.webp',
+    'tas': '/assets/img/produk/tas_1.webp',
 };
 
 const productTitles: Record<string, string> = {
@@ -21,7 +21,7 @@ const productTitles: Record<string, string> = {
 let MainSection = function () {
     const { slug } = useParams<{ slug: string }>();
     const currentSlug = slug || 'tas';
-    const imgSrc = productImages[currentSlug] || '/assets/img/produk/tas_1.png';
+    const imgSrc = productImages[currentSlug] || '/assets/img/produk/tas_1.webp';
     const title = productTitles[currentSlug] || 'Tas Branded';
     return (
         <section className="w-full max-w-[1700px] mx-auto">

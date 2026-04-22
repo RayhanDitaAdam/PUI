@@ -17,7 +17,7 @@ const FloatingWA: React.FC = () => {
         const handleScroll = () => {
             const isMobile = window.innerWidth < 768;
             const threshold = isMobile ? 400 : 200;
-            
+
             if (window.scrollY > threshold) {
                 setShowPopup(true);
             }
@@ -47,8 +47,8 @@ const FloatingWA: React.FC = () => {
 
     return (
         <>
-            <div 
-                ref={popupRef} 
+            <div
+                ref={popupRef}
                 className={`fixed bottom-6 right-6 z-50 prisil-popup transition-all duration-200 transform ${(!showPopup || isMinimized) ? 'opacity-0 scale-90 translate-y-4 pointer-events-none' : 'opacity-100 scale-100 translate-y-0'}`}
             >
                 <a
@@ -92,7 +92,7 @@ const FloatingWA: React.FC = () => {
                                 <div className="absolute bottom-2 right-2 w-[80%] h-[80%] bg-[#b0b0b0]/30 animate-pulse rounded-br-[12px] rounded-tl-[12px]"></div>
                             )}
                             <img
-                                src="/assets/img/40d826a68f7b2fe6a3460b18c5d0de6a1118d609.png"
+                                src="/assets/img/40d826a68f7b2fe6a3460b18c5d0de6a1118d609.webp"
                                 alt="Prisil"
                                 onLoad={() => setIsImageLoaded(true)}
                                 className={`absolute bottom-0 left-1/2 w-[110%] max-w-none transition-all duration-500 group-hover:scale-105 ${isImageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}

@@ -4,12 +4,12 @@ let Proccess = function () {
       className="relative process-section py-12 md:py-28 lg:py-32 px-6 text-white overflow-hidden"
     >
       <img
-        src="/assets/img/main/mobile.png"
+        src="/assets/img/main/mobile.webp"
         className="absolute inset-0 w-full h-full object-cover object-center md:hidden"
         alt="Process Background Mobile"
       />
       <img
-        src="/assets/img/main/desktop.png"
+        src="/assets/img/main/desktop.webp"
         className="absolute inset-0 w-full h-full object-cover object-center hidden md:block"
         alt="Process Background Desktop"
       />
@@ -29,7 +29,7 @@ let Proccess = function () {
         <div className="flex flex-col items-center gap-6 md:flex-row md:items-start md:justify-center md:gap-10 mb-14">
           <div className="flex flex-col items-center md:w-[38%] lg:w-1/3 text-center group">
             <div className="flex justify-center mb-4">
-              <img width="60" src="/assets/img/8e1e5e9db68de8dec0f9170c46b26215695d80aa.png" alt="Icon" className="md:w-[50px]" />
+              <img width="60" src="/assets/img/8e1e5e9db68de8dec0f9170c46b26215695d80aa.webp" alt="Icon" className="md:w-[50px]" />
             </div>
             <h3 className="font-semibold text-lg md:text-[0.875rem] lg:text-base mb-2">Initial Consultation</h3>
             <p className="text-sm md:text-[0.75rem] lg:text-xs opacity-80 leading-relaxed">
@@ -41,7 +41,7 @@ let Proccess = function () {
           </div>
           <div className="flex flex-col items-center md:w-[38%] lg:w-1/3 text-center">
             <div className="flex justify-center mb-4">
-              <img width="60" src="/assets/img/1c1766aaa851ad680797a36295bd9e74b589b531.png" alt="Icon" className="md:w-[50px]" />
+              <img width="60" src="/assets/img/1c1766aaa851ad680797a36295bd9e74b589b531.webp" alt="Icon" className="md:w-[50px]" />
             </div>
             <h3 className="font-semibold text-lg md:text-[0.875rem] lg:text-base mb-2">Professional Appraisal</h3>
             <p className="text-sm md:text-[0.75rem] lg:text-xs opacity-80 leading-relaxed">
@@ -53,7 +53,7 @@ let Proccess = function () {
           </div>
           <div className="flex flex-col items-center md:w-[38%] lg:w-1/3 text-center">
             <div className="flex justify-center mb-4">
-              <img width="60" src="/assets/img/8e1e5e9db68de8dec0f9170c46b26215695d80aa.png" alt="Icon" className="md:w-[50px]" />
+              <img width="60" src="/assets/img/8e1e5e9db68de8dec0f9170c46b26215695d80aa.webp" alt="Icon" className="md:w-[50px]" />
             </div>
             <h3 className="font-semibold text-lg md:text-[0.875rem] lg:text-base mb-2">Instant Disbursement</h3>
             <p className="text-sm md:text-[0.75rem] lg:text-xs opacity-80 leading-relaxed">

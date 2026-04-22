@@ -15,7 +15,7 @@ let PUIThumbs = function () {
                     </a>
                 </div>
                 <div className="flex justify-center -mb-8 md:-mb-16">
-                    <img className="w-full md:w-[1200px] h-auto object-contain" src="/assets/img/63959d55c77b0ac1ccf433618f2f6ac32f199cd6.png"/>
+                    <img className="w-full md:w-[1200px] h-auto object-contain" src="/assets/img/63959d55c77b0ac1ccf433618f2f6ac32f199cd6.webp" />
                 </div>
             </div>
         </div>

@@ -30,7 +30,7 @@ let SidePost = function () {
             <div className="mt-6 mb-6">
                 <h3 className="font-bold text-base mb-4">Penulis</h3>
                 <div className="bg-black text-white p-4 rounded-lg flex items-center justify-center gap-3">
-                    <img width="160" src="/assets/logo-pui.png" alt="PUI Logo" />
+                    <img width="160" src="/assets/logo-pui.webp" alt="PUI Logo" />
                 </div>
                 <h4 className="font-bold text-sm mt-3">Tim PUI</h4>
                 <p className="text-xs text-gray-500">Admin</p>
@@ -47,4 +47,4 @@ let SidePost = function () {
         </div>
     );
 }
-export {SidePost}
+export { SidePost }

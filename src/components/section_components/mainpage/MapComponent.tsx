@@ -5,8 +5,8 @@ import L from 'leaflet';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
 
 // Fix for default marker icons in Leaflet with Webpack/Vite
-import icon from 'leaflet/dist/images/marker-icon.png';
-import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+import icon from 'leaflet/dist/images/marker-icon.webp';
+import iconShadow from 'leaflet/dist/images/marker-shadow.webp';
 
 let DefaultIcon = L.icon({
   iconUrl: icon,

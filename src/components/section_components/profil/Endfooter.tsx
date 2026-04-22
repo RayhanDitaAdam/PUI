@@ -25,7 +25,7 @@ let Endfooter = function () {
     shadow-md px-6 py-4 rounded-xl w-[320px]">
 
                         <img
-                            src="/assets/img/profil/976bcb699eee62365f73346a6cc9c54906a407b5.png"
+                            src="/assets/img/profil/976bcb699eee62365f73346a6cc9c54906a407b5.webp"
                             className="h-auto"
                             width="100"
                         />
@@ -34,7 +34,7 @@ let Endfooter = function () {
                     <div className="flex flex-col items-center justify-center 
     shadow-md px-6 py-4 rounded-xl w-[320px]">
                         <img
-                            src="/assets/img/profil/09dd06d3deee0d04947fcc24e3c35ec5d9e191e3.png"
+                            src="/assets/img/profil/09dd06d3deee0d04947fcc24e3c35ec5d9e191e3.webp"
                             className="h-auto"
                             width="100"
                         />
@@ -44,7 +44,7 @@ let Endfooter = function () {
                         px-6 py-4 rounded-xl 
                         w-[320px]">
                         <img
-                            src="/assets/img/profil/60801985fc03ada13d72d3999781a82323267511.png"
+                            src="/assets/img/profil/60801985fc03ada13d72d3999781a82323267511.webp"
                             width="50"
                         />
                         <span className="font-medium">
@@ -55,7 +55,7 @@ let Endfooter = function () {
             </div>
             <div>
                 <div className="w-full">
-                    <img src="/assets/img/profil/b1f2109c3a1758ec231d48590ba9d6dc545b51b6.png" />
+                    <img src="/assets/img/profil/b1f2109c3a1758ec231d48590ba9d6dc545b51b6.webp" />
                 </div>
             </div>
             <div
@@ -69,7 +69,7 @@ let Endfooter = function () {
             >
                 <div className="grid grid-cols-4 gap-12 mb-12">
                     <div>
-                        <img src="/assets/img/profil/logo-pui.png" className="w-[160px]" />
+                        <img src="/assets/img/profil/logo-pui.webp" className="w-[160px]" />
                         <div className="flex-col mt-10 gap-3 mb-4">
                             <i className="fa-solid fa-location-dot mt-1 pr-2 text-white/80"></i>
                             <span className="font-bold">Alamat</span>
@@ -161,13 +161,13 @@ let Endfooter = function () {
                 </div>
                 <div className="flex items-center gap-6 mb-8">
                     <div className="flex gap-3 p-3 bg-white/5 rounded">
-                        <img width="60" src="/assets/img/profil/logo-ojk.png" />
+                        <img width="60" src="/assets/img/profil/logo-ojk.webp" />
                         <span className="font-medium">
                             Terdaftar & diawasi OJK
                         </span>
                     </div>
                     <div className="flex gap-3 p-3 bg-white/5 rounded">
-                        <img width="90" src="/assets/img/profil/d8a28cc7d63c61e6d01f7699200f9f7a096d9c27.png" />
+                        <img width="90" src="/assets/img/profil/d8a28cc7d63c61e6d01f7699200f9f7a096d9c27.webp" />
                         <span className="font-medium">
                             Anggota Resmi PPGI
                         </span>

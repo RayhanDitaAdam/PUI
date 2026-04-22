@@ -45,32 +45,32 @@ let Items = function () {
         {
             title: "Proses Cepat & Mudah",
             desc: "Pencairan dana dalam waktu singkat tanpa prosedur rumit.",
-            img: "/assets/img/profil/9e83dda683c8326a23b19ada7a63fd44c6c71dc0.png"
+            img: "/assets/img/profil/9e83dda683c8326a23b19ada7a63fd44c6c71dc0.webp"
         },
         {
             title: "Spesialis Barang Mewah",
             desc: "Penaksiran akurat untuk jam tangan premium dan tas branded.",
-            img: "/assets/img/profil/ee3abcda2eef6e828e2f1c99fd9ec7b9ad6f5227.png"
+            img: "/assets/img/profil/ee3abcda2eef6e828e2f1c99fd9ec7b9ad6f5227.webp"
         },
         {
             title: "Penilaian Profesional",
             desc: "Dilakukan oleh ahli bersertifikat di bidangnya.",
-            img: "/assets/img/profil/1c1766aaa851ad680797a36295bd9e74b589b531.png"
+            img: "/assets/img/profil/1c1766aaa851ad680797a36295bd9e74b589b531.webp"
         },
         {
             title: "Keamanan Terjamin",
             desc: "Sistem keamanan berlapis dan asuransi penuh.",
-            img: "/assets/img/profil/6d027213f36c0121fa6839cfbfcea55aeb10fe93.png"
+            img: "/assets/img/profil/6d027213f36c0121fa6839cfbfcea55aeb10fe93.webp"
         },
         {
             title: "Privasi Terjaga",
             desc: "Kerahasiaan data nasabah adalah prioritas utama kami.",
-            img: "/assets/img/profil/5621a4ed92942d4fd7a7ed260178126043c4a193.png"
+            img: "/assets/img/profil/5621a4ed92942d4fd7a7ed260178126043c4a193.webp"
         },
         {
             title: "Layanan Premium",
             desc: "Layanan eksklusif dan personal untuk setiap nasabah.",
-            img: "/assets/img/profil/15c7d3ecd86c33afcd8f6d95a9cd6ca74e6184bd.png"
+            img: "/assets/img/profil/15c7d3ecd86c33afcd8f6d95a9cd6ca74e6184bd.webp"
         }
     ];
 

@@ -80,7 +80,7 @@ function D_1() {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12 md:mb-12">
               {/* Brand & Address */}
               <div className="flex flex-col">
-                <img className="w-[140px] md:w-[160px] mb-8" src="/assets/img/logo-pui.png" alt="PUI Logo" />
+                <img className="w-[140px] md:w-[160px] mb-8" src="/assets/img/logo-pui.webp" alt="PUI Logo" />
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <FaLocationDot className="mt-1 text-[#C49A6C] shrink-0" />
@@ -147,11 +147,11 @@ function D_1() {
             {/* Regulation Logos */}
             <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 md:mb-12 border-t border-white/10 pt-10">
               <div className="flex items-center gap-4 p-3 bg-white/5 rounded-xl w-full md:w-auto">
-                <img width="50" src="/assets/img/logo-ojk.png" alt="OJK" />
+                <img width="50" src="/assets/img/logo-ojk.webp" alt="OJK" />
                 <span className="text-[12px] font-medium">Terdaftar & diawasi OJK</span>
               </div>
               <div className="flex items-center gap-4 p-3 bg-white/5 rounded-xl w-full md:w-auto">
-                <img width="70" src="/assets/img/d8a28cc7d63c61e6d01f7699200f9f7a096d9c27.png" alt="PPGI" />
+                <img width="70" src="/assets/img/d8a28cc7d63c61e6d01f7699200f9f7a096d9c27.webp" alt="PPGI" />
                 <span className="text-[12px] font-medium">Anggota Resmi PPGI</span>
               </div>
             </div>

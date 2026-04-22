@@ -15,18 +15,18 @@ const Testimonials = function () {
       if (!isDragging && !isPaused && scrollRef.current) {
         const container = scrollRef.current;
         const maxScroll = container.scrollWidth / 2;
-        
+
         scrollPosRef.current += 0.8; // Scroll speed
-        
+
         if (scrollPosRef.current >= maxScroll) {
           scrollPosRef.current = 0;
         }
-        
+
         container.scrollLeft = scrollPosRef.current;
       }
       animationId = requestAnimationFrame(scroll);
     };
-    
+
     animationId = requestAnimationFrame(scroll);
     return () => cancelAnimationFrame(animationId);
   }, [isDragging, isPaused]);
@@ -41,12 +41,12 @@ const Testimonials = function () {
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!isDragging || !scrollRef.current) return;
     e.preventDefault();
-    
+
     const container = scrollRef.current;
     const x = e.pageX - container.offsetLeft;
     const walk = (x - startX) * 1.5;
     let newScroll = translateX - walk;
-    
+
     const maxScroll = container.scrollWidth / 2;
 
     // Infinite Teleportation Logic
@@ -104,7 +104,7 @@ const Testimonials = function () {
       <div className="max-w-7xl mx-auto px-6">
         <div className="google-badge flex items-center gap-2 text-[#4D4D4D] mb-4">
           <div className="google-g w-6">
-            <img src="/assets/img/24ab7a440ef6f6b86af438c9c31494764e08e757.png" alt="Google" />
+            <img src="/assets/img/24ab7a440ef6f6b86af438c9c31494764e08e757.webp" alt="Google" />
           </div>
           <span className="text-yellow-500 text-xl">★</span>
           <span className="font-bold text-base mt-[1px]">5/5 Trust Rating (87+ Review)</span>

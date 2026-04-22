@@ -5,38 +5,38 @@ let Product = function () {
         {
             title: "Jam Tangan Mewah",
             desc: "PUI menyediakan layanan gadai jaminan mewah dari merek ternama seperti Rolex, Patek Philippe, Audemars Piguet, Omega, and brand prestisius lainnya.",
-            image: "/assets/img/a45fc430aa97c22576e74a861673646bbf66ce9e.png",
+            image: "/assets/img/a45fc430aa97c22576e74a861673646bbf66ce9e.webp",
             slug: "jam-tangan"
         },
         {
             title: "Logam mulia",
             desc: "PUI menghadirkan layanan gadai terpercaya untuk logam mulia seperti emas batangan dari UBS, Galeri 24, serta produk emas bersertifikat lainnya.",
-            image: "/assets/img/414cd3630fa9cc6d8251ccb1128f151649ca43e9.png",
+            image: "/assets/img/414cd3630fa9cc6d8251ccb1128f151649ca43e9.webp",
             slug: "emas"
         },
         {
             title: "Perhiasan dan batu mulia",
             desc: "PUI menyediakan layanan gadai berbagai jenis perhiasan seperti Tiffany & Co., Cartier, Harry Winston, Bulgari, dan Graff.",
-            image: "/assets/img/b66aced856067bdae66be6141bebc57002ffb69a.png",
+            image: "/assets/img/b66aced856067bdae66be6141bebc57002ffb69a.webp",
             slug: "perhiasan"
         },
         {
             title: "Tas Branded",
             desc: "PUI menghadirkan layanan gadai tas branded dari merek ternama seperti Cartier, Tiffany & Co., Bulgari, Van Cleef & Arpels, dan lainnya.",
-            image: "/assets/img/c0c7e308852f4d42b44a67e0409997954100aea7.png",
+            image: "/assets/img/c0c7e308852f4d42b44a67e0409997954100aea7.webp",
             slug: "tas"
         },
         {
             title: "Kendaraan Premium",
             desc: "PUI menghadirkan layanan gadai kendaraan premium seperti Ferrari, Lamborghini, Rolls-Royce, Bentley, Porsche, dan Mercedes-Benz.",
-            image: "/assets/img/7c58ab2f499ac33473f3ebb7e780a42adc2b46d3.png",
-            image_1: "/assets/img/275d928d0acce97c08200ee8a8246b06a9062207.png",
+            image: "/assets/img/7c58ab2f499ac33473f3ebb7e780a42adc2b46d3.webp",
+            image_1: "/assets/img/275d928d0acce97c08200ee8a8246b06a9062207.webp",
             slug: "kendaraan"
         },
         {
             title: "Rare Collectibles",
             desc: "PUI menghadirkan layanan gadai koleksi langka seperti kartu koleksi, NFT, dan barang unik lainnya bernilai tinggi.",
-            image: "/assets/img/53ced318beb9e9e4041c1594080cf2521fa77f15.png",
+            image: "/assets/img/53ced318beb9e9e4041c1594080cf2521fa77f15.webp",
             variant: "rare",
             slug: "koleksi"
         },

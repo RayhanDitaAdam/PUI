@@ -9,7 +9,7 @@ let ItemSec = function () {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-14">
                 <div className="bg-[#003B33] rounded-2xl p-6 md:p-8 shadow-lg flex flex-col transition-transform">
                     <div className="w-10 h-10 md:w-9 md:h-9 mb-4 md:mb-6">
-                        <img src="/assets/img/carakerja/icon-time.png" alt="Fast Process" className="w-full h-full object-contain" />
+                        <img src="/assets/img/carakerja/icon-time.webp" alt="Fast Process" className="w-full h-full object-contain" />
                     </div>
 
                     <h3 className="text-xl lg:text-3xl font-extrabold bg-gradient-to-b from-[#D4AA6A] to-[#B8945F] bg-clip-text text-transparent mb-3 md:mb-4">
@@ -22,7 +22,7 @@ let ItemSec = function () {
                 </div>
                 <div className="bg-[#003B33] rounded-2xl p-6 md:p-8 shadow-lg flex flex-col transition-transform">
                     <div className="w-10 h-10 md:w-9 md:h-9 mb-4 md:mb-6">
-                        <img src="/assets/img/carakerja/icon-dm.png" alt="High Value" className="w-full h-full object-contain" />
+                        <img src="/assets/img/carakerja/icon-dm.webp" alt="High Value" className="w-full h-full object-contain" />
                     </div>
 
                     <h3 className="text-xl lg:text-3xl font-extrabold bg-gradient-to-b from-[#D4AA6A] to-[#B8945F] bg-clip-text text-transparent mb-3 md:mb-4">
@@ -36,7 +36,7 @@ let ItemSec = function () {
 
                 <div className="bg-[#003B33] rounded-2xl p-6 md:p-8 shadow-lg flex flex-col transition-transform">
                     <div className="w-10 h-10 md:w-9 md:h-9 mb-4 md:mb-6">
-                        <img src="/assets/img/carakerja/icon-shield.png" alt="Safe" className="w-full h-full object-contain" />
+                        <img src="/assets/img/carakerja/icon-shield.webp" alt="Safe" className="w-full h-full object-contain" />
                     </div>
 
                     <h3 className="text-xl lg:text-3xl font-extrabold bg-gradient-to-b from-[#D4AA6A] to-[#B8945F] bg-clip-text text-transparent mb-3 md:mb-4">

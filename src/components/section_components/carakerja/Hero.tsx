@@ -8,11 +8,11 @@ let Hero: React.FC = () => {
         className="relative md:h-[38.75rem] h-full shadow-lg overflow-hidden rounded-b-[2rem] md:rounded-b-[3.125rem]"
       >
         <img
-          src="/assets/img/carakerja/mobile.png"
+          src="/assets/img/carakerja/mobile.webp"
           className="absolute inset-0 w-full h-full object-cover object-[-12rem_0rem] md:hidden"
         />
         <img
-          src="/assets/img/carakerja/LAPTOP.png"
+          src="/assets/img/carakerja/LAPTOP.webp"
           className="absolute inset-0 w-full h-full object-cover object-center hidden md:block"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/40 to-black"></div>
