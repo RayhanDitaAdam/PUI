@@ -1,18 +1,17 @@
 .pui-wrap {
     position: relative;
-    width: min(1200px, 100%);
+    width: min(1200px, 100%); 
     box-sizing: border-box;
     border-radius: 16px;
 }
-
 .hero {
-    background: url("/assets/img/carakerja/91fd43c06292c0a132846c9ad9f6a014922f2280.png");
+    background: url("/assets/img/91fd43c06292c0a132846c9ad9f6a014922f2280.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    padding: 64px 48px 0 48px;
+    padding: 48px 48px 0 48px;
     display: flex;
     align-items: flex-end;
     gap: 32px;
@@ -123,44 +122,49 @@
     z-index: 1;
 }
 
+@media (min-width: 768px) {
 .cards-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    overflow: visible;
+    gap: 16px;
+    overflow: hidden;
     margin-top: -60px;
+    background: #FFFFFF;
+    padding: 50px 0px 0px 0px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
     position: relative;
     z-index: 3;
 }
 
 .card {
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 32px;
-    background-color: white;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
+    background: #FFFFFF;
+    border-radius: 10px;
+    border: solid 1px #cecece;
+    padding: 28px 28px 24px 28px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 }
 
-.card {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-}
-
-.card-icon-wrap_1 {
+@media (min-width: 768px) {
+.card-icon-wrap {
     width: 48px;
     height: 48px;
+    background: #C49A6C;
     border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
 }
-
+}
 .card-icon-wrap img {
     filter: brightness(0);
 }
 
+@media (min-width: 768px) {
 .card h3 {
     font-size: 17px;
     font-weight: 800;
@@ -175,7 +179,9 @@
     line-height: 1.65;
     margin: 0 0 20px 0;
 }
+}
 
+@media (min-width: 768px) {
 .card-link {
     display: inline-flex;
     align-items: center;
@@ -185,6 +191,8 @@
     color: #1B4332;
     text-decoration: none;
     cursor: pointer;
+    margin-top: auto;
+}
 }
 
 .arrow {
