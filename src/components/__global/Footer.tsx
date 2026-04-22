@@ -1,8 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef, Suspense } from "react";
 // import { useLocation } from "react-router-dom"; (REMOVED)
-import { MapContainer, TileLayer, Marker, Polyline, useMap } from "react-leaflet";
-import L from "leaflet";
-import "leaflet/dist/leaflet.css";
 import {
     FaLocationDot,
     FaClock,
@@ -13,37 +10,7 @@ import {
     FaLinkedinIn
 } from "react-icons/fa6";
 
-const customIcon = L.divIcon({
-    className: "custom-marker",
-    html: `<div class="flex items-center justify-center bg-white border-2 border-red-600 rounded-full w-10 h-10 shadow-lg">
-             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg" class="text-red-600">
-               <path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path>
-             </svg>
-           </div>`,
-    iconSize: [40, 40],
-    iconAnchor: [20, 20],
-});
-
-const routeCoords: [number, number][] = [
-    [-6.2440, 106.8000],
-    [-6.2445, 106.8015],
-    [-6.2449, 106.8023]
-];
-
-const MapResizeFix: React.FC = () => {
-    const map = useMap();
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            map.invalidateSize();
-        }, 300);
-        window.addEventListener('resize', () => map.invalidateSize());
-        return () => {
-            clearTimeout(timer);
-            window.removeEventListener('resize', () => map.invalidateSize());
-        };
-    }, [map]);
-    return null;
-};
+const LazyFooterMap = React.lazy(() => import('./FooterMap'));
 
 interface FooterProps {
     showMap?: boolean;
@@ -60,6 +27,27 @@ const Footer: React.FC<FooterProps> = ({
 }) => {
     const bgClass = "bg-white";
     const position: [number, number] = [-6.2449, 106.8023];
+
+    const [isMapVisible, setIsMapVisible] = useState(false);
+    const mapRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                if (entries[0].isIntersecting) {
+                    setIsMapVisible(true);
+                    observer.disconnect(); // Stop observing once loaded
+                }
+            },
+            { rootMargin: "300px" } // Load map 300px before it scrolls into view
+        );
+
+        if (mapRef.current) {
+            observer.observe(mapRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, []);
 
     return (
         <div className="bg-white">
@@ -97,24 +85,23 @@ const Footer: React.FC<FooterProps> = ({
 
                 {/* 2. Map Section with New Styled Card */}
                 {showMap && (
-                    <div className="w-full md:max-w-7xl 2xl:max-w-[1700px] md:mx-auto h-[450px] md:h-[350px] overflow-hidden relative">
-                        <MapContainer
-                            center={position}
-                            zoom={17}
-                            scrollWheelZoom={false}
-                            style={{ height: "100%", width: "100%", zIndex: 0 }}
-                        >
-                            <MapResizeFix />
-                            <TileLayer url="https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}" attribution="&copy; Google Maps" />
-                            <Polyline positions={routeCoords} color="#C49A6C" weight={4} dashArray="10, 10" opacity={0.7} />
-                            <Marker position={position} icon={customIcon} />
-                        </MapContainer>
-
-                        {/* New Styled Card Overlay (HIDDEN)
-                        <div className="absolute bottom-6 md:bottom-auto top-auto md:top-6 left-4 right-4 md:left-auto md:right-8 md:w-[420px] bg-[#F4F4F1] border border-white/50 p-4 md:p-8 rounded-3xl md:rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.1)] pointer-events-auto">
-                            ... (omitted content for brevity)
-                        </div>
-                        */}
+                    <div ref={mapRef} className="w-full md:max-w-7xl 2xl:max-w-[1700px] md:mx-auto h-[450px] md:h-[350px] overflow-hidden relative bg-gray-100 flex items-center justify-center">
+                        {!isMapVisible ? (
+                            <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#E5E5E5] animate-pulse">
+                                {/* Placeholder Image or Skeleton */}
+                                <img src="/assets/img/logo-pui.webp" className="w-[8rem] opacity-30 mb-4 grayscale" alt="Loading Maps..." />
+                                <span className="text-gray-500 font-medium text-sm">Loading Interactive Map...</span>
+                            </div>
+                        ) : (
+                            <Suspense fallback={
+                                <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#E5E5E5] animate-pulse">
+                                    <img src="/assets/img/logo-pui.webp" className="w-[8rem] opacity-30 mb-4 grayscale" alt="Loading Maps..." />
+                                    <span className="text-gray-500 font-medium text-sm">Loading Interactive Map...</span>
+                                </div>
+                            }>
+                                <LazyFooterMap position={position} />
+                            </Suspense>
+                        )}
                     </div>
                 )}
                 {/* 3. Bottom Footer - Main Content */}
