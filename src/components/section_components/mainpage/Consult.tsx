@@ -54,7 +54,7 @@ let Consult = function () {
                 </span>
               </a>
             </div>
-  
+
             <div className="card bg-white border border-gray-200 md:border-gray-200 rounded-xl p-4 md:p-7 flex flex-col">
               <div className="card-icon-wrap w-9 h-9 md:w-12 md:h-12 bg-[#C49A6C] rounded-lg md:rounded-xl flex items-center justify-center mb-3 md:mb-5">
                 <img src="/assets/img/d8d020e2c5ce16700e20195204cc0d38d6ba12bb.png" width="1.5rem" className="brightness-0 w-[1.125rem] md:w-[1.5rem]" />

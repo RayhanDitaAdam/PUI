@@ -3,7 +3,7 @@ let DuoCard = function () {
         <section className="max-w-7xl mx-auto">
             <div className="hidden md:flex about-section mt-44 mx-auto relative justify-center items-center px-4">
                 <div className="about-content w-full flex justify-center items-center md:mb-7 relative">
-                    <div className="about-card absolute left-0 lg:left-[-2rem] xl:left-[2rem] z-10 !w-[39.4375rem] !h-[26.1875rem]">
+                    <div className="about-card absolute left-0 lg:left-[-2rem] xl:left-[2rem] z-10 md:!w-[34rem] lg:!w-[39.4375rem] md:!h-auto lg:!h-[26.1875rem]">
                         <h2>Tentang Perusahaan</h2>
                         <div className="w-[300px] h-[3px] mt-2 mb-6 bg-white"></div>
                         <div className="feature-list text-white">

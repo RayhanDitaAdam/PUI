@@ -15,7 +15,7 @@ let Proccess = function () {
       />
       <div className="absolute inset-0 z-0"></div>
 
-      <div className="relative max-w-4xl mx-auto mt-80 md:mt-[10rem] lg:mt-80 text-center z-10">
+      <div className="relative max-w-4xl mx-auto mt-80 md:mt-[25rem] lg:mt-80 text-center z-10">
 
         <p className="text-sm md:text-[1.25rem] lg:text-2xl tracking-[0.18em] mb-2">How it works</p>
         <h2 className="text-3xl md:text-[2.75rem] lg:text-7xl font-bold mb-4 leading-tight">
@@ -27,7 +27,7 @@ let Proccess = function () {
           Kami memastikan pengalaman yang mudah dengan hasil maksimal serta ketenangan bagi Anda.
         </p>
         <div className="flex flex-col items-center gap-6 md:flex-row md:items-start md:justify-center md:gap-10 mb-14">
-          <div className="flex flex-col items-center md:w-1/3 text-center group">
+          <div className="flex flex-col items-center md:w-[38%] lg:w-1/3 text-center group">
             <div className="flex justify-center mb-4">
               <img width="60" src="/assets/img/8e1e5e9db68de8dec0f9170c46b26215695d80aa.png" alt="Icon" className="md:w-[50px]" />
             </div>
@@ -39,7 +39,7 @@ let Proccess = function () {
           <div className="text-3xl md:text-4xl md:mt-8 opacity-50 rotate-90 md:rotate-0">
             →
           </div>
-          <div className="flex flex-col items-center md:w-1/3 text-center">
+          <div className="flex flex-col items-center md:w-[38%] lg:w-1/3 text-center">
             <div className="flex justify-center mb-4">
               <img width="60" src="/assets/img/1c1766aaa851ad680797a36295bd9e74b589b531.png" alt="Icon" className="md:w-[50px]" />
             </div>
@@ -51,7 +51,7 @@ let Proccess = function () {
           <div className="text-3xl md:text-4xl md:mt-8 opacity-50 rotate-90 md:rotate-0">
             →
           </div>
-          <div className="flex flex-col items-center md:w-1/3 text-center">
+          <div className="flex flex-col items-center md:w-[38%] lg:w-1/3 text-center">
             <div className="flex justify-center mb-4">
               <img width="60" src="/assets/img/8e1e5e9db68de8dec0f9170c46b26215695d80aa.png" alt="Icon" className="md:w-[50px]" />
             </div>
