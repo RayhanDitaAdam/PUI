@@ -1,5 +1,5 @@
 import "./style/init.css"
-import "./style/section-cards.css"
+// import "./style/section-cards.css"
 
 let Consult = function () {
   return (
