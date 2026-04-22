@@ -1,26 +1,26 @@
 let Lab = function () {
     return (
-        <section className="bg-[#004C41] w-full py-12 md:py-20 lg:py-32">
-            <div className="flex flex-col lg:flex-row gap-10 items-center w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-10">
-                <div className="w-full lg:w-1/2 order-first lg:order-last">
+        <section className="bg-[#004C41] w-full md:w-auto lg:w-full py-12 md:py-20 lg:py-32 md:mx-2 lg:mx-0 md:rounded-[1rem] lg:rounded-none">
+            <div className="flex flex-col md:flex-row gap-10 md:gap-4 lg:gap-10 items-center w-full max-w-7xl mx-auto px-4 md:px-0 lg:px-10">
+                <div className="w-full md:w-5/12 lg:w-1/2 order-first lg:order-last">
                     <img
                         src="/assets/img/profil/3f48b06a2025d9ddfb384280d6667a2d6c048b3f.jpg"
-                        className="rounded-3xl w-full h-[18.75rem] md:h-[28.125rem] lg:h-[34.375rem] object-cover"
+                        className="rounded-3xl md:rounded-[1rem] lg:rounded-3xl w-full h-[18.75rem] md:h-[20rem] lg:h-[34.375rem] object-cover"
                         alt="Gemologi"
                     />
                 </div>
 
-                <div className="text-white w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
-                    <h2 className="text-3xl lg:text-4xl font-semibold mb-2">Laboratorium Gemologi</h2>
-                    <p className="text-base text-green-100 mb-4 leading-relaxed max-w-xl">
+                <div className="text-white w-full md:w-7/12 lg:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
+                    <h2 className="text-3xl md:text-2xl lg:text-4xl font-semibold mb-2">Laboratorium Gemologi</h2>
+                    <p className="text-base md:text-sm lg:text-base text-green-100 mb-2 md:mb-4 lg:mb-4 leading-relaxed max-w-xl">
                         Fasilitas penilaian internal untuk memastikan setiap aset dinilai dengan standart yang seharusnya.
                     </p>
 
-                    <div className="flex items-center justify-start gap-[0.5rem] md:gap-[1.25rem] flex-wrap mt-6 mb-16">
+                    <div className="flex items-center justify-start gap-[0.5rem] md:gap-[0.5rem] lg:gap-[1.25rem] flex-wrap mt-6 mb-10 md:mb-6 lg:mb-16 w-full">
                         {["SSEF.png", "IGS.png", "BNSP.png"].map((logo, idx) => (
                             <div 
                                 key={idx}
-                                className="w-[6.25rem] h-[2.125rem] md:w-[11.0625rem] md:h-[3.75rem]"
+                                className="w-[6.25rem] h-[2.125rem] md:w-[6.5rem] md:h-[2.2rem] lg:w-[11.0625rem] lg:h-[3.75rem]"
                                 style={{ 
                                     backgroundImage: `url(/assets/img/profil/${logo})`,
                                     backgroundSize: "85%",
@@ -34,7 +34,7 @@ let Lab = function () {
                         ))}
                     </div>
 
-                    <div className="flex flex-col md:flex-row items-start justify-start gap-y-6 md:gap-y-10 gap-x-[1.25rem] w-full">
+                    <div className="flex flex-col md:flex-row items-start md:items-stretch lg:items-start justify-start gap-y-6 md:gap-y-0 lg:gap-y-10 gap-x-[1.25rem] md:gap-x-2 lg:gap-x-[1.25rem] w-full">
                         {[
                             { 
                                 title: "Analisis Presisi", 
@@ -54,74 +54,21 @@ let Lab = function () {
                         ].map((card, idx) => (
                             <div 
                                 key={idx}
-                                className="w-full md:w-[12rem] h-auto md:h-[11.5rem]"
-                                style={{
-                                    padding: "1.25rem 1rem",
-                                    backgroundColor: "#007060",
-                                    borderRadius: "0.625rem",
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    alignItems: "flex-start",
-                                    gap: "0.75rem"
-                                }}
+                                className="w-full md:flex-1 lg:flex-none lg:w-[12rem] h-auto lg:h-[11.5rem] p-[1.25rem_1rem] md:p-[0.75rem_0.5rem] lg:p-[1.25rem_1rem] bg-[#007060] rounded-[0.625rem] flex flex-col items-start gap-[0.75rem] md:gap-2 lg:gap-[0.75rem]"
                             >
-                                <div 
-                                    style={{
-                                        display: "flex",
-                                        width: "fit-content",
-                                        height: "fit-content",
-                                        padding: "0.40625rem",
-                                        flexDirection: "column",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        borderRadius: "0.40625rem",
-                                        background: "#0A917E"
-                                    }}
-                                >
+                                <div className="flex w-fit h-fit p-[0.40625rem] md:p-1 lg:p-[0.40625rem] flex-col justify-center items-center rounded-[0.40625rem] bg-[#0A917E]">
                                     <img 
                                         src={`/assets/img/profil/${card.icon}`} 
                                         alt={card.title}
-                                        style={{
-                                            width: "1.75rem",
-                                            height: "1.75rem",
-                                            objectFit: "contain"
-                                        }}
+                                        className="w-[1.75rem] h-[1.75rem] md:w-[1.25rem] md:h-[1.25rem] lg:w-[1.75rem] lg:h-[1.75rem] object-contain"
                                     />
                                 </div>
 
-                                <div 
-                                    style={{
-                                        width: "100%",
-                                        display: "flex",
-                                        flexDirection: "column",
-                                        alignItems: "flex-start",
-                                        gap: "0.5rem"
-                                    }}
-                                >
-                                    <h3 
-                                        style={{ 
-                                            color: "#FFF", 
-                                            fontFamily: "Lato, sans-serif", 
-                                            fontSize: "0.875rem", 
-                                            fontWeight: 700, 
-                                            lineHeight: "130%",
-                                            alignSelf: "stretch",
-                                            textAlign: "left"
-                                        }}
-                                    >
+                                <div className="w-full flex flex-col items-start gap-[0.5rem] md:gap-1 lg:gap-[0.5rem]">
+                                    <h3 className="text-[#FFF] font-['Lato',sans-serif] text-[0.875rem] md:text-[0.65rem] lg:text-[0.875rem] font-bold leading-[130%] self-stretch text-left">
                                         {card.title}
                                     </h3>
-                                    <p 
-                                        style={{ 
-                                            color: "#E4E4E4", 
-                                            fontFamily: "Lato, sans-serif", 
-                                            fontSize: "0.75rem", 
-                                            fontWeight: 400, 
-                                            lineHeight: "130%",
-                                            alignSelf: "stretch",
-                                            textAlign: "left"
-                                        }}
-                                    >
+                                    <p className="text-[#E4E4E4] font-['Lato',sans-serif] text-[0.75rem] md:text-[0.55rem] lg:text-[0.75rem] font-normal leading-[130%] self-stretch text-left">
                                         {card.subtitle}
                                     </p>
                                 </div>

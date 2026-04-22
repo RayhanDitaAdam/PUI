@@ -16,7 +16,7 @@ let ItemContext = function () {
         let mm = gsap.matchMedia();
 
         // 1. DESKTOP ANIMATION (DIKEMBALIKAN PERSIS ASLINYA)
-        mm.add("(min-width: 768px)", () => {
+        mm.add("(min-width: 1024px)", () => {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: sectionRef.current,
@@ -45,8 +45,8 @@ let ItemContext = function () {
                 .to(stepsRef.current[3], { borderColor: "#D4AA6A", borderWidth: "2px", duration: 0.1 }, "step-06+=1.5");
         });
 
-        // 2. MOBILE ANIMATION (VERTIKAL LURUS)
-        mm.add("(max-width: 767px)", () => {
+        // 2. MOBILE & TABLET ANIMATION (VERTIKAL LURUS)
+        mm.add("(max-width: 1023px)", () => {
             const steps = stepsRef.current.slice(6, 12);
 
             const tl = gsap.timeline({
@@ -113,7 +113,7 @@ let ItemContext = function () {
                     </div>
 
                     {/* DESKTOP VIEW (Original Content) */}
-                    <div className="relative w-full hidden md:block">
+                    <div className="relative w-full hidden lg:block">
                         {/* Path Lines */}
                         <div className="absolute bg-gray-800 h-[2px] top-[130px] left-[170px] right-[170px] z-0"></div>
                         <div className="absolute bg-gray-800 w-[2px] top-[130px] h-[308px] right-[170px] z-0"></div>
@@ -175,8 +175,8 @@ let ItemContext = function () {
                         </div>
                     </div>
 
-                    {/* MOBILE VIEW (Sticky Card Stacking) */}
-                    <div className="relative w-full block md:hidden">
+                    {/* MOBILE & TABLET VIEW (Sticky Card Stacking) */}
+                    <div className="relative w-full block lg:hidden">
                         <div className="grid grid-cols-1 relative z-10 w-full min-h-[500px]">
                             {[
                                 { id: "01", title: "Pemeriksaan Awal", desc: "Asset mewah Anda diterima dan dilakukan pengecekan awal oleh tim ahli", idx: 6 },

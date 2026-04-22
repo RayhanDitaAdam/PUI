@@ -12,7 +12,7 @@ let ItemSec = function () {
                         <img src="/assets/img/carakerja/icon-time.png" alt="Fast Process" className="w-full h-full object-contain" />
                     </div>
 
-                    <h3 className="text-xl md:text-3xl font-extrabold bg-gradient-to-b from-[#D4AA6A] to-[#B8945F] bg-clip-text text-transparent mb-3 md:mb-4">
+                    <h3 className="text-xl lg:text-3xl font-extrabold bg-gradient-to-b from-[#D4AA6A] to-[#B8945F] bg-clip-text text-transparent mb-3 md:mb-4">
                         Proses Cepat & <br className="hidden md:block" />Valuasi Tinggi
                     </h3>
 
@@ -25,7 +25,7 @@ let ItemSec = function () {
                         <img src="/assets/img/carakerja/icon-dm.png" alt="High Value" className="w-full h-full object-contain" />
                     </div>
 
-                    <h3 className="text-xl md:text-3xl font-extrabold bg-gradient-to-b from-[#D4AA6A] to-[#B8945F] bg-clip-text text-transparent mb-3 md:mb-4">
+                    <h3 className="text-xl lg:text-3xl font-extrabold bg-gradient-to-b from-[#D4AA6A] to-[#B8945F] bg-clip-text text-transparent mb-3 md:mb-4">
                         Spesialis Aset <br className="hidden md:block" />Bernilai Tinggi
                     </h3>
 
@@ -39,7 +39,7 @@ let ItemSec = function () {
                         <img src="/assets/img/carakerja/icon-shield.png" alt="Safe" className="w-full h-full object-contain" />
                     </div>
 
-                    <h3 className="text-xl md:text-3xl font-extrabold bg-gradient-to-b from-[#D4AA6A] to-[#B8945F] bg-clip-text text-transparent mb-3 md:mb-4">
+                    <h3 className="text-xl lg:text-3xl font-extrabold bg-gradient-to-b from-[#D4AA6A] to-[#B8945F] bg-clip-text text-transparent mb-3 md:mb-4">
                         Aman & <br className="hidden md:block" />Terpercaya
                     </h3>
 
