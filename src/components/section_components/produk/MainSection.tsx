@@ -1,17 +1,41 @@
+import { useParams } from 'react-router-dom';
+
+const productImages: Record<string, string> = {
+    'emas': '/assets/img/produk/emas.jpg',
+    'perhiasan': '/assets/img/produk/cincin.png',
+    'jam-tangan': '/assets/img/produk/jam-tangan.png',
+    'koleksi': '/assets/img/produk/koleksi.jpg',
+    'kendaraan': '/assets/img/produk/kendaraan.jpg',
+    'tas': '/assets/img/produk/tas_1.png',
+};
+
+const productTitles: Record<string, string> = {
+    'emas': 'Logam Mulia',
+    'perhiasan': 'Perhiasan',
+    'jam-tangan': 'Jam Tangan Mewah',
+    'koleksi': 'Rare Collectibles',
+    'kendaraan': 'Kendaraan Premium',
+    'tas': 'Tas Branded',
+};
+
 let MainSection = function () {
+    const { slug } = useParams<{ slug: string }>();
+    const currentSlug = slug || 'tas';
+    const imgSrc = productImages[currentSlug] || '/assets/img/produk/tas_1.png';
+    const title = productTitles[currentSlug] || 'Tas Branded';
     return (
         <section className="w-full max-w-[1700px] mx-auto">
             <section className="block md:hidden lg:hidden sm:block">
-                <div className="bg-black text-white px-6 pt-32 pb-[25rem] rounded-b-[40px] text-center flex flex-col items-center overflow-hidden">
-                    <h2 className="text-[2.5rem] font-bold mb-6 relative z-10">Tas Branded</h2>
+                <div className="bg-black text-white px-6 pt-32 pb-[17.6rem] rounded-b-[40px] text-center flex flex-col items-center overflow-hidden">
+                    <h2 className="text-[2.5rem] font-bold mb-6 relative z-10">{title}</h2>
                     <p className="text-sm leading-relaxed text-gray-300 mb-12 max-w-md relative z-10">
                         Butuh dana cepat? Punya tas branded mewah seperti <br /> Louis Vuitton, Chanel, Hermès, Gucci, Dior dan tas <br /> branded lainnya. Gadaikan tas mewah Anda, terjamin <br /> aman di PUI.
                     </p>
                     <div className="relative inline-block w-full max-w-none px-4 z-0">
-                        <img 
-                            src="/assets/img/tas_1.png" 
-                            alt="tas" 
-                            className="w-full h-auto drop-shadow-2xl scale-[3.5] origin-center translate-y-32 -translate-x-[15rem]" 
+                        <img
+                            src={imgSrc}
+                            alt="tas"
+                            className="w-full h-auto drop-shadow-2xl scale-[3.5] origin-center translate-y-32 -translate-x-[15rem]"
                         />
                     </div>
                 </div>
@@ -88,10 +112,19 @@ let MainSection = function () {
 
             <section>
                 <div
+                    style={{
+                        background: "linear-gradient(135deg, rgb(0, 40, 35) 0%, rgb(0, 20, 15) 50%, rgb(0, 5, 4) 100%)"
+                    }}
                     className="lg:h-[500px] hero-gradient hidden md:block text-white pt-10 pb-24 px-16 rounded-b-[80px] relative overflow-hidden">
-                    <div className="max-w-7xl mx-auto flex items-center">
+                    <img
+                        src={imgSrc}
+                        alt="produk-bg"
+                        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                    />
+
+                    <div className="max-w-7xl mx-auto flex items-center relative z-10">
                         <div className="w-1/2 pr-20 lg:pt-28">
-                            <h1 className="text-5xl font-semibold mb-6">Tas Branded</h1>
+                            <h1 className="text-5xl font-semibold mb-6">{title}</h1>
                             <p className="text-gray-400 leading-relaxed text-lg">
                                 Butuh dana cepat? Punya tas branded mewah seperti Louis Vuitton, Chanel, Hermes, Gucci, Dior
                                 dan
@@ -99,7 +132,9 @@ let MainSection = function () {
                             </p>
                         </div>
 
-                        <div className="py-20 flex justify-center"></div>
+                        <div className="w-1/2 relative h-full flex items-center justify-center">
+                            {/* Duplicate image removed as per user request */}
+                        </div>
                     </div>
                 </div>
             </section>
@@ -107,7 +142,7 @@ let MainSection = function () {
             <section className="mt-20">
                 <div className="hidden md:block lg:block sm:hidden max-w-7xl mx-auto px-16 -mt-10 pb-20">
                     <div className="text-center mb-16 pt-20">
-                        <h2 className="text-[#1a4d3a] text-4xl font-bold mb-4">Mengapa menggadaikan tas di PUI?</h2>
+                        <h2 className="text-[#1a4d3a] text-4xl font-bold mb-4">Mengapa menggadaikan {title.toLowerCase()} di PUI?</h2>
                         <p className="text-lg text-gray-600">Solusi pembiayaan cepat dan aman berbasis aset bernilai tinggi.</p>
                     </div>
 
