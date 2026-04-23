@@ -27,6 +27,10 @@ const routeCoords: [number, number][] = [
 const MapResizeFix: React.FC = () => {
   const map = useMap();
   useEffect(() => {
+    if (map.attributionControl) {
+      map.attributionControl.setPrefix(false);
+    }
+
     const timer = setTimeout(() => {
       map.invalidateSize();
     }, 300);

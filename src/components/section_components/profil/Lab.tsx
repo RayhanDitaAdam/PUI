@@ -16,7 +16,7 @@ let Lab = function () {
                         Fasilitas penilaian internal untuk memastikan setiap aset dinilai dengan standart yang seharusnya.
                     </p>
 
-                    <div className="flex items-center justify-start gap-[0.5rem] md:gap-[0.5rem] lg:gap-[1.25rem] flex-wrap mt-6 mb-10 md:mb-6 lg:mb-16 w-full">
+                    <div className="flex items-center justify-center md:justify-start gap-[0.5rem] md:gap-[0.5rem] lg:gap-[1.25rem] flex-wrap mt-6 mb-10 md:mb-6 lg:mb-16 w-full">
                         {["SSEF.webp", "IGS.webp", "BNSP.webp"].map((logo, idx) => (
                             <div
                                 key={idx}
