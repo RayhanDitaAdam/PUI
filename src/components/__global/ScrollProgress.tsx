@@ -18,7 +18,6 @@ const ScrollProgress: React.FC = () => {
                         start: 'top top',
                         end: 'bottom bottom',
                         scrub: 0.3,
-                        invalidateOnRefresh: true,
                     },
                 }
             );

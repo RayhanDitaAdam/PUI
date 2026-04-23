@@ -70,12 +70,14 @@ let Product = function () {
                                     <img
                                         src={item.image}
                                         alt={item.title}
+                                        loading="lazy"
                                         className={`product-image ${item.image_1 ? "main" : "single"} ${item.variant === "rare" ? "aspect-[51/76]" : ""}`}
                                     />
                                     {item.image_1 && (
                                         <img
                                             src={item.image_1}
                                             alt={item.title}
+                                            loading="lazy"
                                             className="product-image second opacity-80"
                                         />
                                     )}
