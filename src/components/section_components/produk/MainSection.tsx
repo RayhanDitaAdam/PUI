@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import { Items } from './Mengapa';
 
 const productImages: Record<string, string> = {
     'emas': '/assets/img/produk/emas.webp',
@@ -40,74 +41,7 @@ let MainSection = function () {
                     </div>
                 </div>
 
-                <div className="px-6 py-12 bg-white">
-                    <div className="text-center mb-10">
-                        <h3 className="mt-20 text-[#064e3b] text-2xl font-bold leading-tight">
-                            Mengapa menggadaikan tas di PUI?
-                        </h3>
-                        <p className="text-gray-500 text-sm mt-2">
-                            Solusi pembiayaan cepat dan aman berbasis aset bernilai tinggi.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-4">
-
-                        <div className="bg-white p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-50">
-                            <div className="text-[#c0a060] text-3xl mb-2">
-                                <i className="fa-solid fa-clock-rotate-left"></i>
-                            </div>
-                            <h4 className="text-[#064e3b] font-bold text-sm mb-2 leading-tight">Proses Cepat & Mudah</h4>
-                            <p className="text-[10px] text-gray-500 leading-normal">Pencairan dana dalam waktu singkat tanpa
-                                prosedur rumit</p>
-                        </div>
-
-                        <div className="bg-white p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-50">
-                            <div className="text-[#c0a060] text-3xl mb-2">
-                                <i className="fa-solid fa-gem"></i>
-                            </div>
-                            <h4 className="text-[#064e3b] font-bold text-sm mb-2 leading-tight">Spesialis Barang Mewah</h4>
-                            <p className="text-[10px] text-gray-500 leading-normal">Pencairan dana dalam waktu singkat tanpa
-                                prosedur rumit</p>
-                        </div>
-
-                        <div className="bg-white p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-50">
-                            <div className="text-[#c0a060] text-3xl mb-2">
-                                <i className="fa-solid fa-file-signature"></i>
-                            </div>
-                            <h4 className="text-[#064e3b] font-bold text-sm mb-2 leading-tight">Penilaian Profesional</h4>
-                            <p className="text-[10px] text-gray-500 leading-normal">Pencairan dana dalam waktu singkat tanpa
-                                prosedur rumit</p>
-                        </div>
-
-                        <div className="bg-white p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-50">
-                            <div className="text-[#c0a060] text-3xl mb-2">
-                                <i className="fa-solid fa-lock"></i>
-                            </div>
-                            <h4 className="text-[#064e3b] font-bold text-sm mb-2 leading-tight">Keamanan Terjamin</h4>
-                            <p className="text-[10px] text-gray-500 leading-normal">Pencairan dana dalam waktu singkat tanpa
-                                prosedur rumit</p>
-                        </div>
-
-                        <div className="bg-white p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-50">
-                            <div className="text-[#c0a060] text-3xl mb-2">
-                                <i className="fa-solid fa-user-shield"></i>
-                            </div>
-                            <h4 className="text-[#064e3b] font-bold text-sm mb-2 leading-tight">Privasi Terjaga</h4>
-                            <p className="text-[10px] text-gray-500 leading-normal">Pencairan dana dalam waktu singkat tanpa
-                                prosedur rumit</p>
-                        </div>
-
-                        <div className="bg-white p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-50">
-                            <div className="text-[#c5a059] mb-3">
-                                <span className="font-bold text-lg">VIP</span>
-                            </div>
-                            <h4 className="text-[#064e3b] font-bold text-sm mb-2 leading-tight">Layanan Premium</h4>
-                            <p className="text-[10px] text-gray-500 leading-normal">Pencairan dana dalam waktu singkat tanpa
-                                prosedur rumit</p>
-                        </div>
-
-                    </div>
-                </div>
+                <Items/>
             </section>
 
             <section>
@@ -139,77 +73,7 @@ let MainSection = function () {
                 </div>
             </section>
 
-            <section className="mt-20">
-                <div className="hidden md:block lg:block sm:hidden max-w-7xl mx-auto px-16 -mt-10 pb-20">
-                    <div className="text-center mb-16 pt-20">
-                        <h2 className="text-[#1a4d3a] text-4xl font-bold mb-4">Mengapa menggadaikan {title.toLowerCase()} di PUI?</h2>
-                        <p className="text-lg text-gray-600">Solusi pembiayaan cepat dan aman berbasis aset bernilai tinggi.</p>
-                    </div>
-
-                    <div className="grid grid-cols-3 gap-8">
-
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-4">
-                            <div className="text-[#c0a060] text-3xl mb-2">
-                                <i className="fa-solid fa-clock-rotate-left"></i>
-                            </div>
-                            <h3 className="text-[#1a4d3a] font-bold text-xl">Proses Cepat & Mudah</h3>
-                            <p className="text-gray-500 text-sm leading-relaxed">Pencairan dana dalam waktu singkat tanpa
-                                prosedur
-                                rumit</p>
-                        </div>
-
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-4">
-                            <div className="text-[#c0a060] text-3xl mb-2">
-                                <i className="fa-solid fa-gem"></i>
-                            </div>
-                            <h3 className="text-[#1a4d3a] font-bold text-xl">Spesialis Barang Mewah</h3>
-                            <p className="text-gray-500 text-sm leading-relaxed">Pencairan dana dalam waktu singkat tanpa
-                                prosedur
-                                rumit</p>
-                        </div>
-
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-4">
-                            <div className="text-[#c0a060] text-3xl mb-2">
-                                <i className="fa-solid fa-file-signature"></i>
-                            </div>
-                            <h3 className="text-[#1a4d3a] font-bold text-xl">Penilaian Profesional</h3>
-                            <p className="text-gray-500 text-sm leading-relaxed">Pencairan dana dalam waktu singkat tanpa
-                                prosedur
-                                rumit</p>
-                        </div>
-
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-4">
-                            <div className="text-[#c0a060] text-3xl mb-2">
-                                <i className="fa-solid fa-lock"></i>
-                            </div>
-                            <h3 className="text-[#1a4d3a] font-bold text-xl">Keamanan Terjamin</h3>
-                            <p className="text-gray-500 text-sm leading-relaxed">Pencairan dana dalam waktu singkat tanpa
-                                prosedur
-                                rumit</p>
-                        </div>
-
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-4">
-                            <div className="text-[#c0a060] text-3xl mb-2">
-                                <i className="fa-solid fa-user-shield"></i>
-                            </div>
-                            <h3 className="text-[#1a4d3a] font-bold text-xl">Privasi Terjaga</h3>
-                            <p className="text-gray-500 text-sm leading-relaxed">Pencairan dana dalam waktu singkat tanpa
-                                prosedur
-                                rumit</p>
-                        </div>
-
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-4">
-                            <div className="bg-[#c0a060] text-white text-[10px] font-bold px-2 py-0.5 rounded w-fit mb-1">VIP
-                            </div>
-                            <h3 className="text-[#1a4d3a] font-bold text-xl">Layanan Premium</h3>
-                            <p className="text-gray-500 text-sm leading-relaxed">Pencairan dana dalam waktu singkat tanpa
-                                prosedur
-                                rumit</p>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
+               <Items/>
         </section>
     );
 }
