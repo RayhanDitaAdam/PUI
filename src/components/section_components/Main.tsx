@@ -12,8 +12,6 @@ import { Proccess } from './mainpage/Proccess';
 import { Product } from './mainpage/Product';
 import { PUIThumbs } from './mainpage/PUIThumbs';
 import { Testimonials } from './mainpage/Testimonials';
-// @ts-ignore
-import Lenis from 'lenis';
 import "./mainpage/style/product.css";
 import "./mainpage/style/section-cards.css";
 import "./mainpage/style/init.css";
@@ -23,28 +21,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Main() {
   React.useEffect(() => {
-    // Initialize Lenis
-    const lenis = new Lenis({
-      duration: 1.8,
-      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: 'vertical',
-      gestureOrientation: 'vertical',
-      smoothWheel: true,
-      wheelMultiplier: 0.8,
-      touchMultiplier: 2,
-      infinite: false,
-    });
-
-    // Synchronize Lenis with GSAP ScrollTrigger
-    lenis.on('scroll', () => {
-      if (typeof ScrollTrigger !== 'undefined') {
-        ScrollTrigger.update();
-      }
-    });
-
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
 
     gsap.ticker.lagSmoothing(0);
 
@@ -55,9 +31,6 @@ function Main() {
       ScrollTrigger.refresh();
     }, 100);
 
-    return () => {
-      lenis.destroy();
-    };
   }, []);
 
   return (

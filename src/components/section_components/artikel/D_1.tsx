@@ -16,8 +16,6 @@ import {
   FaInstagram,
   FaLinkedinIn
 } from "react-icons/fa6";
-// @ts-ignore
-import Lenis from 'lenis';
 
 // Register plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -26,26 +24,6 @@ function D_1() {
   useEffect(function () {
     document.body.style.backgroundColor = "white";
 
-    const lenis = new Lenis({
-      duration: 1.8,
-      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: 'vertical',
-      gestureOrientation: 'vertical',
-      smoothWheel: true,
-      wheelMultiplier: 0.8,
-      touchMultiplier: 2,
-      infinite: false,
-    });
-
-    lenis.on('scroll', () => {
-      if (typeof ScrollTrigger !== 'undefined') {
-        ScrollTrigger.update();
-      }
-    });
-
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
 
     gsap.ticker.lagSmoothing(0);
 
@@ -57,7 +35,6 @@ function D_1() {
 
     return function () {
       document.body.style.backgroundColor = "";
-      lenis.destroy();
     };
   }, []);
 
