@@ -131,7 +131,7 @@ let Item = function () {
                         <p className="text-sm md:text-xs text-gray-500 mb-3 leading-relaxed line-clamp-2">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         </p>
-                        <a href="/artikel/lorem-ipsum-is-simple" className="group text-[#00A294] text-xs font-semibold flex items-center gap-1">
+                        <a aria-label="Read full article" href="/artikel/lorem-ipsum-is-simple" className="group text-[#00A294] text-xs font-semibold flex items-center gap-1">
                             Read More <i className="fa-solid fa-arrow-right text-xs transform group-hover:translate-x-1 transition-transform duration-300"></i>
                         </a>
                     </div>

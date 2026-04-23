@@ -6,7 +6,7 @@ let SidePost = function () {
             <div className="pb-5 border-b border-gray-100">
                 <h4 className="font-bold text-sm mb-1">Lorem Ipsum is Simple</h4>
                 <p className="text-xs text-gray-500 mb-2 leading-relaxed">Lorem Ipsum is simply dummy text of the printing and typesetting...</p>
-                <a href="/artikel/lorem-ipsum-is-simple" className="group text-xs text-[#008774] flex items-center gap-1 font-semibold">
+                <a aria-label="Read full article" href="/artikel/lorem-ipsum-is-simple" className="group text-xs text-[#008774] flex items-center gap-1 font-semibold">
                     Read More <i className="fa-solid fa-arrow-right text-[10px] transform group-hover:translate-x-1 transition-transform duration-300"></i>
                 </a>
             </div>
@@ -14,7 +14,7 @@ let SidePost = function () {
             <div className="pb-5 border-b border-gray-100">
                 <h4 className="font-bold text-sm mb-1">Lorem Ipsum is Simple</h4>
                 <p className="text-xs text-gray-500 mb-2 leading-relaxed">Lorem Ipsum is simply dummy text of the printing and typesetting...</p>
-                <a href="/artikel/lorem-ipsum-is-simple" className="group text-xs text-[#008774] flex items-center gap-1 font-semibold">
+                <a aria-label="Read full article" href="/artikel/lorem-ipsum-is-simple" className="group text-xs text-[#008774] flex items-center gap-1 font-semibold">
                     Read More <i className="fa-solid fa-arrow-right text-[10px] transform group-hover:translate-x-1 transition-transform duration-300"></i>
                 </a>
             </div>
@@ -22,7 +22,7 @@ let SidePost = function () {
             <div className="pb-5 border-b border-gray-100">
                 <h4 className="font-bold text-sm mb-1">Lorem Ipsum is Simple</h4>
                 <p className="text-xs text-gray-500 mb-2 leading-relaxed">Lorem Ipsum is simply dummy text of the printing and typesetting...</p>
-                <a href="/artikel/lorem-ipsum-is-simple" className="group text-xs text-[#008774] flex items-center gap-1 font-semibold">
+                <a aria-label="Read full article" href="/artikel/lorem-ipsum-is-simple" className="group text-xs text-[#008774] flex items-center gap-1 font-semibold">
                     Read More <i className="fa-solid fa-arrow-right text-[10px] transform group-hover:translate-x-1 transition-transform duration-300"></i>
                 </a>
             </div>

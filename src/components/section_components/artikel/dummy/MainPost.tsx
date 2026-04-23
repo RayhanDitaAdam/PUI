@@ -31,7 +31,7 @@ let MainPost = function () {
                         <p className="text-sm md:text-gray-300 mb-5 max-w-xl line-clamp-2 text-gray-200">
                             Ubah koleksi bernilai menjadi likuiditas optimal dengan dokumentasi yang tepat dan terstruktur.
                         </p>
-                        <a href="/artikel/lorem-ipsum-is-simple" className="flex items-center gap-2 text-[#00A294] font-bold text-sm group/btn">
+                        <a aria-label="Read full article" href="/artikel/lorem-ipsum-is-simple" className="flex items-center gap-2 text-[#00A294] font-bold text-sm group/btn">
                             Read More 
                             <i className="fa-solid fa-arrow-right text-xs transform group-hover/btn:translate-x-2 transition-transform"></i>
                         </a>
@@ -52,7 +52,7 @@ let MainPost = function () {
                             <h3 className="text-sm md:text-base font-bold text-gray-900 mb-2 group-hover:text-[#00A294] transition-colors line-clamp-2">
                                 Koran Dunia: Lorem Ipsum Dolor Sit Amet
                             </h3>
-                            <a href="/artikel/lorem-ipsum-is-simple" className="flex items-center gap-1.5 text-[#00A294] font-semibold text-xs group/btn">
+                            <a aria-label="Read full article" href="/artikel/lorem-ipsum-is-simple" className="flex items-center gap-1.5 text-[#00A294] font-semibold text-xs group/btn">
                                 Read More <i className="fa-solid fa-arrow-right text-[10px] transform group-hover/btn:translate-x-1.5 transition-transform"></i>
                             </a>
                         </div>
@@ -71,7 +71,7 @@ let MainPost = function () {
                             <h3 className="text-sm md:text-base font-bold text-gray-900 mb-2 group-hover:text-[#00A294] transition-colors line-clamp-2">
                                 Amplop Surat: Strategi Komunikasi Efektif
                             </h3>
-                            <a href="/artikel/lorem-ipsum-is-simple" className="flex items-center gap-1.5 text-[#00A294] font-semibold text-xs group/btn">
+                            <a aria-label="Read full article" href="/artikel/lorem-ipsum-is-simple" className="flex items-center gap-1.5 text-[#00A294] font-semibold text-xs group/btn">
                                 Read More <i className="fa-solid fa-arrow-right text-[10px] transform group-hover/btn:translate-x-1.5 transition-transform"></i>
                             </a>
                         </div>
