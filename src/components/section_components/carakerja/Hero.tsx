@@ -9,7 +9,7 @@ let Hero: React.FC = () => {
       >
         <img
           src="/assets/img/carakerja/mobile.webp"
-          className="absolute inset-0 w-full h-full object-cover object-[-12rem_0rem] md:hidden"
+          className="absolute inset-0 w-full h-full object-cover object-[-29rem_0rem] md:hidden"
          alt="Mobile" />
         <img
           src="/assets/img/carakerja/LAPTOP.webp"
