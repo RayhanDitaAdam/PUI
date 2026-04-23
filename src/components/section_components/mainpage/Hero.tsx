@@ -85,9 +85,9 @@ let Hero: React.FC = () => {
 
           {/* PUI Info Card */}
           <div className="mt-[17rem] text-center flex flex-col items-center max-w-[90%] sm:max-w-sm bg-black/80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1),inset_0_1px_0_0_rgba(255,255,255,0.2)] backdrop-blur-[8px] rounded-[1.5rem] p-6 sm:p-8">
-            <h3 className="font-bold mb-3 animate-shine-text text-xl">
+            <h1 className="font-bold mb-3 animate-shine-text text-xl">
               Pergadaian Utama Indonesia
-            </h3>
+            </h1>
             <p className="text-sm text-gray-300 leading-relaxed">
               Pergadaian Utama Indonesia (PUI) adalah mitra terpercaya
               untuk solusi likuiditas aset mewah Anda, dengan layanan
@@ -179,9 +179,9 @@ let Hero: React.FC = () => {
 
             {/* PUI Info Card */}
             <div className="text-center flex flex-col items-center max-w-[20rem] bg-black/80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1),inset_0_1px_0_0_rgba(255,255,255,0.2)] backdrop-blur-[8px] rounded-[1.5rem] p-6 lg:p-8">
-              <h3 className="font-bold mb-3 animate-shine-text text-lg">
+              <h1 className="font-bold mb-3 animate-shine-text text-lg">
                 Pergadaian Utama Indonesia
-              </h3>
+              </h1>
               <p className="text-xs text-gray-300 leading-relaxed">
                 Pergadaian Utama Indonesia (PUI) adalah mitra terpercaya
                 untuk solusi likuiditas aset mewah Anda, dengan layanan
@@ -224,9 +224,9 @@ let Hero: React.FC = () => {
             <div className="w-full max-w-[90rem] relative pointer-events-none">
               {/* Info Card */}
               <div className="absolute left-[5rem] top-[18.75rem] z-20 max-w-xs pointer-events-auto origin-left bg-black/80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1),inset_0_1px_0_0_rgba(255,255,255,0.2)] backdrop-blur-[8px] rounded-[1.5rem] p-6 lg:p-8">
-                <h3 className="font-bold mb-2 animate-shine-text text-lg">
+                <h1 className="font-bold mb-2 animate-shine-text text-lg">
                   Pergadaian Utama Indonesia
-                </h3>
+                </h1>
                 <p className="text-xs text-gray-300 leading-relaxed">
                   Pergadaian Utama Indonesia (PUI) adalah mitra terpercaya
                   untuk solusi likuiditas aset mewah Anda, dengan layanan

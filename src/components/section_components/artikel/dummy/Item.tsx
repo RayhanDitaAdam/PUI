@@ -100,8 +100,8 @@ let Item = function () {
                                 }}
                                 className={`px-5 py-1.5 rounded-md transition-all duration-300 text-sm font-medium ${
                                     activeCategory === cat 
-                                    ? "bg-[#008774] text-white shadow-md" 
-                                    : "border border-gray-300 text-gray-500 hover:border-[#008774] hover:text-[#008774]"
+                                    ? "bg-[#006658] text-white shadow-md" 
+                                    : "border border-gray-300 text-gray-500 hover:border-[#006658] hover:text-[#006658]"
                                 }`}
                             >
                                 {cat}
@@ -120,14 +120,14 @@ let Item = function () {
                                 alt={item.title} 
                                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
                             />
-                            <span className="absolute top-3 right-3 bg-[#008774] text-white text-[10px] px-3 py-1 rounded-full">
+                            <span className="absolute top-3 right-3 bg-[#006658] text-white text-[10px] px-3 py-1 rounded-full">
                                 {item.category}
                             </span>
                         </div>
                         <div className="text-[10px] text-gray-400 flex items-center gap-1 mb-1">
                             <i className="fa-solid fa-clock"></i> 20 Mei 2025
                         </div>
-                        <h3 className="text-lg md:text-base font-bold text-gray-900 mb-2 group-hover:text-[#008774] transition-colors line-clamp-1">{item.title}</h3>
+                        <h3 className="text-lg md:text-base font-bold text-gray-900 mb-2 group-hover:text-[#006658] transition-colors line-clamp-1">{item.title}</h3>
                         <p className="text-sm md:text-xs text-gray-500 mb-3 leading-relaxed line-clamp-2">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         </p>

@@ -146,13 +146,13 @@ let Endfooter = function () {
                             </a>
                         </div>
                         <div className="flex gap-4 mt-6">
-                            <a href="https://www.facebook.com/profile.php?id=61585918772400" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center cursor-pointer">
+                            <a aria-label="Facebook Profile" href="https://www.facebook.com/profile.php?id=61585918772400" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center cursor-pointer">
                                 <i className="text-2xl fa-brands fa-facebook-f"></i>
                             </a>
-                            <a href="https://www.instagram.com/pui.gadai" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center cursor-pointer">
+                            <a aria-label="Instagram Profile" href="https://www.instagram.com/pui.gadai" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center cursor-pointer">
                                 <i className="text-2xl fa-brands fa-instagram"></i>
                             </a>
-                            <a href="https://www.linkedin.com/company/puigadai/about" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center 
+                            <a aria-label="LinkedIn Profile" href="https://www.linkedin.com/company/puigadai/about" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center 
                                 bg-white rounded cursor-pointer">
                                 <i className="text-black fa-brands fa-linkedin-in"></i>
                             </a>

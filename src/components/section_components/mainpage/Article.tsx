@@ -37,7 +37,7 @@ let Article = function () {
             Eksplorasi insight eksklusif seputar pengelolaan aset bernilai tinggi, strategi likuidasi, dan tren finansial terkini.
           </p>
         </div>
-        <a href="/artikel" className="flex items-center gap-2 text-[#008774] font-bold text-sm hover:underline">
+        <a href="/artikel" className="flex items-center gap-2 text-[#006658] font-bold text-sm hover:underline">
           Lihat Selengkapnya 
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="stroke-current">
             <path d="M3 8h10M9 4l4 4-4 4" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
@@ -76,7 +76,7 @@ let Article = function () {
               <p className="text-xs text-gray-500 leading-relaxed mb-4">
                 {item.desc}
               </p>
-              <a aria-label="Read full article" href="/artikel/lorem-ipsum-is-simple" className="mt-auto flex items-center gap-2 text-[#008774] font-bold text-xs hover:gap-3 transition-all">
+              <a aria-label="Read full article" href="/artikel/lorem-ipsum-is-simple" className="mt-auto flex items-center gap-2 text-[#006658] font-bold text-xs hover:gap-3 transition-all">
                 Read More
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="stroke-current">
                   <path d="M3 8h10M9 4l4 4-4 4" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />

@@ -90,13 +90,13 @@ const Footer: React.FC<FooterProps> = ({
                             <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#E5E5E5] animate-pulse">
                                 {/* Placeholder Image or Skeleton */}
                                 <img src="/assets/img/logo-pui.webp" className="w-[8rem] opacity-30 mb-4 grayscale" alt="Loading Maps..." />
-                                <span className="text-gray-500 font-medium text-sm">Loading Interactive Map...</span>
+                                <span className="text-gray-700 font-medium text-sm">Loading Interactive Map...</span>
                             </div>
                         ) : (
                             <Suspense fallback={
                                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#E5E5E5] animate-pulse">
                                     <img src="/assets/img/logo-pui.webp" className="w-[8rem] opacity-30 mb-4 grayscale" alt="Loading Maps..." />
-                                    <span className="text-gray-500 font-medium text-sm">Loading Interactive Map...</span>
+                                    <span className="text-gray-700 font-medium text-sm">Loading Interactive Map...</span>
                                 </div>
                             }>
                                 <LazyFooterMap position={position} />
@@ -169,13 +169,13 @@ const Footer: React.FC<FooterProps> = ({
                             </div>
 
                             <div className="flex gap-4 mt-8">
-                                <a href="https://www.facebook.com/profile.php?id=61585918772400" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#C49A6C] transition-colors cursor-pointer no-underline">
+                                <a aria-label="Facebook Profile" href="https://www.facebook.com/profile.php?id=61585918772400" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#C49A6C] transition-colors cursor-pointer no-underline">
                                     <FaFacebookF className="text-lg" />
                                 </a>
-                                <a href="https://www.instagram.com/pui.gadai" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#C49A6C] transition-colors cursor-pointer no-underline">
+                                <a aria-label="Instagram Profile" href="https://www.instagram.com/pui.gadai" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#C49A6C] transition-colors cursor-pointer no-underline">
                                     <FaInstagram className="text-lg" />
                                 </a>
-                                <a href="https://www.linkedin.com/company/puigadai/about" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#C49A6C] transition-colors cursor-pointer no-underline">
+                                <a aria-label="LinkedIn Profile" href="https://www.linkedin.com/company/puigadai/about" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#C49A6C] transition-colors cursor-pointer no-underline">
                                     <FaLinkedinIn className="text-lg" />
                                 </a>
                             </div>

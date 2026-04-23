@@ -6,7 +6,7 @@ let MainPost = function () {
             <div className="lg:grid lg:grid-cols-3 lg:gap-8">
                 <div className="lg:col-span-2">
                     <div className="mb-4">
-                        <a href="/artikel" className="group flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-[#008774] transition-colors mb-4">
+                        <a href="/artikel" className="group flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-[#006658] transition-colors mb-4">
                             <i className="fas fa-arrow-left transform group-hover:-translate-x-1 transition-transform duration-300"></i>
                             <span>Kembali</span>
                         </a>
