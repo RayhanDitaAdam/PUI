@@ -95,7 +95,7 @@ const FloatingWA: React.FC = () => {
                                 src="/assets/img/40d826a68f7b2fe6a3460b18c5d0de6a1118d609.webp"
                                 alt="Prisila"
                                 onLoad={() => setIsImageLoaded(true)}
-                                className={`absolute bottom-0 left-1/2 w-[110%] max-w-none transition-all duration-500 group-hover:scale-105 ${isImageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
+                                className={`absolute bottom-0 left-1/2 w-[110%] max-w-none transition-all duration-500 ${isImageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
                                 style={{ transform: 'translateX(-55%) translateY(35%)' }}
                             />
                         </div>
