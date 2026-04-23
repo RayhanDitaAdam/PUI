@@ -55,11 +55,11 @@ let Product = function () {
                     berbagai aset mewah, mulai dari jam tangan premium, tas branded, berlian, hingga <br className="hidden md:block lg:hidden" />
                     emas dan perhiasan eksklusif.
                 </p>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-16 md:gap-x-[1.25rem] md:gap-y-[3.5rem] lg:gap-x-[6rem] lg:gap-y-[6rem]">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-16 md:gap-x-[1.25rem] md:gap-y-[3.5rem] lg:gap-x-[6rem] lg:gap-y-[2.5rem]">
                     {products.map((item, i) => (
                         <div
                             key={i}
-                            className={`product-card max-w-[170px] mx-auto md:max-w-none md:w-[15.1875rem] md:h-[25.83256rem] md:rounded-[1.1875rem] md:border-2 md:border-white/10 md:bg-[linear-gradient(96deg,rgba(0,112,90,0.03)_59.29%,rgba(255,255,255,0)_117.42%)] md:shadow-[-20px_32px_43px_0_rgba(0,0,0,0.10)] md:backdrop-blur-[10px] mb-0 md:mb-16 flex flex-col ${item.variant === "rare" ? "product-card-rare" : ""
+                            className={`product-card max-w-[170px] mx-auto md:max-w-none md:w-[15.1875rem] h-full md:h-fit md:rounded-[1.1875rem] md:border-2 md:border-white/10 md:bg-[linear-gradient(96deg,rgba(0,112,90,0.03)_59.29%,rgba(255,255,255,0)_117.42%)] md:shadow-[-20px_32px_43px_0_rgba(0,0,0,0.10)] md:backdrop-blur-[10px] mb-0 md:mb-16 flex flex-col ${item.variant === "rare" ? "product-card-rare" : ""
                                 }`}
                         >
                             <div className="bg-[#0000002d] border-t-[#0000002d] rounded-xl w-full h-36 md:h-44 flex items-center justify-center mb-4 md:mb-5 z-10 relative" style={{
@@ -81,14 +81,14 @@ let Product = function () {
                                     )}
                                 </div>
                             </div>
-                            <div className="mx-[0.5rem] p-1 mt-1 md:mx-[0.625rem] lg:mx-[1.06rem] md:mt-2 z-[100] text-left flex flex-col flex-grow relative">
+                            <div className="mx-[0.5rem] p-1 mt-1 md:mx-[0.625rem] lg:mx-[1.06rem] md:mt-2 z-[100] text-left flex flex-col flex-grow md:flex-grow-0 md:h-auto relative">
                                 <h3 className="text-xs md:text-base font-semibold mb-1 md:mb-2 text-[#EDE8D0]">
                                     {item.title}
                                 </h3>
-                                <p className="text-[9px] md:text-[0.75rem] text-gray-400 md:text-white md:font-['Lato'] md:font-medium md:leading-[130%] mb-2 md:mb-3 min-h-[45px] md:h-[6.6875rem] md:self-stretch">
+                                <p className="text-[9px] md:text-[0.75rem] text-gray-400 md:text-white md:font-['Lato'] md:font-medium md:leading-[130%] mb-2 md:mb-3 min-h-[45px] md:min-h-0 md:h-fit">
                                     {item.desc}
                                 </p>
-                                <a href={`/detail/produk/${item.slug}`} className="hover-premium-btn mt-auto text-center text-[10px] md:text-sm border-2 border-[#5C5E3D] mb-[1.56rem] md:mb-[2rem] font-bold text-[#C49A6C] px-2 md:px-4 py-1.5 md:py-2 rounded-lg md:rounded-[15px] bg-[#C49A6C30]">
+                                <a href={`/detail/produk/${item.slug}`} className="hover-premium-btn mt-4 text-center text-[10px] md:text-sm border-2 border-[#5C5E3D] mb-[1.56rem] md:mb-3 font-bold text-[#C49A6C] px-2 md:px-4 py-1.5 md:py-2 rounded-lg md:rounded-[15px] bg-[#C49A6C30]">
                                     Pelajari Selengkapnya
                                 </a>
                             </div>
