@@ -10,9 +10,12 @@ export default defineConfig({
     cssCodeSplit: true,
     rollupOptions: {
       output: {
-        manualChunks: {
-          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
-          'vendor-gsap': ['gsap', 'gsap/ScrollTrigger'],
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('react')) return 'vendor-react';
+            if (id.includes('gsap')) return 'vendor-gsap';
+            return 'vendor';
+          }
         }
       }
     }
