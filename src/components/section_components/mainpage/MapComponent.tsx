@@ -35,11 +35,22 @@ const MapResizeFix: React.FC = () => {
       map.invalidateSize();
     }, 300);
 
-    window.addEventListener('resize', () => map.invalidateSize());
+    let ticking = false;
+    const handleResize = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          map.invalidateSize();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
 
     return () => {
       clearTimeout(timer);
-      window.removeEventListener('resize', () => map.invalidateSize());
+      window.removeEventListener('resize', handleResize);
     };
   }, [map]);
   return null;

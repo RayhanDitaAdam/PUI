@@ -6,4 +6,15 @@ export default defineConfig({
   server: {
     host: true,
   },
+  build: {
+    cssCodeSplit: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+          'vendor-gsap': ['gsap', 'gsap/ScrollTrigger'],
+        }
+      }
+    }
+  }
 })

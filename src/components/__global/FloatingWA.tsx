@@ -14,17 +14,23 @@ const FloatingWA: React.FC = () => {
     useEffect(() => {
         if (isHiddenPath) return;
 
+        let ticking = false;
         const handleScroll = () => {
-            const isMobile = window.innerWidth < 768;
-            const threshold = isMobile ? 400 : 200;
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const isMobile = window.innerWidth < 768;
+                    const threshold = isMobile ? 400 : 200;
 
-            if (window.scrollY > threshold) {
-                setShowPopup(true);
+                    if (window.scrollY > threshold) {
+                        setShowPopup(true);
+                    }
+                    ticking = false;
+                });
+                ticking = true;
             }
         };
 
         window.addEventListener('scroll', handleScroll, { passive: true });
-        // Initial check in case they are already scrolled
         handleScroll();
 
         return () => {
