@@ -23,7 +23,7 @@ let Consult = function () {
 
           <div className="hero-img-wrap">
             <div className="hero-person-placeholder">
-              <img className="-mb-44" src="/assets/img/main/Consult.webp" />
+              <img className="-mb-44" src="/assets/img/main/Consult.webp"  alt="Consult" />
             </div>
           </div>
         </div>
@@ -31,7 +31,7 @@ let Consult = function () {
         <div className="cards-row top-10 mb-24">
           <div className="card">
             <div className="card-icon-wrap">
-              <img src="/assets/img/main/81829e2cbb1d51f007adb0e183c5911e296267be.webp" width="24px" />
+              <img src="/assets/img/main/81829e2cbb1d51f007adb0e183c5911e296267be.webp" width="24px"  alt="image" />
             </div>
             <h3>Bawa langsung aset mewah ke kantor PUI</h3>
             <p>Anda dapat membawa langsung aset mewah Anda ke kantor PUI <br /> untuk mendapatkan pengalaman layanan yang cepat, aman, dan <br /> transparan. Tim profesional kami akan melakukan proses valuasi <br /> secara detail dan akurat, memastikan Anda mendapatkan nilai <br /> terbaik sesuai kondisi dan pasar terkini.</p>
@@ -55,7 +55,7 @@ let Consult = function () {
 
           <div className="card ">
             <div className="card-icon-wrap">
-              <img src="/assets/img/main/d8d020e2c5ce16700e20195204cc0d38d6ba12bb.webp" width="24px" />
+              <img src="/assets/img/main/d8d020e2c5ce16700e20195204cc0d38d6ba12bb.webp" width="24px"  alt="image" />
             </div>
             <h3>Layanan Jemput Barang</h3>
             <p>Untuk kenyamanan maksimal, PUI menyediakan layanan jemput <br /> aset langsung ke lokasi Anda. Layanan ini dirancang bagi Anda yang <br /> menginginkan proses praktis tanpa perlu datang ke kantor. <br /> Tim kami akan datang dengan prosedur keamanan ketat dan profesionalisme tinggi dalam menangani setiap aset.</p>

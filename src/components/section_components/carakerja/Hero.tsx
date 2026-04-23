@@ -10,11 +10,11 @@ let Hero: React.FC = () => {
         <img
           src="/assets/img/carakerja/mobile.webp"
           className="absolute inset-0 w-full h-full object-cover object-[-12rem_0rem] md:hidden"
-        />
+         alt="Mobile" />
         <img
           src="/assets/img/carakerja/LAPTOP.webp"
           className="absolute inset-0 w-full h-full object-cover object-center hidden md:block"
-        />
+         alt="Laptop" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/40 to-black"></div>
 
         <Header />

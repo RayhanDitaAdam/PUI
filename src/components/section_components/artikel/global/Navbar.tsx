@@ -4,7 +4,7 @@ let Navbar: React.FC = function () {
   return (
     <div className="w-full max-w-7xl mx-auto px-12 py-8 flex items-center justify-between text-white">
       <div className="flex items-center gap-2 font-bold text-2xl">
-        <img className="w-[90px]" src="/assets/img/navprop/logo-pui.webp" />
+        <img className="w-[90px]" src="/assets/img/navprop/logo-pui.webp"  alt="Logo Pui" />
       </div>
 
       <nav className="flex space-x-8 text-sm font-medium text-gray-300">

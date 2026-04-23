@@ -49,7 +49,7 @@ const FloatingWA: React.FC = () => {
         <>
             <div
                 ref={popupRef}
-                className={`fixed bottom-6 right-6 z-50 prisil-popup transition-all duration-200 transform ${(!showPopup || isMinimized) ? 'opacity-0 scale-90 translate-y-4 pointer-events-none' : 'opacity-100 scale-100 translate-y-0'}`}
+                className={`fixed bottom-6 right-6 z-50 prisila-popup transition-all duration-200 transform ${(!showPopup || isMinimized) ? 'opacity-0 scale-90 translate-y-4 pointer-events-none' : 'opacity-100 scale-100 translate-y-0'}`}
             >
                 <a
                     href="https://wa.me/6282277777911"
@@ -67,10 +67,10 @@ const FloatingWA: React.FC = () => {
                     <div className="z-10 w-[60%] h-full flex flex-col justify-center">
                         <p className="text-[#334155] text-[8px] md:text-[10px] font-semibold mb-0.5 md:mb-1 leading-none">Selamat Datang</p>
                         <h1 className="text-black text-[10px] sm:text-[11px] md:text-[14px] font-extrabold leading-tight my-0.5 md:my-1">
-                            Ada yang Prisil<br />bisa bantu?
+                            Ada yang Prisila<br />bisa bantu?
                         </h1>
                         <div className="text-[7.5px] sm:text-[9px] md:text-[11px] flex items-center text-[#494949] group-hover:text-[#003D35] transition-all leading-none mt-0.5 md:mt-1">
-                            Chat dengan Prisil <span className="ml-1">→</span>
+                            Chat dengan Prisila <span className="ml-1">→</span>
                         </div>
 
                         <div className="mt-1.5 md:mt-2 flex items-center">
@@ -93,7 +93,7 @@ const FloatingWA: React.FC = () => {
                             )}
                             <img
                                 src="/assets/img/40d826a68f7b2fe6a3460b18c5d0de6a1118d609.webp"
-                                alt="Prisil"
+                                alt="Prisila"
                                 onLoad={() => setIsImageLoaded(true)}
                                 className={`absolute bottom-0 left-1/2 w-[110%] max-w-none transition-all duration-500 group-hover:scale-105 ${isImageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
                                 style={{ transform: 'translateX(-55%) translateY(35%)' }}
@@ -108,7 +108,7 @@ const FloatingWA: React.FC = () => {
                     <button
                         onClick={handleOpen}
                         className="w-[60px] h-[60px] bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300 animate-pulse-whatsapp"
-                        aria-label="Tanya Prisil via WhatsApp"
+                        aria-label="Tanya Prisila via WhatsApp"
                     >
                         <FaWhatsapp className="text-white text-3xl" />
                     </button>
