@@ -118,7 +118,7 @@ let Navbar: React.FC = function () {
         <div className={`absolute left-0 right-0 h-4 top-full z-[190] ${isProfilOpen ? 'block' : 'hidden'}`} />
 
         <div className={`
-          absolute top-[calc(100%+14px)] left-1/2 -translate-x-1/2 w-56 
+          absolute top-[calc(100%+14px)] left-1/2 -translate-x-1/2 w-64 
           bg-black border-none
           shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1),inset_0_1px_0_0_rgba(255,255,255,0.2)]
           rounded-[1.5rem] p-4 lg:p-6
@@ -151,7 +151,7 @@ let Navbar: React.FC = function () {
         <div className={`absolute left-0 right-0 h-4 top-full z-[190] ${isProdukOpen ? 'block' : 'hidden'}`} />
 
         <div className={`
-          absolute top-[calc(100%+14px)] left-1/2 -translate-x-1/2 w-56 
+          absolute top-[calc(100%+14px)] left-1/2 -translate-x-1/2 w-64 
           bg-black border-none
           shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1),inset_0_1px_0_0_rgba(255,255,255,0.2)]
           rounded-[1.5rem] p-4 lg:p-6
@@ -184,7 +184,7 @@ let Navbar: React.FC = function () {
         <div className={`absolute left-0 right-0 h-4 top-full z-[190] ${isCaraKerjaOpen ? 'block' : 'hidden'}`} />
 
         <div className={`
-          absolute top-[calc(100%+14px)] left-1/2 -translate-x-1/2 w-56 
+          absolute top-[calc(100%+14px)] left-1/2 -translate-x-1/2 w-64 
           bg-black border-none
           shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1),inset_0_1px_0_0_rgba(255,255,255,0.2)]
           rounded-[1.5rem] p-4 lg:p-6

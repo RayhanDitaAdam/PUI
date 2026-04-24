@@ -41,7 +41,7 @@ const Header: React.FC = () => {
         <ScrollProgress />
 
         {/* Logo */}
-        <div className="flex items-center gap-2 flex-1">
+        <div className="flex items-center gap-2 flex-none w-[14rem]">
           <a href="/">
             <img src="/assets/img/logo-pui.webp" className="w-[9.0625rem] h-[3rem]" alt="Logo Pui" />
           </a>
@@ -53,7 +53,7 @@ const Header: React.FC = () => {
         </div>
 
         {/* Desktop WhatsApp Button */}
-        <div className="hidden lg:flex justify-end flex-1">
+        <div className="hidden lg:flex justify-end flex-none w-[14rem]">
           <a href="https://wa.me/6282277777911" target="_blank" rel="noopener noreferrer" className="border border-gray-400 px-4 py-2 rounded-full text-sm text-white flex items-center gap-2 animate-pulse-whatsapp hover:scale-105 transition-transform duration-300 cursor-pointer">
             <FaWhatsapp className="z-50 text-white" /> 0822 77777 911
           </a>
