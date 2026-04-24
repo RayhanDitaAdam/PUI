@@ -1,6 +1,6 @@
 let DuoCard = function () {
     return (
-        <section className="max-w-7xl mx-auto">
+        <section id="pengantar-pui" className="max-w-7xl mx-auto scroll-mt-20">
             <div className="hidden md:flex about-section mt-44 mx-auto relative justify-center items-center px-4 md:px-0 md:pr-4 md:pl-8 lg:px-4">
                 <div className="about-content w-full flex justify-center items-center md:mb-7 relative">
                     <div className="about-card absolute left-0 lg:left-[-2rem] xl:left-[2rem] z-10 md:!w-[25.125rem] lg:!w-[39.4375rem] md:!h-[24.3125rem] lg:!h-[26.1875rem]">

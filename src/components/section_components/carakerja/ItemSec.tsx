@@ -2,7 +2,7 @@ import "./style/init.css"
 
 let ItemSec = function () {
     return (
-        <div className="max-w-5xl mx-auto mt-10 md:mt-20 px-6 w-full">
+        <div id="keuntungan-pui" className="max-w-5xl mx-auto mt-10 md:mt-20 px-6 w-full scroll-mt-32">
             <h2 className="text-[#4D4D4D] text-2xl font-extrabold md:text-3xl mb-8 md:mb-10 max-w-lg leading-tight text-center lg:text-left mx-auto lg:ml-0 lg:mr-auto">
                 Kenapa Memilih Melikuidasi di Pergadaian Utama Indonesia ?
             </h2>

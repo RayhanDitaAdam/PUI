@@ -168,7 +168,7 @@ const Footer: React.FC<FooterProps> = ({
                                 </a>
                             </div>
 
-                            <div className="flex gap-4 mt-8">
+                            <div className="flex gap-4 mt-8 mb-6 md:mb-0">
                                 <a aria-label="Facebook Profile" href="https://www.facebook.com/profile.php?id=61585918772400" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#C49A6C] transition-colors cursor-pointer no-underline">
                                     <FaFacebookF className="text-lg" />
                                 </a>

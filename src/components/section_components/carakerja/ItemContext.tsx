@@ -100,7 +100,7 @@ let ItemContext = function () {
     }, []);
 
     return (
-        <div ref={sectionRef} className="relative h-[3500px] w-full">
+        <div id="langkah-gadai" ref={sectionRef} className="relative h-[3500px] w-full scroll-mt-20">
             <div className="sticky top-0 min-h-screen w-full flex flex-col items-center justify-center pt-24 pb-16 md:pt-32 md:pb-32 px-4 md:px-0">
                 <div className="w-full max-w-[1100px] relative">
                     <div className="mb-10 md:mb-14 text-center md:text-left">

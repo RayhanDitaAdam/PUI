@@ -3,7 +3,7 @@ import Header from "../../__global/Header";
 
 let Hero: React.FC = () => {
   return (
-    <section className="relative w-full h-[42.5rem] md:h-[40rem] lg:h-[36.25rem]">
+    <section id="hero-profil" className="relative w-full h-[42.5rem] md:h-[40rem] lg:h-[36.25rem]">
       <div className="relative h-[42.5rem] md:h-[40rem] lg:h-[36.25rem] rounded-b-[2rem] md:rounded-b-[3.125rem] shadow-lg overflow-hidden">
         <img
           src="/assets/img/profil/hero-bg.webp"

@@ -100,7 +100,7 @@ const Testimonials = function () {
   }, []);
 
   return (
-    <section className="testimonial-section py-16 overflow-hidden">
+    <section id="testimoni" className="testimonial-section py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="google-badge flex items-center gap-2 text-[#4D4D4D] mb-4">
           <div className="google-g w-6">

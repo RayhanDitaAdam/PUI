@@ -1,6 +1,7 @@
 let Proccess = function () {
   return (
     <section
+      id="alur"
       className="relative process-section py-12 md:py-28 lg:py-32 px-6 text-white overflow-hidden"
     >
       <img

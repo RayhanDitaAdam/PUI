@@ -1,6 +1,6 @@
 let PUIThumbs = function () {
     return (
-        <div className="bg-white gsap-reveal">
+        <div id="vision" className="bg-white gsap-reveal">
             <div className="text-center py-16 md:py-24 px-6 md:px-0">
                 <h1 className="text-3xl md:text-6xl font-extrabold text-[#003B33]">Pave Your Dreams</h1>
                 <div>

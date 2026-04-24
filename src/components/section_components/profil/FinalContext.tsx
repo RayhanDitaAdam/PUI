@@ -55,7 +55,7 @@ let FinalContext = function () {
     }, []);
 
     return (
-        <section ref={containerRef} className="gsap-reveal py-32 px-6 max-w-7xl mx-auto font-sans overflow-hidden">
+        <section id="visi-misi-pui" ref={containerRef} className="gsap-reveal py-32 px-6 max-w-7xl mx-auto font-sans overflow-hidden scroll-mt-20">
             <div className="text-center mb-20">
                 <div className="reveal-item inline-block px-6 py-2 mb-6 text-sm font-bold tracking-widest text-[#003A30] uppercase bg-white/20 backdrop-blur-md border border-[#003A30]/20 rounded-full">
                     Tentang PUI

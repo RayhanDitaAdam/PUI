@@ -26,7 +26,7 @@ let Hero: React.FC = () => {
   }, [index]);
 
   return (
-    <section id="produk" className="z-10 relative w-full h-auto min-h-[39rem] md:h-[53.125rem] lg:h-[45rem] overflow-hidden">
+    <section id="hero" className="z-10 relative w-full h-auto min-h-[39rem] md:h-[53.125rem] lg:h-[45rem] overflow-hidden">
       <div className="relative h-full min-h-[39rem] md:h-[53.125rem] lg:h-[45rem] rounded-b-[1.875rem] md:rounded-b-[3.125rem] shadow-lg overflow-hidden">
         <div
           className="absolute inset-0 md:hidden bg-no-repeat"

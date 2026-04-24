@@ -1,6 +1,6 @@
 let Lab = function () {
     return (
-        <section className="bg-[#004C41] w-full md:w-auto lg:w-full py-12 md:py-20 lg:py-32 md:mx-2 lg:mx-0 md:rounded-[1rem] lg:rounded-none">
+        <section id="lab-pui" className="bg-[#004C41] w-full md:w-auto lg:w-full py-12 md:py-20 lg:py-32 md:mx-2 lg:mx-0 md:rounded-[1rem] lg:rounded-none scroll-mt-20">
             <div className="flex flex-col md:flex-row lg:flex-row-reverse gap-10 md:gap-4 lg:gap-10 items-center w-full max-w-7xl mx-auto px-4 md:px-4 lg:px-10">
                 <div className="w-full md:w-5/12 lg:w-1/2 order-first lg:order-last">
                     <img

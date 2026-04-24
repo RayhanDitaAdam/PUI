@@ -3,7 +3,7 @@ import Header from "../../__global/Header";
 
 let Hero: React.FC = () => {
   return (
-    <section className="relative w-full md:h-[32.5rem] h-[53.125rem]">
+    <section id="hero-cara-kerja" className="relative w-full h-[41rem] md:h-[40rem] lg:h-[35.625rem]">
       <div
         className="relative md:h-[38.75rem] h-full shadow-lg overflow-hidden rounded-b-[2rem] md:rounded-b-[3.125rem]"
       >

@@ -5,7 +5,7 @@ let Cpages: React.FC = function () {
   return (
     <>
       <div className="-z-50 -mt-[3.5rem]">
-        <section className="px-[1.5rem] md:px-[1.5rem] lg:px-[4rem] py-[5rem] md:pt-[8rem] md:pb-[4rem] lg:py-[8rem] bg-transparent">
+        <section id="about" className="px-[1.5rem] md:px-[1.5rem] lg:px-[4rem] py-[5rem] md:pt-[8rem] md:pb-[4rem] lg:py-[8rem] bg-transparent">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-4 md:gap-0 text-center md:text-left">
               <h2 className="text-[1.875rem] font-bold text-[#C49A6C] leading-snug max-w-[28rem]">

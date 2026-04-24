@@ -28,7 +28,7 @@ let Article = function () {
   }, []);
 
   return (
-    <section className="bg-white py-10 px-6 md:px-16 overflow-hidden">
+    <section id="artikel-home" className="bg-white py-10 px-6 md:px-16 overflow-hidden">
       {/* Header Section */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
         <div>

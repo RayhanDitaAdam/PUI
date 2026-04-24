@@ -145,7 +145,7 @@ let Endfooter = function () {
                                 </span>
                             </a>
                         </div>
-                        <div className="flex gap-4 mt-6">
+                        <div className="flex gap-4 mt-6 mb-6 md:mb-0">
                             <a aria-label="Facebook Profile" href="https://www.facebook.com/profile.php?id=61585918772400" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center cursor-pointer">
                                 <i className="text-2xl fa-brands fa-facebook-f"></i>
                             </a>

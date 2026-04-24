@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import { Navbar } from "./Navbar";
+import { Navbar, dropdownItems, profilDropdownItems, caraKerjaDropdownItems } from "./Navbar";
 import ScrollProgress from "./ScrollProgress";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaChevronDown } from "react-icons/fa";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isProdukOpen, setIsProdukOpen] = useState(false);
+  const [isProfilOpen, setIsProfilOpen] = useState(false);
+  const [isCaraKerjaOpen, setIsCaraKerjaOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(typeof window !== "undefined" ? window.innerWidth >= 1024 : true);
 
   React.useEffect(() => {
@@ -23,6 +26,9 @@ const Header: React.FC = () => {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "unset";
+      setIsProdukOpen(false); // Reset accordions when menu closes
+      setIsProfilOpen(false);
+      setIsCaraKerjaOpen(false);
     }
   }, [isMenuOpen]);
 
@@ -37,7 +43,7 @@ const Header: React.FC = () => {
         {/* Logo */}
         <div className="flex items-center gap-2 flex-1">
           <a href="/">
-            <img src="/assets/img/logo-pui.webp" className="w-[9.0625rem] h-[3rem]"  alt="Logo Pui" />
+            <img src="/assets/img/logo-pui.webp" className="w-[9.0625rem] h-[3rem]" alt="Logo Pui" />
           </a>
         </div>
 
@@ -79,9 +85,75 @@ const Header: React.FC = () => {
           </div>
 
           <nav className="flex flex-col gap-8">
-            <a href="/profil-perusahaan" onClick={() => setIsMenuOpen(false)} className="text-white text-xl font-medium border-b border-white/10 pb-4 hover:text-gray-300 transition-colors">Profil Perusahaan</a>
-            <a href="/#produk" onClick={() => setIsMenuOpen(false)} className="text-white text-xl font-medium border-b border-white/10 pb-4 hover:text-gray-300 transition-colors">Produk</a>
-            <a href="/cara-kerja" onClick={() => setIsMenuOpen(false)} className="text-white text-xl font-medium border-b border-white/10 pb-4 hover:text-gray-300 transition-colors">Cara Kerja</a>
+            {/* Profil Accordion */}
+            <div className="flex flex-col gap-4">
+              <div 
+                className="flex items-center justify-between text-white text-xl font-medium border-b border-white/10 pb-4 hover:text-gray-300 transition-colors cursor-pointer"
+                onClick={() => setIsProfilOpen(!isProfilOpen)}
+              >
+                <span>Profil Perusahaan</span>
+                <FaChevronDown className={`text-sm transition-transform duration-300 ${isProfilOpen ? 'rotate-180' : ''}`} />
+              </div>
+              <div className={`flex flex-col gap-6 pl-4 overflow-hidden transition-all duration-300 ${isProfilOpen ? 'max-h-[500px] opacity-100 mt-2 pb-4' : 'max-h-0 opacity-0'}`}>
+                {profilDropdownItems.map((item) => (
+                  <a 
+                    key={item.target} 
+                    href={`/profil-perusahaan${item.target}`} 
+                    onClick={() => { setIsMenuOpen(false); setIsProfilOpen(false); }} 
+                    className="text-gray-400 text-lg hover:text-white transition-colors"
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Produk Accordion */}
+            <div className="flex flex-col gap-4">
+              <div 
+                className="flex items-center justify-between text-white text-xl font-medium border-b border-white/10 pb-4 hover:text-gray-300 transition-colors cursor-pointer"
+                onClick={() => setIsProdukOpen(!isProdukOpen)}
+              >
+                <span>Produk</span>
+                <FaChevronDown className={`text-sm transition-transform duration-300 ${isProdukOpen ? 'rotate-180' : ''}`} />
+              </div>
+              <div className={`flex flex-col gap-6 pl-4 overflow-hidden transition-all duration-300 ${isProdukOpen ? 'max-h-[500px] opacity-100 mt-2 pb-4' : 'max-h-0 opacity-0'}`}>
+                {dropdownItems.map((item) => (
+                  <a
+                    key={item.target}
+                    href={`/${item.target}`}
+                    onClick={() => { setIsMenuOpen(false); setIsProdukOpen(false); }}
+                    className="text-gray-400 text-lg hover:text-white transition-colors"
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Cara Kerja Accordion */}
+            <div className="flex flex-col gap-4">
+              <div 
+                className="flex items-center justify-between text-white text-xl font-medium border-b border-white/10 pb-4 hover:text-gray-300 transition-colors cursor-pointer"
+                onClick={() => setIsCaraKerjaOpen(!isCaraKerjaOpen)}
+              >
+                <span>Cara Kerja</span>
+                <FaChevronDown className={`text-sm transition-transform duration-300 ${isCaraKerjaOpen ? 'rotate-180' : ''}`} />
+              </div>
+              <div className={`flex flex-col gap-6 pl-4 overflow-hidden transition-all duration-300 ${isCaraKerjaOpen ? 'max-h-[500px] opacity-100 mt-2 pb-4' : 'max-h-0 opacity-0'}`}>
+                {caraKerjaDropdownItems.map((item) => (
+                  <a 
+                    key={item.target} 
+                    href={`/cara-kerja${item.target}`} 
+                    onClick={() => { setIsMenuOpen(false); setIsCaraKerjaOpen(false); }} 
+                    className="text-gray-400 text-lg hover:text-white transition-colors"
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+
             <a href="/artikel" onClick={() => setIsMenuOpen(false)} className="text-white text-xl font-medium border-b border-white/10 pb-4 hover:text-gray-300 transition-colors">Artikel</a>
           </nav>
 

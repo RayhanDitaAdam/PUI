@@ -75,7 +75,7 @@ let Items = function () {
     ];
 
     return (
-        <section ref={sectionRef} className="py-24 font-sans overflow-hidden bg-[#FAFAFA]">
+        <section id="keunggulan-pui" ref={sectionRef} className="py-24 font-sans overflow-hidden bg-[#FAFAFA] scroll-mt-20">
             <div className="max-w-6xl mx-auto px-6">
 
                 <div className="mb-20 space-y-2 reveal-header opacity-0 -translate-x-8 transform-gpu transition-none">
