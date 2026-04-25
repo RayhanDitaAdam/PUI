@@ -40,8 +40,6 @@ let MainSection = function () {
                         />
                     </div>
                 </div>
-
-                <Items/>
             </section>
 
             <section>
