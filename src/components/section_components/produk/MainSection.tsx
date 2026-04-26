@@ -24,13 +24,24 @@ let MainSection = function () {
     const currentSlug = slug || 'tas';
     const imgSrc = productImages[currentSlug] || '/assets/img/produk/tas_1.webp';
     const title = productTitles[currentSlug] || 'Tas Branded';
+    const productDescriptions: Record<string, React.ReactNode> = {
+        tas: <>Butuh dana cepat? Punya tas branded mewah seperti <br /> Louis Vuitton, Chanel, Hermès, Gucci, Dior dan tas <br /> branded lainnya. Gadaikan tas mewah Anda, terjamin <br /> aman di PUI.</>,
+        emas: <>Butuh dana cepat? Punya logam mulia seperti Antam, UBS, Galeri 24, serta produk emas bersertifikat lainnya. Gadaikan logam mulia Anda, terjamin aman di PUI.</>,
+        "jam-tangan": <>Butuh dana cepat? Punya jam tangan mewah seperti Rolex, Patek Philippe, Audemars Piguet, Omega, dan brand prestisius lainnya. Gadaikan jam tangan mewah Anda, terjamin aman di PUI.</>,
+        perhiasan: <>Butuh dana cepat? Punya logam mulia seperti Tiffany & Co., Cartier, Harry Winston, Bulgari, dan lainnya. Gadaikan perhiasan dan batu mulia Anda, terjamin aman di PUI.</>,
+        kendaraan: <>Butuh dana cepat? Punya kendaraan premium seperti Ferrari, Lamborghini, Rolls-Royce, Bentley, Porsche, dan Mercedes-Benz brand prestisius lainnya. Gadaikan kendaraan premum Anda, terjamin aman di PUI.</>,
+        koleksi: <>Butuh dana cepat? Punya rare collectibles seperti Pokémon, Yu-Gi-Oh! serta memorabilia olahraga seperti FIFA, NBA, NFL, & UEFA dan lainnya. Gadaikan kendaraan premum Anda, terjamin aman di PUI.</>,
+    };
+
+    const description = productDescriptions[currentSlug] || productDescriptions.tas;
+
     return (
         <section className="w-full max-w-[1700px] mx-auto">
             <section className="block md:hidden lg:hidden sm:block">
                 <div className="bg-black text-white px-6 pt-32 pb-[17.6rem] rounded-b-[40px] text-center flex flex-col items-center overflow-hidden">
                     <h2 className="text-[2.5rem] font-bold mb-6 relative z-10">{title}</h2>
                     <p className="text-sm leading-relaxed text-gray-300 mb-12 max-w-md relative z-10">
-                        Butuh dana cepat? Punya tas branded mewah seperti <br /> Louis Vuitton, Chanel, Hermès, Gucci, Dior dan tas <br /> branded lainnya. Gadaikan tas mewah Anda, terjamin <br /> aman di PUI.
+                        {description}
                     </p>
                     <div className="relative inline-block w-full max-w-none px-4 z-0">
                         <img
