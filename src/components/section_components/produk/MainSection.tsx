@@ -35,8 +35,13 @@ let MainSection = function () {
                     <div className="relative inline-block w-full max-w-none px-4 z-0">
                         <img
                             src={imgSrc}
-                            alt="tas"
-                            className="w-full h-auto drop-shadow-2xl scale-[3.5] origin-center translate-y-32 -translate-x-[15rem]"
+                            alt={title}
+                            className={`w-full h-auto origin-center ${currentSlug === 'kendaraan'
+                                    ? 'drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] scale-[2.0] sm:scale-[3.5] translate-y-24 sm:translate-y-32 -translate-x-[7rem] sm:-translate-x-[15rem]'
+                                    : currentSlug === 'koleksi'
+                                        ? 'drop-shadow-2xl scale-[3.5] translate-y-32 -translate-x-[19rem]'
+                                        : 'drop-shadow-2xl scale-[3.5] translate-y-32 -translate-x-[15rem]'
+                                }`}
                         />
                     </div>
                 </div>
@@ -71,7 +76,7 @@ let MainSection = function () {
                 </div>
             </section>
 
-               <Items/>
+            <Items />
         </section>
     );
 }
