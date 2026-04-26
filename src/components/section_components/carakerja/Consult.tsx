@@ -62,7 +62,7 @@ let Consult = function () {
               <h3 className="text-xs md:text-lg font-extrabold text-[#111] mb-1.5 md:mb-2.5 leading-tight">
                 Layanan Jemput Barang
               </h3>
-              <p className="text-[0.625rem] md:text-sm text-[#333] leading-relaxed mb-4 md:mb-6">
+              <p className="text-xs lg:text-[10px] md:text-sm text-[#333] leading-relaxed mb-4 md:mb-6">
                 Untuk kenyamanan maksimal, PUI menyediakan layanan jemput
                 aset langsung ke lokasi Anda. Layanan ini dirancang bagi Anda yang
                 menginginkan proses praktis tanpa perlu datang ke kantor.
