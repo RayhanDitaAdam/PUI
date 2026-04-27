@@ -26,23 +26,25 @@ let Hero: React.FC = () => {
   }, [index]);
 
   return (
-    <section id="hero" className="z-10 relative w-full h-auto min-h-[39rem] md:h-[53.125rem] lg:h-[45rem] overflow-hidden">
-      <div className="relative h-full min-h-[39rem] md:h-[53.125rem] lg:h-[45rem] rounded-b-[1.875rem] md:rounded-b-[3.125rem] shadow-lg overflow-hidden">
+    <section id="hero" className="z-10 relative w-full h-auto min-h-[39rem] md:h-[68rem] lg:h-[45rem] overflow-hidden">
+      <div className="relative h-full min-h-[39rem] md:h-[68rem] lg:h-[45rem] rounded-b-[1.875rem] md:rounded-b-[3.125rem] shadow-lg overflow-hidden">
         <div
           className="absolute inset-0 md:hidden bg-no-repeat"
           style={{
             backgroundImage: 'url("/assets/img/mobile-hero.webp")',
-            backgroundSize: 'cover',
-            backgroundPosition: '48% -7rem',
             backgroundColor: 'black',
+            backgroundPosition: '-400px 120px',
+            backgroundSize: '320.121% auto',
+            backgroundRepeat: 'no-repeat',
+            borderRadius: '0 0 1.875rem 1.875rem',
             border: '1px solid #000',
             boxShadow: '0 4px 32px 18px rgba(0, 0, 0, 0.25)'
           }}
         />
         {/* Bottom Fade Gradient for Mobile */}
         <div className="absolute inset-x-0 bottom-0 h-52 bg-gradient-to-t from-black via-black/90 to-transparent md:hidden" />
-        <img src="/assets/img/Tablet.webp" className="absolute inset-0 w-full h-full object-cover hidden md:block lg:hidden"  alt="Tablet" />
-        <img src="/assets/img/hero-bg.webp" className="absolute inset-0 w-full h-full object-cover hidden lg:block"  alt="Hero Bg" />
+        <img src="/assets/img/hero.webp" className="absolute inset-0 w-full h-full object-cover hidden md:block lg:hidden" alt="Tablet" />
+        <img src="/assets/img/hero.webp" className="absolute inset-0 w-full h-full object-cover hidden lg:block" alt="Hero Bg" />
         <div className="absolute inset-0"></div>
         <Header />
 
@@ -102,11 +104,11 @@ let Hero: React.FC = () => {
           <div className="mt-10 w-full flex flex-col gap-4 items-center">
             <div className="grid grid-cols-2 gap-4 w-full">
               <div className="animate-floating flex items-center justify-center gap-2 bg-[#003D35] border-2 rounded-[0.625rem] border-[#5C5E3D] px-3 py-2 text-[0.625rem] shadow text-white" style={{ animationDelay: '0.8s' }}>
-                <img className="w-[1.25rem]" src="/assets/img/icon-clock.webp"  alt="Icon Clock" />
+                <img className="w-[1.25rem]" src="/assets/img/icon-clock.webp" alt="Icon Clock" />
                 Pencairan Dana Cepat
               </div>
               <div className="animate-floating flex items-center justify-center gap-2 bg-[#003D35] border-2 rounded-[0.625rem] border-[#5C5E3D] px-3 py-2 text-[0.625rem] shadow text-white" style={{ animationDelay: '0.4s' }}>
-                <img className="w-[1.25rem]" src="/assets/img/icon-chart.webp"  alt="Icon Chart" />
+                <img className="w-[1.25rem]" src="/assets/img/icon-chart.webp" alt="Icon Chart" />
                 Valuasi Aset Tinggi
               </div>
             </div>
@@ -120,7 +122,7 @@ let Hero: React.FC = () => {
         {/* --- TABLET LAYOUT (Visible only on tablet) --- */}
         <div className="hidden md:flex lg:hidden relative z-20 flex-col h-full items-center pt-[10rem] pb-16 px-12">
           {/* Top Content */}
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center md:mt-[5rem]">
             {/* Hero Title */}
             <h1 className="text-[1.75rem] font-bold leading-tight text-center text-white">
               Dapatkan Solusi Gadai{" "}
@@ -163,11 +165,11 @@ let Hero: React.FC = () => {
             <div className="flex flex-col gap-4 items-center">
               <div className="grid grid-cols-2 gap-4 w-full">
                 <div className="animate-floating flex items-center justify-center gap-2 bg-[#003D35] border-2 rounded-[0.625rem] border-[#5C5E3D] px-3 py-2 text-[0.625rem] shadow text-white" style={{ animationDelay: '0.8s' }}>
-                  <img className="w-[1.25rem]" src="/assets/img/icon-clock.webp"  alt="Icon Clock" />
+                  <img className="w-[1.25rem]" src="/assets/img/icon-clock.webp" alt="Icon Clock" />
                   Pencairan Dana Cepat
                 </div>
                 <div className="animate-floating flex items-center justify-center gap-2 bg-[#003D35] border-2 rounded-[0.625rem] border-[#5C5E3D] px-3 py-2 text-[0.625rem] shadow text-white" style={{ animationDelay: '0.4s' }}>
-                  <img className="w-[1.25rem]" src="/assets/img/icon-chart.webp"  alt="Icon Chart" />
+                  <img className="w-[1.25rem]" src="/assets/img/icon-chart.webp" alt="Icon Chart" />
                   Valuasi Aset Tinggi
                 </div>
               </div>
@@ -245,12 +247,12 @@ let Hero: React.FC = () => {
                 </div>
                 <div className="-ml-[5rem]">
                   <div className="animate-floating inline-flex mt-10 items-center gap-2 bg-[#003D35] border-2 rounded-[0.625rem] border-[#5C5E3D] px-4 py-2 text-xs shadow text-white" style={{ animationDelay: '0.4s' }}>
-                    <img className="w-[1.875rem]" src="/assets/img/icon-chart.webp"  alt="Icon Chart" />
+                    <img className="w-[1.875rem]" src="/assets/img/icon-chart.webp" alt="Icon Chart" />
                     Valuasi Aset Tinggi
                   </div>
                 </div>
                 <div className="animate-floating flex items-center mt-14 gap-2 bg-[#003D35] border-2 rounded-[0.625rem] border-[#5C5E3D] px-4 py-2 text-xs shadow text-white" style={{ animationDelay: '0.8s' }}>
-                  <img className="w-[1.875rem]" src="/assets/img/icon-clock.webp"  alt="Icon Clock" />
+                  <img className="w-[1.875rem]" src="/assets/img/icon-clock.webp" alt="Icon Clock" />
                   Pencairan Dana Cepat
                 </div>
               </div>

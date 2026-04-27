@@ -11,7 +11,7 @@ let Consult = function () {
           <div className="hero-deco"></div>
           <div className="hero-deco2"></div>
           <div className="hero-content relative bottom-10">
-            <h1>Punya barang mewah dan ingin dilikuidasi?</h1>
+            <h1>Ingin gadai barang mewah anda?</h1>
             <p>Konsultasikan sekarang via WhatsApp. Terjamin anonimitas & privasi 100%.</p>
             <button className="btn-wa">
               <svg className="wa-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

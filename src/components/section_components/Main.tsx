@@ -4,6 +4,7 @@ import gsap from 'gsap';
 // @ts-ignore
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Article } from './mainpage/Article';
+import { FAQ } from './mainpage/FAQ';
 import { Consult } from './mainpage/Consult';
 import { Cpages } from './mainpage/Cpages';
 import { Endfooter } from './mainpage/Endfooter';
@@ -56,6 +57,9 @@ function Main() {
       </div>
       <div className="gsap-stagger-cards">
         <Article />
+      </div>
+      <div className="gsap-reveal">
+        <FAQ />
       </div>
       <Endfooter />
     </div>
