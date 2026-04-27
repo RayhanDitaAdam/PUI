@@ -190,11 +190,11 @@ let ItemContext = function () {
                                     key={step.id}
                                     ref={el => { stepsRef.current[step.idx] = el; }}
                                     style={{ gridArea: "1 / 1 / 2 / 2" }}
-                                    className="step-item relative z-10 p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 min-h-[260px]"
+                                    className="step-item relative z-10 p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 min-h-[260px] flex flex-col items-center md:items-start text-center md:text-left"
                                 >
-                                    <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">{step.id}</h2>
-                                    <h3 className="text-lg font-bold text-[#003B33] mb-3">{step.title}</h3>
-                                    <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium mb-2">{step.desc}</p>
+                                    <h2 className="text-5xl md:text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">{step.id}</h2>
+                                    <h3 className="text-2xl md:text-lg font-bold text-[#003B33] mb-3">{step.title}</h3>
+                                    <p className="text-base md:text-[14px] text-[#003B33]/80 leading-relaxed font-medium mb-2">{step.desc}</p>
                                     {step.id === "06" && (
                                         <a 
                                             href="https://wa.me/6282277777911"
