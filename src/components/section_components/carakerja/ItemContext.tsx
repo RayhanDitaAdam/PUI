@@ -107,7 +107,7 @@ let ItemContext = function () {
                         <h4 className="text-[#003B33] font-semibold text-base md:text-lg mb-2 md:mb-3">Cara Kerja</h4>
                         <h1 className="text-3xl md:text-4xl font-extrabold leading-snug tracking-tight">
                             <span className="text-[#003B33]">Solusi Menyeluruh</span>
-                            <span className="text-gray-600">&nbsp;dengan</span><br className="hidden md:block" />
+                            <span className="text-gray-600">&nbsp;dengan </span><br className="hidden md:block" />
                             <span className="text-[#003B33]">Proses Terstandar</span>
                         </h1>
                     </div>
