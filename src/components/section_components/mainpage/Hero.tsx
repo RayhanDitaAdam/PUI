@@ -44,7 +44,7 @@ let Hero: React.FC = () => {
         {/* Bottom Fade Gradient for Mobile */}
         <div className="absolute inset-x-0 bottom-0 h-52 bg-gradient-to-t from-black via-black/90 to-transparent md:hidden" />
         <img src="/assets/img/hero.webp" className="absolute inset-0 w-full h-full object-cover hidden md:block lg:hidden" alt="Tablet" />
-        <img src="/assets/img/hero.webp" className="absolute inset-0 w-full h-full object-cover hidden lg:block" alt="Hero Bg" />
+        <img src="/assets/img/hero.webp" className="absolute inset-0 w-full h-full object-cover object-top hidden lg:block" alt="Hero Bg" />
         <div className="absolute inset-0"></div>
         <Header />
 
@@ -241,18 +241,18 @@ let Hero: React.FC = () => {
 
               {/* Feature Cards Column */}
               <div className="absolute right-[6rem] top-[16.25rem] z-20 flex flex-col gap-4 pointer-events-auto origin-right">
-                <div className="animate-floating flex items-center gap-2 bg-[#003D35] border-2 rounded-[0.625rem] border-[#5C5E3D] px-4 py-2 text-sm shadow text-white" style={{ animationDelay: '0s' }}>
-                  <img src="/assets/img/Layer_1.svg" className="h-[1.125rem] w-auto" alt="License Logo" />
+                <div className="animate-floating flex items-center gap-2 bg-[#003D35] border-2 rounded-[0.625rem] border-[#5C5E3D] px-2 py-1 text-sm shadow text-white" style={{ animationDelay: '0s' }}>
+                  <img src="/assets/img/Layer_1.svg" className="h-[2rem] w-auto" alt="License Logo" />
                   <span>Terdaftar & diawasi OJK</span>
                 </div>
                 <div className="-ml-[5rem]">
-                  <div className="animate-floating inline-flex mt-10 items-center gap-2 bg-[#003D35] border-2 rounded-[0.625rem] border-[#5C5E3D] px-4 py-2 text-xs shadow text-white" style={{ animationDelay: '0.4s' }}>
-                    <img className="w-[1.875rem]" src="/assets/img/icon-chart.webp" alt="Icon Chart" />
+                  <div className="animate-floating inline-flex mt-10 items-center gap-2 bg-[#003D35] border-2 rounded-[0.625rem] border-[#5C5E3D] px-4 py-0 text-sm shadow text-white" style={{ animationDelay: '0.4s' }}>
+                    <img className="w-[2.25rem]" src="/assets/img/icon-chart.webp" alt="Icon Chart" />
                     Valuasi Aset Tinggi
                   </div>
                 </div>
-                <div className="animate-floating flex items-center mt-14 gap-2 bg-[#003D35] border-2 rounded-[0.625rem] border-[#5C5E3D] px-4 py-2 text-xs shadow text-white" style={{ animationDelay: '0.8s' }}>
-                  <img className="w-[1.875rem]" src="/assets/img/icon-clock.webp" alt="Icon Clock" />
+                <div className="animate-floating flex items-center mt-14 gap-2 bg-[#003D35] border-2 rounded-[0.625rem] border-[#5C5E3D] px-2 py-0 text-sm shadow text-white" style={{ animationDelay: '0.8s' }}>
+                  <img className="w-[2.25rem]" src="/assets/img/icon-clock.webp" alt="Icon Clock" />
                   Pencairan Dana Cepat
                 </div>
               </div>

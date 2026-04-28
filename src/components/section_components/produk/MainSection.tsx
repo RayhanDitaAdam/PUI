@@ -48,17 +48,17 @@ let MainSection = function () {
                             src={imgSrc}
                             alt={title}
                             className={`w-full h-auto origin-center ${currentSlug === 'kendaraan'
-                                    ? 'drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] scale-[2.0] sm:scale-[3.5] translate-y-24 sm:translate-y-32 -translate-x-[7rem] sm:-translate-x-[15rem]'
-                                    : currentSlug === 'koleksi'
-                                        ? 'drop-shadow-2xl scale-[3.5] translate-y-32 -translate-x-[19rem]'
-                                        : 'drop-shadow-2xl scale-[3.5] translate-y-32 -translate-x-[15rem]'
+                                ? 'drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] scale-[2.0] sm:scale-[3.5] translate-y-24 sm:translate-y-32 -translate-x-[7rem] sm:-translate-x-[15rem]'
+                                : currentSlug === 'koleksi'
+                                    ? 'drop-shadow-2xl scale-[3.5] translate-y-32 -translate-x-[19rem]'
+                                    : 'drop-shadow-2xl scale-[3.5] translate-y-32 -translate-x-[15rem]'
                                 }`}
                         />
                     </div>
                 </div>
             </section>
 
-            <section>
+            <section className="bg-[#FAFAFA]">
                 <div
                     style={{
                         background: "linear-gradient(135deg, rgb(0, 40, 35) 0%, rgb(0, 20, 15) 50%, rgb(0, 5, 4) 100%)"
