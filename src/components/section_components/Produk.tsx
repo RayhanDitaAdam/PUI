@@ -4,6 +4,7 @@ import Header from "../__global/Header";
 import { Consult } from "./produk/Consult";
 import { ItemContext } from "./produk/ItemContext";
 import { MainSection } from "./produk/MainSection";
+import { FAQ } from "./mainpage/FAQ";
 import "./produk/style/init.css"
 import gsap from 'gsap';
 // @ts-ignore
@@ -34,6 +35,7 @@ let Produk = function () {
                 <MainSection />
                 <ItemContext />
                 <Consult />
+                <FAQ />
                 <Footer />
             </div>
         </div>
