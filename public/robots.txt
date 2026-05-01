@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pui.co.id/sitemap.xml
+Sitemap: https://www.puigadai.co.id/sitemap.xml
