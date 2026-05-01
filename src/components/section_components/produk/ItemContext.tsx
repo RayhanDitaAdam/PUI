@@ -1,11 +1,24 @@
 import { useEffect, useRef } from 'react';
+import { useParams } from 'react-router-dom';
 import { FaWhatsapp } from 'react-icons/fa';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+const productLabels: Record<string, string> = {
+    'emas': 'Logam Mulia',
+    'perhiasan': 'Perhiasan',
+    'jam-tangan': 'Jam Tangan',
+    'koleksi': 'Koleksi',
+    'kendaraan': 'Kendaraan',
+    'tas': 'Tas Branded',
+};
+
 let ItemContext = function () {
+    const { slug } = useParams<{ slug: string }>();
+    const currentSlug = slug || 'tas';
+    const productLabel = productLabels[currentSlug] || 'Aset';
     const sectionRef = useRef<HTMLDivElement>(null);
     const ballRef = useRef<HTMLDivElement>(null);
     const stepsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -140,20 +153,20 @@ let ItemContext = function () {
                             {/* Row 1: 01, 02, 03 */}
                             <div ref={el => { stepsRef.current[0] = el; }} className="step-item relative z-10 h-[260px] p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-300">
                                 <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">01</h2>
-                                <h3 className="text-lg font-bold text-[#003B33] mb-3">Penerimaan Aset</h3>
-                                <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">Aset anda diterima oleh tim ahli kami di kantor PUI</p>
+                                <h3 className="text-lg font-bold text-[#003B33] mb-3">Penerimaan {productLabel}</h3>
+                                <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">{productLabel} anda diterima oleh tim ahli kami di kantor PUI</p>
                             </div>
 
                             <div ref={el => { stepsRef.current[1] = el; }} className="step-item relative z-10 h-[260px] p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-300">
                                 <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">02</h2>
                                 <h3 className="text-lg font-bold text-[#003B33] mb-3">Pemeriksaan Fisik</h3>
-                                <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">Kondisi aset diperiksa secara menyeluruh oleh tenaga ahli</p>
+                                <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">Kondisi {productLabel.toLowerCase()} diperiksa secara menyeluruh oleh tenaga ahli</p>
                             </div>
 
                             <div ref={el => { stepsRef.current[2] = el; }} className="step-item relative z-10 h-[260px] p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-300">
                                 <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">03</h2>
                                 <h3 className="text-lg font-bold text-[#003B33] mb-3">Pengujian Laboratorium</h3>
-                                <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">Aset diuji di laboratorium untuk memastikan keaslian dan kualitas</p>
+                                <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">{productLabel} diuji di laboratorium untuk memastikan keaslian dan kualitas</p>
                             </div>
 
                             {/* Row 2: 06, 05, 04 */}
@@ -189,9 +202,9 @@ let ItemContext = function () {
                     <div className="relative w-full block lg:hidden">
                         <div className="grid grid-cols-1 relative z-10 w-full min-h-[400px]">
                             {[
-                                { id: "01", title: "Penerimaan Aset", desc: "Aset anda diterima oleh tim ahli kami di kantor PUI", idx: 6 },
-                                { id: "02", title: "Pemeriksaan Fisik", desc: "Kondisi aset diperiksa secara menyeluruh oleh tenaga ahli", idx: 7 },
-                                { id: "03", title: "Pengujian Laboratorium", desc: "Aset diuji di laboratorium untuk memastikan keaslian dan kualitas", idx: 8 },
+                                { id: "01", title: `Penerimaan ${productLabel}`, desc: `${productLabel} anda diterima oleh tim ahli kami di kantor PUI`, idx: 6 },
+                                { id: "02", title: "Pemeriksaan Fisik", desc: `Kondisi ${productLabel.toLowerCase()} diperiksa secara menyeluruh oleh tenaga ahli`, idx: 7 },
+                                { id: "03", title: "Pengujian Laboratorium", desc: `${productLabel} diuji di laboratorium untuk memastikan keaslian dan kualitas`, idx: 8 },
                                 { id: "04", title: "Penawaran Nilai Gadai", desc: "Kami menyamapikan nilai taksiran dan bunag kompetitif untuk disetujui", idx: 9 },
                                 { id: "05", title: "Pencairan Dana", desc: "Setelah Anda setuju, dana langsung cair ke rekening Anda", idx: 10 },
                                 { id: "06", title: "Hubungi Kami Via Whatsapp", desc: "Untuk memulai", idx: 11 }

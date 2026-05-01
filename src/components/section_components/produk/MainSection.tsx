@@ -74,9 +74,7 @@ let MainSection = function () {
                         <div className="w-1/2 pr-20 lg:pt-28">
                             <h1 className="text-5xl font-semibold mb-6">{title}</h1>
                             <p className="text-gray-400 leading-relaxed text-lg">
-                                Butuh dana cepat? Punya tas branded mewah seperti Louis Vuitton, Chanel, Hermes, Gucci, Dior
-                                dan
-                                tas branded lainnya. Gadai kan tas mewah Anda, terjamin aman di PUI.
+                                {description}
                             </p>
                         </div>
 

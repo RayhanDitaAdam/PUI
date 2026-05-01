@@ -75,19 +75,36 @@ const Testimonials = function () {
     {
       name: "Anonim User",
       text: "Prosesnya cepat dan transparan. Saya gadaikan jam tangan mewah, valuasinya sangat profesional dan sesuai ekpektasi. Sangat recommended.",
-      stars: 5,
       isDark: false
     },
     {
       name: "Anonim User",
       text: "Pelayanan sangat ramah dan sangat membantu. Privasi benar-benar terjaga 100%. Terima kasih PUI atas solusinya.",
-      stars: 5,
       isDark: true
     },
     {
       name: "Anonim User",
       text: "Tempat gadai aset mewah terbaik di Jakarta. Tim appraisal sangat ahli dan detail. Proses pencairan dana sangat cepat.",
-      stars: 5,
+      isDark: true
+    },
+    {
+      name: "Anonim User",
+      text: "Gadai tas branded di PUI sangat mudah. Prosesnya jelas, tim-nya profesional, dan dana cair dalam hitungan jam. Pasti balik lagi.",
+      isDark: false
+    },
+    {
+      name: "Anonim User",
+      text: "Saya sangat puas dengan layanan PUI. Perhiasan saya ditaksir dengan harga yang sangat fair dan disimpan dengan aman. Top service!",
+      isDark: true
+    },
+    {
+      name: "Anonim User",
+      text: "Awalnya ragu, tapi setelah coba gadai emas di PUI, saya langsung percaya. Prosesnya transparan dan bunga sangat kompetitif.",
+      isDark: false
+    },
+    {
+      name: "Anonim User",
+      text: "Pengalaman gadai kendaraan premium di PUI luar biasa. Semua ditangani dengan profesional dari awal hingga pencairan. Highly recommended!",
       isDark: true
     }
   ];
@@ -106,7 +123,7 @@ const Testimonials = function () {
           <div className="google-g w-6">
             <img src="/assets/img/24ab7a440ef6f6b86af438c9c31494764e08e757.webp" alt="Google" />
           </div>
-          <span className="text-yellow-500 text-xl">★</span>
+
           <span className="font-bold text-base mt-[1px]">5/5 Trust Rating (87+ Review)</span>
         </div>
         <h2 className="text-2xl md:text-3xl font-extrabold text-[#4D4D4D] mb-10 leading-tight">
@@ -134,7 +151,6 @@ const Testimonials = function () {
                   <p className={`text-base font-bold ${review.isDark ? 'text-gray-900' : 'text-[#4D4D4D]'}`}>
                     {review.name}
                   </p>
-                  <div className="text-yellow-500">{"★".repeat(review.stars)}</div>
                 </div>
               </div>
               <p className="text-sm text-gray-600 leading-relaxed">
