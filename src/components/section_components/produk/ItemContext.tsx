@@ -6,15 +6,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const productLabels: Record<string, string> = {
-    'emas': 'Logam Mulia',
-    'perhiasan': 'Perhiasan',
-    'jam-tangan': 'Jam Tangan',
-    'koleksi': 'Koleksi',
-    'kendaraan': 'Kendaraan',
-    'tas': 'Tas Branded',
-};
-
 const stepsData: Record<string, { id: string; title: string; desc: string; idx: number }[]> = {
     'jam-tangan': [
         { id: "01", title: "Kirim Foto Jam Tangan", desc: "Kirim Foto aset jam tangan Anda ke tim kami via WhatsApp untuk asesmen awal.", idx: 6 },
@@ -70,7 +61,6 @@ let ItemContext = function () {
     const { slug } = useParams<{ slug: string }>();
     const currentSlug = slug || 'jam-tangan';
     const activeSteps = stepsData[currentSlug] || stepsData['jam-tangan'];
-    const productLabel = productLabels[currentSlug] || 'Aset';
     const sectionRef = useRef<HTMLDivElement>(null);
     const ballRef = useRef<HTMLDivElement>(null);
     const stepsRef = useRef<(HTMLDivElement | null)[]>([]);
