@@ -15,9 +15,61 @@ const productLabels: Record<string, string> = {
     'tas': 'Tas Branded',
 };
 
+const stepsData: Record<string, { id: string; title: string; desc: string; idx: number }[]> = {
+    'jam-tangan': [
+        { id: "01", title: "Kirim Foto Jam Tangan", desc: "Kirim Foto aset jam tangan Anda ke tim kami via WhatsApp untuk asesmen awal.", idx: 6 },
+        { id: "02", title: "Buat Appointment", desc: "Tim kami menjadwalkan kunjungan Anda ke kantor PUI, Darmawangsa Square, Jakarta Selatan.", idx: 7 },
+        { id: "03", title: "Pemeriksaan & Pengujian", desc: "Tim ahli memeriksa kondisi fisik dan menguji keaslian komponen presisi di laboratorium kami.", idx: 8 },
+        { id: "04", title: "Penawaran Nilai Gadai", desc: "Kami menyampaikan nilai taksiran beserta bunga kompetitif untuk persetujuan Anda.", idx: 9 },
+        { id: "05", title: "Pencairan Dana", desc: "Setelah disetujui, dana langsung cair ke rekening Anda di hari yang sama.", idx: 10 },
+        { id: "06", title: "Hubungi Kami via WhatsApp", desc: "Untuk memulai", idx: 11 }
+    ],
+    'emas': [
+        { id: "01", title: "Kirim Foto Emas", desc: "Kirim foto emas batangan Anda beserta stamp kadar dan informasi berat ke tim kami via WhatsApp.", idx: 6 },
+        { id: "02", title: "Appointment", desc: "Tim kami menjadwalkan kunjungan Anda ke kantor PUI, Darmawangsa Square, Jakarta Selatan.", idx: 7 },
+        { id: "03", title: "Pemeriksaan & Pengujian", desc: "Tim ahli menguji kadar dan keaslian emas di laboratorium kami menggunakan peralatan standar industri.", idx: 8 },
+        { id: "04", title: "Penawaran Nilai Gadai", desc: "Kami menyampaikan nilai taksiran berdasarkan harga emas terkini, beserta bunga kompetitif.", idx: 9 },
+        { id: "05", title: "Pencairan Dana", desc: "Setelah disetujui, dana langsung cair ke rekening Anda di hari yang sama.", idx: 10 },
+        { id: "06", title: "Hubungi Kami via WhatsApp", desc: "Untuk memulai", idx: 11 }
+    ],
+    'perhiasan': [
+        { id: "01", title: "Kirim Foto Perhiasan", desc: "Kirim foto detail perhiasan beserta sertifikat lab (jika ada) ke tim kami via WhatsApp.", idx: 6 },
+        { id: "02", title: "Appointment", desc: "Tim kami menjadwalkan kunjungan Anda ke kantor PUI, Darmawangsa Square, Jakarta Selatan.", idx: 7 },
+        { id: "03", title: "Pemeriksaan & Pengujian", desc: "Tim gemologi menguji karakteristik batu mulia serta kadar logam mounting di laboratorium kami.", idx: 8 },
+        { id: "04", title: "Penawaran Nilai Gadai", desc: "Kami menyampaikan nilai taksiran beserta bunga kompetitif untuk persetujuan Anda.", idx: 9 },
+        { id: "05", title: "Pencairan Dana", desc: "Setelah disetujui, dana langsung cair ke rekening Anda di hari yang sama.", idx: 10 },
+        { id: "06", title: "Hubungi Kami via WhatsApp", desc: "Untuk memulai", idx: 11 }
+    ],
+    'tas': [
+        { id: "01", title: "Kirim Foto Tas Branded", desc: "Kirim foto tas (depan, belakang, sisi, bawah, kode seri, detail hardware) ke tim kami via WhatsApp.", idx: 6 },
+        { id: "02", title: "Appointment", desc: "Tim kami menjadwalkan kunjungan Anda ke kantor PUI, Darmawangsa Square, Jakarta Selatan.", idx: 7 },
+        { id: "03", title: "Pemeriksaan Fisik & Verifikasi Keaslian", desc: "Tim ahli memverifikasi keaslian melalui material, hardware, kode seri, dan signature detail brand.", idx: 8 },
+        { id: "04", title: "Penawaran Nilai Gadai", desc: "Kami menyampaikan nilai taksiran beserta bunga kompetitif untuk persetujuan Anda.", idx: 9 },
+        { id: "05", title: "Pencairan Dana", desc: "Setelah disetujui, dana langsung cair ke rekening Anda di hari yang sama.", idx: 10 },
+        { id: "06", title: "Hubungi Kami via WhatsApp", desc: "Untuk memulai", idx: 11 }
+    ],
+    'kendaraan': [
+        { id: "01", title: "Kirim Foto Kendaraan", desc: "Kirim foto eksterior, interior, panel instrumen/odometer kendaraan Anda via WhatsApp.", idx: 6 },
+        { id: "02", title: "Appointment Inspeksi", desc: "Tim kami menjadwalkan inspeksi kendaraan Anda di fasilitas inspeksi kami.", idx: 7 },
+        { id: "03", title: "Pemeriksaan Fisik & Dokumen", desc: "Tim memverifikasi keaslian BPKB, STNK, nomor rangka/mesin, serta kondisi fisik dan mesin kendaraan.", idx: 8 },
+        { id: "04", title: "Penawaran Nilai Gadai", desc: "Kami menyampaikan nilai taksiran berdasarkan brand, tahun, kondisi, dan jarak tempuh.", idx: 9 },
+        { id: "05", title: "Pencairan Dana", desc: "Setelah disetujui, dana langsung cair ke rekening Anda di hari yang sama.", idx: 10 },
+        { id: "06", title: "Hubungi Kami via WhatsApp", desc: "Untuk memulai", idx: 11 }
+    ],
+    'koleksi': [
+        { id: "01", title: "Kirim Foto Koleksi", desc: "Kirim foto detail koleksi (edges, corners, label grading) ke tim kami via WhatsApp.", idx: 6 },
+        { id: "02", title: "Appointment", desc: "Tim kami menjadwalkan kunjungan Anda ke kantor PUI, Darmawangsa Square, Jakarta Selatan.", idx: 7 },
+        { id: "03", title: "Pemeriksaan Fisik & Verifikasi Pasar", desc: "Tim ahli memverifikasi grading dan menganalisis nilai pasar dari sumber data kolektor terpercaya.", idx: 8 },
+        { id: "04", title: "Penawaran Nilai Gadai", desc: "Kami menyampaikan nilai taksiran berdasarkan rarity, kondisi, grade, dan demand pasar.", idx: 9 },
+        { id: "05", title: "Pencairan Dana", desc: "Setelah disetujui, dana langsung cair ke rekening Anda di hari yang sama.", idx: 10 },
+        { id: "06", title: "Hubungi Kami via WhatsApp", desc: "Untuk memulai", idx: 11 }
+    ]
+};
+
 let ItemContext = function () {
     const { slug } = useParams<{ slug: string }>();
-    const currentSlug = slug || 'tas';
+    const currentSlug = slug || 'jam-tangan';
+    const activeSteps = stepsData[currentSlug] || stepsData['jam-tangan'];
     const productLabel = productLabels[currentSlug] || 'Aset';
     const sectionRef = useRef<HTMLDivElement>(null);
     const ballRef = useRef<HTMLDivElement>(null);
@@ -152,28 +204,28 @@ let ItemContext = function () {
                         <div className="grid grid-cols-3 gap-x-10 gap-y-12 relative z-10">
                             {/* Row 1: 01, 02, 03 */}
                             <div ref={el => { stepsRef.current[0] = el; }} className="step-item relative z-10 h-[260px] p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-300">
-                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">01</h2>
-                                <h3 className="text-lg font-bold text-[#003B33] mb-3">Penerimaan {productLabel}</h3>
-                                <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">{productLabel} anda diterima oleh tim ahli kami di kantor PUI</p>
+                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">{activeSteps[0].id}</h2>
+                                <h3 className="text-lg font-bold text-[#003B33] mb-3">{activeSteps[0].title}</h3>
+                                <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">{activeSteps[0].desc}</p>
                             </div>
 
                             <div ref={el => { stepsRef.current[1] = el; }} className="step-item relative z-10 h-[260px] p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-300">
-                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">02</h2>
-                                <h3 className="text-lg font-bold text-[#003B33] mb-3">Pemeriksaan Fisik</h3>
-                                <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">Kondisi {productLabel.toLowerCase()} diperiksa secara menyeluruh oleh tenaga ahli</p>
+                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">{activeSteps[1].id}</h2>
+                                <h3 className="text-lg font-bold text-[#003B33] mb-3">{activeSteps[1].title}</h3>
+                                <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">{activeSteps[1].desc}</p>
                             </div>
 
                             <div ref={el => { stepsRef.current[2] = el; }} className="step-item relative z-10 h-[260px] p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-300">
-                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">03</h2>
-                                <h3 className="text-lg font-bold text-[#003B33] mb-3">Pengujian Laboratorium</h3>
-                                <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">{productLabel} diuji di laboratorium untuk memastikan keaslian dan kualitas</p>
+                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">{activeSteps[2].id}</h2>
+                                <h3 className="text-lg font-bold text-[#003B33] mb-3">{activeSteps[2].title}</h3>
+                                <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">{activeSteps[2].desc}</p>
                             </div>
 
                             {/* Row 2: 06, 05, 04 */}
                             <div ref={el => { stepsRef.current[3] = el; }} className="step-item relative z-10 h-[260px] p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-300">
-                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">06</h2>
-                                <h3 className="text-lg font-bold text-[#003B33] mb-3">Hubungi Kami Via Whatsapp</h3>
-                                <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium mb-2">Untuk memulai</p>
+                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">{activeSteps[5].id}</h2>
+                                <h3 className="text-lg font-bold text-[#003B33] mb-3">{activeSteps[5].title}</h3>
+                                <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium mb-2">{activeSteps[5].desc}</p>
                                 <a
                                     href="https://wa.me/6282277777911"
                                     target="_blank"
@@ -185,15 +237,15 @@ let ItemContext = function () {
                             </div>
 
                             <div ref={el => { stepsRef.current[4] = el; }} className="step-item relative z-10 h-[260px] p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-300">
-                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">05</h2>
-                                <h3 className="text-lg font-bold text-[#003B33] mb-3">Pencairan Dana</h3>
-                                <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">Setelah Anda setuju, dana langsung cair ke rekening Anda</p>
+                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">{activeSteps[4].id}</h2>
+                                <h3 className="text-lg font-bold text-[#003B33] mb-3">{activeSteps[4].title}</h3>
+                                <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">{activeSteps[4].desc}</p>
                             </div>
 
                             <div ref={el => { stepsRef.current[5] = el; }} className="step-item relative z-10 h-[260px] p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-300">
-                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">04</h2>
-                                <h3 className="text-lg font-bold text-[#003B33] mb-3">Penawaran Nilai Gadai</h3>
-                                <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">Kami menyampaikan nilai taksiran dan bunga kompetitif untuk disetujui</p>
+                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">{activeSteps[3].id}</h2>
+                                <h3 className="text-lg font-bold text-[#003B33] mb-3">{activeSteps[3].title}</h3>
+                                <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">{activeSteps[3].desc}</p>
                             </div>
                         </div>
                     </div>
@@ -201,14 +253,7 @@ let ItemContext = function () {
                     {/* MOBILE & TABLET VIEW (Sticky Card Stacking) */}
                     <div className="relative w-full block lg:hidden">
                         <div className="grid grid-cols-1 relative z-10 w-full min-h-[400px]">
-                            {[
-                                { id: "01", title: `Penerimaan ${productLabel}`, desc: `${productLabel} anda diterima oleh tim ahli kami di kantor PUI`, idx: 6 },
-                                { id: "02", title: "Pemeriksaan Fisik", desc: `Kondisi ${productLabel.toLowerCase()} diperiksa secara menyeluruh oleh tenaga ahli`, idx: 7 },
-                                { id: "03", title: "Pengujian Laboratorium", desc: `${productLabel} diuji di laboratorium untuk memastikan keaslian dan kualitas`, idx: 8 },
-                                { id: "04", title: "Penawaran Nilai Gadai", desc: "Kami menyamapikan nilai taksiran dan bunag kompetitif untuk disetujui", idx: 9 },
-                                { id: "05", title: "Pencairan Dana", desc: "Setelah Anda setuju, dana langsung cair ke rekening Anda", idx: 10 },
-                                { id: "06", title: "Hubungi Kami Via Whatsapp", desc: "Untuk memulai", idx: 11 }
-                            ].map((step) => (
+                            {activeSteps.map((step) => (
                                 <div
                                     key={step.id}
                                     ref={el => { stepsRef.current[step.idx] = el; }}

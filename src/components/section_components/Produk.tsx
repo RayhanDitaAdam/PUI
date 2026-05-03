@@ -3,6 +3,7 @@ import Footer from "../__global/Footer";
 import Header from "../__global/Header";
 import { Consult } from "./produk/Consult";
 import { ItemContext } from "./produk/ItemContext";
+import { Kriteria } from "./produk/Kriteria";
 import { MainSection } from "./produk/MainSection";
 import { FAQ } from "./mainpage/FAQ";
 import "./produk/style/init.css"
@@ -34,6 +35,7 @@ let Produk = function () {
             <div className="mt-10">
                 <MainSection />
                 <ItemContext />
+                <Kriteria />
                 <Consult />
                 <FAQ />
                 <Footer />
