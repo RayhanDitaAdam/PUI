@@ -324,7 +324,17 @@ let Kriteria = function () {
         <p className="text-[#003B33] text-sm md:text-base font-semibold text-left mb-2">
           Kriteria
         </p>
-        <h2 className="text-[#003B33] text-3xl md:text-[2.5rem] font-bold leading-tight text-left w-full max-w-[31.25rem] mb-8 md:mb-10">
+        <h2 
+          className="text-left w-full max-w-[31.25rem] mb-8 md:mb-10"
+          style={{
+            color: 'var(--Foundation-Green-Darker, #003B33)',
+            fontFamily: 'Lato',
+            fontSize: '2.3125rem',
+            fontStyle: 'normal',
+            fontWeight: 800,
+            lineHeight: '130%'
+          }}
+        >
           Kriteria Barang Diterima
         </h2>
 
