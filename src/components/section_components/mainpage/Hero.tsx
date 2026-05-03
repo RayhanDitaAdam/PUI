@@ -95,7 +95,7 @@ let Hero: React.FC = () => {
               untuk solusi likuiditas aset mewah Anda, dengan layanan
               profesional, proses cepat, serta keamanan terjamin.
             </p>
-            <a href="https://pui-xi.vercel.app/profil-perusahaan" className="inline-block mt-6 bg-[#003D35] px-6 py-2.5 rounded-full text-sm text-white hover:bg-[#005D51] hover:scale-105 transition-all duration-300">
+            <a href="https://puigadai.co.id/profil-perusahaan" className="inline-block mt-6 bg-[#003D35] px-6 py-2.5 rounded-full text-sm text-white hover:bg-[#005D51] hover:scale-105 transition-all duration-300">
               Tentang PUI
             </a>
           </div>
@@ -189,7 +189,7 @@ let Hero: React.FC = () => {
                 untuk solusi likuiditas aset mewah Anda, dengan layanan
                 profesional, proses cepat, serta keamanan terjamin.
               </p>
-              <a href="https://pui-xi.vercel.app/profil-perusahaan" className="inline-block mt-6 bg-[#003D35] px-6 py-2 rounded-full text-xs text-white hover:bg-[#005D51] hover:scale-105 transition-all duration-300">
+              <a href="https://puigadai.co.id/profil-perusahaan" className="inline-block mt-6 bg-[#003D35] px-6 py-2 rounded-full text-xs text-white hover:bg-[#005D51] hover:scale-105 transition-all duration-300">
                 Tentang PUI
               </a>
             </div>
@@ -234,7 +234,7 @@ let Hero: React.FC = () => {
                   untuk solusi likuiditas aset mewah Anda, dengan layanan
                   profesional, proses cepat, serta keamanan terjamin.
                 </p>
-                <a href="https://pui-xi.vercel.app/profil-perusahaan" className="inline-block mt-4 bg-[#003D35] px-4 py-2 rounded-full text-xs text-white hover:bg-[#005D51] hover:scale-105 transition-all duration-300">
+                <a href="https://puigadai.co.id/profil-perusahaan" className="inline-block mt-4 bg-[#003D35] px-4 py-2 rounded-full text-xs text-white hover:bg-[#005D51] hover:scale-105 transition-all duration-300">
                   Tentang PUI
                 </a>
               </div>
