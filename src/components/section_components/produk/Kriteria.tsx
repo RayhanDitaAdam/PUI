@@ -342,7 +342,7 @@ let Kriteria = function () {
           {activeCards.map((item) => (
             <article
               key={item.id}
-              className="w-full max-w-[35.75rem] min-h-[20.6875rem] rounded-2xl border border-[#D9E5E3] bg-white p-5 md:p-7 flex flex-col"
+              className="w-full xl:max-w-[35.75rem] min-h-[20.6875rem] rounded-2xl border border-[#D9E5E3] bg-white p-5 md:p-7 flex flex-col"
             >
               <div className="flex w-full max-w-[17.5625rem] items-center gap-4 mb-5">
                 <img
@@ -356,7 +356,7 @@ let Kriteria = function () {
                 )}
               </div>
 
-              <div className="w-full max-w-[31.75rem] min-h-[12.9375rem] text-[#003B33] text-sm md:text-base leading-relaxed">
+              <div className="w-full xl:max-w-[31.75rem] min-h-[12.9375rem] text-[#003B33] text-sm md:text-base leading-relaxed">
                 {item.content}
               </div>
             </article>
