@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { SidePost } from "./SidePost";
 import { articles } from "../../../../data/articles";
+import { FaArrowLeft, FaRegClock, FaRegUser } from "react-icons/fa6";
 
 let MainPost = function () {
     const { slug } = useParams<{ slug: string }>();
@@ -20,8 +21,8 @@ let MainPost = function () {
             <div className="lg:grid lg:grid-cols-3 lg:gap-8">
                 <div className="lg:col-span-2">
                     <div className="mb-4">
-                        <a href="/artikel" className="group flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-[#006658] transition-colors mb-4">
-                            <i className="fas fa-arrow-left transform group-hover:-translate-x-1 transition-transform duration-300"></i>
+                        <a href="/artikel" className="group flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-[#006658] transition-all mb-4">
+                            <FaArrowLeft className="transform group-hover:-translate-x-1 transition-transform duration-300" />
                             <span>Kembali</span>
                         </a>
                         <div className="flex justify-center mb-4">
@@ -29,14 +30,14 @@ let MainPost = function () {
                         </div>
                     </div>
 
-                    <h1 className="text-2xl font-bold mb-3 leading-tight text-black">{article.title}</h1>
+                    <h1 className="text-3xl md:text-5xl font-extrabold mb-6 leading-[1.15] text-gray-900 tracking-tight">{article.title}</h1>
                     
-                    <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500 mb-4">
-                        <span className="flex items-center gap-1">
-                            <i className="far fa-clock"></i> {article.date}
+                    <div className="flex flex-wrap items-center gap-5 text-[13px] font-medium text-gray-400 mb-8 border-b border-gray-100 pb-6">
+                        <span className="flex items-center gap-1.5">
+                            <FaRegClock className="text-[#006658]" /> {article.date}
                         </span>
-                        <span className="flex items-center gap-1">
-                            <i className="far fa-user"></i> Penulis: {article.author}
+                        <span className="flex items-center gap-1.5">
+                            <FaRegUser className="text-[#006658]" /> Penulis: {article.author}
                         </span>
                     </div>
 

@@ -1,6 +1,5 @@
 import { useRef, useEffect } from "react";
-import { FaClock } from "react-icons/fa6";
-import { ArrowRight } from "lucide-react";
+import { FaClock, FaArrowRight } from "react-icons/fa6";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { articles } from "./_data/article.ts";
@@ -38,9 +37,9 @@ let Article = function () {
             Eksplorasi insight eksklusif seputar pengelolaan aset bernilai tinggi, strategi likuidasi, dan tren finansial terkini.
           </p>
         </div>
-        <a href="/artikel" className="flex items-center gap-2 text-[#006658] font-bold text-sm hover:underline">
+        <a href="/artikel" className="flex items-center gap-2 text-[#006658] font-bold text-sm hover:underline uppercase tracking-wider">
           Lihat Selengkapnya 
-          <ArrowRight className="w-4 h-4" />
+          <FaArrowRight className="w-4 h-4" />
         </a>
       </div>
 
@@ -75,9 +74,9 @@ let Article = function () {
               <p className="text-xs text-gray-500 leading-relaxed mb-4">
                 {item.desc}
               </p>
-              <a aria-label="Read full article" href={`/artikel/${item.slug}`} className="mt-auto flex items-center gap-2 text-[#006658] font-bold text-xs hover:gap-3 transition-all">
+              <a aria-label="Read full article" href={`/artikel/${item.slug}`} className="mt-auto flex items-center gap-2 text-[#006658] font-extrabold text-[11px] hover:gap-3 transition-all uppercase tracking-widest">
                 Read More
-                <ArrowRight className="w-4 h-4" />
+                <FaArrowRight className="w-4 h-4" />
               </a>
             </div>
           </div>

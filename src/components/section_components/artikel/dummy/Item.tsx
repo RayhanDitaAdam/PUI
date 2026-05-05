@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { ArrowRight, Clock, ChevronDown, ChevronUp } from "lucide-react";
+import { FaArrowRight, FaRegClock, FaChevronDown, FaChevronUp } from "react-icons/fa6";
 
 import { articles } from '../../../../data/articles';
 
@@ -42,7 +42,7 @@ let Item = function () {
                         className="md:hidden flex items-center justify-between w-full px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-700 font-medium"
                     >
                         <span>Kategori: {activeCategory}</span>
-                        {isMenuOpen ? <ChevronUp className="w-3 h-3 ml-2" /> : <ChevronDown className="w-3 h-3 ml-2" />}
+                        {isMenuOpen ? <FaChevronUp className="w-3 h-3 ml-2" /> : <FaChevronDown className="w-3 h-3 ml-2" />}
                     </button>
 
 
@@ -87,15 +87,15 @@ let Item = function () {
                                 {item.category}
                             </span>
                         </div>
-                        <div className="text-[10px] text-gray-400 flex items-center gap-1 mb-1">
-                            <Clock className="w-3 h-3" /> {item.date}
+                        <div className="text-[10px] text-gray-400 flex items-center gap-1.5 mb-2 font-medium uppercase tracking-wider">
+                            <FaRegClock className="w-3 h-3 text-[#006658]" /> {item.date}
                         </div>
-                        <h3 className="text-lg md:text-base font-bold text-gray-900 mb-2 group-hover:text-[#006658] transition-colors line-clamp-1">{item.title}</h3>
+                        <h3 className="text-lg md:text-base font-extrabold text-gray-900 mb-2 group-hover:text-[#006658] transition-colors line-clamp-1 tracking-tight">{item.title}</h3>
                         <p className="text-sm md:text-xs text-gray-500 mb-3 leading-relaxed line-clamp-2">
                             {item.excerpt}
                         </p>
-                        <a aria-label="Read full article" href={`/artikel/${item.slug}`} className="group text-[#00A294] text-xs font-semibold flex items-center gap-1">
-                            Read More <ArrowRight className="w-3 h-3 transform group-hover:translate-x-1 transition-transform duration-300" />
+                        <a aria-label="Read full article" href={`/artikel/${item.slug}`} className="group text-[#00A294] text-xs font-bold flex items-center gap-1 uppercase tracking-wider">
+                            Read More <FaArrowRight className="w-3 h-3 transform group-hover:translate-x-1 transition-transform duration-300" />
                         </a>
                     </div>
                 ))}

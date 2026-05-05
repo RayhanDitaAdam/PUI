@@ -26,8 +26,8 @@ let Hero: React.FC = () => {
   }, [index]);
 
   return (
-    <section id="hero" className="z-10 relative w-full h-auto min-h-[39rem] md:h-[68rem] lg:h-[45rem] overflow-hidden">
-      <div className="relative h-full min-h-[39rem] md:h-[68rem] lg:h-[45rem] rounded-b-[1.875rem] md:rounded-b-[3.125rem] shadow-lg overflow-hidden">
+    <section id="hero" className="z-10 relative w-full h-auto min-h-[39rem] md:h-[68rem] lg:h-[55rem] overflow-hidden">
+      <div className="relative h-full min-h-[39rem] md:h-[68rem] lg:h-[55rem] rounded-b-[1.875rem] md:rounded-b-[3.125rem] shadow-lg overflow-hidden">
         <div
           className="absolute inset-0 md:hidden bg-no-repeat"
           style={{
@@ -199,7 +199,7 @@ let Hero: React.FC = () => {
         {/* --- DESKTOP LAYOUT (Original behavior) --- */}
         <div className="hidden lg:block">
           {/* Hero Title */}
-          <div className="absolute top-[7.5rem] w-full flex justify-center z-20 px-4">
+          <div className="absolute top-[10rem] w-full flex justify-center z-20 px-4">
             <h1 className="text-4xl font-bold leading-snug text-center text-white">
               Dapatkan Solusi Gadai{" "}
               <span className="text-switcher-container">
@@ -225,7 +225,7 @@ let Hero: React.FC = () => {
           <div className="absolute inset-0 z-20 flex justify-center pointer-events-none">
             <div className="w-full max-w-[90rem] relative pointer-events-none">
               {/* Info Card */}
-              <div className="absolute left-[5rem] top-[18.75rem] z-20 max-w-xs pointer-events-auto origin-left bg-black/80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1),inset_0_1px_0_0_rgba(255,255,255,0.2)] backdrop-blur-[8px] rounded-[1.5rem] p-6 lg:p-8">
+              <div className="absolute left-[5rem] top-[24rem] z-20 max-w-xs pointer-events-auto origin-left bg-black/80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1),inset_0_1px_0_0_rgba(255,255,255,0.2)] backdrop-blur-[8px] rounded-[1.5rem] p-6 lg:p-8">
                 <h1 className="font-bold mb-2 animate-shine-text text-lg">
                   Pergadaian Utama Indonesia
                 </h1>
@@ -240,7 +240,7 @@ let Hero: React.FC = () => {
               </div>
 
               {/* Feature Cards Column */}
-              <div className="absolute right-[6rem] top-[16.25rem] z-20 flex flex-col gap-4 pointer-events-auto origin-right">
+              <div className="absolute right-[6rem] top-[22rem] z-20 flex flex-col gap-4 pointer-events-auto origin-right">
                 <div className="animate-floating flex items-center gap-2 bg-[#003D35] border-2 rounded-[0.625rem] border-[#5C5E3D] px-2 py-1 text-sm shadow text-white" style={{ animationDelay: '0s' }}>
                   <img src="/assets/img/Layer_1.svg" className="h-[2rem] w-auto" alt="License Logo" />
                   <span>Terdaftar & diawasi OJK</span>
