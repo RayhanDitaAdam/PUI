@@ -122,7 +122,7 @@ let Hero: React.FC = () => {
         {/* --- TABLET LAYOUT (Visible only on tablet) --- */}
         <div className="hidden md:flex lg:hidden relative z-20 flex-col h-full items-center pt-[10rem] pb-16 px-12">
           {/* Top Content */}
-          <div className="flex flex-col items-center md:mt-[5rem]">
+          <div className="flex flex-col items-center">
             {/* Hero Title */}
             <h1 className="text-[1.75rem] font-bold leading-tight text-center text-white">
               Dapatkan Solusi Gadai{" "}
