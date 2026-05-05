@@ -30,9 +30,9 @@ let SidePost = function () {
             <div className="mb-6">
                 <h3 className="font-bold text-sm mb-3">Ikuti Media Sosial Kami</h3>
                 <div className="flex gap-4 text-[#006658]">
-                    <a href="#" className="hover:text-[#004d42] transition-colors"><FaFacebookF className="text-base" /></a>
-                    <a href="#" className="hover:text-[#004d42] transition-colors"><FaInstagram className="text-base" /></a>
-                    <a href="#" className="hover:text-[#004d42] transition-colors"><FaLinkedinIn className="text-base" /></a>
+                    <a href="https://www.facebook.com/profile.php?id=61585918772400" target="_blank" rel="noopener noreferrer" className="hover:text-[#004d42] transition-colors"><FaFacebookF className="text-base" /></a>
+                    <a href="https://www.instagram.com/pui.gadai" target="_blank" rel="noopener noreferrer" className="hover:text-[#004d42] transition-colors"><FaInstagram className="text-base" /></a>
+                    <a href="https://www.linkedin.com/company/puigadai/about" target="_blank" rel="noopener noreferrer" className="hover:text-[#004d42] transition-colors"><FaLinkedinIn className="text-base" /></a>
                 </div>
             </div>
         </div>
