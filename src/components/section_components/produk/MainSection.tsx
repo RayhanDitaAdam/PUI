@@ -29,7 +29,7 @@ let MainSection = function () {
         emas: <>Butuh dana cepat? Punya logam mulia seperti Antam, UBS, Galeri 24, serta produk emas bersertifikat lainnya. Gadaikan logam mulia Anda, terjamin aman di PUI.</>,
         "jam-tangan": <>Butuh dana cepat? Punya jam tangan mewah seperti Rolex, Patek Philippe, Audemars Piguet, Omega, dan brand prestisius lainnya. Gadaikan jam tangan mewah Anda, terjamin aman di PUI.</>,
         perhiasan: <>Butuh dana cepat? Punya logam mulia seperti Tiffany & Co., Cartier, Harry Winston, Bulgari, dan lainnya. Gadaikan perhiasan dan batu mulia Anda, terjamin aman di PUI.</>,
-        kendaraan: <>Butuh dana cepat? Punya kendaraan premium seperti Ferrari, Lamborghini, Rolls-Royce, Bentley, Porsche, dan Mercedes-Benz brand prestisius lainnya. Gadaikan kendaraan premum Anda, terjamin aman di PUI.</>,
+        kendaraan: <>Butuh dana cepat? Punya kendaraan premium seperti Ferrari, Lamborghini, Rolls-Royce, Bentley, Porsche, dan Mercedes-Benz brand prestisius lainnya. Gadaikan kendaraan premum Anda, <br /> terjamin aman di PUI.</>,
         koleksi: <>Butuh dana cepat? Punya rare collectibles seperti Pokémon, Yu-Gi-Oh! serta memorabilia olahraga seperti FIFA, NBA, NFL, & UEFA dan lainnya. Gadaikan kendaraan premum Anda, terjamin aman di PUI.</>,
     };
 
