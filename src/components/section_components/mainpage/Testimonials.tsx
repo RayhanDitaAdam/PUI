@@ -129,7 +129,7 @@ const Testimonials = function () {
     },
     {
       name: "Anonim User",
-      text: "Cari tempat gadai yang terpercaya itu sulit, tapi Pui Gadai membuktikan integritasnya. Barangnya diasuransikan dan dijaga di brankas khusus. Saya nggak khawatir sedikit pun.",
+      text: "Cari tempat gadai yang terpercaya itu sulit, tapi PUI Gadai membuktikan integritasnya. Barangnya diasuransikan dan dijaga di brankas khusus. Saya nggak khawatir sedikit pun.",
       isDark: false
     },
     {
