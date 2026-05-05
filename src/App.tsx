@@ -18,7 +18,7 @@ function App () {
           <Route path="/profil-perusahaan" element={<Profil />} />
           <Route path="/cara-kerja" element={<CaraKerja />} />
           <Route path="/artikel" element={<D_1 />} />
-          <Route path="/artikel/lorem-ipsum-is-simple" element={<D_2 />} />
+          <Route path="/artikel/:slug" element={<D_2 />} />
           <Route path="/detail/produk/:slug" element={<Produk />} />
         </Routes>
       </main>

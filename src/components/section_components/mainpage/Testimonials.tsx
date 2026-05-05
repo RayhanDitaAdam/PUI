@@ -106,6 +106,56 @@ const Testimonials = function () {
       name: "Anonim User",
       text: "Pengalaman gadai kendaraan premium di PUI luar biasa. Semua ditangani dengan profesional dari awal hingga pencairan. Highly recommended!",
       isDark: true
+    },
+    {
+      name: "Anonim User",
+      text: "Sudah beberapa kali menitipkan aset premium saya di sini. Setiap kali saya tebus, kondisi barang tetap sempurna tanpa cacat sedikit pun. Integritas mereka dalam menjaga barang nasabah patut diacungi jempol.",
+      isDark: false
+    },
+    {
+      name: "Anonim User",
+      text: "Petugasnya sopan-sopan dan sangat menguasai produk premium. Mereka nggak cuma asal terima barang, tapi bisa kasih edukasi juga soal nilai aset kita. Benar-benar layanan kelas atas.",
+      isDark: true
+    },
+    {
+      name: "Anonim User",
+      text: "Tempatnya eksklusif dan nyaman banget, nggak kayak tempat gadai pada umumnya. Stafnya profesional dan sangat menjaga privasi kita. Berasa lagi konsultasi investasi daripada lagi gadai barang.",
+      isDark: false
+    },
+    {
+      name: "Anonim User",
+      text: "Tempatnya nyaman dan stafnya sangat profesional. Mereka benar-benar paham cara menghargai barang mewah nasabah dengan objektif. Pelayanan kelas atas!",
+      isDark: true
+    },
+    {
+      name: "Anonim User",
+      text: "Cari tempat gadai yang terpercaya itu sulit, tapi Pui Gadai membuktikan integritasnya. Barangnya diasuransikan dan dijaga di brankas khusus. Saya nggak khawatir sedikit pun.",
+      isDark: false
+    },
+    {
+      name: "Anonim User",
+      text: "Pengalaman pertama gadai aset di sini dan puas banget. Prosesnya nggak pakai ribet, stafnya profesional, dan yang paling penting bunganya transparan banget. Rekomen buat yang butuh dana cepat.",
+      isDark: true
+    },
+    {
+      name: "Anonim User",
+      text: "Tempatnya nyaman dan privasi benar-benar dijaga. Saya merasa tenang titip aset berharga di sini karena sistem keamanannya meyakinkan. Pas ditebus, kondisi barang tetap sempurna.",
+      isDark: false
+    },
+    {
+      name: "Anonim User",
+      text: "Awalnya ragu, tapi setelah coba sendiri ternyata prosesnya semudah itu. Cuma butuh waktu sebentar sampai kesepakatan, dan dana langsung cair saat itu juga.",
+      isDark: true
+    },
+    {
+      name: "Anonim User",
+      text: "Awalnya coba tanya-tanya lewat WhatsApp, responnya cepat dan ramah banget. Pas dateng ke lokasi, tempatnya emang nyaman dan transparan prosesnya. Dana cair nggak pakai lama.",
+      isDark: false
+    },
+    {
+      name: "Anonim User",
+      text: "Nggak nyangka proses gadai barang mewah bisa se eksklusif ini. Stafnya sopan, tempatnya nyaman, dan yang paling penting mereka sangat menghargai nilai prestige barang kita.",
+      isDark: true
     }
   ];
   const duplicatedReviews = [...reviews, ...reviews];
@@ -120,11 +170,7 @@ const Testimonials = function () {
     <section id="testimoni" className="testimonial-section py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="google-badge flex items-center gap-2 text-[#4D4D4D] mb-4">
-          <div className="google-g w-6">
-            <img src="/assets/img/24ab7a440ef6f6b86af438c9c31494764e08e757.webp" alt="Google" />
-          </div>
-
-          <span className="font-bold text-base mt-[1px]">5/5 Trust Rating (87+ Review)</span>
+          <span className="font-bold text-base mt-[1px]">Trust Rating (87+ Review)</span>
         </div>
         <h2 className="text-2xl md:text-3xl font-extrabold text-[#4D4D4D] mb-10 leading-tight">
           Apa kata pelanggan yang telah<br />menggunakan layanan PUI

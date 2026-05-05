@@ -1,6 +1,20 @@
+import { useParams } from "react-router-dom";
 import { SidePost } from "./SidePost";
+import { articles } from "../../../../data/articles";
 
 let MainPost = function () {
+    const { slug } = useParams<{ slug: string }>();
+    const article = articles.find(a => a.slug === slug);
+
+    if (!article) {
+        return (
+            <div className="px-4 lg:py-6 max-w-7xl mx-auto text-center">
+                <h1 className="text-2xl font-bold">Artikel tidak ditemukan</h1>
+                <a href="/artikel" className="text-[#006658] hover:underline mt-4 inline-block">Kembali ke daftar artikel</a>
+            </div>
+        );
+    }
+
     return (
         <div className="px-4 lg:py-6 max-w-7xl mx-auto">
             <div className="lg:grid lg:grid-cols-3 lg:gap-8">
@@ -11,41 +25,29 @@ let MainPost = function () {
                             <span>Kembali</span>
                         </a>
                         <div className="flex justify-center mb-4">
-                            <span className="border border-gray-400 text-xs px-4 py-1 text-gray-700">Edukasi</span>
+                            <span className="border border-gray-400 text-xs px-4 py-1 text-gray-700">{article.category}</span>
                         </div>
                     </div>
 
-                    <h1 className="text-2xl font-bold mb-3 leading-tight text-black">Lorem Ipsum is simply dummy text of the printing</h1>
+                    <h1 className="text-2xl font-bold mb-3 leading-tight text-black">{article.title}</h1>
                     
                     <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500 mb-4">
                         <span className="flex items-center gap-1">
-                            <i className="far fa-clock"></i> 23 Mei 2024
+                            <i className="far fa-clock"></i> {article.date}
                         </span>
                         <span className="flex items-center gap-1">
-                            <i className="far fa-user"></i> Penulis: Admin
+                            <i className="far fa-user"></i> Penulis: {article.author}
                         </span>
                     </div>
 
                     <div className="w-full lg:h-[420px] rounded-xl mb-6 overflow-hidden">
-                        <img src="https://picsum.photos/id/445/600/400" alt="Minimalist Architecture" className="w-full h-full object-cover" />
+                        <img src={article.image} alt={article.title} className="w-full h-full object-cover" />
                     </div>
 
-                    <p className="text-sm text-gray-600 leading-relaxed mb-6">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
-
-                    <h2 className="text-lg font-bold mb-3">Lorem Ipsum is simply dummy text</h2>
-                    <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
-                    <p className="text-sm text-gray-600 leading-relaxed mb-6">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
-
-                    <h2 className="text-lg font-bold mb-3">Lorem Ipsum is simply dummy text</h2>
-                    <p className="text-sm text-gray-600 leading-relaxed mb-6">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
+                    <div 
+                        className="article-content"
+                        dangerouslySetInnerHTML={{ __html: article.content }} 
+                    />
                 </div>
                 <div className="hidden lg:block lg:col-span-1">
                     <SidePost />

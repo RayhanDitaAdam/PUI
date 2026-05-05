@@ -1,5 +1,6 @@
 import { useRef, useEffect } from "react";
-import { FaClock } from "react-icons/fa";
+import { FaClock } from "react-icons/fa6";
+import { ArrowRight } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { articles } from "./_data/article.ts";
@@ -39,9 +40,7 @@ let Article = function () {
         </div>
         <a href="/artikel" className="flex items-center gap-2 text-[#006658] font-bold text-sm hover:underline">
           Lihat Selengkapnya 
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="stroke-current">
-            <path d="M3 8h10M9 4l4 4-4 4" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
+          <ArrowRight className="w-4 h-4" />
         </a>
       </div>
 
@@ -76,11 +75,9 @@ let Article = function () {
               <p className="text-xs text-gray-500 leading-relaxed mb-4">
                 {item.desc}
               </p>
-              <a aria-label="Read full article" href="/artikel/lorem-ipsum-is-simple" className="mt-auto flex items-center gap-2 text-[#006658] font-bold text-xs hover:gap-3 transition-all">
+              <a aria-label="Read full article" href={`/artikel/${item.slug}`} className="mt-auto flex items-center gap-2 text-[#006658] font-bold text-xs hover:gap-3 transition-all">
                 Read More
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="stroke-current">
-                  <path d="M3 8h10M9 4l4 4-4 4" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+                <ArrowRight className="w-4 h-4" />
               </a>
             </div>
           </div>

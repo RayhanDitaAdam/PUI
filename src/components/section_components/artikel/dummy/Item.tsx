@@ -1,47 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { ArrowRight, Clock, ChevronDown, ChevronUp } from "lucide-react";
 
-let articleData = {
-    edukasi: [
-        { id: 1, title: "Buku Koleksi", url: "https://picsum.photos/id/24/600/400" },
-        { id: 2, title: "Suasana Belajar", url: "https://picsum.photos/id/1/600/400" },
-        { id: 3, title: "Perpustakaan Klasik", url: "https://picsum.photos/id/20/600/400" },
-        { id: 4, title: "Catatan Kuliah", url: "https://picsum.photos/id/119/600/400" },
-        { id: 5, title: "Laptop Kerja", url: "https://picsum.photos/id/180/600/400" },
-        { id: 6, title: "Ruang Kelas Kosong", url: "https://picsum.photos/id/367/600/400" },
-        { id: 7, title: "Meja Komputer", url: "https://picsum.photos/id/486/600/400" },
-        { id: 8, title: "Mikroskop Sains", url: "https://picsum.photos/id/514/600/400" },
-        { id: 9, title: "Gaya Belajar", url: "https://picsum.photos/id/619/600/400" }
-    ],
-    berita: [
-        { id: 10, title: "Koran Dunia", url: "https://picsum.photos/id/305/600/400" },
-        { id: 11, title: "Kantor Media", url: "https://picsum.photos/id/122/600/400" },
-        { id: 12, title: "Fotografi Pers", url: "https://picsum.photos/id/250/600/400" },
-        { id: 13, title: "Update Kota", url: "https://picsum.photos/id/312/600/400" },
-        { id: 14, title: "Gedung Komunikasi", url: "https://picsum.photos/id/442/600/400" },
-        { id: 15, title: "Layar Informasi", url: "https://picsum.photos/id/674/600/400" },
-        { id: 16, title: "Majalah Bisnis", url: "https://picsum.photos/id/334/600/400" },
-        { id: 17, title: "Telepon Redaksi", url: "https://picsum.photos/id/145/600/400" },
-        { id: 18, title: "Laporan Visual", url: "https://picsum.photos/id/431/600/400" }
-    ],
-    pesan: [
-        { id: 19, title: "Amplop Surat", url: "https://picsum.photos/id/111/600/400" },
-        { id: 20, title: "Mesin Tik Lama", url: "https://picsum.photos/id/429/600/400" },
-        { id: 21, title: "Kotak Surat", url: "https://picsum.photos/id/513/600/400" },
-        { id: 22, title: "Smartphone Chat", url: "https://picsum.photos/id/815/600/400" },
-        { id: 23, title: "Alamat Pesan", url: "https://picsum.photos/id/729/600/400" },
-        { id: 24, title: "Komunikasi Keyboard", url: "https://picsum.photos/id/160/600/400" },
-        { id: 25, title: "Postcard", url: "https://picsum.photos/id/370/600/400" },
-        { id: 26, title: "Koneksi Global", url: "https://picsum.photos/id/201/600/400" },
-        { id: 27, title: "Alat Tulis", url: "https://picsum.photos/id/302/600/400" }
-    ]
-};
+import { articles } from '../../../../data/articles';
 
-let allArticles = [
-    ...articleData.edukasi.map(item => ({ ...item, category: 'Edukasi' })),
-    ...articleData.berita.map(item => ({ ...item, category: 'Berita' })),
-    ...articleData.pesan.map(item => ({ ...item, category: 'Pesan' }))
-];
+let allArticles = articles;
 
 let Item = function () {
     const [activeCategory, setActiveCategory] = useState('Semua');
@@ -52,7 +15,7 @@ let Item = function () {
         ? allArticles 
         : allArticles.filter(item => item.category === activeCategory);
 
-    const categories = ['Semua', 'Edukasi', 'Berita', 'Pesan'];
+    const categories = ['Semua', 'Edukasi', 'Investasi'];
 
     useEffect(() => {
         if (gridRef.current) {
@@ -79,7 +42,7 @@ let Item = function () {
                         className="md:hidden flex items-center justify-between w-full px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-700 font-medium"
                     >
                         <span>Kategori: {activeCategory}</span>
-                        <i className={`fa-solid fa-chevron-${isMenuOpen ? 'up' : 'down'} text-xs ml-2`}></i>
+                        {isMenuOpen ? <ChevronUp className="w-3 h-3 ml-2" /> : <ChevronDown className="w-3 h-3 ml-2" />}
                     </button>
 
 
@@ -116,7 +79,7 @@ let Item = function () {
                     <div key={item.id} className="group cursor-pointer">
                         <div className="w-full h-64 md:h-52 shadow-lg relative mb-4 overflow-hidden rounded-2xl">
                             <img 
-                                src={item.url} 
+                                src={item.image} 
                                 alt={item.title} 
                                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
                             />
@@ -125,14 +88,14 @@ let Item = function () {
                             </span>
                         </div>
                         <div className="text-[10px] text-gray-400 flex items-center gap-1 mb-1">
-                            <i className="fa-solid fa-clock"></i> 20 Mei 2025
+                            <Clock className="w-3 h-3" /> {item.date}
                         </div>
                         <h3 className="text-lg md:text-base font-bold text-gray-900 mb-2 group-hover:text-[#006658] transition-colors line-clamp-1">{item.title}</h3>
                         <p className="text-sm md:text-xs text-gray-500 mb-3 leading-relaxed line-clamp-2">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            {item.excerpt}
                         </p>
-                        <a aria-label="Read full article" href="/artikel/lorem-ipsum-is-simple" className="group text-[#00A294] text-xs font-semibold flex items-center gap-1">
-                            Read More <i className="fa-solid fa-arrow-right text-xs transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                        <a aria-label="Read full article" href={`/artikel/${item.slug}`} className="group text-[#00A294] text-xs font-semibold flex items-center gap-1">
+                            Read More <ArrowRight className="w-3 h-3 transform group-hover:translate-x-1 transition-transform duration-300" />
                         </a>
                     </div>
                 ))}
