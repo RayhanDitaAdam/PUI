@@ -6,12 +6,12 @@ import { LuWatch } from "react-icons/lu";
 
 let Hero: React.FC = () => {
   const words = [
-    "Jam Tangan Mewah",
+    "Jam Tangan",
     "Logam Mulia",
     "Perhiasan",
     "Batu Mulia",
     "Tas Branded",
-    "Kendaraan Premium",
+    "Kendaraan",
     "Barang Kolektor"
   ];
   const [index, setIndex] = React.useState(0);
@@ -68,7 +68,7 @@ let Hero: React.FC = () => {
                 );
               })}
             </span>{" "}
-            untuk<br /> Aset Mewah Anda Dengan PUI
+            untuk<br /> Aset Anda Dengan PUI
           </h1>
 
           {/* Kirim Foto Button */}
@@ -141,7 +141,7 @@ let Hero: React.FC = () => {
                   );
                 })}
               </span>{" "}
-              untuk<br /> Aset Mewah Anda Dengan PUI
+              untuk<br /> Aset Anda Dengan PUI
             </h1>
 
             {/* Kirim Foto Button */}
@@ -217,7 +217,7 @@ let Hero: React.FC = () => {
                   );
                 })}
               </span>{" "}
-              untuk<br /> Aset Mewah Anda Dengan PUI
+              untuk<br /> Aset Anda Dengan PUI
             </h1>
           </div>
 
