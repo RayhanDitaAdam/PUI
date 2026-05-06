@@ -1,4 +1,4 @@
-import { ReactNode, Suspense, lazy } from "react";
+import { Suspense, lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import FloatingWA from "./components/__global/FloatingWA";
 import Analytics from "./components/__global/Analytics";
