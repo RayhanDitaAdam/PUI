@@ -17,7 +17,7 @@ const customIcon = L.divIcon({
 const routeCoords: [number, number][] = [
     [-6.2440, 106.8000],
     [-6.2445, 106.8015],
-    [-6.2449, 106.8023]
+    [-6.25331135969288, 106.80142780544092]
 ];
 
 const MapResizeFix: React.FC = () => {

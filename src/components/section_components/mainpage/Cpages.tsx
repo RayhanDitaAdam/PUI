@@ -10,7 +10,7 @@ let Cpages: React.FC = function () {
             <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-4 md:gap-0 text-center md:text-left">
               <h2 className="text-[1.875rem] font-bold text-[#C49A6C] leading-snug max-w-[28rem]">
                 Mitra terpercaya untuk <br className="hidden md:block" />
-                likuiditas aset mewah Anda.
+                pencairan aset Anda
               </h2>
 
               <p className="text-gray-300 text-[1rem] md:text-[0.875rem] lg:text-[1rem] max-w-[28rem] leading-relaxed">
@@ -42,9 +42,8 @@ let Cpages: React.FC = function () {
                     Proses Transparan & Terverifikasi
                   </h3>
                   <p className="font-['Lato'] font-[700] text-[#D9D9D9] leading-[1.3] text-[0.875rem] md:text-[0.6875rem] lg:text-[1rem]">
-                    Identitas dan seluruh informasi klien dijaga <br className="hidden md:block" />
-                    sepenuhnya dengan sistem keamanan <br className="hidden md:block" />
-                    berlapis.
+                    Nilai taksir & bunga Jelas <br className="hidden md:block" />
+                    Informasi pinjaman jatuh tempo, & Resiko yg jelas
                   </p>
                 </div>
               </div>

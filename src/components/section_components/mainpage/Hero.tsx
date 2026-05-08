@@ -92,7 +92,7 @@ let Hero: React.FC = () => {
             </h1>
             <p className="text-sm text-gray-300 leading-relaxed">
               Pergadaian Utama Indonesia (PUI) adalah mitra terpercaya
-              untuk solusi likuiditas aset mewah Anda, dengan layanan
+              untuk solusi pencairan aset Anda, dengan layanan
               profesional, proses cepat, serta keamanan terjamin.
             </p>
             <a href="https://puigadai.co.id/profil-perusahaan" className="inline-block mt-6 bg-[#003D35] px-6 py-2.5 rounded-full text-sm text-white hover:bg-[#005D51] hover:scale-105 transition-all duration-300">
@@ -186,7 +186,7 @@ let Hero: React.FC = () => {
               </h1>
               <p className="text-xs text-gray-300 leading-relaxed">
                 Pergadaian Utama Indonesia (PUI) adalah mitra terpercaya
-                untuk solusi likuiditas aset mewah Anda, dengan layanan
+                untuk solusi pencairan aset Anda, dengan layanan
                 profesional, proses cepat, serta keamanan terjamin.
               </p>
               <a href="https://puigadai.co.id/profil-perusahaan" className="inline-block mt-6 bg-[#003D35] px-6 py-2 rounded-full text-xs text-white hover:bg-[#005D51] hover:scale-105 transition-all duration-300">
@@ -231,7 +231,7 @@ let Hero: React.FC = () => {
                 </h1>
                 <p className="text-xs text-gray-300 leading-relaxed">
                   Pergadaian Utama Indonesia (PUI) adalah mitra terpercaya
-                  untuk solusi likuiditas aset mewah Anda, dengan layanan
+                  untuk solusi pencairan aset Anda, dengan layanan
                   profesional, proses cepat, serta keamanan terjamin.
                 </p>
                 <a href="https://puigadai.co.id/profil-perusahaan" className="inline-block mt-4 bg-[#003D35] px-4 py-2 rounded-full text-xs text-white hover:bg-[#005D51] hover:scale-105 transition-all duration-300">

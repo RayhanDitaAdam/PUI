@@ -20,7 +20,7 @@ L.Marker.prototype.options.icon = DefaultIcon;
 const routeCoords: [number, number][] = [
   [-6.2440, 106.8000],
   [-6.2445, 106.8015],
-  [-6.2449, 106.8023]
+  [-6.25331135969288, 106.80142780544092]
 ];
 
 // Helper component to fix Leaflet size issues
@@ -57,7 +57,7 @@ const MapResizeFix: React.FC = () => {
 };
 
 const MapComponent: React.FC = () => {
-  const position: [number, number] = [-6.2449, 106.8023]; // Precise Darmawangsa Square coordinates
+  const position: [number, number] = [-6.25331135969288, 106.80142780544092]; // Precise Darmawangsa Square coordinates
 
   const buildingIcon = L.divIcon({
     html: `<div class="flex items-center justify-center bg-white border-2 border-red-600 rounded-full w-10 h-10 shadow-lg">

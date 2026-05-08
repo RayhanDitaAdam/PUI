@@ -26,7 +26,7 @@ const Footer: React.FC<FooterProps> = ({
     isAttached = false
 }) => {
     const bgClass = "bg-white";
-    const position: [number, number] = [-6.2449, 106.8023];
+    const position: [number, number] = [-6.25331135969288, 106.80142780544092];
 
     const [isMapVisible, setIsMapVisible] = useState(false);
     const mapRef = useRef<HTMLDivElement>(null);
@@ -52,7 +52,7 @@ const Footer: React.FC<FooterProps> = ({
     return (
         <div className="bg-white">
 
-            <footer id="kontak" className={`px-[1rem] md:px-[1.5rem] lg:px-0 w-full max-w-[1700px] mx-auto ${bgClass} ${isAttached ? "" : "pt-12 md:pb-12"} ${className}`}>
+            <footer id="kontak" className={`px-[1rem] md:px-[1.5rem] lg:px-0 w-full lg:max-w-[1232px] mx-auto ${bgClass} ${isAttached ? "" : "pt-12 md:pb-12"} ${className}`}>
 
                 {/* 1. Keamanan Section */}
                 {showSecurity && (
@@ -60,32 +60,20 @@ const Footer: React.FC<FooterProps> = ({
                         style={{
                             background: "linear-gradient(135deg, rgb(0, 58, 48) 0%, rgb(0, 29, 24) 50%, rgb(0, 5, 4) 100%)",
                         }}
-                        className="w-full md:max-w-7xl 2xl:max-w-[1700px] md:mx-auto pt-20 pb-16 md:pb-24 text-white rounded-t-[24px] md:rounded-t-[48px] 2xl:px-32 text-center"
+                        className="w-full lg:max-w-[1232px] md:mx-auto pt-20 pb-16 md:pb-24 text-white rounded-t-[24px] md:rounded-t-[48px] 2xl:px-32 text-center"
                     >
                         <img
                             src="/assets/img/logo-pui.webp"
                             alt="PUI Logo"
-                            className="w-[9rem] h-[3.125rem] aspect-[72/25] md:w-[12rem] md:h-[4.1875rem] md:aspect-[192/67] mx-auto mb-10"
+                            className="w-[12rem] h-[4.5rem] md:w-[16rem] md:h-[6rem] mx-auto"
                         />
-                        <p
-                            style={{
-                                color: "#EDE8D0",
-                                fontFamily: "Lato, sans-serif",
-                                fontSize: "clamp(1.5rem, 5vw, 2.3125rem)",
-                                fontWeight: 800,
-                                lineHeight: "130%",
-                                alignSelf: "stretch"
-                            }}
-                            className="w-full md:w-auto max-w-4xl mx-auto px-6 text-center"
-                        >
-                            Pergadaian Utama Indonesia <br className="md:hidden" /> berizin dan <br className="hidden md:block" /> diawasi oleh <br className="md:hidden" /> Otoritas Jasa Keuangan
-                        </p>
+                        
                     </div>
                 )}
 
                 {/* 2. Map Section with New Styled Card */}
                 {showMap && (
-                    <div ref={mapRef} className="w-full md:max-w-7xl 2xl:max-w-[1700px] md:mx-auto h-[450px] md:h-[350px] overflow-hidden relative bg-gray-100 flex items-center justify-center">
+                    <div ref={mapRef} className="w-full lg:max-w-[1232px] md:mx-auto h-[450px] md:h-[350px] overflow-hidden relative bg-gray-100 flex items-center justify-center">
                         {!isMapVisible ? (
                             <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#E5E5E5] animate-pulse">
                                 {/* Placeholder Image or Skeleton */}
@@ -109,19 +97,19 @@ const Footer: React.FC<FooterProps> = ({
                     style={{
                         background: "linear-gradient(135deg, rgb(0, 58, 48) 0%, rgb(0, 29, 24) 50%, rgb(0, 5, 4) 100%)",
                     }}
-                    className={`w-full md:max-w-7xl 2xl:max-w-[1700px] md:mx-auto text-white pt-16 pb-12 md:pb-16 px-6 md:px-10 lg:px-16 2xl:px-32 rounded-b-[24px] md:rounded-b-[48px]`}
+                    className={`w-full lg:max-w-[1232px] md:mx-auto text-white pt-16 pb-12 md:pb-16 px-6 md:px-10 lg:px-16 2xl:px-32 rounded-b-[24px] md:rounded-b-[48px]`}
                 >
-                    <div className="grid grid-cols-1 md:flex md:flex-row md:justify-between lg:grid lg:grid-cols-4 gap-10 md:gap-0 lg:gap-12 md:mb-12">
+                    <div className="grid grid-cols-1 md:flex md:flex-row md:justify-between xl:grid xl:grid-cols-4 gap-10 md:gap-0 xl:gap-12 md:mb-12">
                         {/* Brand & Address */}
-                        <div className="flex flex-col md:max-w-[280px] lg:max-w-none">
+                        <div className="flex flex-col md:max-w-[320px] xl:max-w-none">
                             <img className="w-[140px] md:w-[160px] mb-8" src="/assets/img/logo-pui.webp" alt="PUI Logo" />
                             <div className="space-y-4">
                                 <div className="flex items-start gap-3">
                                     <FaLocationDot className="mt-1 text-[#C49A6C] shrink-0" />
                                     <div>
                                         <span className="font-bold block mb-1">Alamat:</span>
-                                        <p className="text-white/70 text-xs md:text-sm leading-relaxed">
-                                            The Darmawangsa Square Lt.2 No.263-264, <br /> Jl. Darmawangsa VI, Kebayoran Baru, Jakarta Selatan 12160
+                                        <p className="text-white/70 text-xs whitespace-nowrap leading-relaxed">
+                                            The Darmawangsa Square Lt.2 No.263-264, <br /> Jl. Darmawangsa VI, Kebayoran Baru, <br className="hidden md:block" /> Jakarta Selatan 12160
                                         </p>
                                     </div>
                                 </div>
@@ -129,7 +117,7 @@ const Footer: React.FC<FooterProps> = ({
                                     <FaClock className="mt-1 text-[#C49A6C] shrink-0" />
                                     <div>
                                         <span className="font-bold block mb-1">Jam Buka:</span>
-                                        <ul className="text-white/70 text-sm list-disc ml-4">
+                                        <ul className="text-white/70 text-xs whitespace-nowrap list-disc ml-4">
                                             <li>Senin s/d Jumat: 10.00 s/d 17.30</li>
                                             <li>Sabtu-Minggu by Appointment</li>
                                         </ul>
@@ -139,7 +127,7 @@ const Footer: React.FC<FooterProps> = ({
                         </div>
 
                         {/* Navigation Links */}
-                        <div className="md:ml-0 lg:ml-16 md:mt-16">
+                        <div className="md:ml-0 xl:ml-16 md:mt-16">
                             <h3 className="font-semibold mb-4 text-lg md:text-base">Page</h3>
                             <ul className="grid grid-cols-2 md:grid-cols-1 gap-y-2 text-white/70 text-sm">
                                 <li className="hover:text-white"><a href="/cara-kerja">Cara Kerja</a></li>
@@ -152,17 +140,17 @@ const Footer: React.FC<FooterProps> = ({
                             </ul>
                         </div>
 
-                        <div className="hidden lg:block"></div>
+                        <div className="hidden xl:block"></div>
 
                         {/* Socials & Contact Actions */}
-                        <div className="md:mt-16 md:max-w-[14rem] md:w-full md:pl-4 lg:pl-0">
+                        <div className="md:mt-16 md:max-w-[14rem] md:w-full md:pl-4 xl:pl-0">
                             <h3 className="font-semibold mb-4 text-lg md:text-base">Kontak</h3>
                             <div className="space-y-3">
-                                <a href="tel:02172787020" className="flex items-center gap-4 md:gap-3 border border-white/30 px-4 py-4 md:p-2 lg:px-4 lg:py-4 rounded-xl hover:bg-white/5 transition-all cursor-pointer md:w-full md:max-w-[14rem] lg:w-auto md:scale-[0.95] md:origin-left lg:scale-100">
+                                <a href="tel:02172787020" className="flex items-center gap-4 md:gap-3 border border-white/30 px-4 py-4 md:p-2 xl:px-4 xl:py-4 rounded-xl hover:bg-white/5 transition-all cursor-pointer md:w-full md:max-w-[14rem] xl:w-auto md:scale-[0.95] md:origin-left xl:scale-100">
                                     <FaPhone className="text-xl md:text-lg shrink-0" />
                                     <span className="text-sm md:text-xs font-medium">Telepon:<br />021-7278-7020</span>
                                 </a>
-                                <a href="https://wa.me/6282277777911" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 md:gap-3 border border-white/30 px-4 py-4 md:p-2 lg:px-4 lg:py-4 rounded-xl hover:bg-white/5 transition-all cursor-pointer md:w-full md:max-w-[14rem] lg:w-auto md:scale-[0.95] md:origin-left lg:scale-100">
+                                <a href="https://wa.me/6282277777911" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 md:gap-3 border border-white/30 px-4 py-4 md:p-2 xl:px-4 xl:py-4 rounded-xl hover:bg-white/5 transition-all cursor-pointer md:w-full md:max-w-[14rem] xl:w-auto md:scale-[0.95] md:origin-left xl:scale-100">
                                     <FaWhatsapp className="text-xl shrink-0" />
                                     <span className="text-sm font-medium">WhatsApp:<br />0822 77777 911</span>
                                 </a>

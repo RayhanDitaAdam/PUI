@@ -13,7 +13,7 @@ let Lab = function () {
                 <div className="text-white w-full md:w-7/12 lg:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
                     <h2 className="text-3xl md:text-2xl lg:text-4xl font-semibold mb-2">Laboratorium Gemologi</h2>
                     <p className="text-base md:text-sm lg:text-base text-green-100 mb-2 md:mb-4 lg:mb-4 leading-relaxed max-w-xl">
-                        Fasilitas penilaian internal untuk memastikan setiap aset dinilai dengan standart yang seharusnya.
+                        Fasilitas penilaian internal untuk memastikan setiap aset dinilai dengan standart internasional.
                     </p>
 
                     <div className="flex items-center justify-center md:justify-start gap-[0.5rem] md:gap-[0.5rem] lg:gap-[1.25rem] flex-wrap mt-6 mb-10 md:mb-6 lg:mb-16 w-full">

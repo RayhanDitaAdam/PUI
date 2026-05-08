@@ -84,7 +84,7 @@ let Items = function () {
                         <div className="h-14 w-1.5 bg-[#003A30] rounded-full hidden md:block"></div>
                         <div>
                             <h2 className="text-4xl md:text-5xl font-bold text-[#003A30] tracking-tight mb-2">Keunggulan Kami</h2>
-                            <p className="text-gray-500 text-lg max-w-xl font-['Lato'] italic">Solusi pembiayaan cepat dan aman berbasis aset bernilai tinggi.</p>
+                            <p className="text-gray-500 text-lg max-w-xl font-['Lato'] italic">Solusi pembiayaan cepat dan aman berbasis aset bernilai</p>
                         </div>
                     </div>
                 </div>

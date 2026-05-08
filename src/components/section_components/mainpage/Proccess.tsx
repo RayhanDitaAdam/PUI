@@ -34,7 +34,7 @@ let Proccess = function () {
             <div className="flex justify-center mb-4">
               <img width="60" src="/assets/img/8e1e5e9db68de8dec0f9170c46b26215695d80aa.webp" alt="Icon" loading="lazy" className="md:w-[50px]" />
             </div>
-            <h3 className="font-semibold text-lg md:text-[0.875rem] lg:text-base mb-2">Initial Consultation</h3>
+            <h3 className="font-semibold text-lg md:text-[0.875rem] lg:text-base mb-2">Konsultasi awal</h3>
             <p className="text-sm md:text-[0.75rem] lg:text-xs opacity-80 leading-relaxed">
               Konsultasikan aset berharga Anda melalui tim profesional kami, baik secara langsung maupun layanan jemput. Kami memastikan proses awal yang cepat, nyaman, dan sepenuhnya privat.
             </p>
@@ -46,7 +46,7 @@ let Proccess = function () {
             <div className="flex justify-center mb-4">
               <img width="60" src="/assets/img/1c1766aaa851ad680797a36295bd9e74b589b531.webp" alt="Icon" loading="lazy" className="md:w-[50px]" />
             </div>
-            <h3 className="font-semibold text-lg md:text-[0.875rem] lg:text-base mb-2">Professional Appraisal</h3>
+            <h3 className="font-semibold text-lg md:text-[0.875rem] lg:text-base mb-2">Penaksir Profesional</h3>
             <p className="text-sm md:text-[0.75rem] lg:text-xs opacity-80 leading-relaxed">
               Aset Anda akan melalui proses penilaian oleh ahli berpengalaman dengan standar tinggi untuk mendapatkan nilai optimal secara transparan dan akurat.
             </p>
@@ -58,7 +58,7 @@ let Proccess = function () {
             <div className="flex justify-center mb-4">
               <img width="60" src="/assets/img/8e1e5e9db68de8dec0f9170c46b26215695d80aa.webp" alt="Icon" loading="lazy" className="md:w-[50px]" />
             </div>
-            <h3 className="font-semibold text-lg md:text-[0.875rem] lg:text-base mb-2">Instant Disbursement</h3>
+            <h3 className="font-semibold text-lg md:text-[0.875rem] lg:text-base mb-2">Pencairan Instan</h3>
             <p className="text-sm md:text-[0.75rem] lg:text-xs opacity-80 leading-relaxed">
               Setelah kesepakatan tercapai, dana akan dicairkan secara cepat dan aman, memberikan likuiditas instan sesuai kebutuhan Anda.
             </p>
