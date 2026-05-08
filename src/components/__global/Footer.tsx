@@ -130,13 +130,10 @@ const Footer: React.FC<FooterProps> = ({
                         <div className="md:ml-0 xl:ml-16 md:mt-16">
                             <h3 className="font-semibold mb-4 text-lg md:text-base">Page</h3>
                             <ul className="grid grid-cols-2 md:grid-cols-1 gap-y-2 text-white/70 text-sm">
+                                <li className="hover:text-white"><a href="/profil-perusahaan">Profil Perusahaan</a></li>
                                 <li className="hover:text-white"><a href="/cara-kerja">Cara Kerja</a></li>
-                                <li className="hover:text-white">Gadai Tas Branded</li>
-                                <li className="hover:text-white">Profil Perusahaan</li>
-                                <li className="hover:text-white">Gadai Perhiasan & Berlian</li>
-                                <li className="hover:text-white">Kontak</li>
-                                <li className="hover:text-white">FAQs</li>
-                                <li className="hover:text-white">Gadai Jam Tangan</li>
+                                <li className="hover:text-white"><a href="/#produk">Produk</a></li>
+                                <li className="hover:text-white"><a href="/artikel">Artikel</a></li>
                             </ul>
                         </div>
 
