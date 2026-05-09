@@ -5,7 +5,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Article } from './mainpage/Article';
 import { FAQ } from './mainpage/FAQ';
-import { Consult } from './mainpage/Consult';
+import { Consult } from '../__global/Consult';
 import { Cpages } from './mainpage/Cpages';
 import { Endfooter } from './mainpage/Endfooter';
 import { Hero } from './mainpage/Hero';

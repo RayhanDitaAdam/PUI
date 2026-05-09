@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from "../__global/Footer";
 import Header from "../__global/Header";
-import { Consult } from "./produk/Consult";
+import { Consult } from "../__global/Consult";
 import { ItemContext } from "./produk/ItemContext";
 import { Kriteria } from "./produk/Kriteria";
 import { MainSection } from "./produk/MainSection";
@@ -36,7 +36,9 @@ let Produk = function () {
                 <MainSection />
                 <ItemContext />
                 <Kriteria />
-                <Consult />
+                <div className="gsap-reveal">
+                    <Consult />
+                </div>
                 <FAQ />
                 <Footer />
             </div>

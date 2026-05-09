@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import Footer from '../__global/Footer';
-import { Consult } from './carakerja/Consult';
+import { Consult } from '../__global/Consult';
 import { Hero } from './carakerja/Hero';
 import { ItemContext } from './carakerja/ItemContext';
 import { ItemSec } from './carakerja/ItemSec';
