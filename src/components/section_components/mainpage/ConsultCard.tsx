@@ -1,6 +1,5 @@
-import React from 'react';
-import "../section_components/mainpage/style/init.css"
-import "../section_components/mainpage/style/section-cards.css"
+import "./style/init.css"
+import "./style/section-cards.css"
 
 let Consult = function () {
   return (
