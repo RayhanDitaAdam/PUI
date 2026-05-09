@@ -26,7 +26,7 @@ function CaraKerja() {
     gsap.ticker.lagSmoothing(0);
 
     initScrollAnimations();
-    
+
     setTimeout(() => {
       ScrollTrigger.refresh();
     }, 100);
@@ -47,7 +47,7 @@ function CaraKerja() {
       </div>
       <Footer />
     </div>
-  ); 
+  );
 }
 
 export default CaraKerja;

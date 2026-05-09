@@ -1,12 +1,14 @@
 import React from 'react';
 import Footer from "../__global/Footer";
 import Header from "../__global/Header";
-import { Consult } from "./produk/Consult";
+import { Consult } from "./mainpage/Consult";
 import { ItemContext } from "./produk/ItemContext";
 import { Kriteria } from "./produk/Kriteria";
 import { MainSection } from "./produk/MainSection";
 import { FAQ } from "./mainpage/FAQ";
 import "./produk/style/init.css"
+import "./mainpage/style/section-cards.css"
+import "./mainpage/style/init.css"
 import gsap from 'gsap';
 // @ts-ignore
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -20,7 +22,7 @@ let Produk = function () {
         gsap.ticker.lagSmoothing(0);
 
         window.scrollTo(0, 0);
-        
+
         // Refresh ScrollTrigger after initial render
         setTimeout(() => {
             ScrollTrigger.refresh();

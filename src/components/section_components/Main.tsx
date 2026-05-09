@@ -26,7 +26,7 @@ function Main() {
     gsap.ticker.lagSmoothing(0);
 
     initScrollAnimations();
-    
+
     // Refresh ScrollTrigger after initial render and animations
     setTimeout(() => {
       ScrollTrigger.refresh();
