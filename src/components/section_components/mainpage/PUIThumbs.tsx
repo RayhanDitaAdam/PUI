@@ -4,7 +4,7 @@ let PUIThumbs = function () {
             <div className="text-center py-16 md:py-24 px-6 md:px-0">
                 <h1 className="text-3xl md:text-6xl font-extrabold text-[#003B33]">Pave Your Dreams</h1>
                 <div>
-                    <h1 className="py-3 text-xl md:text-4xl text-[#030303] font-thin">Likuidasi Barang Mewah Terpercaya</h1>
+                    <h1 className="py-3 text-xl md:text-4xl text-[#030303] font-thin">Mewah</h1>
                     <p className="py-3 text-sm md:text-base text-black mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed">
                         Kami melayani berbagai aset bernilai tinggi seperti jam tangan mewah, tas branded, berlian, <br className="hidden md:block" /> emas, hingga koleksi langka dengan proses transparan dan profesional.
                     </p>
