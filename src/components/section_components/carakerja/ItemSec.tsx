@@ -26,11 +26,11 @@ let ItemSec = function () {
                     </div>
 
                     <h3 className="text-xl lg:text-3xl font-extrabold bg-gradient-to-b from-[#D4AA6A] to-[#B8945F] bg-clip-text text-transparent mb-3 md:mb-4">
-                        Spesialis Aset <br className="hidden md:block" />Bernilai Tinggi
+                        Spesialis Aset <br className="hidden md:block" />Bernilai
                     </h3>
 
                     <p className="text-white text-sm md:text-base font-medium md:font-semibold leading-relaxed">
-                        Fokus pada gadai barang mewah dengan penilaian profesional dan nilai kompetitif.
+                        Fokus pada gadai barang dengan penilaian profesional dan nilai kompetitif.
                     </p>
                 </div>
 
