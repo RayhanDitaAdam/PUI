@@ -33,7 +33,7 @@ let Consult = function () {
             <div className="card-icon-wrap">
               <img src="/assets/img/main/81829e2cbb1d51f007adb0e183c5911e296267be.webp" width="24px"  alt="image" />
             </div>
-            <h3>Bawa langsung aset ke kantor PUI</h3>
+            <h3>Bawa langsung aset anda ke PUI</h3>
             <p>Anda dapat membawa langsung aset Anda ke kantor PUI <br /> untuk mendapatkan pengalaman layanan yang cepat, aman, dan <br /> transparan. Tim profesional kami akan melakukan proses valuasi <br /> secara detail dan akurat, memastikan Anda mendapatkan nilai <br /> terbaik sesuai kondisi dan pasar terkini.</p>
             <div className="card-link">
               Booking Jadwal Janji Temu

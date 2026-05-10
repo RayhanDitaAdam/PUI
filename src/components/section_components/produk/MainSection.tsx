@@ -36,7 +36,7 @@ let MainSection = function () {
     const description = productDescriptions[currentSlug] || productDescriptions.tas;
 
     return (
-        <section className="w-full max-w-[1700px] mx-auto">
+        <section className="w-full max-w-[1700px] xl:max-w-none mx-auto xl:mx-0">
             <section className="block md:hidden lg:hidden sm:block">
                 <div className="bg-black text-white px-6 pt-32 pb-[17.6rem] rounded-b-[40px] text-center flex flex-col items-center overflow-hidden">
                     <h2 className="text-[2.5rem] font-bold mb-6 relative z-10">{title}</h2>
@@ -70,7 +70,7 @@ let MainSection = function () {
                         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
                     />
 
-                    <div className="max-w-7xl mx-auto flex items-center relative z-10">
+                    <div className="max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1600px] mx-auto flex items-center relative z-10">
                         <div className="w-1/2 pr-20 lg:pt-28">
                             <h1 className="text-5xl font-semibold mb-6">{title}</h1>
                             <p className="text-gray-400 leading-relaxed text-lg">

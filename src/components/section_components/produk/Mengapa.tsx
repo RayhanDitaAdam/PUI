@@ -1,47 +1,9 @@
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import { useRef } from "react";
 
 let Items = function () {
     const sectionRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        const ctx = gsap.context(() => {
-            // Header Animation: Animate to visible
-            gsap.to(".reveal-header", {
-                opacity: 1,
-                x: 0,
-                duration: 1,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: ".reveal-header",
-                    start: "top 90%",
-                    toggleActions: "play none none none"
-                }
-            });
-
-            // Card Animation: Animate to visible with stagger
-            gsap.to(".reveal-card", {
-                opacity: 1,
-                y: 0,
-                stagger: 0.1,
-                duration: 0.8,
-                ease: "back.out(1.2)", // Subtle bounce for premium feel
-                scrollTrigger: {
-                    trigger: ".reveal-card",
-                    start: "top 92%",
-                    toggleActions: "play none none none"
-                }
-            });
-        }, sectionRef);
-
-        return () => ctx.revert();
-    }, []);
-
     const features = [
-        // ... (preserving this section exactly as is)
         {
             title: "Proses Cepat & Mudah",
             desc: "Pencairan dana dalam waktu singkat tanpa prosedur rumit.",
@@ -76,9 +38,9 @@ let Items = function () {
 
     return (
         <section ref={sectionRef} className="py-24 font-sans overflow-hidden bg-[#FAFAFA]">
-            <div className="max-w-6xl mx-auto px-6">
+            <div className="max-w-6xl xl:max-w-[1440px] 2xl:max-w-[1600px] mx-auto px-6">
 
-                <div className="mb-20 space-y-2 reveal-header opacity-0 -translate-x-8 transform-gpu transition-none">
+                <div className="mb-20 space-y-2">
                     <span className="text-[#C49A6C] font-semibold tracking-[0.2em] uppercase text-sm block mb-1">Exclusive Services</span>
                     <div className="flex items-center gap-6">
                         <div className="h-14 w-1.5 bg-[#003A30] rounded-full hidden md:block"></div>
@@ -93,7 +55,7 @@ let Items = function () {
                     {features.map((feat, i) => (
                         <div
                             key={i}
-                            className="reveal-card opacity-0 translate-y-8 transform-gpu transition-none p-10 rounded-xl border border-gray-100 bg-white shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,58,48,0.06)] hover:-translate-y-2 transition-all duration-700 ease-out group relative overflow-hidden"
+                            className="p-10 rounded-xl border border-gray-100 bg-white shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,58,48,0.06)] hover:-translate-y-2 transition-all duration-700 ease-out group relative overflow-hidden"
                         >
                             <div className="relative z-20">
                                 <div className="mb-8 relative inline-block">

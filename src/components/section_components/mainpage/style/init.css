@@ -521,6 +521,12 @@
     top: -5px;
 }
 
+@media (max-width: 768px) {
+    .text-switcher-container {
+        top: 0px;
+    }
+}
+
 .text-switcher-item {
     color: #B8945F;
     text-align: center;

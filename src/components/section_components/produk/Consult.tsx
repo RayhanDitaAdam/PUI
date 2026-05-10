@@ -36,7 +36,7 @@ let Consult = function () {
                 <img src="/assets/img/81829e2cbb1d51f007adb0e183c5911e296267be.webp" width="1.5rem" className="brightness-0 w-[1.125rem] md:w-[1.5rem]" alt="image" />
               </div>
               <h3 className="text-sm lg:text-base md:text-lg font-extrabold text-[#111] mb-1.5 md:mb-2.5">
-                Bawa langsung aset ke kantor PUI
+                Bawa langsung aset anda ke PUI
               </h3>
               <p className="text-xs lg:text-[10px] md:text-sm text-[#333] leading-relaxed mb-4 md:mb-6">
                 Anda dapat membawa langsung aset Anda ke kantor PUI
