@@ -52,7 +52,7 @@ const Footer: React.FC<FooterProps> = ({
     return (
         <div className="bg-white">
 
-            <footer id="kontak" className={`px-[1rem] md:px-[1.5rem] lg:px-0 w-full lg:max-w-[1232px] xl:max-w-[1440px] 2xl:max-w-[1600px] mx-auto ${bgClass} ${isAttached ? "" : "pt-12 md:pb-12"} ${className}`}>
+            <footer id="kontak" className={`px-[1rem] md:px-[1.5rem] lg:px-6 xl:px-8 w-full lg:max-w-[1232px] xl:max-w-[1440px] 2xl:max-w-[1600px] mx-auto ${bgClass} ${isAttached ? "" : "pt-12 md:pb-12"} ${className}`}>
 
                 {/* 1. Keamanan Section */}
                 {showSecurity && (
@@ -60,7 +60,7 @@ const Footer: React.FC<FooterProps> = ({
                         style={{
                             background: "linear-gradient(135deg, rgb(0, 58, 48) 0%, rgb(0, 29, 24) 50%, rgb(0, 5, 4) 100%)",
                         }}
-                        className="w-full lg:max-w-[1232px] xl:max-w-[1440px] 2xl:max-w-[1600px] md:mx-auto pt-20 pb-16 md:pb-24 text-white rounded-t-[24px] md:rounded-t-[48px] 2xl:px-8 text-center"
+                        className="w-full lg:max-w-[1232px] xl:max-w-[1440px] 2xl:max-w-[1600px] md:mx-auto pt-20 pb-16 md:pb-24 px-6 md:px-10 lg:px-16 2xl:px-8 text-white rounded-t-[24px] md:rounded-t-[48px] text-center"
                     >
                         <img
                             src="/assets/img/logo-pui.webp"
@@ -73,7 +73,7 @@ const Footer: React.FC<FooterProps> = ({
 
                 {/* 2. Map Section with New Styled Card */}
                 {showMap && (
-                    <div ref={mapRef} className="w-full lg:max-w-[1232px] xl:max-w-[1440px] 2xl:max-w-[1600px] md:mx-auto h-[450px] md:h-[350px] overflow-hidden relative bg-gray-100 flex items-center justify-center">
+                    <div ref={mapRef} className="w-full lg:max-w-[1232px] xl:max-w-[1440px] 2xl:max-w-[1600px] md:mx-auto h-[450px] md:h-[350px] px-6 md:px-10 lg:px-16 2xl:px-8 overflow-hidden relative bg-gray-100 flex items-center justify-center">
                         {!isMapVisible ? (
                             <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#E5E5E5] animate-pulse">
                                 {/* Placeholder Image or Skeleton */}
