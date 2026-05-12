@@ -66,12 +66,17 @@ let Product = function () {
                                 borderBottomLeftRadius: "0px",
                                 borderBottomRightRadius: "0px"
                             }}>
-                                <div className={`image-wrapper transform md:scale-100 ${item.image_1 ? "scale-[0.85]" : "scale-[1.1]"}`}>
+                                <div className={`image-wrapper transform md:scale-100 ${item.image_1 ? "scale-[0.85]" : "scale-[1.05]"}`}>
                                     <img
                                         src={item.image}
                                         alt={item.title}
                                         loading="lazy"
-                                        className={`product-image ${item.image_1 ? "main" : "single"} ${item.variant === "rare" ? "aspect-[51/76]" : ""}`}
+                                        style={{
+                                            width: item.slug === "emas" || item.slug === "koleksi" ? "10rem" : "13rem",
+                                            height: item.slug === "emas" || item.slug === "koleksi" ? "10rem" : "13rem",
+                                            marginTop: item.slug === "emas" || item.slug === "koleksi" || item.slug === "perhiasan" ? "0" : "1.5rem"
+                                        }}
+                                        className={`product-image md:!w-[11rem] md:!h-[11rem] lg:!w-[13rem] lg:!h-[13rem] ${item.image_1 ? "main" : "single"} ${item.variant === "rare" ? "aspect-[51/76]" : ""}`}
                                     />
                                     {item.image_1 && (
                                         <img

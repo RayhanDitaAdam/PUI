@@ -30,16 +30,17 @@ let MainSection = function () {
         "jam-tangan": <>Butuh dana cepat? Punya jam tangan mewah seperti Rolex, Patek Philippe, Audemars Piguet, Omega, dan brand prestisius lainnya. Gadaikan jam tangan mewah Anda, terjamin aman di PUI.</>,
         perhiasan: <>Butuh dana cepat? Punya logam mulia seperti Tiffany & Co., Cartier, Harry Winston, Bulgari, dan lainnya. Gadaikan perhiasan dan batu mulia Anda, terjamin aman di PUI.</>,
         kendaraan: <>Butuh dana cepat? Punya kendaraan premium seperti Ferrari, Lamborghini, Rolls-Royce, Bentley, Porsche, dan Mercedes-Benz brand prestisius lainnya. Gadaikan kendaraan premium <br /> Anda, terjamin aman di PUI.</>,
-        koleksi: <>Butuh dana cepat? Punya rare collectibles seperti Pokémon, Yu-Gi-Oh! serta memorabilia olahraga seperti FIFA, NBA, NFL, & UEFA dan lainnya. Gadaikan koleksi langka <br /> Anda, terjamin aman di PUI.</>,
+        koleksi: <>Butuh dana cepat? Punya rare collectibles seperti Pokémon, Yu-Gi-Oh! serta memorabilia olahraga seperti FIFA, NBA, NFL, & UEFA dan lainnya. Gadaikan koleksi langka Anda, terjamin aman di PUI.</>,
     };
 
     const description = productDescriptions[currentSlug] || productDescriptions.tas;
 
     return (
         <section className="w-full max-w-[1700px] xl:max-w-none mx-auto xl:mx-0">
+            {/* ===== MOBILE ===== */}
             <section className="block md:hidden lg:hidden sm:block">
                 <div className="bg-black text-white px-6 pt-32 pb-[17.6rem] rounded-b-[40px] text-center flex flex-col items-center overflow-hidden">
-                    <h2 className="text-[2.5rem] font-bold mb-6 relative z-10">{title}</h2>
+                    <h2 className="text-[2rem] md:text-[1.75rem] font-bold relative z-10 w-full md:w-auto md:pr-0">{title}</h2>
                     <p className="text-sm leading-relaxed text-gray-300 mb-12 max-w-md relative z-10">
                         {description}
                     </p>
@@ -47,33 +48,97 @@ let MainSection = function () {
                         <img
                             src={imgSrc}
                             alt={title}
-                            className={`w-full h-auto origin-center ${currentSlug === 'kendaraan'
-                                ? 'drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] scale-[2.0] sm:scale-[3.5] translate-y-24 sm:translate-y-32 -translate-x-[7rem] sm:-translate-x-[15rem]'
+                            style={{ width: "300px", minWidth: "300px" }}
+                            className={`h-auto origin-center ${currentSlug === 'kendaraan'
+                                ? 'drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] scale-[4] translate-y-18 -translate-x-[17rem]'
                                 : currentSlug === 'koleksi'
-                                    ? 'drop-shadow-2xl scale-[3.5] translate-y-32 -translate-x-[19rem]'
-                                    : 'drop-shadow-2xl scale-[3.5] translate-y-32 -translate-x-[15rem]'
+                                    ? 'drop-shadow-2xl scale-[6] translate-y-38 -translate-x-[24rem]'
+                                    : currentSlug === 'emas'
+                                        ? 'drop-shadow-2xl scale-[6] translate-y-32 -translate-x-[22rem]'
+                                    : currentSlug === 'tas'
+                                        ? 'drop-shadow-2xl scale-[6] translate-y-32 -translate-x-[19rem]'
+                                    : currentSlug === 'jam-tangan'
+                                        ? 'drop-shadow-2xl scale-[6] translate-y-22 -translate-x-[25rem]'
+                                    : currentSlug === 'perhiasan'
+                                        ? 'drop-shadow-2xl scale-[6] translate-y-32 -translate-x-[24rem]'
+                                        : 'drop-shadow-2xl scale-[6] translate-y-32 -translate-x-[23rem]'
                                 }`}
                         />
                     </div>
                 </div>
             </section>
 
-            <section className="bg-[#FAFAFA]">
+            {/* ===== TABLET ===== */}
+            <section className="bg-[#FAFAFA] hidden md:block lg:hidden">
                 <div
                     style={{
                         background: "linear-gradient(135deg, rgb(0, 40, 35) 0%, rgb(0, 20, 15) 50%, rgb(0, 5, 4) 100%)"
                     }}
-                    className="lg:h-[500px] hero-gradient hidden md:block text-white pt-10 pb-24 px-16 rounded-b-[80px] relative overflow-hidden">
+                    className="md:h-[550px] hero-gradient text-white md:pt-32 md:pb-20 px-16 rounded-b-[80px] relative overflow-hidden">
                     <img
                         src={imgSrc}
                         alt="produk-bg"
-                        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                        className={`absolute inset-0 w-full h-full object-cover pointer-events-none ${currentSlug === 'emas'
+                            ? 'md:scale-[1.4] md:origin-center md:-translate-x-[8rem] md:-translate-y-[1rem]'
+                            : currentSlug === 'kendaraan'
+                                ? 'md:scale-[1.2] md:origin-center md:-translate-x-[4rem] md:-translate-y-[0.5rem]'
+                            : currentSlug === 'koleksi'
+                                ? 'md:scale-[1.3] md:origin-center md:-translate-x-[8rem] md:-translate-y-[-3rem]'
+                            : currentSlug === 'tas'
+                                ? 'md:scale-[1.4] md:origin-center md:-translate-x-[8rem] md:-translate-y-[1rem]'
+                            : currentSlug === 'jam-tangan'
+                                ? 'md:scale-[2] md:origin-center md:-translate-x-[32rem] md:-translate-y-[0.75rem]'
+                            : currentSlug === 'perhiasan'
+                                ? 'md:scale-[1.3] md:origin-center md:-translate-x-[8rem] md:-translate-y-[0.75rem]'
+                                : 'md:scale-[1.4] md:origin-center md:-translate-x-[2rem] md:-translate-y-[1rem]'
+                            }`}
+                        style={{
+                            transform: `scale(${currentSlug === 'emas' ? 1.4 : currentSlug === 'kendaraan' ? 1.2 : currentSlug === 'koleksi' ? 1.3 : currentSlug === 'tas' ? 1.4 : currentSlug === 'jam-tangan' ? 1.3 : currentSlug === 'perhiasan' ? 1.3 : 1.4})`
+                        }}
                     />
 
-                    <div className="max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1600px] mx-auto flex items-center relative z-10">
-                        <div className="w-1/2 pr-20 lg:pt-28">
-                            <h1 className="text-5xl font-semibold mb-6">{title}</h1>
-                            <p className="text-gray-400 leading-relaxed text-lg">
+                    <div className="max-w-7xl mx-auto flex items-center relative z-10 md:mt-[3rem]">
+                        <div className="w-1/2">
+                            <h1 className="text-4xl md:text-2xl font-semibold mb-6">{title}</h1>
+                            <p className="text-white leading-relaxed md:text-base">
+                                {description}
+                            </p>
+                        </div>
+                        <div className="w-1/2 relative h-full flex items-center justify-center"></div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ===== LAPTOP ===== */}
+            <section className="bg-[#FAFAFA] hidden lg:block">
+                <div
+                    style={{
+                        background: "linear-gradient(135deg, rgb(0, 40, 35) 0%, rgb(0, 20, 15) 50%, rgb(0, 5, 4) 100%)"
+                    }}
+                    className="lg:h-[600px] hero-gradient text-white lg:pt-10 lg:pb-24 px-16 rounded-b-[80px] relative overflow-hidden">
+                    <img
+                        src={imgSrc}
+                        alt="produk-bg"
+                        className={`absolute inset-0 w-full h-full object-cover pointer-events-none ${currentSlug === 'emas'
+                            ? 'lg:scale-[2.4] lg:origin-center lg:-translate-x-[18rem] lg:-translate-y-[-10rem]'
+                            : currentSlug === 'kendaraan'
+                                ? 'lg:scale-[1.2] lg:origin-center lg:-translate-x-[1rem] lg:-translate-y-[0.5rem]'
+                            : currentSlug === 'koleksi'
+                                ? 'lg:scale-[1.3] lg:origin-center lg:-translate-x-[2rem] lg:-translate-y-[-3rem]'
+                            : currentSlug === 'tas'
+                                ? 'lg:scale-[1.8] lg:origin-center lg:-translate-x-[8rem] lg:-translate-y-[1rem]'
+                            : currentSlug === 'jam-tangan'
+                                ? 'lg:scale-[2] lg:origin-center lg:-translate-x-[18rem] lg:-translate-y-[0.75rem]'
+                            : currentSlug === 'perhiasan'
+                                ? 'lg:scale-[1.8] lg:origin-center lg:-translate-x-[12rem] lg:-translate-y-[0.75rem]'
+                                : 'lg:scale-[1.4] lg:origin-center lg:-translate-x-[2rem] lg:-translate-y-[1rem]'
+                            }`}
+                    />
+
+                    <div className="max-w-[1280px] mx-auto flex items-center relative z-10 lg:mt-[3rem]">
+                        <div className="w-1/2 lg:pr-20 lg:pt-28">
+                            <h1 className="text-4xl lg:text-5xl font-semibold mb-6">{title}</h1>
+                            <p className="text-white leading-relaxed lg:text-lg">
                                 {description}
                             </p>
                         </div>
