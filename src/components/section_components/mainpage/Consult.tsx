@@ -22,8 +22,8 @@ let Consult = function () {
             <a className="text-[0.65rem] lg:text-base md:text-sm text-white/70 mb-8 md:mb-7 leading-relaxed max-w-[16.25rem] md:max-w-[17.5rem]">
               Konsultasikan sekarang via WhatsApp. <br />Terjamin Kerahasiaan & privasi 100%.
             </a>
-            <button className="btn-wa animate-pulse-whatsapp flex items-center justify-center gap-1 bg-[#006658] border border-white/20 text-white w-full md:w-auto px-3 py-2.5 md:px-5 md:py-3 rounded-xl text-[0.5rem] md:text-sm font-semibold relative z-[60] pointer-events-auto">
-              <FaWhatsapp className="text-sm md:text-xl" />
+            <button className="btn-wa animate-pulse-whatsapp flex items-center justify-center gap-2 bg-[#006658] border border-white/20 text-white w-full md:w-auto px-6 py-3.5 md:px-5 md:py-3 rounded-xl text-base md:text-sm font-semibold relative z-[60] pointer-events-auto">
+              <FaWhatsapp className="text-xl" />
               Konsultasi Valuasi Sekarang
             </button>
           </div>

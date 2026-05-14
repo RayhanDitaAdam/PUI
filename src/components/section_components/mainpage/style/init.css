@@ -42,23 +42,23 @@
 .btn-wa {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    background: #25D366;
-    color: white;
-    padding: 14px 28px;
-    border-radius: 12px;
-    font-weight: 700;
-    font-size: 0.95rem;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-    transition: all 0.3s ease;
+    gap: 8px;
+    background: #006658;
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 20px;
+    border-radius: 10px;
     cursor: pointer;
-    border: none;
+    letter-spacing: 0.01em;
+    transition: all 0.3s ease;
 }
 
 .btn-wa:hover {
-    background: #20BA5A;
+    background: #00544a;
     transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 102, 88, 0.3);
 }
 
 .process-section {
