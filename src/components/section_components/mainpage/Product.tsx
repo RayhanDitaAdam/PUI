@@ -29,8 +29,7 @@ let Product = function () {
         {
             title: "Kendaraan Premium",
             desc: "PUI menghadirkan layanan gadai kendaraan premium seperti Bentley, Ferrari, Lamborghini, Mercedes-Benz, Porsche, dan Rolls-Royce.",
-            image: "/assets/img/7c58ab2f499ac33473f3ebb7e780a42adc2b46d3.webp",
-            image_1: "/assets/img/275d928d0acce97c08200ee8a8246b06a9062207.webp",
+            image: "/assets/img/275d928d0acce97c08200ee8a8246b06a9062207.webp",
             slug: "kendaraan"
         },
         {
@@ -66,29 +65,21 @@ let Product = function () {
                                 borderBottomLeftRadius: "0px",
                                 borderBottomRightRadius: "0px"
                             }}>
-                                <div className={`image-wrapper transform md:scale-100 ${item.image_1 ? "scale-[0.85]" : "scale-[1.05]"}`}>
+                                <div className={`image-wrapper transform md:scale-100 ${item.slug === "kendaraan" ? "scale-[1.45] md:!scale-[1.45] lg:!scale-[1.55]" : "scale-[1.05]"}`}>
                                     <img
                                         src={item.image}
                                         alt={item.title}
                                         loading="lazy"
                                         style={{
-                                            width: item.slug === "emas" || item.slug === "koleksi" ? "10rem" : "13rem",
-                                            height: item.slug === "emas" || item.slug === "koleksi" ? "10rem" : "13rem",
-                                            marginTop: item.slug === "emas" || item.slug === "koleksi" || item.slug === "perhiasan" ? "0" : "1.5rem"
+                                            width: item.slug === "emas" || item.slug === "koleksi" ? "10rem" : item.slug === "kendaraan" ? "19rem" : "13rem",
+                                            height: item.slug === "emas" || item.slug === "koleksi" ? "10rem" : item.slug === "kendaraan" ? "19rem" : "13rem",
+                                            marginTop: item.slug === "emas" || item.slug === "koleksi" || item.slug === "perhiasan" ? "0" : item.slug === "kendaraan" ? "5rem" : "1.5rem"
                                         }}
-                                        className={`product-image md:!w-[11rem] md:!h-[11rem] lg:!w-[13rem] lg:!h-[13rem] ${item.image_1 ? "main" : "single"} ${item.variant === "rare" ? "aspect-[51/76]" : ""}`}
+                                        className={`product-image ${item.slug === "kendaraan" ? "md:!w-[15rem] md:!h-[15rem] lg:!w-[19rem] lg:!h-[19rem]" : "md:!w-[11rem] md:!h-[11rem] lg:!w-[13rem] lg:!h-[13rem]"} single ${item.variant === "rare" ? "aspect-[51/76]" : ""}`}
                                     />
-                                    {item.image_1 && (
-                                        <img
-                                            src={item.image_1}
-                                            alt={item.title}
-                                            loading="lazy"
-                                            className="product-image second opacity-80"
-                                        />
-                                    )}
                                 </div>
                             </div>
-<div className="mx-[0.5rem] p-1 mt-1 md:mx-[0.625rem] lg:mx-[1.06rem] md:mt-2 z-[100] text-left flex flex-col h-full md:min-h-[180px] lg:min-h-[200px]">
+                            <div className="mx-[0.5rem] p-1 mt-1 md:mx-[0.625rem] lg:mx-[1.06rem] md:mt-2 z-[100] text-left flex flex-col h-full md:min-h-[180px] lg:min-h-[200px]">
                                 <h3 className="text-xs md:text-base font-semibold mb-1 md:mb-2 text-[#EDE8D0]">
                                     {item.title}
                                 </h3>
