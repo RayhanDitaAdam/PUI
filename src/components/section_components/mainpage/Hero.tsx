@@ -28,23 +28,15 @@ let Hero: React.FC = () => {
   return (
     <section id="hero" className="z-10 relative w-full h-auto min-h-[39rem] md:h-[68rem] lg:h-[48rem] xl:h-[55rem] overflow-hidden">
       <div className="relative h-full min-h-[39rem] md:h-[68rem] lg:h-[48rem] xl:h-[55rem] rounded-b-[1.875rem] md:rounded-b-[3.125rem] shadow-lg overflow-hidden">
-        <div
-          className="absolute inset-0 md:hidden bg-no-repeat"
-          style={{
-            backgroundImage: 'url("/assets/img/mobile-hero.webp")',
-            backgroundColor: 'black',
-            backgroundPosition: '-400px 120px',
-            backgroundSize: '320.121% auto',
-            backgroundRepeat: 'no-repeat',
-            borderRadius: '0 0 1.875rem 1.875rem',
-            border: '1px solid #000',
-            boxShadow: '0 4px 32px 18px rgba(0, 0, 0, 0.25)'
-          }}
+        <img
+          src="/assets/img/mobile-hero.webp"
+          className="absolute inset-x-0 top-[-14rem] w-full h-[130%] object-cover object-center md:hidden"
+          alt="Hero Mobile Bg"
         />
         {/* Bottom Fade Gradient for Mobile */}
         <div className="absolute inset-x-0 bottom-0 h-52 bg-gradient-to-t from-black via-black/90 to-transparent md:hidden" />
-        <img src="/assets/img/hero.webp" className="absolute inset-0 w-full h-full object-cover hidden md:block lg:hidden" alt="Tablet" />
-        <img src="/assets/img/hero.webp" className="absolute inset-0 w-full h-full object-cover object-top hidden lg:block" alt="Hero Bg" />
+        <img src="/assets/img/hero.webp" className="absolute inset-0 w-full h-full object-cover hidden md:block lg:hidden scale-[1.3]" alt="Tablet" />
+        <img src="/assets/img/hero.webp" className="absolute inset-0 w-full h-full object-contain object-top hidden lg:block scale-[2] lg:translate-y-0 lg:translate-x-[2rem]" alt="Hero Bg" />
         <div className="absolute inset-0"></div>
         <Header />
 
@@ -124,7 +116,7 @@ let Hero: React.FC = () => {
           {/* Top Content */}
           <div className="flex flex-col items-center">
             {/* Hero Title */}
-            <h1 className="text-[1.75rem] font-bold leading-tight text-center text-white">
+            <h1 className="text-[2.25rem] font-bold leading-tight text-center text-white">
               Dapatkan Solusi Gadai{" "}
               <span className="text-switcher-container">
                 {words.map((word, i) => {
@@ -146,7 +138,7 @@ let Hero: React.FC = () => {
 
             {/* Kirim Foto Button */}
             <div className="mt-10 w-full flex justify-center">
-              <a href="https://wa.me/6282277777911" target="_blank" rel="noopener noreferrer" className="group relative bg-[#D4AA6A] text-black px-[2.5rem] py-[0.875rem] rounded-2xl text-base font-bold shadow-xl flex items-center justify-center gap-3 animate-pulse-whatsapp hover:scale-105 transition-all duration-300 cursor-pointer">
+              <a href="https://wa.me/6282277777911" target="_blank" rel="noopener noreferrer" className="group relative bg-[#D4AA6A] text-black w-full px-[2.5rem] py-[0.875rem] rounded-2xl text-base font-bold shadow-xl flex items-center justify-center gap-3 animate-pulse-whatsapp hover:scale-105 transition-all duration-300 cursor-pointer">
                 <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-[#243F29]/80 backdrop-blur-md px-4 py-2 rounded-full flex gap-4 opacity-0 group-hover:opacity-100 group-hover:-top-16 transition-all duration-300 pointer-events-none border border-[#5C5E3D] shadow-2xl z-30">
                   <FaCarSide className="text-[#D4AA6A] text-lg" />
                   <GiHandBag className="text-[#D4AA6A] text-lg" />

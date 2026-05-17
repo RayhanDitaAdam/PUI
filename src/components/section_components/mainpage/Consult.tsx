@@ -45,7 +45,7 @@ let Consult = function () {
                 secara detail dan akurat, memastikan Anda mendapatkan nilai
                 terbaik sesuai kondisi dan pasar terkini.
               </p>
-              <a href="https://wa.me/6282277777911?text=Halo%20PUI,%20saya%20ingin%20booking%20jadwal%20janji%20temu%20ke%20kantor." target="_blank" rel="noopener noreferrer" className="card-link mt-auto flex items-center gap-2 text-[#1B4332] font-semibold text-[9px] md:text-xs cursor-pointer animate-link-arrow">
+              <a href="https://wa.me/6282277777911?text=Halo%20PUI,%20saya%20ingin%20booking%20jadwal%20janji%20temu%20ke%20kantor." target="_blank" rel="noopener noreferrer" className="card-link mt-auto flex items-center gap-2 text-[#1B4332] font-semibold text-[9px] md:text-xs cursor-pointer animate-link-arrow underline">
                 Booking Jadwal Janji Temu
                 <span className="w-4 h-4 bg-[#1B4332] rounded-full flex items-center justify-center">
                   <svg width="8" height="8" viewBox="0 0 9 9" fill="none">
