@@ -36,7 +36,7 @@ let Hero: React.FC = () => {
         {/* Bottom Fade Gradient for Mobile */}
         <div className="absolute inset-x-0 bottom-0 h-52 bg-gradient-to-t from-black via-black/90 to-transparent md:hidden" />
         <img src="/assets/img/hero.webp" className="absolute inset-0 w-full h-full object-cover hidden md:block lg:hidden scale-[1.3]" alt="Tablet" />
-        <img src="/assets/img/hero.webp" className="absolute inset-0 w-full h-full object-contain object-top hidden lg:block scale-[2] lg:translate-y-0 lg:translate-x-[2rem]" alt="Hero Bg" />
+        <img src="/assets/img/hero.webp" className="absolute inset-0 w-full h-full object-cover object-center hidden lg:block scale-[1.1] translate-x-8" alt="Hero Bg" />
         <div className="absolute inset-0"></div>
         <Header />
 

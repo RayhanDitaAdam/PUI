@@ -10,15 +10,16 @@ let Proccess = function () {
         className="absolute top-0 left-0 w-full h-[80%] object-cover object-top md:hidden"
         alt="Process Background Mobile"
       />
+      <div className="absolute bottom-0 left-0 w-full h-[35%] bg-gradient-to-t from-black via-black to-transparent md:hidden" />
       <img
         src="/assets/img/main/desktop.webp"
         loading="lazy"
         className="absolute inset-0 w-full h-full object-cover object-top hidden md:block"
         alt="Process Background Desktop"
       />
-      <div className="absolute inset-0 z-0"></div>
+      
 
-      <div className="relative max-w-4xl mx-auto mt-76 md:mt-[15rem] lg:mt-80 text-center z-10">
+      <div className="relative max-w-4xl mx-auto mt-76 md:mt-[15rem] lg:mt-80 2xl:mt-[30rem] text-center z-10">
 
         <p className="text-sm md:text-[1.25rem] lg:text-2xl tracking-[0.18em] mb-2">How it works</p>
         <h2 className="text-3xl md:text-[2.75rem] lg:text-7xl font-bold mb-4 leading-tight">

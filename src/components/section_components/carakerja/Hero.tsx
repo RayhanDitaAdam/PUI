@@ -9,13 +9,13 @@ let Hero: React.FC = () => {
       >
         <img
           src="/assets/img/carakerja/mobile.webp"
-          className="absolute inset-0 w-full h-full object-cover object-[-20rem_0rem] md:hidden"
+          className="absolute inset-0 w-full h-full object-cover md:hidden scale-150 translate-y-48 -translate-x-24"
          alt="Mobile" />
         <img
           src="/assets/img/carakerja/LAPTOP.webp"
-          className="absolute inset-0 w-full h-full object-cover object-center hidden md:block"
+          className="absolute inset-0 w-full h-full object-cover object-center hidden md:block md:scale-125 md:translate-x-24 md:translate-y-8 lg:scale-150 lg:translate-x-16 lg:translate-y-4 2xl:scale-110 2xl:translate-x-20 2xl:translate-y-8"
          alt="Laptop" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/40 to-black"></div>
+        
 
         <Header />
 
