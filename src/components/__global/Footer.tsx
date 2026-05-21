@@ -10,6 +10,9 @@ import {
     FaLinkedinIn
 } from "react-icons/fa6";
 
+import { settings } from "../../data/settings";
+import { trackEvent } from "../../data/track";
+
 const LazyFooterMap = React.lazy(() => import('./FooterMap'));
 
 interface FooterProps {
@@ -143,24 +146,24 @@ const Footer: React.FC<FooterProps> = ({
                         <div className="md:mt-16 md:max-w-[14rem] md:w-full md:pl-4 xl:pl-0">
                             <h3 className="font-semibold mb-4 text-lg md:text-base">Kontak</h3>
                             <div className="space-y-3">
-                                <a href="tel:02172787020" className="flex items-center gap-4 md:gap-3 border border-white/30 px-4 py-4 md:p-2 xl:px-4 xl:py-4 rounded-xl hover:bg-white/5 transition-all cursor-pointer md:w-full md:max-w-[14rem] xl:w-auto md:scale-[0.95] md:origin-left xl:scale-100">
+                                <a href={`tel:${settings.phone}`} onClick={() => trackEvent('click', { label: 'footer-phone' })} className="flex items-center gap-4 md:gap-3 border border-white/30 px-4 py-4 md:p-2 xl:px-4 xl:py-4 rounded-xl hover:bg-white/5 transition-all cursor-pointer md:w-full md:max-w-[14rem] xl:w-auto md:scale-[0.95] md:origin-left xl:scale-100">
                                     <FaPhone className="text-xl md:text-lg shrink-0" />
-                                    <span className="text-sm md:text-xs font-medium">Telepon:<br />021-7278-7020</span>
+                                    <span className="text-sm md:text-xs font-medium">Telepon:<br />{settings.phone.replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3')}</span>
                                 </a>
-                                <a href="https://wa.me/6282277777911" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 md:gap-3 border border-white/30 px-4 py-4 md:p-2 xl:px-4 xl:py-4 rounded-xl hover:bg-white/5 transition-all cursor-pointer md:w-full md:max-w-[14rem] xl:w-auto md:scale-[0.95] md:origin-left xl:scale-100">
+                                <a href={`https://wa.me/${settings.whatsapp}`} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click', { label: 'footer-whatsapp' })} className="flex items-center gap-4 md:gap-3 border border-white/30 px-4 py-4 md:p-2 xl:px-4 xl:py-4 rounded-xl hover:bg-white/5 transition-all cursor-pointer md:w-full md:max-w-[14rem] xl:w-auto md:scale-[0.95] md:origin-left xl:scale-100">
                                     <FaWhatsapp className="text-xl shrink-0" />
-                                    <span className="text-sm font-medium">WhatsApp:<br />0822 77777 911</span>
+                                    <span className="text-sm font-medium">WhatsApp:<br />{settings.whatsapp.replace(/(\d{3})(\d{4})(\d{4})/, '$1 $2 $3')}</span>
                                 </a>
                             </div>
 
                             <div className="flex gap-4 mt-8 mb-6 md:mb-0">
-                                <a aria-label="Facebook Profile" href="https://www.facebook.com/profile.php?id=61585918772400" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#C49A6C] transition-colors cursor-pointer no-underline">
+                                <a aria-label="Facebook Profile" href={settings.facebook} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click', { label: 'footer-facebook' })} className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#C49A6C] transition-colors cursor-pointer no-underline">
                                     <FaFacebookF className="text-lg" />
                                 </a>
-                                <a aria-label="Instagram Profile" href="https://www.instagram.com/pui.gadai" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#C49A6C] transition-colors cursor-pointer no-underline">
+                                <a aria-label="Instagram Profile" href={settings.instagram} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click', { label: 'footer-instagram' })} className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#C49A6C] transition-colors cursor-pointer no-underline">
                                     <FaInstagram className="text-lg" />
                                 </a>
-                                <a aria-label="LinkedIn Profile" href="https://www.linkedin.com/company/puigadai/about" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#C49A6C] transition-colors cursor-pointer no-underline">
+                                <a aria-label="LinkedIn Profile" href={settings.linkedin} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click', { label: 'footer-linkedin' })} className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-[#C49A6C] transition-colors cursor-pointer no-underline">
                                     <FaLinkedinIn className="text-lg" />
                                 </a>
                             </div>
@@ -170,7 +173,7 @@ const Footer: React.FC<FooterProps> = ({
                     {/* Regulation Logos */}
                     <div className="flex flex-row md:flex-row items-stretch justify-center md:justify-start gap-4 md:gap-6 md:mb-[3rem] border-t border-white/10 pt-[2.5rem]">
                         <span
-                            className="w-[18.5625rem] md:w-auto md:max-w-[320px] text-white md:text-white/60 font-normal md:font-medium text-[0.75rem] md:text-[1rem] leading-[130%] font-['Lato']"
+                            className="w-[18.5625rem] md:w-auto md:max-w-[320px] text-white md:text-white/60 font-normal md:font-medium text-[0.75rem] md:text-[1rem] leading-[130%] font-['Inter']"
                         >
                             Pergadaian Utama Indonesia berizin dan diawasi oleh Otoritas Jasa Keuangan
                         </span>

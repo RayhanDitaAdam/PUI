@@ -1,4 +1,10 @@
 .testimonial-marquee {
   position: relative;
+  overflow: hidden;
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  cursor: grab;
+}
+
+.testimonial-marquee:active {
+  cursor: grabbing;
 }

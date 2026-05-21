@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { FaWhatsapp, FaTimes } from 'react-icons/fa';
+import { settings } from '../../data/settings';
+import { trackEvent } from '../../data/track';
 
 const FloatingWA: React.FC = () => {
     const location = useLocation();
@@ -58,9 +60,10 @@ const FloatingWA: React.FC = () => {
                 className={`fixed bottom-6 right-6 z-50 prisila-popup transition-all duration-200 transform ${(!showPopup || isMinimized) ? 'opacity-0 scale-90 translate-y-4 pointer-events-none' : 'opacity-100 scale-100 translate-y-0'}`}
             >
                 <a
-                    href="https://wa.me/6282277777911"
+                    href={`https://wa.me/${settings.whatsapp}`}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackEvent('click', { label: 'floating-wa' })}
                     className="relative w-[190px] md:w-[230px] h-[85px] md:h-[100px] bg-[#D9D9D9] rounded-[12px] flex items-center px-3 md:px-4 shadow-xl cursor-pointer block group overflow-visible"
                 >
                     <button

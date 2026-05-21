@@ -2,7 +2,8 @@ import { useRef, useEffect } from "react";
 import { FaClock, FaArrowRight } from "react-icons/fa6";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { articles } from "./_data/article.ts";
+import { getPageContent } from "../../../data/content";
+import { articles } from "../../../data/articles";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,14 +28,24 @@ let Article = function () {
     );
   }, []);
 
+  const content = getPageContent("mainpage");
+  const articleSectionTitle = content.articleSectionTitle || "Artikel";
+  const articleSectionSubtitle = content.articleSectionSubtitle || "Eksplorasi insight eksklusif seputar pengelolaan aset bernilai tinggi, strategi likuidasi, dan tren finansial terkini.";
+  const selectedIds = content.selectedArticleIds || [];
+
+  // Filter articles based on selected IDs from CMS, falling back to all articles if none selected
+  const filteredArticles = selectedIds.length > 0 
+    ? articles.filter(a => selectedIds.includes(a.id)) 
+    : articles;
+
   return (
     <section id="artikel-home" className="bg-white py-10 px-6 md:px-16 overflow-hidden">
       {/* Header Section */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
         <div>
-          <h2 className="text-2xl font-extrabold text-[#4D4D4D] mb-2">Artikel</h2>
+          <h2 className="text-2xl font-extrabold text-[#4D4D4D] mb-2">{articleSectionTitle}</h2>
           <p className="text-lg md:text-xl font-bold text-[#4D4D4D] leading-relaxed max-w-2xl">
-            Eksplorasi insight eksklusif seputar pengelolaan aset bernilai tinggi, strategi likuidasi, dan tren finansial terkini.
+            {articleSectionSubtitle}
           </p>
         </div>
         <a href="/artikel" className="flex items-center gap-2 text-[#006658] font-bold text-sm hover:underline uppercase tracking-wider">
@@ -50,14 +61,14 @@ let Article = function () {
         className="flex overflow-x-auto overflow-y-hidden snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-3 gap-6 md:gap-10 pb-4"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
-        {articles.map((item) => (
+        {filteredArticles.map((item) => (
           <div 
             key={item.id} 
             className="article-card min-w-[85%] md:min-w-0 snap-center flex flex-col bg-white rounded-2xl overflow-hidden"
           >
             <div className="relative aspect-[4/5] md:aspect-auto">
               <img 
-                src={item.img} 
+                src={item.image} 
                 alt={item.title}
                 className="w-full h-full object-cover rounded-2xl shadow-md"
               />
@@ -72,7 +83,7 @@ let Article = function () {
                 {item.title}
               </h3>
               <p className="text-xs text-gray-500 leading-relaxed mb-4">
-                {item.desc}
+                {item.excerpt}
               </p>
               <a aria-label="Read full article" href={`/artikel/${item.slug}`} className="mt-auto flex items-center gap-2 text-[#006658] font-extrabold text-[11px] hover:gap-3 transition-all uppercase tracking-widest">
                 Read More

@@ -3,10 +3,12 @@ import { useParams } from 'react-router-dom';
 import { FaWhatsapp } from 'react-icons/fa';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { settings } from "../../../data/settings";
+import { getProducts, type WorkStep } from "../../../data/products";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const stepsData: Record<string, { id: string; title: string; desc: string; idx: number }[]> = {
+const fallbackSteps: Record<string, WorkStep[]> = {
     'jam-tangan': [
         { id: "01", title: "Kirim Foto Jam Tangan", desc: "Kirim Foto aset jam tangan Anda ke tim kami via WhatsApp untuk asesmen awal.", idx: 6 },
         { id: "02", title: "Buat Appointment", desc: "Tim kami menjadwalkan kunjungan Anda ke kantor PUI, Darmawangsa Square, Jakarta Selatan.", idx: 7 },
@@ -57,10 +59,20 @@ const stepsData: Record<string, { id: string; title: string; desc: string; idx: 
     ]
 };
 
+function getSteps(slug: string): WorkStep[] {
+    const products = getProducts();
+    if (products.length > 0) {
+        const product = products.find(p => p.slug === slug);
+        if (product?.workSteps) return product.workSteps;
+        if (products[0]?.workSteps) return products[0].workSteps;
+    }
+    return fallbackSteps[slug] || fallbackSteps['jam-tangan'];
+}
+
 let ItemContext = function () {
     const { slug } = useParams<{ slug: string }>();
     const currentSlug = slug || 'jam-tangan';
-    const activeSteps = stepsData[currentSlug] || stepsData['jam-tangan'];
+    const activeSteps = getSteps(currentSlug);
     const sectionRef = useRef<HTMLDivElement>(null);
     const ballRef = useRef<HTMLDivElement>(null);
     const stepsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -70,7 +82,6 @@ let ItemContext = function () {
 
         let mm = gsap.matchMedia();
 
-        // 1. DESKTOP ANIMATION (DIKEMBALIKAN PERSIS ASLINYA)
         mm.add("(min-width: 1024px)", () => {
             const tl = gsap.timeline({
                 scrollTrigger: {
@@ -100,7 +111,6 @@ let ItemContext = function () {
                 .to(stepsRef.current[3], { borderColor: "#D4AA6A", borderWidth: "2px", duration: 0.1 }, "step-06+=1.5");
         });
 
-        // 2. MOBILE & TABLET ANIMATION (STICKY STACKING COVER)
         mm.add("(max-width: 1023px)", () => {
             const steps = stepsRef.current.slice(6, 12);
 
@@ -113,10 +123,9 @@ let ItemContext = function () {
                 }
             });
 
-            // Initial state: Cards are listing downwards in Y position with depth effects (solid background)
             steps.forEach((step, i) => {
                 gsap.set(step, {
-                    opacity: 1, // Keep solid as requested
+                    opacity: 1,
                     scale: 1 - (i * 0.05),
                     filter: `blur(${i * 1}px)`,
                     y: i * 260,
@@ -127,7 +136,6 @@ let ItemContext = function () {
                 });
             });
 
-            // Animate through steps
             steps.forEach((step, i) => {
                 const label = `step-${i}`;
                 tl.to({}, { duration: 1 }, label);
@@ -136,7 +144,6 @@ let ItemContext = function () {
                     const transitionLabel = `transition-${i}`;
                     const currentStep = step;
 
-                    // Previous card fades out as it gets covered
                     tl.to(currentStep, {
                         opacity: 0,
                         duration: 1.5,
@@ -144,12 +151,11 @@ let ItemContext = function () {
                         force3D: true
                     }, transitionLabel);
 
-                    // Next cards move UP and become CLEAR / LARGER (keep solid)
                     for (let j = i + 1; j < steps.length; j++) {
                         const targetIdx = j - (i + 1);
                         tl.to(steps[j], {
                             y: targetIdx * 260,
-                            opacity: 1, // Keep solid
+                            opacity: 1,
                             scale: 1 - (targetIdx * 0.05),
                             filter: `blur(${targetIdx * 1}px)`,
                             duration: 1.5,
@@ -177,14 +183,11 @@ let ItemContext = function () {
                         </h1>
                     </div>
 
-                    {/* DESKTOP VIEW (Original Content) */}
                     <div className="relative w-full hidden lg:block">
-                        {/* Path Lines */}
                         <div className="absolute bg-gray-800 h-[2px] top-[130px] left-[170px] right-[170px] z-0"></div>
                         <div className="absolute bg-gray-800 w-[2px] top-[130px] h-[308px] right-[170px] z-0"></div>
                         <div className="absolute bg-gray-800 h-[2px] top-[438px] left-[170px] right-[170px] z-0"></div>
 
-                        {/* Moving Ball */}
                         <div
                             ref={ballRef}
                             className="absolute w-8 h-8 bg-[#D4AA6A] rounded-full z-[5] -mt-4 -ml-4 shadow-[0_0_20px_rgba(212,170,106,0.8)] border-4 border-white"
@@ -192,7 +195,6 @@ let ItemContext = function () {
                         ></div>
 
                         <div className="grid grid-cols-3 gap-x-10 gap-y-12 relative z-10">
-                            {/* Row 1: 01, 02, 03 */}
                             <div ref={el => { stepsRef.current[0] = el; }} className="step-item relative z-10 h-[260px] p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-300">
                                 <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">{activeSteps[0].id}</h2>
                                 <h3 className="text-lg font-bold text-[#003B33] mb-3">{activeSteps[0].title}</h3>
@@ -211,13 +213,12 @@ let ItemContext = function () {
                                 <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">{activeSteps[2].desc}</p>
                             </div>
 
-                            {/* Row 2: 06, 05, 04 */}
                             <div ref={el => { stepsRef.current[3] = el; }} className="step-item relative z-10 h-[260px] p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-300">
                                 <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">{activeSteps[5].id}</h2>
                                 <h3 className="text-lg font-bold text-[#003B33] mb-3">{activeSteps[5].title}</h3>
                                 <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium mb-2">{activeSteps[5].desc}</p>
                                 <a
-                                    href="https://wa.me/6282277777911"
+                                    href={`https://wa.me/${settings.whatsapp}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="w-10 h-10 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
@@ -240,7 +241,6 @@ let ItemContext = function () {
                         </div>
                     </div>
 
-                    {/* MOBILE & TABLET VIEW (Sticky Card Stacking) */}
                     <div className="relative w-full block lg:hidden">
                         <div className="grid grid-cols-1 relative z-10 w-full min-h-[400px]">
                             {activeSteps.map((step) => (
@@ -255,7 +255,7 @@ let ItemContext = function () {
                                     <p className="text-xs lg:text-[14px] text-[#003B33]/80 leading-relaxed font-medium mb-2">{step.desc}</p>
                                     {step.id === "06" && (
                                         <a
-                                            href="https://wa.me/6282277777911"
+                                            href={`https://wa.me/${settings.whatsapp}`}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="w-10 h-10 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"

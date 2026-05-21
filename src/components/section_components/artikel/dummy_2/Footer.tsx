@@ -1,3 +1,5 @@
+import { settings } from "../../../../data/settings";
+
 let Footer = function () {
     return (
         <footer className="max-w-7xl mx-auto">
@@ -72,7 +74,7 @@ let Footer = function () {
                                 Kontak
                             </h3>
                             <div className="space-y-1">
-                                <a href="tel:02172787020" className="flex items-center gap-3 border-2 border-white px-4 py-3 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
+                                <a href={`tel:${settings.phone}`} className="flex items-center gap-3 border-2 border-white px-4 py-3 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
                                     <i className="fa-solid fa-phone"></i>
                                     <span className="text-sm">
                                         Telepon:
@@ -80,7 +82,7 @@ let Footer = function () {
                                         021-7278-7020
                                     </span>
                                 </a>
-                                <a href="https://wa.me/6282277777911" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 border-2 border-white px-4 py-3 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
+                                <a href={`https://wa.me/${settings.whatsapp}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 border-2 border-white px-4 py-3 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
                                     <i className="fa-brands fa-whatsapp"></i>
                                     <span className="text-sm">
                                         WhatsApp:

@@ -1,11 +1,13 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { getPageContent } from '../../../data/content'
 
 gsap.registerPlugin(ScrollTrigger);
 
 let Items = function () {
     const sectionRef = useRef<HTMLDivElement>(null);
+    const c = getPageContent('profil-perusahaan')
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -40,7 +42,7 @@ let Items = function () {
         return () => ctx.revert();
     }, []);
 
-    const features = [
+    const features = c.features || [
         // ... (preserving this section exactly as is)
         {
             title: "Proses Cepat & Mudah",
@@ -73,18 +75,21 @@ let Items = function () {
             img: "/assets/img/profil/15c7d3ecd86c33afcd8f6d95a9cd6ca74e6184bd.webp"
         }
     ];
+    const badge = c.featuresBadge || 'Exclusive Services'
+    const title = c.featuresTitle || 'Keunggulan Kami'
+    const subtitle = c.featuresSubtitle || 'Solusi pembiayaan cepat dan aman berbasis aset bernilai'
 
     return (
         <section id="keunggulan-pui" ref={sectionRef} className="py-24 font-sans overflow-hidden bg-[#FAFAFA] scroll-mt-20">
             <div className="max-w-6xl mx-auto px-6">
 
                 <div className="mb-20 space-y-2 reveal-header opacity-0 -translate-x-8 transform-gpu transition-none">
-                    <span className="text-[#C49A6C] font-semibold tracking-[0.2em] uppercase text-sm block mb-1">Exclusive Services</span>
+                    <span className="text-[#C49A6C] font-semibold tracking-[0.2em] uppercase text-sm block mb-1">{badge}</span>
                     <div className="flex items-center gap-6">
                         <div className="h-14 w-1.5 bg-[#003A30] rounded-full hidden md:block"></div>
                         <div>
-                            <h2 className="text-4xl md:text-5xl font-bold text-[#003A30] tracking-tight mb-2">Keunggulan Kami</h2>
-                            <p className="text-gray-500 text-lg max-w-xl font-['Lato'] italic">Solusi pembiayaan cepat dan aman berbasis aset bernilai</p>
+                            <h2 className="text-4xl md:text-5xl font-bold text-[#003A30] tracking-tight mb-2">{title}</h2>
+                            <p className="text-gray-500 text-lg max-w-xl font-['Inter'] italic">{subtitle}</p>
                         </div>
                     </div>
                 </div>
@@ -116,7 +121,7 @@ let Items = function () {
                                     </h3>
                                 </div>
 
-                                <p className="text-gray-500 text-base leading-relaxed font-['Lato'] opacity-80 group-hover:opacity-100 transition-opacity duration-500">
+                                <p className="text-gray-500 text-base leading-relaxed font-['Inter'] opacity-80 group-hover:opacity-100 transition-opacity duration-500">
                                     {feat.desc}
                                 </p>
                             </div>

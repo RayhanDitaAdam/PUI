@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const faqCollections: Record<string, { question: string; answer: string }[]> = {
   'jam-tangan': [
@@ -216,7 +217,22 @@ const faqCollections: Record<string, { question: string; answer: string }[]> = {
   ]
 };
 
-const defaultFAQ = [
+function getEmbeddedFaq(): Record<string, { question: string; answer: string }[]> | null {
+  try {
+    const el = document.getElementById("cms-faq");
+    if (el?.textContent) return JSON.parse(el.textContent);
+  } catch {}
+  return null;
+}
+
+const embeddedFaq = getEmbeddedFaq();
+if (embeddedFaq) {
+  for (const key of Object.keys(embeddedFaq)) {
+    faqCollections[key] = embeddedFaq[key];
+  }
+}
+
+const defaultFAQ = embeddedFaq?.default || [
   {
     question: "Apa itu Gadai Barang Mewah di PUI?",
     answer: "PUI (Pegadaian Utama Indonesia) menyediakan layanan pinjaman dana tunai dengan jaminan aset mewah seperti jam tangan, emas, perhiasan, tas branded, hingga kendaraan premium dengan proses yang cepat, aman, dan transparan."
@@ -249,8 +265,25 @@ const FAQ: React.FC = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqData.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer,
+      },
+    })),
+  };
+
   return (
-    <div className="w-full bg-white py-20 px-5">
+    <>
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Helmet>
+      <div className="w-full bg-white py-20 px-5">
       <div className="max-w-[1200px] mx-auto">
         <div className="flex flex-col items-center mb-16">
           <h2 className="font-bold text-4xl md:text-5xl tracking-tight text-[#003B33]">
@@ -310,6 +343,7 @@ const FAQ: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

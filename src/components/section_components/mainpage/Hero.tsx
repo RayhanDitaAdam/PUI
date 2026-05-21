@@ -3,9 +3,13 @@ import Header from "../../__global/Header";
 import { FaWhatsapp, FaCarSide } from "react-icons/fa";
 import { GiHandBag } from "react-icons/gi";
 import { LuWatch } from "react-icons/lu";
+import { settings } from "../../../data/settings";
+import { trackEvent } from "../../../data/track";
+import { getPageContent } from "../../../data/content";
 
 let Hero: React.FC = () => {
-  const words = [
+  const content = getPageContent("mainpage");
+  const words = content.heroWords || [
     "Jam Tangan",
     "Logam Mulia",
     "Perhiasan",
@@ -14,6 +18,16 @@ let Hero: React.FC = () => {
     "Kendaraan",
     "Barang Kolektor"
   ];
+  const heroTitle = content.heroTitle || "Dapatkan Solusi Gadai";
+  const heroEnding = content.heroEnding || "untuk\nAset Anda Dengan PUI";
+  const buttonText = content.buttonText || "Kirim Foto Aset Anda";
+  const aboutTitle = content.aboutTitle || "Pergadaian Utama Indonesia";
+  const aboutDesc = content.aboutDesc || "Pergadaian Utama Indonesia (PUI) adalah mitra terpercaya untuk solusi pencairan aset Anda, dengan layanan profesional, proses cepat, serta keamanan terjamin.";
+  const aboutButton = content.aboutButton || "Tentang PUI";
+  const aboutLink = content.aboutLink || "https://puigadai.co.id/profil-perusahaan";
+  const feature1 = content.feature1 || "Pencairan Dana Cepat";
+  const feature2 = content.feature2 || "Valuasi Aset Tinggi";
+  const feature3 = content.feature3 || "Terdaftar & diawasi OJK";
   const [index, setIndex] = React.useState(0);
   const [prevIndex, setPrevIndex] = React.useState(-1);
 
@@ -44,7 +58,7 @@ let Hero: React.FC = () => {
         <div className="md:hidden relative z-20 flex flex-col items-center pt-[8.75rem] pb-16 px-6">
           {/* Hero Title */}
           <h1 className="text-[1.625rem] font-bold leading-tight text-center text-white">
-            Dapatkan Solusi Gadai{" "}
+            {heroTitle}{" "}
             <span className="text-switcher-container">
               {words.map((word, i) => {
                 const isActive = i === index;
@@ -60,12 +74,14 @@ let Hero: React.FC = () => {
                 );
               })}
             </span>{" "}
-            untuk<br /> Aset Anda Dengan PUI
+            {heroEnding.split('\n').map((line, i) => (
+              <React.Fragment key={i}>{i > 0 && <br />}{line}</React.Fragment>
+            ))}
           </h1>
 
           {/* Kirim Foto Button */}
           <div className="mt-6 w-full flex justify-center">
-            <a href="https://wa.me/6282277777911" target="_blank" rel="noopener noreferrer" className="group relative bg-[#D4AA6A] text-black w-[85%] py-3 rounded-2xl text-base font-bold shadow-xl flex items-center justify-center gap-3 animate-pulse-whatsapp hover:scale-105 transition-all duration-300 cursor-pointer">
+            <a href={`https://wa.me/${settings.whatsapp}`} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click', { label: 'hero-wa' })} className="group relative bg-[#D4AA6A] text-black w-[85%] py-3 rounded-2xl text-base font-bold shadow-xl flex items-center justify-center gap-3 animate-pulse-whatsapp hover:scale-105 transition-all duration-300 cursor-pointer">
               <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-[#243F29]/80 backdrop-blur-md px-4 py-2 rounded-full flex gap-4 opacity-0 group-hover:opacity-100 group-hover:-top-16 transition-all duration-300 pointer-events-none border border-[#5C5E3D] shadow-2xl z-30">
                 <FaCarSide className="text-[#D4AA6A] text-lg" />
                 <GiHandBag className="text-[#D4AA6A] text-lg" />
@@ -80,15 +96,13 @@ let Hero: React.FC = () => {
           {/* PUI Info Card */}
           <div className="mt-[17rem] text-center flex flex-col items-center max-w-[90%] sm:max-w-sm bg-black/80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1),inset_0_1px_0_0_rgba(255,255,255,0.2)] backdrop-blur-[8px] rounded-[1.5rem] p-6 sm:p-8">
             <h1 className="font-bold mb-3 animate-shine-text text-xl">
-              Pergadaian Utama Indonesia
+              {aboutTitle}
             </h1>
             <p className="text-sm text-gray-300 leading-relaxed">
-              Pergadaian Utama Indonesia (PUI) adalah mitra terpercaya
-              untuk solusi pencairan aset Anda, dengan layanan
-              profesional, proses cepat, serta keamanan terjamin.
+              {aboutDesc}
             </p>
-            <a href="https://puigadai.co.id/profil-perusahaan" className="inline-block mt-6 bg-[#003D35] px-6 py-2.5 rounded-full text-sm text-white hover:bg-[#005D51] hover:scale-105 transition-all duration-300">
-              Tentang PUI
+            <a href={aboutLink} className="inline-block mt-6 bg-[#003D35] px-6 py-2.5 rounded-full text-sm text-white hover:bg-[#005D51] hover:scale-105 transition-all duration-300">
+              {aboutButton}
             </a>
           </div>
 
@@ -97,16 +111,16 @@ let Hero: React.FC = () => {
             <div className="grid grid-cols-2 gap-4 w-full">
               <div className="animate-floating flex items-center justify-center gap-2 bg-[#003D35] border-2 rounded-[0.625rem] border-[#5C5E3D] px-3 py-2 text-[0.625rem] shadow text-white" style={{ animationDelay: '0.8s' }}>
                 <img className="w-[1.25rem]" src="/assets/img/icon-clock.webp" alt="Icon Clock" />
-                Pencairan Dana Cepat
+                {feature1}
               </div>
               <div className="animate-floating flex items-center justify-center gap-2 bg-[#003D35] border-2 rounded-[0.625rem] border-[#5C5E3D] px-3 py-2 text-[0.625rem] shadow text-white" style={{ animationDelay: '0.4s' }}>
                 <img className="w-[1.25rem]" src="/assets/img/icon-chart.webp" alt="Icon Chart" />
-                Valuasi Aset Tinggi
+                {feature2}
               </div>
             </div>
             <div className="animate-floating flex items-center gap-2 bg-[#003D35] border-2 rounded-[0.625rem] border-[#5C5E3D] px-4 py-2 text-xs shadow text-white" style={{ animationDelay: '0s' }}>
               <img src="/assets/img/Layer_1.svg" className="h-[0.875rem] w-auto" alt="License Logo" />
-              <span>Terdaftar & diawasi OJK</span>
+              <span>{feature3}</span>
             </div>
           </div>
         </div>
@@ -117,7 +131,7 @@ let Hero: React.FC = () => {
           <div className="flex flex-col items-center">
             {/* Hero Title */}
             <h1 className="text-[2.25rem] font-bold leading-tight text-center text-white">
-              Dapatkan Solusi Gadai{" "}
+              {heroTitle}{" "}
               <span className="text-switcher-container">
                 {words.map((word, i) => {
                   const isActive = i === index;
@@ -133,12 +147,14 @@ let Hero: React.FC = () => {
                   );
                 })}
               </span>{" "}
-              untuk<br /> Aset Anda Dengan PUI
+              {heroEnding.split('\n').map((line, i) => (
+                <React.Fragment key={i}>{i > 0 && <br />}{line}</React.Fragment>
+              ))}
             </h1>
 
             {/* Kirim Foto Button */}
             <div className="mt-10 w-full flex justify-center">
-              <a href="https://wa.me/6282277777911" target="_blank" rel="noopener noreferrer" className="group relative bg-[#D4AA6A] text-black w-full px-[2.5rem] py-[0.875rem] rounded-2xl text-base font-bold shadow-xl flex items-center justify-center gap-3 animate-pulse-whatsapp hover:scale-105 transition-all duration-300 cursor-pointer">
+              <a href={`https://wa.me/${settings.whatsapp}`} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click', { label: 'hero-wa' })} className="group relative bg-[#D4AA6A] text-black w-full px-[2.5rem] py-[0.875rem] rounded-2xl text-base font-bold shadow-xl flex items-center justify-center gap-3 animate-pulse-whatsapp hover:scale-105 transition-all duration-300 cursor-pointer">
                 <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-[#243F29]/80 backdrop-blur-md px-4 py-2 rounded-full flex gap-4 opacity-0 group-hover:opacity-100 group-hover:-top-16 transition-all duration-300 pointer-events-none border border-[#5C5E3D] shadow-2xl z-30">
                   <FaCarSide className="text-[#D4AA6A] text-lg" />
                   <GiHandBag className="text-[#D4AA6A] text-lg" />
@@ -146,7 +162,7 @@ let Hero: React.FC = () => {
                   <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-[#243F29]/80 rotate-45 border-r border-b border-[#5C5E3D]"></div>
                 </div>
                 <FaWhatsapp className="relative z-10 text-xl" />
-                <span className="relative z-10">Kirim Foto Aset Anda</span>
+              <span className="relative z-10">{buttonText}</span>
               </a>
             </div>
           </div>
@@ -157,43 +173,41 @@ let Hero: React.FC = () => {
             <div className="flex flex-col gap-4 items-center">
               <div className="grid grid-cols-2 gap-4 w-full">
                 <div className="animate-floating flex items-center justify-center gap-2 bg-[#003D35] border-2 rounded-[0.625rem] border-[#5C5E3D] px-3 py-2 text-[0.625rem] shadow text-white" style={{ animationDelay: '0.8s' }}>
-                  <img className="w-[1.25rem]" src="/assets/img/icon-clock.webp" alt="Icon Clock" />
-                  Pencairan Dana Cepat
-                </div>
+                <img className="w-[1.25rem]" src="/assets/img/icon-clock.webp" alt="Icon Clock" />
+                {feature1}
+              </div>
                 <div className="animate-floating flex items-center justify-center gap-2 bg-[#003D35] border-2 rounded-[0.625rem] border-[#5C5E3D] px-3 py-2 text-[0.625rem] shadow text-white" style={{ animationDelay: '0.4s' }}>
-                  <img className="w-[1.25rem]" src="/assets/img/icon-chart.webp" alt="Icon Chart" />
-                  Valuasi Aset Tinggi
-                </div>
+                <img className="w-[1.25rem]" src="/assets/img/icon-chart.webp" alt="Icon Chart" />
+                {feature2}
+              </div>
               </div>
               <div className="animate-floating flex items-center gap-2 bg-[#003D35] border-2 rounded-[0.625rem] border-[#5C5E3D] px-4 py-2 text-xs shadow text-white" style={{ animationDelay: '0s' }}>
                 <img src="/assets/img/Layer_1.svg" className="h-[0.875rem] w-auto" alt="License Logo" />
-                <span>Terdaftar & diawasi OJK</span>
+                <span>{feature3}</span>
               </div>
             </div>
 
             {/* PUI Info Card */}
             <div className="text-center flex flex-col items-center max-w-[20rem] bg-black/80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1),inset_0_1px_0_0_rgba(255,255,255,0.2)] backdrop-blur-[8px] rounded-[1.5rem] p-6 lg:p-8">
               <h1 className="font-bold mb-3 animate-shine-text text-lg">
-                Pergadaian Utama Indonesia
+                {aboutTitle}
               </h1>
               <p className="text-xs text-gray-300 leading-relaxed">
-                Pergadaian Utama Indonesia (PUI) adalah mitra terpercaya
-                untuk solusi pencairan aset Anda, dengan layanan
-                profesional, proses cepat, serta keamanan terjamin.
+                {aboutDesc}
               </p>
-              <a href="https://puigadai.co.id/profil-perusahaan" className="inline-block mt-6 bg-[#003D35] px-6 py-2 rounded-full text-xs text-white hover:bg-[#005D51] hover:scale-105 transition-all duration-300">
-                Tentang PUI
+              <a href={aboutLink} className="inline-block mt-6 bg-[#003D35] px-6 py-2 rounded-full text-xs text-white hover:bg-[#005D51] hover:scale-105 transition-all duration-300">
+                {aboutButton}
               </a>
             </div>
           </div>
         </div>
 
-        {/* --- DESKTOP LAYOUT (Original behavior) --- */}
+        {/* --- DESKTOP LAYOUT --- */}
         <div className="hidden lg:block">
           {/* Hero Title */}
           <div className="absolute top-[8rem] xl:top-[10rem] w-full flex justify-center z-20 px-4">
             <h1 className="text-4xl font-bold leading-snug text-center text-white">
-              Dapatkan Solusi Gadai{" "}
+              {heroTitle}{" "}
               <span className="text-switcher-container">
                 {words.map((word, i) => {
                   const isActive = i === index;
@@ -209,7 +223,9 @@ let Hero: React.FC = () => {
                   );
                 })}
               </span>{" "}
-              untuk<br /> Aset Anda Dengan PUI
+              {heroEnding.split('\n').map((line, i) => (
+                <React.Fragment key={i}>{i > 0 && <br />}{line}</React.Fragment>
+              ))}
             </h1>
           </div>
 
@@ -219,15 +235,13 @@ let Hero: React.FC = () => {
               {/* Info Card */}
               <div className="absolute left-[5rem] top-[19rem] xl:top-[24rem] z-20 max-w-xs pointer-events-auto origin-left bg-black/80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1),inset_0_1px_0_0_rgba(255,255,255,0.2)] backdrop-blur-[8px] rounded-[1.5rem] p-6 lg:p-8">
                 <h1 className="font-bold mb-2 animate-shine-text text-lg">
-                  Pergadaian Utama Indonesia
+                  {aboutTitle}
                 </h1>
                 <p className="text-xs text-gray-300 leading-relaxed">
-                  Pergadaian Utama Indonesia (PUI) adalah mitra terpercaya
-                  untuk solusi pencairan aset Anda, dengan layanan
-                  profesional, proses cepat, serta keamanan terjamin.
+                  {aboutDesc}
                 </p>
-                <a href="https://puigadai.co.id/profil-perusahaan" className="inline-block mt-4 bg-[#003D35] px-4 py-2 rounded-full text-xs text-white hover:bg-[#005D51] hover:scale-105 transition-all duration-300">
-                  Tentang PUI
+                <a href={aboutLink} className="inline-block mt-4 bg-[#003D35] px-4 py-2 rounded-full text-xs text-white hover:bg-[#005D51] hover:scale-105 transition-all duration-300">
+                  {aboutButton}
                 </a>
               </div>
 
@@ -235,17 +249,17 @@ let Hero: React.FC = () => {
               <div className="absolute right-[6rem] top-[17rem] xl:top-[22rem] z-20 flex flex-col gap-4 pointer-events-auto origin-right">
                 <div className="animate-floating flex items-center gap-2 bg-[#003D35] border-2 rounded-[0.625rem] border-[#5C5E3D] px-2 py-1 text-sm shadow text-white" style={{ animationDelay: '0s' }}>
                   <img src="/assets/img/Layer_1.svg" className="h-[2rem] w-auto" alt="License Logo" />
-                  <span>Terdaftar & diawasi OJK</span>
+                  <span>{feature3}</span>
                 </div>
                 <div className="-ml-[5rem]">
                   <div className="animate-floating inline-flex mt-10 items-center gap-2 bg-[#003D35] border-2 rounded-[0.625rem] border-[#5C5E3D] px-4 py-0 text-sm shadow text-white" style={{ animationDelay: '0.4s' }}>
                     <img className="w-[2.25rem]" src="/assets/img/icon-chart.webp" alt="Icon Chart" />
-                    Valuasi Aset Tinggi
+                    {feature2}
                   </div>
                 </div>
                 <div className="animate-floating flex items-center mt-14 gap-2 bg-[#003D35] border-2 rounded-[0.625rem] border-[#5C5E3D] px-2 py-0 text-sm shadow text-white" style={{ animationDelay: '0.8s' }}>
                   <img className="w-[2.25rem]" src="/assets/img/icon-clock.webp" alt="Icon Clock" />
-                  Pencairan Dana Cepat
+                  {feature1}
                 </div>
               </div>
             </div>
@@ -253,7 +267,7 @@ let Hero: React.FC = () => {
 
           {/* Kirim Foto Button */}
           <div className="absolute bottom-[6.875rem] w-full flex justify-center z-20">
-            <a href="https://wa.me/6282277777911" target="_blank" rel="noopener noreferrer" className="group relative bg-[#D4AA6A] text-black px-8 py-3 rounded-md text-sm font-semibold shadow-xl flex items-center gap-2 animate-pulse-whatsapp hover:scale-105 transition-all duration-300 cursor-pointer">
+            <a href={`https://wa.me/${settings.whatsapp}`} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click', { label: 'hero-wa' })} className="group relative bg-[#D4AA6A] text-black px-8 py-3 rounded-md text-sm font-semibold shadow-xl flex items-center gap-2 animate-pulse-whatsapp hover:scale-105 transition-all duration-300 cursor-pointer">
               <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-[#243F29]/80 backdrop-blur-md px-4 py-2 rounded-full flex gap-4 opacity-0 group-hover:opacity-100 group-hover:-top-16 transition-all duration-300 pointer-events-none border border-[#5C5E3D] shadow-2xl z-30">
                 <FaCarSide className="text-[#D4AA6A] text-lg" />
                 <GiHandBag className="text-[#D4AA6A] text-lg" />
@@ -261,7 +275,7 @@ let Hero: React.FC = () => {
                 <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-[#243F29]/80 rotate-45 border-r border-b border-[#5C5E3D]"></div>
               </div>
               <FaWhatsapp className="relative z-10 text-xl" />
-              <span className="relative z-10">Kirim Foto Aset Anda</span>
+              <span className="relative z-10">{buttonText}</span>
             </a>
           </div>
         </div>

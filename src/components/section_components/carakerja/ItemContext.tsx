@@ -2,6 +2,8 @@ import { useEffect, useRef } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { settings } from "../../../data/settings";
+import { getPageContent } from '../../../data/content';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,6 +11,17 @@ let ItemContext = function () {
     const sectionRef = useRef<HTMLDivElement>(null);
     const ballRef = useRef<HTMLDivElement>(null);
     const stepsRef = useRef<(HTMLDivElement | null)[]>([]);
+    const c = getPageContent('cara-kerja')
+    const badge = c.workBadge || 'Cara Kerja'
+    const wTitle = c.workTitle || 'Solusi Menyeluruh Dengan Proses Standart'
+    const workSteps = c.workSteps || [
+        { title: 'Penerimaan Aset', desc: 'Aset anda diterima oleh tim ahli kami di kantor PUI' },
+        { title: 'Pemeriksaan Fisik', desc: 'Kondisi aset diperiksa secara menyeluruh oleh tenaga ahli' },
+        { title: 'Pengujian Laboratorium', desc: 'Aset diuji di laboratorium untuk memastikan keaslian dan kualitas' },
+        { title: 'Penawaran Nilai Gadai', desc: 'Kami menyampaikan nilai taksiran dan bunga kompetitif untuk disetujui' },
+        { title: 'Pencairan Dana', desc: 'Setelah Anda setuju, dana langsung cair ke rekening Anda' },
+        { title: 'Hubungi Kami Via Whatsapp', desc: 'Untuk memulai' },
+    ]
 
     useEffect(() => {
         if (!sectionRef.current || !ballRef.current) return;
@@ -114,11 +127,9 @@ let ItemContext = function () {
             <div className="sticky top-0 min-h-screen w-full flex flex-col items-center justify-center pt-24 pb-16 md:pt-32 md:pb-32 px-4 md:px-0">
                 <div className="w-full max-w-[1100px] relative">
                     <div className="mb-10 lg:mb-14 text-center lg:text-left">
-                        <h4 className="text-[#003B33] font-semibold text-base md:text-lg mb-2 lg:mb-3">Cara Kerja</h4>
+                        <h4 className="text-[#003B33] font-semibold text-base md:text-lg mb-2 lg:mb-3">{badge}</h4>
                         <h1 className="text-3xl md:text-4xl font-extrabold leading-snug tracking-tight">
-                            <span className="text-[#003B33]">Solusi Menyeluruh</span>
-                            <span className="text-[#003B33]">&nbsp;Dengan </span><br className="hidden lg:block" />
-                            <span className="text-[#003B33]">Proses Standart</span>
+                            <span className="text-[#003B33]" dangerouslySetInnerHTML={{ __html: wTitle }} />
                         </h1>
                     </div>
 
@@ -138,80 +149,51 @@ let ItemContext = function () {
 
                         <div className="grid grid-cols-3 gap-x-10 gap-y-12 relative z-10">
                             {/* Row 1: 01, 02, 03 */}
-                            <div ref={el => { stepsRef.current[0] = el; }} className="step-item relative z-10 h-[260px] p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-300">
-                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">01</h2>
-                                <h3 className="text-lg font-bold text-[#003B33] mb-3">Penerimaan Aset</h3>
-                                <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">Aset anda diterima oleh tim ahli kami di kantor PUI</p>
-                            </div>
-
-                            <div ref={el => { stepsRef.current[1] = el; }} className="step-item relative z-10 h-[260px] p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-300">
-                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">02</h2>
-                                <h3 className="text-lg font-bold text-[#003B33] mb-3">Pemeriksaan Fisik</h3>
-                                <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">Kondisi aset diperiksa secara menyeluruh oleh tenaga ahli</p>
-                            </div>
-
-                            <div ref={el => { stepsRef.current[2] = el; }} className="step-item relative z-10 h-[260px] p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-300">
-                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">03</h2>
-                                <h3 className="text-lg font-bold text-[#003B33] mb-3">Pengujian Laboratorium</h3>
-                                <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">Aset diuji di laboratorium untuk memastikan keaslian dan kualitas</p>
-                            </div>
-
+                            {[0, 1, 2].map(i => {
+                                const step = workSteps[i] || { title: '', desc: '' }
+                                return (
+                                    <div key={i} ref={el => { stepsRef.current[i] = el; }} className="step-item relative z-10 h-[260px] p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-300">
+                                        <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">{String(i + 1).padStart(2, '0')}</h2>
+                                        <h3 className="text-lg font-bold text-[#003B33] mb-3">{step.title}</h3>
+                                        <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">{step.desc}</p>
+                                    </div>
+                                )
+                            })}
                             {/* Row 2: 06, 05, 04 */}
-                            <div ref={el => { stepsRef.current[3] = el; }} className="step-item relative z-10 h-[260px] p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-300">
-                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">06</h2>
-                                <h3 className="text-lg font-bold text-[#003B33] mb-3">Hubungi Kami Via Whatsapp</h3>
-                                <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium mb-2">Untuk memulai</p>
-                                <a 
-                                    href="https://wa.me/6282277777911"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="w-10 h-10 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
-                                >
-                                    <FaWhatsapp className="text-2xl" />
-                                </a>
-                            </div>
-
-                            <div ref={el => { stepsRef.current[4] = el; }} className="step-item relative z-10 h-[260px] p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-300">
-                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">05</h2>
-                                <h3 className="text-lg font-bold text-[#003B33] mb-3">Pencairan Dana</h3>
-                                <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">Setelah Anda setuju, dana langsung cair ke rekening Anda</p>
-                            </div>
-
-                            <div ref={el => { stepsRef.current[5] = el; }} className="step-item relative z-10 h-[260px] p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-300">
-                                <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">04</h2>
-                                <h3 className="text-lg font-bold text-[#003B33] mb-3">Penawaran Nilai Gadai</h3>
-                                <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium">Kami menyampaikan nilai taksiran dan bunga kompetitif untuk disetujui</p>
-                            </div>
+                            {[5, 4, 3].map(i => {
+                                const step = workSteps[i] || { title: '', desc: '' }
+                                const isLast = i === 5
+                                return (
+                                    <div key={i} ref={el => { stepsRef.current[i] = el; }} className="step-item relative z-10 h-[260px] p-8 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-300">
+                                        <h2 className="text-3xl font-extrabold text-[#003B33] mb-2 md:mb-[0.5rem]">{String(i + 1).padStart(2, '0')}</h2>
+                                        <h3 className="text-lg font-bold text-[#003B33] mb-3">{step.title}</h3>
+                                        <p className="text-[14px] text-[#003B33]/80 leading-relaxed font-medium mb-2">{step.desc}</p>
+                                        {isLast && (
+                                            <a href={`https://wa.me/${settings.whatsapp}`} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                                                <FaWhatsapp className="text-2xl" />
+                                            </a>
+                                        )}
+                                    </div>
+                                )
+                            })}
                         </div>
                     </div>
 
                     {/* MOBILE & TABLET VIEW (Sticky Card Stacking) */}
                     <div className="relative w-full block lg:hidden">
                         <div className="grid grid-cols-1 relative z-10 w-full min-h-[400px]">
-                            {[
-                                { id: "01", title: "Penerimaan Aset", desc: "Aset anda diterima oleh tim ahli kami di kantor PUI", idx: 6 },
-                                { id: "02", title: "Pemeriksaaan Fisik", desc: "Kondisi aset diperiska secara menyeluruh oleh tenaga ahli", idx: 7 },
-                                { id: "03", title: "Pengujian Laboratorium", desc: "Aset diuji di laboratorium untuk memastikan keaslian dan kualitas", idx: 8 },
-                                { id: "04", title: "Penawaran Nilai Gadai", desc: "Kami menyamapikan nilai taksiran dan bunag kompetitif untuk disetujui", idx: 9 },
-                                { id: "05", title: "Pencairan Dana", desc: "Setelah Anda setuju, dana langsung cair ke rekening Anda", idx: 10 },
-                                { id: "06", title: "Hubungi Kami Via Whatsapp", desc: "Untuk memulai", idx: 11 }
-                            ].map((step) => (
+                            {workSteps.map((step, i) => (
                                 <div
-                                    key={step.id}
-                                    ref={el => { stepsRef.current[step.idx] = el; }}
+                                    key={i}
+                                    ref={el => { stepsRef.current[i + 6] = el; }}
                                     style={{ gridArea: "1 / 1 / 2 / 2", willChange: "transform, opacity, filter" }}
                                     className="step-item relative z-10 p-4 lg:p-8 rounded-2xl shadow-sm lg:shadow-[0_10px_40px_rgba(0,0,0,0.06)] bg-white lg:bg-white/40 lg:backdrop-blur-md border border-gray-100 lg:border-white/60 min-h-[140px] lg:min-h-[260px] flex flex-col items-center lg:items-start text-center lg:text-left"
                                 >
-                                    <h2 className="text-2xl lg:text-3xl font-extrabold text-[#003B33] mb-1 lg:mb-[0.5rem]">{step.id}</h2>
+                                    <h2 className="text-2xl lg:text-3xl font-extrabold text-[#003B33] mb-1 lg:mb-[0.5rem]">{String(i + 1).padStart(2, '0')}</h2>
                                     <h3 className="text-lg lg:text-lg font-bold text-[#003B33] mb-1 lg:mb-3">{step.title}</h3>
                                     <p className="text-xs lg:text-[14px] text-[#003B33]/80 leading-relaxed font-medium mb-2">{step.desc}</p>
-                                    {step.id === "06" && (
-                                        <a 
-                                            href="https://wa.me/6282277777911"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="w-10 h-10 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
-                                        >
+                                    {i === 5 && (
+                                        <a href={`https://wa.me/${settings.whatsapp}`} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
                                             <FaWhatsapp className="text-2xl" />
                                         </a>
                                     )}

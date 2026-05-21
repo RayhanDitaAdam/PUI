@@ -1,7 +1,6 @@
 import React from 'react';
-import Footer from "../__global/Footer";
 import Header from "../__global/Header";
-import { Consult } from "./mainpage/Consult";
+import { Consult } from "../__global/Consult";
 import { ItemContext } from "./produk/ItemContext";
 import { Kriteria } from "./produk/Kriteria";
 import { MainSection } from "./produk/MainSection";
@@ -13,22 +12,16 @@ import gsap from 'gsap';
 // @ts-ignore
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-// Register ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
 let Produk = function () {
     React.useEffect(() => {
-
         gsap.ticker.lagSmoothing(0);
-
         window.scrollTo(0, 0);
-
-        // Refresh ScrollTrigger after initial render
         setTimeout(() => {
             ScrollTrigger.refresh();
             window.scrollTo(0, 0);
         }, 100);
-
     }, []);
 
     return (<>
@@ -40,9 +33,8 @@ let Produk = function () {
                 <Kriteria />
                 <Consult />
                 <FAQ />
-                <Footer />
             </div>
         </div>
     </>);
 }
-export { Produk };
+export { Produk }

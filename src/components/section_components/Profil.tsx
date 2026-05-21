@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import Footer from '../__global/Footer';
 import { DuoCard } from './profil/DuoCard';
 import { FinalContext } from './profil/FinalContext';
 import { Hero } from './profil/Hero';
@@ -42,7 +41,6 @@ function Profil() {
       <div className="gsap-reveal">
         <FinalContext />
       </div>
-      <Footer />
     </div>
   );
 }

@@ -1,45 +1,27 @@
 
 
 let Product = function () {
-    const products = [
-        {
-            title: "Jam Tangan",
-            desc: "PUI menyediakan layanan gadai jaminan dari merek ternama seperti Audemars Piguet, Omega, Patek Philippe, Richard Mille, Rolex, dan lainnya.",
-            image: "/assets/img/a45fc430aa97c22576e74a861673646bbf66ce9e.webp",
-            slug: "jam-tangan"
-        },
-        {
-            title: "Logam Mulia",
-            desc: "PUI menghadirkan layanan gadai terpercaya untuk logam mulia seperti emas batangan dan produk emas lainnya.",
-            image: "/assets/img/414cd3630fa9cc6d8251ccb1128f151649ca43e9.webp",
-            slug: "emas"
-        },
-        {
-            title: "Perhiasan dan Batu Mulia",
-            desc: "PUI menyediakan layanan gadai berbagai jenis perhiasan seperti Bulgari, Cartier, Graff, Harry Winston, Tiffany & Co., Debeers, dan lainnya.",
-            image: "/assets/img/b66aced856067bdae66be6141bebc57002ffb69a.webp",
-            slug: "perhiasan"
-        },
-        {
-            title: "Tas Branded",
-            desc: "PUI menghadirkan layanan gadai tas branded dari merek ternama seperti Hermes, Dior, Chanel, dan lainnya.",
-            image: "/assets/img/c0c7e308852f4d42b44a67e0409997954100aea7.webp",
-            slug: "tas"
-        },
-        {
-            title: "Kendaraan Premium",
-            desc: "PUI menghadirkan layanan gadai kendaraan premium seperti Bentley, Ferrari, Lamborghini, Mercedes-Benz, Porsche, dan Rolls-Royce.",
-            image: "/assets/img/275d928d0acce97c08200ee8a8246b06a9062207.webp",
-            slug: "kendaraan"
-        },
-        {
-            title: "Rare Collectibles",
-            desc: "PUI menghadirkan layanan gadai koleksi langka seperti kartu koleksi, Lukisan, dan barang unik lainnya bernilai tinggi.",
-            image: "/assets/img/53ced318beb9e9e4041c1594080cf2521fa77f15.webp",
-            variant: "rare",
-            slug: "koleksi"
-        },
-    ];
+    const products: Array<{
+        title: string;
+        desc: string;
+        image: string;
+        slug: string;
+        variant?: string;
+    }> = (() => {
+        const el = document.getElementById('cms-products') as HTMLScriptElement | null;
+        if (el?.textContent) {
+            try { return JSON.parse(el.textContent) }
+            catch { }
+        }
+        return [
+            { title: "Jam Tangan", desc: "PUI menyediakan layanan gadai jaminan dari merek ternama seperti Audemars Piguet, Omega, Patek Philippe, Richard Mille, Rolex, dan lainnya.", image: "/assets/img/a45fc430aa97c22576e74a861673646bbf66ce9e.webp", slug: "jam-tangan" },
+            { title: "Logam Mulia", desc: "PUI menghadirkan layanan gadai terpercaya untuk logam mulia seperti emas batangan dan produk emas lainnya.", image: "/assets/img/414cd3630fa9cc6d8251ccb1128f151649ca43e9.webp", slug: "emas" },
+            { title: "Perhiasan dan Batu Mulia", desc: "PUI menyediakan layanan gadai berbagai jenis perhiasan seperti Bulgari, Cartier, Graff, Harry Winston, Tiffany & Co., Debeers, dan lainnya.", image: "/assets/img/b66aced856067bdae66be6141bebc57002ffb69a.webp", slug: "perhiasan" },
+            { title: "Tas Branded", desc: "PUI menghadirkan layanan gadai tas branded dari merek ternama seperti Hermes, Dior, Chanel, dan lainnya.", image: "/assets/img/c0c7e308852f4d42b44a67e0409997954100aea7.webp", slug: "tas" },
+            { title: "Kendaraan Premium", desc: "PUI menghadirkan layanan gadai kendaraan premium seperti Bentley, Ferrari, Lamborghini, Mercedes-Benz, Porsche, dan Rolls-Royce.", image: "/assets/img/275d928d0acce97c08200ee8a8246b06a9062207.webp", slug: "kendaraan" },
+            { title: "Rare Collectibles", desc: "PUI menghadirkan layanan gadai koleksi langka seperti kartu koleksi, Lukisan, dan barang unik lainnya bernilai tinggi.", image: "/assets/img/53ced318beb9e9e4041c1594080cf2521fa77f15.webp", variant: "rare", slug: "koleksi" },
+        ];
+    })();
     return (
         <section id="produk" style={{
             background: "linear-gradient(135deg, rgb(0, 58, 48) 0%, rgb(0, 29, 24) 50%, rgb(0, 5, 4) 100%)"
@@ -83,7 +65,7 @@ let Product = function () {
                                 <h3 className="text-xs md:text-base font-semibold mb-1 md:mb-2 text-[#EDE8D0]">
                                     {item.title}
                                 </h3>
-                                <p className="text-[9px] md:text-[0.75rem] text-gray-400 md:text-white md:font-['Lato'] md:font-medium md:leading-[130%] mb-2 md:mb-3 flex-grow">
+                                <p className="text-[9px] md:text-[0.75rem] text-gray-400 md:text-white md:font-['Inter'] md:font-medium md:leading-[130%] mb-2 md:mb-3 flex-grow">
                                     {item.desc}
                                 </p>
                                 <a href={`/detail/produk/${item.slug}`} className="hover-premium-btn mt-auto text-center text-[10px] md:text-sm border-2 border-[#5C5E3D] mb-[1.56rem] md:mb-3 font-bold text-[#C49A6C] px-2 md:px-4 py-1.5 md:py-2 rounded-lg md:rounded-[15px] bg-[#C49A6C30]">

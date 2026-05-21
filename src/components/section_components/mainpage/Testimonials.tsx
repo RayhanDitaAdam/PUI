@@ -1,76 +1,7 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./style/marquee.css"
 
 const Testimonials = function () {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [translateX, setTranslateX] = useState(0);
-  const scrollPosRef = useRef(0);
-
-  useEffect(() => {
-    let animationId: number;
-    const scroll = () => {
-      if (!isDragging && !isPaused && scrollRef.current) {
-        const container = scrollRef.current;
-        const maxScroll = container.scrollWidth / 2;
-
-        scrollPosRef.current += 0.8; // Scroll speed
-
-        if (scrollPosRef.current >= maxScroll) {
-          scrollPosRef.current = 0;
-        }
-
-        container.scrollLeft = scrollPosRef.current;
-      }
-      animationId = requestAnimationFrame(scroll);
-    };
-
-    animationId = requestAnimationFrame(scroll);
-    return () => cancelAnimationFrame(animationId);
-  }, [isDragging, isPaused]);
-
-  const handleMouseDown = (e: React.MouseEvent) => {
-    if (!scrollRef.current) return;
-    setIsDragging(true);
-    setStartX(e.pageX - scrollRef.current.offsetLeft);
-    setTranslateX(scrollRef.current.scrollLeft);
-  };
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging || !scrollRef.current) return;
-    e.preventDefault();
-
-    const container = scrollRef.current;
-    const x = e.pageX - container.offsetLeft;
-    const walk = (x - startX) * 1.5;
-    let newScroll = translateX - walk;
-
-    const maxScroll = container.scrollWidth / 2;
-
-    // Infinite Teleportation Logic
-    if (newScroll < 0) {
-      newScroll = maxScroll + newScroll;
-      setStartX(e.pageX - container.offsetLeft);
-      setTranslateX(newScroll);
-    } else if (newScroll >= maxScroll) {
-      newScroll = newScroll - maxScroll;
-      setStartX(e.pageX - container.offsetLeft);
-      setTranslateX(newScroll);
-    }
-
-    container.scrollLeft = newScroll;
-    scrollPosRef.current = newScroll;
-  };
-
-  const handleMouseUp = () => setIsDragging(false);
-  const handleMouseLeave = () => {
-    setIsDragging(false);
-    setIsPaused(false);
-  };
-  const handleMouseEnter = () => setIsPaused(true);
-
   const reviews = [
     {
       name: "Anonim User",
@@ -160,11 +91,55 @@ const Testimonials = function () {
   ];
   const duplicatedReviews = [...reviews, ...reviews];
 
-  React.useEffect(() => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollLeft = 0;
-    }
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!scrollRef.current) return;
+    setIsDragging(true);
+    setStartX(e.pageX - scrollRef.current.offsetLeft);
+    setScrollLeft(scrollRef.current.scrollLeft);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+    setIsHovering(false);
+  };
+
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !scrollRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - scrollRef.current.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    scrollRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    el.scrollLeft = 0;
   }, []);
+
+  useEffect(() => {
+    if (isDragging || isHovering) return;
+    const id = setInterval(() => {
+      if (!scrollRef.current) return;
+      scrollRef.current.scrollLeft += 1;
+    }, 30);
+    return () => clearInterval(id);
+  }, [isDragging, isHovering]);
 
   return (
     <section id="testimoni" className="testimonial-section py-16 overflow-hidden">

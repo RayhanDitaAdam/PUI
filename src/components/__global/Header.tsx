@@ -3,6 +3,8 @@ import { Navbar, productDropdownItems } from "./Navbar";
 import ScrollProgress from "./ScrollProgress";
 import { FaWhatsapp, FaChevronDown } from "react-icons/fa";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
+import { settings } from "../../data/settings";
+import { trackEvent } from "../../data/track";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -50,7 +52,7 @@ const Header: React.FC = () => {
 
         {/* Desktop WhatsApp Button */}
         <div className="hidden lg:flex justify-end flex-none w-[14rem]">
-          <a href="https://wa.me/6282277777911" target="_blank" rel="noopener noreferrer" className="border border-gray-400 px-4 py-2 rounded-full text-sm text-white flex items-center gap-2 animate-pulse-whatsapp hover:scale-105 transition-transform duration-300 cursor-pointer">
+          <a href={`https://wa.me/${settings.whatsapp}`} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click', { label: 'header-wa-desktop' })} className="border border-gray-400 px-4 py-2 rounded-full text-sm text-white flex items-center gap-2 animate-pulse-whatsapp hover:scale-105 transition-transform duration-300 cursor-pointer">
             <FaWhatsapp className="z-50 text-white" /> 0822 77777 911
           </a>
         </div>
@@ -126,7 +128,7 @@ const Header: React.FC = () => {
           </nav>
 
           <div className="mt-auto pt-8 border-t border-white/10">
-            <a href="https://wa.me/6282277777911" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white hover:text-green-400 transition-colors">
+            <a href={`https://wa.me/${settings.whatsapp}`} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click', { label: 'header-wa-mobile' })} className="flex items-center gap-3 text-white hover:text-green-400 transition-colors">
               <FaWhatsapp className="text-2xl text-green-500" />
               <span className="text-base font-semibold">0822 77777 911</span>
             </a>

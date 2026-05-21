@@ -1,10 +1,11 @@
 import { useEffect } from 'react';
-import Footer from '../__global/Footer';
-import { Consult } from './carakerja/Consult';
 import { Hero } from './carakerja/Hero';
 import { ItemContext } from './carakerja/ItemContext';
 import { ItemSec } from './carakerja/ItemSec';
+import { Consult } from '../__global/Consult';
 import "./carakerja/style/init.css"
+import "./mainpage/style/section-cards.css"
+import "./mainpage/style/init.css"
 import { initScrollAnimations } from '../../utils/animations';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -45,7 +46,6 @@ function CaraKerja() {
       <div className="gsap-reveal">
         <Consult />
       </div>
-      <Footer />
     </div>
   );
 }

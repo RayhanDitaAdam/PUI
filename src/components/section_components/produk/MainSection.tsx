@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { Items } from './Mengapa';
+import { getProducts } from "../../../data/products";
 
 const productImages: Record<string, string> = {
     'emas': '/assets/img/produk/emas.webp',
@@ -10,7 +11,7 @@ const productImages: Record<string, string> = {
     'tas': '/assets/img/produk/tas_1.webp',
 };
 
-const productTitles: Record<string, string> = {
+const fallbackTitles: Record<string, string> = {
     'emas': 'Logam Mulia',
     'perhiasan': 'Perhiasan',
     'jam-tangan': 'Jam Tangan Mewah',
@@ -19,21 +20,37 @@ const productTitles: Record<string, string> = {
     'tas': 'Tas Branded',
 };
 
+const fallbackDescs: Record<string, string> = {
+    tas: 'Butuh dana cepat? Punya tas branded mewah seperti Louis Vuitton, Chanel, Hermes, Gucci, Dior dan tas branded lainnya. Gadaikan tas mewah Anda, terjamin aman di PUI.',
+    emas: 'Butuh dana cepat? Punya logam mulia seperti Antam, UBS, Galeri 24, serta produk emas bersertifikat lainnya. Gadaikan logam mulia Anda, terjamin aman di PUI.',
+    "jam-tangan": 'Butuh dana cepat? Punya jam tangan mewah seperti Rolex, Patek Philippe, Audemars Piguet, Omega, dan brand prestisius lainnya. Gadaikan jam tangan mewah Anda, terjamin aman di PUI.',
+    perhiasan: 'Butuh dana cepat? Punya logam mulia seperti Tiffany & Co., Cartier, Harry Winston, Bulgari, dan lainnya. Gadaikan perhiasan dan batu mulia Anda, terjamin aman di PUI.',
+    kendaraan: 'Butuh dana cepat? Punya kendaraan premium seperti Ferrari, Lamborghini, Rolls-Royce, Bentley, Porsche, dan Mercedes-Benz brand prestisius lainnya. Gadaikan kendaraan premium Anda, terjamin aman di PUI.',
+    koleksi: 'Butuh dana cepat? Punya rare collectibles seperti Pokemon, Yu-Gi-Oh! serta memorabilia olahraga seperti FIFA, NBA, NFL, & UEFA dan lainnya. Gadaikan koleksi langka Anda, terjamin aman di PUI.',
+};
+
+function getHero(slug: string) {
+    const products = getProducts();
+    if (products.length > 0) {
+        const product = products.find(p => p.slug === slug);
+        if (product?.heroTitle && product?.heroDesc) {
+            return { title: product.heroTitle, desc: product.heroDesc };
+        }
+        if (products[0]?.heroTitle && products[0]?.heroDesc) {
+            return { title: products[0].heroTitle, desc: products[0].heroDesc };
+        }
+    }
+    return {
+        title: fallbackTitles[slug] || 'Tas Branded',
+        desc: fallbackDescs[slug] || fallbackDescs.tas,
+    };
+}
+
 let MainSection = function () {
     const { slug } = useParams<{ slug: string }>();
     const currentSlug = slug || 'tas';
     const imgSrc = productImages[currentSlug] || '/assets/img/produk/tas_1.webp';
-    const title = productTitles[currentSlug] || 'Tas Branded';
-    const productDescriptions: Record<string, React.ReactNode> = {
-        tas: <>Butuh dana cepat? Punya tas branded mewah seperti <br /> Louis Vuitton, Chanel, Hermès, Gucci, Dior dan tas <br /> branded lainnya. Gadaikan tas mewah Anda, terjamin <br /> aman di PUI.</>,
-        emas: <>Butuh dana cepat? Punya logam mulia seperti Antam, UBS, Galeri 24, serta produk emas bersertifikat lainnya. Gadaikan logam mulia Anda, terjamin aman di PUI.</>,
-        "jam-tangan": <>Butuh dana cepat? Punya jam tangan mewah seperti Rolex, Patek Philippe, Audemars Piguet, Omega, dan brand prestisius lainnya. Gadaikan jam tangan mewah Anda, terjamin aman di PUI.</>,
-        perhiasan: <>Butuh dana cepat? Punya logam mulia seperti Tiffany & Co., Cartier, Harry Winston, Bulgari, dan lainnya. Gadaikan perhiasan dan batu mulia Anda, terjamin aman di PUI.</>,
-        kendaraan: <>Butuh dana cepat? Punya kendaraan premium seperti Ferrari, Lamborghini, Rolls-Royce, Bentley, Porsche, dan Mercedes-Benz brand prestisius lainnya. Gadaikan kendaraan premium <br /> Anda, terjamin aman di PUI.</>,
-        koleksi: <>Butuh dana cepat? Punya rare collectibles seperti Pokémon, Yu-Gi-Oh! serta memorabilia olahraga seperti FIFA, NBA, NFL, & UEFA dan lainnya. Gadaikan koleksi langka Anda, terjamin aman di PUI.</>,
-    };
-
-    const description = productDescriptions[currentSlug] || productDescriptions.tas;
+    const { title, desc } = getHero(currentSlug);
 
     return (
         <section className="w-full max-w-[1700px] xl:max-w-none mx-auto xl:mx-0">
@@ -42,7 +59,7 @@ let MainSection = function () {
                 <div className="bg-black text-white px-6 pt-32 pb-[17.6rem] rounded-b-[40px] text-center flex flex-col items-center overflow-hidden">
                     <h2 className="text-[2rem] md:text-[1.75rem] font-bold relative z-10 w-full md:w-auto md:pr-0">{title}</h2>
                     <p className="text-sm leading-relaxed text-gray-300 mb-12 max-w-md relative z-10">
-                        {description}
+                        {desc}
                     </p>
                     <div className="relative inline-block w-full max-w-none px-4 z-0">
                         <img
@@ -101,7 +118,7 @@ let MainSection = function () {
                         <div className="w-1/2">
                             <h1 className="text-4xl md:text-2xl font-semibold mb-6">{title}</h1>
                             <p className="text-white leading-relaxed md:text-base">
-                                {description}
+                                {desc}
                             </p>
                         </div>
                         <div className="w-1/2 relative h-full flex items-center justify-center"></div>
@@ -139,12 +156,11 @@ let MainSection = function () {
                         <div className="w-1/2 lg:pr-20 lg:pt-28">
                             <h1 className="text-4xl lg:text-5xl font-semibold mb-6">{title}</h1>
                             <p className="text-white leading-relaxed lg:text-lg">
-                                {description}
+                                {desc}
                             </p>
                         </div>
 
                         <div className="w-1/2 relative h-full flex items-center justify-center">
-                            {/* Duplicate image removed as per user request */}
                         </div>
                     </div>
                 </div>
@@ -154,4 +170,4 @@ let MainSection = function () {
         </section>
     );
 }
-export { MainSection };
+export { MainSection }

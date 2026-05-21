@@ -1,4 +1,15 @@
+import { getPageContent } from '../../../data/content'
+
 let Lab = function () {
+    const c = getPageContent('profil-perusahaan')
+    const title = c.labTitle || 'Laboratorium Gemologi'
+    const desc = c.labDesc || 'Fasilitas penilaian internal untuk memastikan setiap aset dinilai dengan standart internasional.'
+    const cards = c.labCards || [
+        { title: 'Analisis Presisi', desc: 'Pengujian batu mulia dengan hasil presisi tinggi' },
+        { title: 'Verifikasi Keaslian', desc: 'Menjamin identifikasi asli atau sintetis secara terpercaya' },
+        { title: 'Penilaian Independent', desc: 'Ditangani oleh gemologist berpengalaman dan bersertifikasi' },
+    ]
+
     return (
         <section id="lab-pui" className="bg-[#004C41] w-full md:w-auto lg:w-full py-12 md:py-20 lg:py-32 md:mx-2 lg:mx-0 md:rounded-[1rem] lg:rounded-none scroll-mt-20">
             <div className="flex flex-col md:flex-row lg:flex-row-reverse gap-10 md:gap-4 lg:gap-10 items-center w-full max-w-7xl mx-auto px-4 md:px-4 lg:px-10">
@@ -11,10 +22,8 @@ let Lab = function () {
                 </div>
 
                 <div className="text-white w-full md:w-7/12 lg:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
-                    <h2 className="text-3xl md:text-2xl lg:text-4xl font-semibold mb-2">Laboratorium Gemologi</h2>
-                    <p className="text-base md:text-sm lg:text-base text-green-100 mb-2 md:mb-4 lg:mb-4 leading-relaxed max-w-xl">
-                        Fasilitas penilaian internal untuk memastikan setiap aset dinilai dengan standart internasional.
-                    </p>
+                    <h2 className="text-3xl md:text-2xl lg:text-4xl font-semibold mb-2">{title}</h2>
+                    <p className="text-base md:text-sm lg:text-base text-green-100 mb-2 md:mb-4 lg:mb-4 leading-relaxed max-w-xl">{desc}</p>
 
                     <div className="flex items-center justify-center md:justify-start gap-[0.5rem] md:gap-[0.5rem] lg:gap-[1.25rem] flex-wrap mt-6 mb-10 md:mb-6 lg:mb-16 w-full">
                         {["SSEF.webp", "IGS.webp", "BNSP.webp"].map((logo, idx) => (
@@ -36,21 +45,9 @@ let Lab = function () {
 
                     <div className="flex flex-col md:flex-row items-start md:items-stretch lg:items-start justify-start gap-y-6 md:gap-y-0 lg:gap-y-10 gap-x-[1.25rem] md:gap-x-2 lg:gap-x-[1.25rem] w-full">
                         {[
-                            {
-                                title: "Analisis Presisi",
-                                subtitle: "Pengujian batu mulia dengan hasil presisi tinggi",
-                                icon: "Analisi-Akurat.svg"
-                            },
-                            {
-                                title: "Verifikasi Keaslian",
-                                subtitle: "Menjamin identifikasi asli atau sintetis secara terpercaya",
-                                icon: "Verifikasi-Keahlian.svg"
-                            },
-                            {
-                                title: "Penilaian Independent",
-                                subtitle: "Ditangani oleh gemologist berpengalaman dan bersertifikasi",
-                                icon: "Penilaian-Independent.svg"
-                            }
+                            { title: cards[0]?.title || 'Analisis Presisi', desc: cards[0]?.desc || 'Pengujian batu mulia dengan hasil presisi tinggi', icon: 'Analisi-Akurat.svg' },
+                            { title: cards[1]?.title || 'Verifikasi Keaslian', desc: cards[1]?.desc || 'Menjamin identifikasi asli atau sintetis secara terpercaya', icon: 'Verifikasi-Keahlian.svg' },
+                            { title: cards[2]?.title || 'Penilaian Independent', desc: cards[2]?.desc || 'Ditangani oleh gemologist berpengalaman dan bersertifikasi', icon: 'Penilaian-Independent.svg' },
                         ].map((card, idx) => (
                             <div
                                 key={idx}
@@ -65,11 +62,11 @@ let Lab = function () {
                                 </div>
 
                                 <div className="w-full flex flex-col items-start gap-[0.5rem] md:gap-1 lg:gap-[0.5rem]">
-                                    <h3 className="text-[#FFF] font-['Lato',sans-serif] text-[0.875rem] md:text-[0.65rem] lg:text-[0.875rem] font-bold leading-[130%] self-stretch text-left">
+                                    <h3 className="text-[#FFF] font-['Inter',sans-serif] text-[0.875rem] md:text-[0.65rem] lg:text-[0.875rem] font-bold leading-[130%] self-stretch text-left">
                                         {card.title}
                                     </h3>
-                                    <p className="text-[#E4E4E4] font-['Lato',sans-serif] text-[0.75rem] md:text-[0.55rem] lg:text-[0.75rem] font-normal leading-[130%] self-stretch text-left">
-                                        {card.subtitle}
+                                    <p className="text-[#E4E4E4] font-['Inter',sans-serif] text-[0.75rem] md:text-[0.55rem] lg:text-[0.75rem] font-normal leading-[130%] self-stretch text-left">
+                                        {card.desc}
                                     </p>
                                 </div>
                             </div>

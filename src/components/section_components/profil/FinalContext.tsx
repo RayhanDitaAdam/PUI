@@ -2,11 +2,27 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaMoneyBillWave, FaGem, FaShieldHalved, FaLaptop } from "react-icons/fa6";
+import { getPageContent } from '../../../data/content'
 
 gsap.registerPlugin(ScrollTrigger);
 
+const misiIcons = [<FaMoneyBillWave className="w-5 h-5" />, <FaGem className="w-5 h-5" />, <FaShieldHalved className="w-5 h-5" />, <FaLaptop className="w-5 h-5" />]
+
 let FinalContext = function () {
     const containerRef = useRef<HTMLDivElement>(null);
+    const c = getPageContent('profil-perusahaan')
+    const badge = c.visiBadge || 'Tentang PUI'
+    const desc = c.visiDesc || 'PUI (Pergadaian Utama Indonesia) hadir sebagai mitra finansial strategis yang memberikan solusi pinjaman dana cepat dengan jaminan '
+    const companyName = c.visiCompanyName || 'PT Pergadaian Utama Indonesia'
+    const visiTitle = c.visiTitle || 'Visi'
+    const visiText = c.visiText || 'Menjadi lembaga pembiayaan gadai terpercaya dan terdepan di Indonesia, menghadirkan standar layanan '
+    const misiTitle = c.misiTitle || 'Misi Kami'
+    const misiList = c.misiList || [
+        { text: 'Pembiayaan cepat, aman, & transparan.' },
+        { text: 'Solusi aset bernilai tinggi.' },
+        { text: 'Kerahasiaan aset nasabah.' },
+        { text: 'Layanan profesional & digital.' },
+    ]
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -58,18 +74,18 @@ let FinalContext = function () {
         <section id="visi-misi-pui" ref={containerRef} className="gsap-reveal py-32 px-6 max-w-7xl mx-auto font-sans overflow-hidden scroll-mt-20">
             <div className="text-center mb-20">
                 <div className="reveal-item inline-block px-6 py-2 mb-6 text-sm font-bold tracking-widest text-[#003A30] uppercase bg-white/20 backdrop-blur-md border border-[#003A30]/20 rounded-full">
-                    Tentang PUI
+                    {badge}
                 </div>
                 <p className="reveal-item text-xl md:text-2xl text-slate-600 leading-relaxed max-w-4xl mx-auto font-light">
-                    PUI (Pergadaian Utama Indonesia) hadir sebagai mitra finansial strategis yang memberikan solusi pinjaman dana cepat dengan jaminan <span className="font-semibold text-slate-900 underline decoration-[#003A30]/30">aset bernilai tinggi</span>.
+                    {desc}<span className="font-semibold text-slate-900 underline decoration-[#003A30]/30">aset bernilai tinggi</span>.
                 </p>
 
                 <div className="reveal-item mt-10">
                     <h1
-                        style={{ color: "rgb(0, 58, 48)", fontFamily: "'Lato', sans-serif" }}
+                        style={{ color: "rgb(0, 58, 48)", fontFamily: "'Inter', sans-serif" }}
                         className="text-3xl md:text-5xl font-black tracking-tighter uppercase"
                     >
-                        PT Pergadaian Utama Indonesia
+                        {companyName}
                     </h1>
                 </div>
             </div>
@@ -82,43 +98,31 @@ let FinalContext = function () {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                         </svg>
                     </div>
-                    <h3 className="text-3xl font-bold text-slate-900 mb-4">Visi</h3>
+                    <h3 className="text-3xl font-bold text-slate-900 mb-4">{visiTitle}</h3>
                     <p className="text-slate-500 leading-relaxed text-lg font-light">
-                        Menjadi lembaga pembiayaan gadai terpercaya dan terdepan di Indonesia, menghadirkan standar layanan <span className="text-[#003A30] font-medium border-b border-[#003A30]/20">premium dan inovatif</span> bagi pemilik aset bernilai tinggi.
+                        {visiText}<span className="text-[#003A30] font-medium border-b border-[#003A30]/20">premium and inovatif</span> bagi pemilik aset bernilai tinggi.
                     </p>
                 </div>
 
                 <div className="v-card flex-[1.4] p-10 bg-white rounded-3xl shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] border border-slate-100 transition-colors duration-500 hover:border-[#003A30]/50">
                     <div className="flex items-center gap-4 mb-8">
                         <div className="h-1 w-12 bg-[#003A30] rounded-full animate-pulse"></div>
-                        <h3 className="text-3xl font-bold text-slate-900">Misi Kami</h3>
+                        <h3 className="text-3xl font-bold text-slate-900">{misiTitle}</h3>
                     </div>
 
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <li className="misi-item flex items-start gap-4 group/item">
-                            <div className="flex-shrink-0 bg-green-50 p-2.5 rounded-xl text-[#003A30] group-hover/item:bg-[#003A30] group-hover/item:text-white transition-all duration-300">
-                                <FaMoneyBillWave className="w-5 h-5" />
-                            </div>
-                            <span className="text-slate-600 font-medium group-hover/item:text-slate-900 transition-colors">Pembiayaan cepat, aman, & transparan.</span>
-                        </li>
-                        <li className="misi-item flex items-start gap-4 group/item">
-                            <div className="flex-shrink-0 bg-green-50 p-2.5 rounded-xl text-[#003A30] group-hover/item:bg-[#003A30] group-hover/item:text-white transition-all">
-                                <FaGem className="w-5 h-5" />
-                            </div>
-                            <span className="text-slate-600 font-medium group-hover/item:text-slate-900 transition-colors">Solusi aset bernilai tinggi.</span>
-                        </li>
-                        <li className="misi-item flex items-start gap-4 group/item">
-                            <div className="flex-shrink-0 bg-green-50 p-2.5 rounded-xl text-[#003A30] group-hover/item:bg-[#003A30] group-hover/item:text-white transition-all">
-                                <FaShieldHalved className="w-5 h-5" />
-                            </div>
-                            <span className="text-slate-600 font-medium group-hover/item:text-slate-900 transition-colors">Kerahasiaan aset nasabah.</span>
-                        </li>
-                        <li className="misi-item flex items-start gap-4 group/item">
-                            <div className="flex-shrink-0 bg-green-50 p-2.5 rounded-xl text-[#003A30] group-hover/item:bg-[#003A30] group-hover/item:text-white transition-all">
-                                <FaLaptop className="w-5 h-5" />
-                            </div>
-                            <span className="text-slate-600 font-medium group-hover/item:text-slate-900 transition-colors">Layanan profesional & digital.</span>
-                        </li>
+                        {misiList.map((item, idx) => (
+                            <li key={idx} className="misi-item flex items-start gap-4 group/item">
+                                <div className="flex-shrink-0 bg-green-50 p-2.5 rounded-xl text-[#003A30] group-hover/item:bg-[#003A30] group-hover/item:text-white transition-all duration-300">
+                                    {item.icon ? (
+                                        <img src={item.icon} alt="" className="w-5 h-5 object-contain" />
+                                    ) : (
+                                        misiIcons[idx] || misiIcons[0]
+                                    )}
+                                </div>
+                                <span className="text-slate-600 font-medium group-hover/item:text-slate-900 transition-colors">{item.text}</span>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>

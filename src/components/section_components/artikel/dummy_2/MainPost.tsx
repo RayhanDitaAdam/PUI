@@ -2,6 +2,17 @@ import { useParams } from "react-router-dom";
 import { SidePost } from "./SidePost";
 import { articles } from "../../../../data/articles";
 import { FaArrowLeft, FaRegClock, FaRegUser } from "react-icons/fa6";
+import TableOfContents from "../TableOfContents";
+
+function addIdsToHeadings(html: string): string {
+  return html.replace(/<h([23])\b([^>]*)>/gi, (match, level, attrs) => {
+    const idMatch = attrs.match(/id\s*=\s*["']([^"']*)["']/);
+    if (idMatch) return match;
+    const textMatch = match.replace(/<[^>]+>/g, '').trim() || 'heading';
+    const id = textMatch.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || `toc-${Date.now()}`;
+    return `<h${level} id="${id}"${attrs}>`;
+  });
+}
 
 let MainPost = function () {
     const { slug } = useParams<{ slug: string }>();
@@ -15,6 +26,8 @@ let MainPost = function () {
             </div>
         );
     }
+
+    const contentHtml = addIdsToHeadings(article.content);
 
     return (
         <div className="px-4 lg:py-6 max-w-7xl mx-auto">
@@ -47,12 +60,28 @@ let MainPost = function () {
 
                     <div 
                         className="article-content"
-                        dangerouslySetInnerHTML={{ __html: article.content }} 
+                        dangerouslySetInnerHTML={{ __html: contentHtml }} 
                     />
                 </div>
                 <div className="hidden lg:block lg:col-span-1">
-                    <SidePost />
+                    <div className="space-y-6">
+                        <div className="bg-white border border-gray-200 rounded-xl p-5">
+                            <TableOfContents htmlContent={contentHtml} />
+                        </div>
+                        <SidePost />
+                    </div>
                 </div>
+            </div>
+
+            <div className="lg:hidden mt-8">
+                <details className="bg-white border border-gray-200 rounded-xl p-4">
+                    <summary className="text-sm font-bold text-[#003B33] uppercase tracking-wider cursor-pointer select-none">
+                        Daftar Isi
+                    </summary>
+                    <div className="mt-3">
+                        <TableOfContents htmlContent={contentHtml} />
+                    </div>
+                </details>
             </div>
 
             <div className="lg:hidden">

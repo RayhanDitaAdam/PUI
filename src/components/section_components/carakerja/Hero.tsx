@@ -1,7 +1,12 @@
 import Header from "../../__global/Header";
-
+import { getPageContent } from '../../../data/content'
 
 let Hero: React.FC = () => {
+  const c = getPageContent('cara-kerja')
+  const badge = c.workHeroBadge || 'Cara Kerja'
+  const title = c.workHeroTitle || 'Pelajari & Mulai Prosesnya'
+  const desc = c.workHeroDesc || 'Ikuti langkah mudah dan dapatkan solusi finansial Anda hari ini.'
+
   return (
     <section id="hero-cara-kerja" className="relative w-full h-[41rem] md:h-[40rem] lg:h-[35.625rem]">
       <div
@@ -23,13 +28,13 @@ let Hero: React.FC = () => {
           <div className="w-full max-w-[1440px] relative flex flex-col items-center md:block">
             <div className="relative md:absolute md:left-12 lg:left-32 md:top-[13.75rem] z-20 text-center md:text-left px-6 md:px-0 mt-40 md:mt-0">
               <h3 className="text-lg md:text-xl lg:text-2xl text-[#C5A358] md:text-white mb-2">
-                Cara Kerja
+                {badge}
               </h3>
               <h2 className="text-3xl md:text-3xl lg:text-4xl font-bold mb-4 text-white leading-tight">
-                Pelajari & Mulai Prosesnya
+                {title}
               </h2>
               <p className="text-sm md:text-sm lg:text-base text-gray-300 leading-relaxed max-w-[17.5rem] md:max-w-none mx-auto md:mx-0">
-                Ikuti langkah mudah dan dapatkan solusi finansial Anda hari ini.
+                {desc}
               </p>
 
               <div className="flex justify-center md:justify-start gap-4">
