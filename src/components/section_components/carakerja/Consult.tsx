@@ -22,15 +22,15 @@ let Consult = function () {
             <a className="text-[0.65rem] lg:text-base md:text-sm text-white/70 mb-8 md:mb-7 leading-relaxed max-w-[16.25rem] md:max-w-[17.5rem]">
               Konsultasikan sekarang via WhatsApp. <br />Terjamin Kerahasiaan & privasi 100%.
             </a>
-            <button className="btn-wa animate-pulse-whatsapp flex items-center justify-center gap-2 bg-[#006658] border border-white/20 text-white w-full md:w-auto px-6 py-3.5 md:px-5 md:py-3 rounded-xl text-base md:text-sm font-semibold relative z-[60] pointer-events-auto">
+            <a href="https://wa.me/6282277777911" target="_blank" rel="noopener noreferrer" className="btn-wa animate-pulse-whatsapp flex items-center justify-center gap-2 bg-[#006658] border border-white/20 text-white w-full md:w-auto px-6 py-3.5 md:px-5 md:py-3 rounded-xl text-base md:text-sm font-semibold relative z-[60] pointer-events-auto hover:bg-[#004f44] transition-colors duration-300">
               <FaWhatsapp className="text-xl" />
               Konsultasi Valuasi Sekarang
-            </button>
+            </a>
           </div>
         </div>
 
         <div className="bg-white relative z-20">
-          <div className="mx-[1rem] grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 lg:-mt-[1.1rem] md:mt-0 !bg-white pt-2 pb-4 md:pt-[2rem] md:pb-[1rem] lg:py-4 rounded-b-xl md:rounded-b-2xl border-x md:border-none border-b md:border-none border-gray-200 relative z-10" style={{ backgroundColor: 'white' }}>
+          <div className="mx-[1rem] grid grid-cols-1 gap-3 md:gap-4 lg:-mt-[1.1rem] md:mt-0 !bg-white pt-2 pb-4 md:pt-[2rem] md:pb-[1rem] lg:py-4 rounded-b-xl md:rounded-b-2xl border-x md:border-none border-b md:border-none border-gray-200 relative z-10" style={{ backgroundColor: 'white' }}>
             <div className="card bg-white border border-gray-200 md:border-gray-200 rounded-xl p-4 md:p-7 flex flex-col">
               <div className="card-icon-wrap w-9 h-9 md:w-12 md:h-12 bg-[#C49A6C] rounded-lg md:rounded-xl flex items-center justify-center mb-3 md:mb-5">
                 <img src="/assets/img/81829e2cbb1d51f007adb0e183c5911e296267be.webp" width="1.5rem" className="brightness-0 w-[1.125rem] md:w-[1.5rem]" alt="image" />
@@ -45,7 +45,7 @@ let Consult = function () {
                 secara detail dan akurat, memastikan Anda mendapatkan nilai
                 terbaik sesuai kondisi dan pasar terkini.
               </p>
-              <a href="https://wa.me/6282277777911?text=Halo%20PUI,%20saya%20ingin%20booking%20jadwal%20janji%20temu%20ke%20kantor." target="_blank" rel="noopener noreferrer" className="card-link mt-auto flex items-center gap-2 text-[#1B4332] font-semibold text-[9px] md:text-xs cursor-pointer animate-link-arrow">
+              <a href="https://wa.me/6282277777911?text=Halo%20PUI,%20saya%20ingin%20booking%20jadwal%20janji%20temu%20ke%20kantor." target="_blank" rel="noopener noreferrer" className="card-link mt-auto flex items-center gap-2 text-[#1B4332] font-semibold text-[9px] md:text-xs cursor-pointer animate-link-arrow underline">
                 Booking Jadwal Janji Temu
                 <span className="w-4 h-4 bg-[#1B4332] rounded-full flex items-center justify-center">
                   <svg width="8" height="8" viewBox="0 0 9 9" fill="none">
@@ -55,28 +55,7 @@ let Consult = function () {
               </a>
             </div>
 
-            <div className="card bg-white border border-gray-200 md:border-gray-200 rounded-xl p-4 md:p-7 flex flex-col">
-              <div className="card-icon-wrap w-9 h-9 md:w-12 md:h-12 bg-[#C49A6C] rounded-lg md:rounded-xl flex items-center justify-center mb-3 md:mb-5">
-                <img src="/assets/img/d8d020e2c5ce16700e20195204cc0d38d6ba12bb.webp" width="1.5rem" className="brightness-0 w-[1.125rem] md:w-[1.5rem]" alt="image" />
-              </div>
-              <h3 className="text-xs md:text-lg font-extrabold text-[#111] mb-1.5 md:mb-2.5 leading-tight">
-                Layanan Jemput Barang
-              </h3>
-              <p className="text-[0.625rem] md:text-sm text-[#333] leading-relaxed mb-4 md:mb-6">
-                Untuk kenyamanan maksimal, PUI menyediakan layanan jemput
-                aset langsung ke lokasi Anda. Layanan ini dirancang bagi Anda yang
-                menginginkan proses praktis tanpa perlu datang ke kantor.
-                Tim kami akan datang dengan prosedur keamanan ketat dan profesionalisme tinggi dalam menangani setiap aset.
-              </p>
-              <a href="https://wa.me/6282277777911?text=Halo%20PUI,%20saya%20ingin%20booking%20layanan%20jemput%20aset%20ke%20lokasi%20saya." target="_blank" rel="noopener noreferrer" className="card-link mt-auto flex items-center gap-2 text-[#1B4332] font-semibold text-[0.5625rem] md:text-xs cursor-pointer animate-link-arrow">
-                Booking Jadwal Jemput Barang
-                <span className="w-4 h-4 bg-[#1B4332] rounded-full flex items-center justify-center">
-                  <svg width="8" height="8" viewBox="0 0 9 9" fill="none">
-                    <path d="M2 4.5h5M4.5 2l2.5 2.5L4.5 7" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </span>
-              </a>
-            </div>
+            
           </div>
         </div>
       </div>
