@@ -4,6 +4,12 @@ interface PageContent {
   heroWords?: string[]
   heroEnding?: string
   buttonText?: string
+  waNavLabel?: string
+  waNavMessage?: string
+  waHeroLabel?: string
+  waHeroMessage?: string
+  waConsultLabel?: string
+  waConsultMessage?: string
   aboutTitle?: string
   aboutDesc?: string
   aboutButton?: string

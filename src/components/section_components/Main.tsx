@@ -6,6 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Article } from './mainpage/Article';
 import { FAQ } from './mainpage/FAQ';
 import { Consult } from '../__global/Consult';
+import { getPageContent } from '../../data/content';
 import { Cpages } from './mainpage/Cpages';
 import { Hero } from './mainpage/Hero';
 import { Proccess } from './mainpage/Proccess';
@@ -33,6 +34,12 @@ function Main() {
 
   }, []);
 
+  const mainpage = getPageContent("mainpage");
+  const consultProps = {
+    buttonText: mainpage.waConsultLabel,
+    message: mainpage.waConsultMessage,
+  };
+
   return (
     <div className="overflow-x-hidden text-white" style={{ background: "linear-gradient(135deg, #003D35, #091D1A)" }}>
       <Hero />
@@ -46,7 +53,7 @@ function Main() {
         <Product />
       </div>
       <div className="gsap-reveal">
-        <Consult />
+        <Consult {...consultProps} />
       </div>
       <div className="gsap-reveal">
         <Proccess />

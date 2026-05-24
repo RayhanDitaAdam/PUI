@@ -12,7 +12,7 @@ export function trackEvent(type: 'page_view' | 'click', data: { page?: string; l
 
   // Meta Pixel for clicks
   if (type === 'click' && data.label && typeof fbq === 'function') {
-    fbq('trackCustom', 'Contact', { content_name: data.label })
+    fbq('track', 'Lead', { content_name: data.label, content_category: 'WhatsApp' })
   }
 }
 
@@ -24,17 +24,17 @@ if (typeof document !== 'undefined') {
 
     const existing = link.getAttribute('data-fbp')
     if (existing) {
-      if (typeof fbq === 'function') fbq('trackCustom', 'Contact', { content_name: existing })
+      if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: existing, content_category: 'WhatsApp' })
       return
     }
 
     // Auto-detect label from DOM context
     const section = link.closest('section, header, footer, [id]')
-    let label = 'whatsapp-click'
+    let label = 'wa-click'
     if (section) {
       const id = section.id || section.tagName.toLowerCase()
       label = `wa-${id}`
     }
-    if (typeof fbq === 'function') fbq('trackCustom', 'Contact', { content_name: label })
+    if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: label, content_category: 'WhatsApp' })
   })
 }

@@ -5,11 +5,17 @@ import { FaWhatsapp, FaChevronDown } from "react-icons/fa";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { settings } from "../../data/settings";
 import { trackEvent } from "../../data/track";
+import { getPageContent } from "../../data/content";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProdukOpen, setIsProdukOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(typeof window !== "undefined" ? window.innerWidth >= 1024 : true);
+  const mainpage = getPageContent("mainpage");
+  const waNavLabel = mainpage.waNavLabel || "0822 77777 911";
+  const waNavUrl = mainpage.waNavMessage
+    ? `https://wa.me/${settings.whatsapp}?text=${encodeURIComponent(mainpage.waNavMessage)}`
+    : `https://wa.me/${settings.whatsapp}`;
 
   React.useEffect(() => {
     const handleResize = () => setIsDesktop(window.innerWidth >= 1024);
@@ -52,8 +58,8 @@ const Header: React.FC = () => {
 
         {/* Desktop WhatsApp Button */}
         <div className="hidden lg:flex justify-end flex-none w-[14rem]">
-          <a href={`https://wa.me/${settings.whatsapp}`} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click', { label: 'header-wa-desktop' })} className="border border-gray-400 px-4 py-2 rounded-full text-sm text-white flex items-center gap-2 animate-pulse-whatsapp hover:scale-105 transition-transform duration-300 cursor-pointer">
-            <FaWhatsapp className="z-50 text-white" /> 0822 77777 911
+          <a href={waNavUrl} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click', { label: 'header-wa-desktop' })} className="border border-gray-400 px-4 py-2 rounded-full text-sm text-white flex items-center gap-2 animate-pulse-whatsapp hover:scale-105 transition-transform duration-300 cursor-pointer">
+            <FaWhatsapp className="z-50 text-white" /> {waNavLabel}
           </a>
         </div>
 
@@ -128,9 +134,9 @@ const Header: React.FC = () => {
           </nav>
 
           <div className="mt-auto pt-8 border-t border-white/10">
-            <a href={`https://wa.me/${settings.whatsapp}`} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click', { label: 'header-wa-mobile' })} className="flex items-center gap-3 text-white hover:text-green-400 transition-colors">
+            <a href={waNavUrl} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click', { label: 'header-wa-mobile' })} className="flex items-center gap-3 text-white hover:text-green-400 transition-colors">
               <FaWhatsapp className="text-2xl text-green-500" />
-              <span className="text-base font-semibold">0822 77777 911</span>
+              <span className="text-base font-semibold">{waNavLabel}</span>
             </a>
           </div>
         </div>
