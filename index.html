@@ -56,6 +56,15 @@
   fbq('set', 'autoConfig', false, '1669965257655878');
   fbq('track', 'PageView');
   </script>
+  <script>
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[href*="wa.me"]');
+      if (link) {
+        var label = link.getAttribute('data-fbp') || 'wa-click';
+        fbq('trackSingle', '1669965257655878', 'Lead', { content_name: label, content_category: 'WhatsApp' });
+      }
+    });
+  </script>
   <!-- End Meta Pixel Code -->
 
   <!-- Google tag (gtag.js) -->
