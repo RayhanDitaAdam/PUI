@@ -1,6 +1,8 @@
 const API = 'http://localhost:3001'
 
-declare const fbq: any
+function pixel() {
+  return (window as any).fbq
+}
 
 export function trackEvent(type: 'page_view' | 'click', data: { page?: string; label?: string }) {
   // Internal analytics
@@ -11,8 +13,11 @@ export function trackEvent(type: 'page_view' | 'click', data: { page?: string; l
   }).catch(() => {})
 
   // Meta Pixel for clicks
-  if (type === 'click' && data.label && typeof fbq === 'function') {
-    fbq('trackCustom', 'WhatsAppClick', { content_name: data.label, content_category: 'WhatsApp' })
+  if (type === 'click' && data.label) {
+    const fbq = pixel()
+    if (typeof fbq === 'function') {
+      fbq('trackCustom', 'WhatsAppClick', { content_name: data.label, content_category: 'WhatsApp' })
+    }
   }
 }
 
@@ -22,19 +27,21 @@ if (typeof document !== 'undefined') {
     const link = (e.target as HTMLElement).closest('a[href*="wa.me"]') as HTMLAnchorElement | null
     if (!link) return
 
+    const fbq = pixel()
+    if (typeof fbq !== 'function') return
+
     const existing = link.getAttribute('data-fbp')
     if (existing) {
-      if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: existing, content_category: 'WhatsApp' })
+      fbq('trackCustom', 'WhatsAppClick', { content_name: existing, content_category: 'WhatsApp' })
       return
     }
 
-    // Auto-detect label from DOM context
     const section = link.closest('section, header, footer, [id]')
     let label = 'wa-click'
     if (section) {
       const id = section.id || section.tagName.toLowerCase()
       label = `wa-${id}`
     }
-    if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: label, content_category: 'WhatsApp' })
+    fbq('trackCustom', 'WhatsAppClick', { content_name: label, content_category: 'WhatsApp' })
   })
 }
