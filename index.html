@@ -61,6 +61,7 @@
       var link = e.target.closest('a[href*="wa.me"]');
       if (link) {
         var label = link.getAttribute('data-fbp') || 'wa-click';
+        console.log('[Meta Pixel] Sending Lead:', label);
         fbq('trackSingle', '1669965257655878', 'Lead', { content_name: label, content_category: 'WhatsApp' });
       }
     });
