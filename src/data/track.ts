@@ -12,7 +12,7 @@ export function trackEvent(type: 'page_view' | 'click', data: { page?: string; l
 
   // Meta Pixel for clicks
   if (type === 'click' && data.label && typeof fbq === 'function') {
-    fbq('track', 'Lead', { content_name: data.label, content_category: 'WhatsApp' })
+    fbq('trackCustom', 'WhatsAppClick', { content_name: data.label, content_category: 'WhatsApp' })
   }
 }
 
