@@ -146,7 +146,7 @@ const Footer: React.FC<FooterProps> = ({
                         <div className="md:mt-16 md:max-w-[14rem] md:w-full md:pl-4 xl:pl-0">
                             <h3 className="font-semibold mb-4 text-lg md:text-base">Kontak</h3>
                             <div className="space-y-3">
-                                <a href={`tel:${settings.phone}`} onClick={() => trackEvent('click', { label: 'footer-phone' })} className="flex items-center gap-4 md:gap-3 border border-white/30 px-4 py-4 md:p-2 xl:px-4 xl:py-4 rounded-xl hover:bg-white/5 transition-all cursor-pointer md:w-full md:max-w-[14rem] xl:w-auto md:scale-[0.95] md:origin-left xl:scale-100">
+                                <a href={`tel:${settings.phone}`} onClick={(e) => { e.preventDefault(); trackEvent('click', { label: 'footer-phone' }); gtag_report_conversion(`tel:${settings.phone}`); }} className="flex items-center gap-4 md:gap-3 border border-white/30 px-4 py-4 md:p-2 xl:px-4 xl:py-4 rounded-xl hover:bg-white/5 transition-all cursor-pointer md:w-full md:max-w-[14rem] xl:w-auto md:scale-[0.95] md:origin-left xl:scale-100">
                                     <FaPhone className="text-xl md:text-lg shrink-0" />
                                     <span className="text-sm md:text-xs font-medium">Telepon:<br />{settings.phone.replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3')}</span>
                                 </a>

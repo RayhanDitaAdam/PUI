@@ -85,6 +85,24 @@
     });
   </script>
 
+  <!-- Event snippet for Click to call (1) conversion -->
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-17998882398/E_SaCMennrMcEN7MxIZD',
+        'value': 1.0,
+        'currency': 'IDR',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+
   <style>
     body {
       font-family: 'Inter', sans-serif;

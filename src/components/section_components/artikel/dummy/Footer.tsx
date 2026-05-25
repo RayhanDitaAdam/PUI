@@ -74,7 +74,7 @@ let Footer = function () {
                                 Kontak
                             </h3>
                             <div className="space-y-1">
-                                <a href={`tel:${settings.phone}`} className="flex items-center gap-3 border-2 border-white px-4 py-3 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
+                                <a href={`tel:${settings.phone}`} onClick={(e) => { e.preventDefault(); gtag_report_conversion(`tel:${settings.phone}`); }} className="flex items-center gap-3 border-2 border-white px-4 py-3 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
                                     <i className="fa-solid fa-phone"></i>
                                     <span className="text-sm">
                                         Telepon:
