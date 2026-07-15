@@ -2,6 +2,7 @@ export const article5 = {
   id: 5,
   slug: "valuasi-dan-likuiditas-memahami-berlian-sebagai-aset-dinamis",
   title: "Valuasi & Likuiditas: Memahami Berlian sebagai Aset Dinamis",
+  isMain: false,
   category: "Investasi",
   date: "24 Mei 2025",
   author: "Admin",

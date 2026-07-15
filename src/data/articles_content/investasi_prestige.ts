@@ -2,6 +2,7 @@ export const article4 = {
   id: 4,
   slug: "investasi-prestige-memahami-nilai-sejati-di-balik-aset-bergengsi",
   title: "Investasi Prestige: Memahami Nilai Sejati di Balik Aset Bergengsi",
+  isMain: false,
   category: "Investasi",
   date: "23 Mei 2025",
   author: "Admin",

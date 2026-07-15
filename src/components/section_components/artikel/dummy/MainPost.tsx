@@ -2,8 +2,8 @@ import { FaArrowRight, FaRegClock } from "react-icons/fa6";
 import { articles } from "../../../../data/articles";
 
 let MainPost = function () {
-    const mainArticle = articles[0];
-    const sideArticles = articles.slice(1, 3);
+    const mainArticle = articles.find(a => a.isMain) || articles[0];
+    const sideArticles = articles.filter(a => a !== mainArticle).slice(0, 2);
 
     return (
         <div className="w-full">

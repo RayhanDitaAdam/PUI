@@ -10,6 +10,7 @@ interface Article {
   image: string
   excerpt: string
   content: string
+  isMain?: boolean
 }
 
 function getEmbeddedArticles(): Article[] | null {
@@ -25,8 +26,8 @@ let merged: Article[];
 const embedded = getEmbeddedArticles();
 if (embedded) {
   const slugMap = new Map<string, Article>();
-  for (const a of allArticlesContent) slugMap.set(a.slug, a);
-  for (const a of embedded) {
+  for (const a of embedded) slugMap.set(a.slug, a);
+  for (const a of allArticlesContent) {
     if (!slugMap.has(a.slug)) slugMap.set(a.slug, a);
   }
   merged = Array.from(slugMap.values());

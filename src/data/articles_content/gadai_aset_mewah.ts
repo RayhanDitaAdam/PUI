@@ -2,6 +2,7 @@ export const article6 = {
   id: 6,
   slug: "panduan-lengkap-gadai-aset-mewah-2026",
   title: "Panduan Lengkap Gadai Aset Mewah: Dari Tas Branded hingga Jam Tangan Koleksi",
+  isMain: false,
   category: "Edukasi",
   date: "20 Mei 2026",
   author: "Tim PUI",

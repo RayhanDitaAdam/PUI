@@ -2,6 +2,7 @@ export const article1 = {
   id: 1,
   slug: "panduan-dokumentasi-likuidasi-emas",
   title: "Panduan Dokumentasi Likuidasi Emas",
+  isMain: false,
   category: "Edukasi",
   date: "20 Mei 2025",
   author: "Admin",

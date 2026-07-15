@@ -2,6 +2,7 @@ export const article2 = {
   id: 2,
   slug: "investasi-di-pergelangan-tangan-cara-mengoptimalkan-nilai-jam-tangan-anda",
   title: "Investasi di Pergelangan Tangan: Cara Mengoptimalkan Nilai Jam Tangan Anda",
+  isMain: false,
   category: "Investasi",
   date: "21 Mei 2025",
   author: "Admin",

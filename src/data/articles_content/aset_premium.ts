@@ -2,6 +2,7 @@ export const article3 = {
   id: 3,
   slug: "mengelola-aset-premium-strategi-cerdas-mendapatkan-likuiditas-tanpa-menjual-koleksi",
   title: "Mengelola Aset Premium: Strategi Cerdas Mendapatkan Likuiditas Tanpa Menjual Koleksi",
+  isMain: false,
   category: "Investasi",
   date: "22 Mei 2025",
   author: "Admin",
