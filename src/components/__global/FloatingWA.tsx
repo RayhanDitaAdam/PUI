@@ -1,21 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import { FaWhatsapp, FaTimes } from 'react-icons/fa';
 import { settings } from '../../data/settings';
 import { trackEvent } from '../../data/track';
 
 const FloatingWA: React.FC = () => {
-    const location = useLocation();
     const [showPopup, setShowPopup] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isImageLoaded, setIsImageLoaded] = useState(false);
-    const isHiddenPath = location.pathname.startsWith('/artikel');
-
     const popupRef = React.useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        if (isHiddenPath) return;
-
         let ticking = false;
         const handleScroll = () => {
             if (!ticking) {
@@ -38,7 +32,7 @@ const FloatingWA: React.FC = () => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, [isHiddenPath]);
+    }, []);
 
 
     const handleClose = (e: React.MouseEvent) => {
@@ -50,8 +44,6 @@ const FloatingWA: React.FC = () => {
     const handleOpen = () => {
         setIsMinimized(false);
     };
-
-    if (isHiddenPath) return null;
 
     return (
         <>

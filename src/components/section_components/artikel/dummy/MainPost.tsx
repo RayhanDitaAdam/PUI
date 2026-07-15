@@ -18,11 +18,13 @@ let MainPost = function () {
                 
                 {mainArticle && (
                     <div className="md:col-span-8 h-[400px] md:h-[610px] relative rounded-3xl md:rounded-[32px] overflow-hidden group shadow-lg">
-                        <img 
-                            src={mainArticle.image} 
-                            alt={mainArticle.title} 
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-                        />
+                        <a aria-label="Read full article" href={`/artikel/${mainArticle.slug}`} className="block w-full h-full">
+                            <img 
+                                src={mainArticle.image} 
+                                alt={mainArticle.title} 
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                            />
+                        </a>
                         
                         <span className="absolute top-4 right-4 bg-[#00A294] text-white text-xs px-4 py-1.5 rounded-full font-medium z-10">
                             {mainArticle.category}
@@ -49,13 +51,13 @@ let MainPost = function () {
                 <div className="md:col-span-4 flex flex-col gap-6">
                     {sideArticles.map(article => (
                         <div key={article.id} className="flex flex-col bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-md transition-all">
-                            <div className="w-full h-40 md:h-44 flex-shrink-0 overflow-hidden">
+                            <a aria-label="Read full article" href={`/artikel/${article.slug}`} className="block w-full h-40 md:h-44 flex-shrink-0 overflow-hidden">
                                 <img 
                                     src={article.image} 
                                     alt={article.title} 
                                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
                                 />
-                            </div>
+                            </a>
                             <div className="p-4">
                                 <span className="text-[#00A294] text-[10px] md:text-xs font-bold uppercase mb-1 block">{article.category}</span>
                                 <h3 className="text-sm md:text-base font-bold text-gray-900 mb-2 group-hover:text-[#00A294] transition-colors line-clamp-2">

@@ -15,9 +15,9 @@ export default function TableOfContents({ htmlContent }: { htmlContent: string }
     const doc = parser.parseFromString(htmlContent, 'text/html')
     const headings = doc.querySelectorAll('h2, h3')
     const toc: TocItem[] = []
-    headings.forEach((h, i) => {
-      const id = `toc-${i}`
-      h.setAttribute('id', id)
+    headings.forEach((h) => {
+      const id = h.getAttribute('id') || h.textContent?.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || ''
+      if (!id) return
       toc.push({ id, text: h.textContent || '', level: h.tagName === 'H2' ? 2 : 3 })
     })
     setItems(toc)
@@ -49,6 +49,7 @@ export default function TableOfContents({ htmlContent }: { htmlContent: string }
   if (items.length < 2) return null
 
   const scrollTo = (id: string) => {
+    setActiveId(id)
     const el = document.getElementById(id)
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
@@ -66,9 +67,9 @@ export default function TableOfContents({ htmlContent }: { htmlContent: string }
               className={`text-left text-sm leading-snug transition-all duration-200 w-full ${
                 item.level === 3 ? 'pl-4' : ''
               } ${
-                activeId === item.id
-                  ? 'text-[#C49A6C] font-semibold'
-                  : 'text-gray-500 hover:text-[#003B33]'
+                  activeId === item.id
+                    ? 'text-[#C49A6C] font-semibold'
+                    : 'text-gray-500 hover:text-[#C49A6C]'
               }`}
             >
               {item.text}

@@ -5,12 +5,12 @@ import { FaArrowLeft, FaRegClock, FaRegUser } from "react-icons/fa6";
 import TableOfContents from "../TableOfContents";
 
 function addIdsToHeadings(html: string): string {
-  return html.replace(/<h([23])\b([^>]*)>/gi, (match, level, attrs) => {
+  let counter = 0;
+  return html.replace(/<h([23])([^>]*)>(.*?)<\/h\1>/gi, (match, level, attrs, text) => {
     const idMatch = attrs.match(/id\s*=\s*["']([^"']*)["']/);
     if (idMatch) return match;
-    const textMatch = match.replace(/<[^>]+>/g, '').trim() || 'heading';
-    const id = textMatch.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || `toc-${Date.now()}`;
-    return `<h${level} id="${id}"${attrs}>`;
+    const id = text.toLowerCase().replace(/<[^>]+>/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || `heading-${++counter}`;
+    return `<h${level} id="${id}"${attrs}>${text}</h${level}>`;
   });
 }
 

@@ -77,7 +77,7 @@ let Item = function () {
             <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-10 mb-20">
                 {filteredItems.map((item) => (
                     <div key={item.id} className="group cursor-pointer">
-                        <div className="w-full h-64 md:h-52 shadow-lg relative mb-4 overflow-hidden rounded-2xl">
+                        <a aria-label="Read full article" href={`/artikel/${item.slug}`} className="block w-full h-64 md:h-52 shadow-lg relative mb-4 overflow-hidden rounded-2xl">
                             <img 
                                 src={item.image} 
                                 alt={item.title} 
@@ -86,7 +86,7 @@ let Item = function () {
                             <span className="absolute top-3 right-3 bg-[#006658] text-white text-[10px] px-3 py-1 rounded-full">
                                 {item.category}
                             </span>
-                        </div>
+                        </a>
                         <div className="text-[10px] text-gray-400 flex items-center gap-1.5 mb-2 font-medium uppercase tracking-wider">
                             <FaRegClock className="w-3 h-3 text-[#006658]" /> {item.date}
                         </div>
