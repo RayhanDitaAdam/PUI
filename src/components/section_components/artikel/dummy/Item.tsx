@@ -15,7 +15,7 @@ let Item = function () {
         ? allArticles 
         : allArticles.filter(item => item.category === activeCategory);
 
-    const categories = ['Semua', 'Edukasi', 'Investasi'];
+    const categories = ['Semua', ...new Set(allArticles.map(item => item.category))];
 
     useEffect(() => {
         if (gridRef.current) {
